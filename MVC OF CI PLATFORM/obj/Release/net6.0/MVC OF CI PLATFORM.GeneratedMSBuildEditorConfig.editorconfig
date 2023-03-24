@@ -1,0 +1,61 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MVC_OF_CI_PLATFORM
+build_property.RootNamespace = MVC_OF_CI_PLATFORM
+build_property.ProjectDir = D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Home/FORGOTPASSWORD.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGT1JHT1RQQVNTV09SRC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Home/LOGIN.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMT0dJTi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Home/REGISTRATIONPAGE.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSRUdJU1RSQVRJT05QQUdFLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Home/RESETPAGE.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSRVNFVFBBR0UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GITHUB UPLOAD FOR CI PLATFORM/MVC OF CI PLATFORM/MVC OF CI PLATFORM/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-na84z8d7l7

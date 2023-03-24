@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#container{
+    display: flex;
+}
+
+#subcontainer{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+}
+
+.carousel{
+    width: 100%;
+} 
+
+.carousel-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+}
+
+.btn{
+    width: 100%;
+    background-color: white;
+    color: coral;
+    border-color: coral;
+    border-radius: 20px;
+}
+
+#form{
+    width: 70%;
+    margin: auto;
+}
+
+#lostpass{
+    margin: 10px auto;
+    text-align: center;
+    font-size: 15px;
+}
+
+#lostpass a{
+    color: gainsboro;
+}
+
+#createAcc{
+    margin: 0px auto;
+    color: gainsboro;
+    font-size: 15px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#policy{
+    text-align: center;
+    text-decoration: none;
+    color: gainsboro;
+    margin-bottom: 5%;
+}
+
+.carousel-item img{
+    height: 100vh;
+}
+
+@media screen and (max-width:1000px) {
+    #container{
+        flex-direction: column;
+    }
+    .carousel-item img{
+        height: unset;
+    }
+    .carousel{
+        width: 100% !important;
+    } 
+    #subcontainer{
+        margin: 20px auto;
+        width: 70%;
+    }
+    #form{
+        width: 90%;
+    }
+    #policy{
+        margin-bottom: 0;
+        margin-top: 30%;
+    }
+}

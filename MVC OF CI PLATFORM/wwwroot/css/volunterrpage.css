@@ -1,0 +1,155 @@
+﻿.icon {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.heart {
+    width: 38px;
+    height: 32px;
+}
+
+.apply {
+    border: 2px solid orange;
+    border-radius: 20px;
+    color: orange;
+    background-color: white;
+}
+
+.imgTitle {
+    bottom: 14px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.img1, .pin {
+    width: 25px;
+    height: 25px;
+}
+
+.pill {
+    width: fit-content;
+    background-color: white;
+}
+
+#progress {
+    width: 500%;
+}
+
+#hr {
+    position: relative;
+    bottom: 2rem;
+}
+
+.stardiv {
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#starLine {
+    position: relative;
+    bottom: 1.6rem;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: var(--bs-nav-tabs-link-active-color) !important;
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+    border: none;
+    border-bottom: 2px solid black !important;
+}
+
+.volunteer-img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.comment {
+    height: 408px;
+    overflow-y: auto;
+}
+.added img{
+    width:28px;
+    height:25px;
+}
+
+#toast-container > .toast-success {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==) !important;
+    background-color: #00d68f;
+}
+
+#toast-container > .toast-info {
+    background-color: #2f96b4;
+}
+
+
+
+
+
+
+
+
+
+img {
+    vertical-align: middle;
+}
+
+/* / Position the image container (needed to position the left and right arrows) / */
+.container {
+    position: relative;
+}
+
+/* / Hide the images by default / */
+.mySlides {
+    display: none;
+}
+
+/* / Add a pointer when hovering over the thumbnail images / */
+.cursor {
+    cursor: pointer;
+}
+
+.row > .column {
+    width: 16.66%;
+    padding: 0 1px;
+}
+
+/* / Next & previous buttons / */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    width: auto;
+    padding: 16px 6px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    height: 14%;
+}
+
+/* / Position the "next button" to the right / */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* / Six columns side by side / */
+.column {
+    float: left;
+    width: 16.66%;
+}

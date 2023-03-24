@@ -1,0 +1,105 @@
+body {
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cointainer {
+    background-color: white;
+    display: flex;
+}
+
+.row {
+    --bs-gutter-x: 0px!important;
+}
+
+.part1 {
+    top: 0px;
+    left: 0px;
+    width: 70%;
+    height: 100%;
+    /* UI Properties */
+    opacity: 1;
+    position: relative;
+}
+
+.loginimage {
+    position: relative;
+}
+
+.posterimg {
+    width: 100%;
+}
+
+.part2 {
+    top: 0px;
+    width: 33%;
+    position: relative;
+    /* UI Properties */
+    background: transparent url('img/Layer 52.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.login-button {
+    background: none;
+    border-radius: 15px;
+    color: #F88634;
+    height: 35px;
+    width: 90%;
+    margin: 5px;
+    border: 2px solid #F88634
+}
+
+form {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.login {
+    margin-top: 50%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.lostpassword {
+    text-align: center;
+}
+
+.account {
+    text-align: center;
+}
+
+.text {
+    position: absolute;
+    bottom: 0;
+    bottom: 70px;
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.form-group {
+    border-radius: 3px;
+}
+
+.text1 {
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.privacy {
+    text-align: center;
+    width: fit-content;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media ( max-width:990px) {
+    .part2 {
+        top: 55px;
+        width: 80%;
+    }
+}

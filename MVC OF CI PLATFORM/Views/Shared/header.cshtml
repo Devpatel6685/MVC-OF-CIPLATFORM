@@ -1,0 +1,166 @@
+﻿@*@model CI_PLATFORM.Entities.ViewModels.MissionViewmodel*@
+@using Microsoft.AspNetCore.Http;
+
+@{
+    var country = (List<Country>)ViewData["country"];
+    var city = (List<City>)ViewData["city"];
+    var theme = (List<MissionTheme>)ViewData["theme"];
+    var skill = (List<Skill>)ViewData["skill"];
+    var mission = (List<Mission>)ViewData["Mission"];
+    var missionskills = (List<MissionSkill>)ViewData["missionSkill"];
+    var goalmissions = (List<GoalMission>)ViewData["GoalMission"];
+}
+@inject IHttpContextAccessor Accessor;
+@{
+    Layout = "";
+}
+@{
+    var firstname_session = @Accessor.HttpContext.Session.GetString("username");
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/header.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-body-light border-bottom">
+    <div class="container-fluid mx-auto">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" id="navbarSupportedContent" tabindex="-1">
+            <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu dropdown-border">
+                        <li><a class="dropdown-item" href="#">Policy</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  asp-controller="VolunterrStory" asp-action="volunteerstory">Stories</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Policy
+                    </a>
+                    <ul class="dropdown-menu dropdown-border">
+                        <li><a class="dropdown-item" href="#">Policy</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="dropdown mx-5" id="prof-drop">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/Assets/user-img.png" class="rounded-circle" alt="profile">
+            <span id="hide">@firstname_session</span>
+        </a>
+        <ul class="dropdown-menu" id="drop-pos">
+            <li><a class="dropdown-item" href="#">Policy</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" asp-action="LogOut" asp-controller="Home">Logout</a></li>
+        </ul>
+    </div>
+}
+else
+{
+    <div class="dropdown mx-5 d-flex" id="prof-drop">
+
+        <ul class="navbar-nav log-register flex-row">
+            <li class="nav-item ">
+                <a class="nav-link active me-2 btn btn-outline-light btn-warning" aria-current="page" asp-action="LOGIN" asp-controller="HOME">Login</a>
+            </li>
+            <li class="nav-item ms-1">
+                <a class="nav-link active btn btn-outline-light  btn-warning" aria-current="page" asp-action="REGISTRATIONPAGE" asp-controller="HOME">Register</a>
+            </li>
+        </ul>
+
+
+    </div>
+
+}
+
+
+@{
+    //var searchQuery = Context.Request.Query["q"];
+
+}
+<div class="container-fluid border-bottom navbar-expand-md">
+    <div class="row mx-5 d-flex justify-content-between">
+        <div class="col-11 col-md-4">
+            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
+            <input class="form-control me-2 ps-5 pt-3 pb-3 search-border" id="search-input" type="search" placeholder="Search" aria-label="Search" name="SearchInputdata">
+        </div>
+        @*<div class="d-flex col-11 col-md-4" role="search">
+        <img src="/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
+        <input class="form-control me-2 ps-5 pt-3 pb-3" id="search-border" type="search" placeholder="Search" aria-label="Search">
+        </div>*@
+        <button class="navbar-toggler col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><img src="/Assets/filter.png" alt=""></span>
+        </button>
+        <div id="filter" class="offcanvas offcanvas-start d-flex flex-row col-md-8" tabindex="-1">
+                <li class="list-group-item  dropdown border-start col-md-3 border-end pt-3 pb-3 noborder">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Country
+                    </a>
+                    <ul class="dropdown-menu drop" aria-labelledby="navbarDropdown" id="country">
+                    </ul>
+                </li>
+                <li class="list-group-item  dropdown border-start col-md-3 border-end pt-3 pb-3 noborder">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        City
+                    </a>
+                    <ul class="dropdown-menu drop" aria-labelledby="navbarDropdown" id="city">
+                    </ul>
+                </li>
+                <li class="list-group-item  dropdown border-start col-md-3 border-end pt-3 pb-3 noborder">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Theme
+                    </a>
+                    <ul class="dropdown-menu drop" aria-labelledby="navbarDropdown" id="theme">
+                    </ul>
+                </li>
+                <li class="list-group-item  dropdown border-start col-md-3 border-end pt-3 pb-3 noborder">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Skills
+                    </a>
+                    <ul class="dropdown-menu drop" aria-labelledby="navbarDropdown" id="skill">
+                    </ul>
+                </li>
+              
+        </div>
+    </div>
+</div>
+<div class="filters-section d-flex align-items-center flex-wrap justify-content-center">
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/js/plaltformLanding.js"></script>
+
+</body>
+
+</html>

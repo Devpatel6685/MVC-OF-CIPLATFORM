@@ -1,0 +1,56 @@
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.deps.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.runtimeconfig.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.AssemblyReference.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfoInputs.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfo.cs
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.CoreCompileInputs.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\refint\CI PLATFORM.Entities.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.pdb
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.genruntimeconfig.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\ref\CI PLATFORM.Entities.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.deps.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.runtimeconfig.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.AssemblyReference.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfoInputs.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfo.cs
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.CoreCompileInputs.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\refint\CI PLATFORM.Entities.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.pdb
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.genruntimeconfig.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\ref\CI PLATFORM.Entities.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.deps.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.runtimeconfig.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.AssemblyReference.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfoInputs.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfo.cs
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.CoreCompileInputs.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\refint\CI PLATFORM.Entities.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.genruntimeconfig.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\CI PLATFORM.Entities\obj\Debug\net6.0\ref\CI PLATFORM.Entities.dll
+E:\Mvc of ci platform\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.deps.json
+E:\Mvc of ci platform\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.runtimeconfig.json
+E:\Mvc of ci platform\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\Mvc of ci platform\CI PLATFORM.Entities\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.AssemblyReference.cache
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.GeneratedMSBuildEditorConfig.editorconfig
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfoInputs.cache
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.AssemblyInfo.cs
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.csproj.CoreCompileInputs.cache
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\refint\CI PLATFORM.Entities.dll
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\CI PLATFORM.Entities.genruntimeconfig.cache
+E:\Mvc of ci platform\CI PLATFORM.Entities\obj\Debug\net6.0\ref\CI PLATFORM.Entities.dll

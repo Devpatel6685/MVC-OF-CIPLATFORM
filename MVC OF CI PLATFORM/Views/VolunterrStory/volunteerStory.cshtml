@@ -1,0 +1,73 @@
+﻿@model CI_PLATFORM.Entities.ViewModels.StoryViewModel;
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story listing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/volunterrstorycss.css">
+</head>
+
+<body>
+    <partial name="header" model="Model" />
+   
+    <div class="shareStory">
+        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" alt="" id="img">
+        <div class="overlay">
+            <div class="text">
+                <p class="d-none d-sm-block">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla eum aut voluptates accusamus repellat similique, rem libero, cumque, saepe repudiandae temporibus. Officia, odio. Exercitationem nostrum provident quae quaerat excepturi doloribus!
+                </p>
+                <a class="btn border rounded-pill py-1 px-2 text-light" asp-action="Shareyourstory" asp-controller="VolunterrStory">Share your Story <img src="~/Assets/right-arrow.png" alt="" srcset=""></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 p-3 mx-auto mt-1">
+        @foreach (var story in Model.Stories)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <div class="d-flex flex-column position-relative shareStory">
+                        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top" alt="Skyscrapers" />
+                        <div class="overlay">
+                            <div class="text">
+                                <a class="btn border rounded-pill py-1 px-2 text-light" asp-action="storydetails" asp-controller="VolunterrStory" asp-route-Id="@story.StoryId">View Details <img src="~/Assets/right-arrow.png" alt="" srcset=""></a>
+                            </div>
+                        </div>
+                        @{
+                            var theme = Model.Missions.SingleOrDefault(m => m.MissionId == story.MissionId);
+                        }
+                        <div class="position-absolute title rounded-pill border mx-auto px-2">@theme.Theme.Title</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@story.Title</h5>
+                        <p class="card-text truncate">
+                            @story.Description
+                        </p>
+                        <div class="d-flex">
+                            <img src="~/Assets/volunteer1.png" class="rounded-circle volunteer-img" alt="">
+                            <p class="my-auto">&nbsp; @story.User.FirstName @story.User.LastName</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+
+
+    @*<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  integrity ="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>*@
+    <script src ="~/js/plaltformLanding.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,422 @@
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.Development.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.staticwebassets.runtime.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.exe
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.deps.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.runtimeconfig.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.dll
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.pdb
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.AssemblyReference.cache
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfoInputs.cache
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfo.cs
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CoreCompileInputs.cache
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cache
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cache
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cs
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.MVC OF CI PLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.build.MVC OF CI PLATFORM.props
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MVC OF CI PLATFORM.props
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MVC OF CI PLATFORM.props
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.pack.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.build.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.development.json
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\bundle\MVC OF CI PLATFORM.styles.css
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\projectbundle\MVC OF CI PLATFORM.bundle.scp.css
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.dll
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\refint\MVC OF CI PLATFORM.dll
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.pdb
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.genruntimeconfig.cache
+D:\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\ref\MVC OF CI PLATFORM.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.Development.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.staticwebassets.runtime.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.exe
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.deps.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.runtimeconfig.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.pdb
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Core.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Identity.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Humanizer.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MailKit.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MimeKit.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.CodeDom.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Memory.Data.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Json.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.pdb
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.AssemblyReference.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfoInputs.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfo.cs
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CoreCompileInputs.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cs
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.MVC OF CI PLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.build.MVC OF CI PLATFORM.props
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MVC OF CI PLATFORM.props
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MVC OF CI PLATFORM.props
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.pack.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.build.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.development.json
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\bundle\MVC OF CI PLATFORM.styles.css
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\projectbundle\MVC OF CI PLATFORM.bundle.scp.css
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CopyComplete
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\refint\MVC OF CI PLATFORM.dll
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.pdb
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.genruntimeconfig.cache
+D:\GITHUB UPLOAD FOR CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\ref\MVC OF CI PLATFORM.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.Development.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.staticwebassets.runtime.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.exe
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.deps.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.runtimeconfig.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.pdb
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Core.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Identity.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Humanizer.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MailKit.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MimeKit.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.CodeDom.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Memory.Data.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Json.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.pdb
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.AssemblyReference.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfoInputs.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfo.cs
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CoreCompileInputs.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cs
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.MVC OF CI PLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.build.MVC OF CI PLATFORM.props
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MVC OF CI PLATFORM.props
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MVC OF CI PLATFORM.props
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.pack.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.build.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.development.json
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\bundle\MVC OF CI PLATFORM.styles.css
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\projectbundle\MVC OF CI PLATFORM.bundle.scp.css
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CopyComplete
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\refint\MVC OF CI PLATFORM.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.pdb
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.genruntimeconfig.cache
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\ref\MVC OF CI PLATFORM.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\cloudscribe.Pagination.Models.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\cloudscribe.Web.Pagination.dll
+D:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cs
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.Development.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.staticwebassets.runtime.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.exe
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.deps.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.runtimeconfig.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.pdb
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Core.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Identity.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\cloudscribe.Pagination.Models.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\cloudscribe.Web.Pagination.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Humanizer.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MailKit.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\MimeKit.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\Mono.TextTemplating.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.CodeDom.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Drawing.Common.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Memory.Data.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Runtime.Caching.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Json.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Windows.Extensions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.pdb
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.AssemblyReference.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfoInputs.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfo.cs
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CoreCompileInputs.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cs
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cs
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.MVC OF CI PLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.build.MVC OF CI PLATFORM.props
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MVC OF CI PLATFORM.props
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MVC OF CI PLATFORM.props
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.pack.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.build.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.development.json
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\bundle\MVC OF CI PLATFORM.styles.css
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\projectbundle\MVC OF CI PLATFORM.bundle.scp.css
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CopyComplete
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\refint\MVC OF CI PLATFORM.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.pdb
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.genruntimeconfig.cache
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\obj\Debug\net6.0\ref\MVC OF CI PLATFORM.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\JetBrains.Annotations.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\X.PagedList.dll
+E:\GITHUB CI PLATFORM\MVC OF CI PLATFORM\MVC OF CI PLATFORM\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.Development.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\appsettings.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.staticwebassets.runtime.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.exe
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.deps.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.runtimeconfig.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MVC OF CI PLATFORM.pdb
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Core.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Azure.Identity.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\cloudscribe.Pagination.Models.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\cloudscribe.Web.Pagination.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Humanizer.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\JetBrains.Annotations.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MailKit.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\MimeKit.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\Mono.TextTemplating.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.CodeDom.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Drawing.Common.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Memory.Data.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Runtime.Caching.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Security.Permissions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Text.Json.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\System.Windows.Extensions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\X.PagedList.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM .repository.pdb
+E:\Mvc of ci platform\MVC OF CI PLATFORM\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.AssemblyReference.cache
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfoInputs.cache
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.AssemblyInfo.cs
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CoreCompileInputs.cache
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cs
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.MvcApplicationPartsAssemblyInfo.cache
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cache
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.RazorAssemblyInfo.cs
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.MVC OF CI PLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.build.MVC OF CI PLATFORM.props
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MVC OF CI PLATFORM.props
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.MVC OF CI PLATFORM.props
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.pack.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.build.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\staticwebassets.development.json
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\bundle\MVC OF CI PLATFORM.styles.css
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\scopedcss\projectbundle\MVC OF CI PLATFORM.bundle.scp.css
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.csproj.CopyComplete
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\refint\MVC OF CI PLATFORM.dll
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.pdb
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\MVC OF CI PLATFORM.genruntimeconfig.cache
+E:\Mvc of ci platform\MVC OF CI PLATFORM\obj\Debug\net6.0\ref\MVC OF CI PLATFORM.dll

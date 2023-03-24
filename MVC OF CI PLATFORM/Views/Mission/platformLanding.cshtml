@@ -1,0 +1,413 @@
+﻿@model CI_PLATFORM.Entities.ViewModels.MissionViewmodel
+@using Microsoft.AspNetCore.Http;
+@using X.PagedList.Mvc.Core;
+
+@{
+    var country = (List<Country>)ViewData["country"];
+    var city = (List<City>)ViewData["city"];
+    var theme = (List<MissionTheme>)ViewData["theme"];
+    var skill = (List<Skill>)ViewData["skill"];
+    var mission = (List<Mission>)ViewData["Mission"];
+    var missionskills = (List<MissionSkill>)ViewData["missionSkill"];
+    var goalmissions = (List<GoalMission>)ViewData["GoalMission"];
+}
+@inject IHttpContextAccessor Accessor;
+@{
+    Layout = "";
+}
+@{
+    var firstname_session = @Accessor.HttpContext.Session.GetString("username");
+    var userid_session = @Accessor.HttpContext.Session.GetString("userid");
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/platformlandingStyle.css">
+
+</head>
+
+<body>
+    <partial name="header" model="Model" />
+     <div>
+    @if (TempData["LOGIN"] != null)
+    {
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript">
+    toastr.success('@TempData["LOGIN"]');
+    </script>
+    }
+    </div>
+
+    <div class="d-flex mt-4 mx-5 justify-content-between" id="gridList">
+        <h3 class="ms-3">Explore <span id="displayOnExploreOnThisFeild" value="missons"> </span> missions</h3>
+       
+        <div class="d-flex mx-3">
+
+        
+
+            <select id="sort">
+                <option value="0">Sort by</option>
+                <option value="1">Newest</option>
+                <option value="2">Oldest</option>
+                <option value="3">Lowest Available Seats</option>
+                <option value="4">Highest Available Seats</option>
+                @if (userid_session != null)
+                {
+                    <option value="5">My Favorite</option>
+                }
+                <option value="6">Deadline</option>
+            </select>
+
+            <button class="border-0 btn btn-grid"><img src="/Assets/grid.png" alt="grid"></button>
+            <button class="border-0 btn px-0 btn-list"><img src="/Assets/list.png" alt="list"></button>
+        </div>
+    </div>
+    <div>
+        <div class="container grid-container" id="result">
+            <input type="text" value="@Model.totalrecords" id="displayOnExplore" hidden />
+            @if (Model.totalrecords == 0)
+            {
+                <div class="d-flex mt-5 flex-column">
+                    <div class="mx-auto"><h3>No Mission Found</h3></div>
+                    <div class="mx-auto mt-3"><button class="py-2 px-3 mx-auto apply">Submit New Mission <img src="~/Assets/right-arrow.png" alt="" class="ms-2"></button></div>
+                </div>
+            }
+            else
+            {
+                <div>
+                    <div class="row g-4 mx-auto mt-1">
+                        @{
+                            foreach (var i in Model.Missions)
+                            {
+                                // if (string.IsNullOrEmpty(searchQuery) || (i.Theme.Title + i.City.Name + i.Title + i.OrganizationName + i.ShortDescription).Contains(searchQuery))
+                                // {
+                                <div class="col-md-6 col-lg-4 item">
+                                    <div class=" card  d-flex">
+
+                                        <div class="d-flex flex-column position-relative">
+                                            @if (i.EndDate < DateTime.Now)
+                                            {
+                                                <div class="d-flex position-absolute pt-2 badgeclass">
+                                                    <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
+                                                </div>
+                                            }
+                                            <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
+                                                <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
+                                            </div>
+                                            <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
+                                            <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
+                                                <a>
+
+                                                    @{
+                                                        var fav = Model.favorite.FirstOrDefault(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session);
+                                                        if (fav != null)
+                                                        {
+                                                            <img class="heart rounded-circle   mb-1 mt-1" src="~/Assets/favorite.png" alt="">
+                                                        }
+                                                        else
+                                                        {
+                                                            <img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" alt="">
+
+                                                        }
+
+                                                    }
+
+                                                </a>
+                                                <a><img class="heart rounded-circle icon p-2" src="~/Assets/add1.png" alt=""></a>
+                                            </div>
+                                            <div class="mx-auto d-flex position-absolute px-3 imgTitle">@i.Theme.Title</div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <div class="d-flex justify-content-between card-start flex-wrap d-none">
+                                                <div class="d-flex">
+                                                    <div class="me-2">
+                                                        <img src="~/Assets/pin1.png" alt="">
+                                                        <span>@i.City.Name</span>
+                                                    </div>
+                                                    <div class="me-2">
+                                                        <img src="~/Assets/web.png" alt="">
+                                                        <span>@i.Theme.Title</span>
+                                                    </div>
+                                                    <div>
+                                                        <img src="~/Assets/organization.png" alt="">
+                                                        <span>@i.OrganizationName</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+
+                                                        @{
+                                                            var ratings = Model.rate.Where(m => m.MissionId == i.MissionId).Select(m => m.Rating);
+                                                            int avgRat = 0;
+                                                            if (ratings.Count() != 0)
+                                                            {
+                                                                avgRat = Convert.ToInt32(Queryable.Average(ratings.AsQueryable()));
+                                                            }
+                                                            for (int x = 1; x <= 5; x++)
+                                                            {
+                                                                if (x <= avgRat)
+                                                                {
+                                                                    <img src="~/Assets/selected-star.png" style="width: 30px"/>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <img src="~/Assets/star-empty.png" style="width: 30px"/>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h5 class="card-title">@i.Title</h5>
+                                            <p class="card-text">@i.Description</p>
+
+                                            <div class="d-flex justify-content-between grid-element">
+                                                <p>@i.OrganizationName</p>
+                                                <div>
+                                                    @{
+                                                        var rating = Model.rate.Where(m => m.MissionId == i.MissionId).Select(m => m.Rating);
+                                                        int avgRate = 0;
+                                                        if (rating.Count() != 0)
+                                                        {
+                                                            avgRate = Convert.ToInt32(Queryable.Average(rating.AsQueryable()));
+                                                        }
+                                                        for (int x = 1; x <= 5; x++)
+                                                        {
+                                                            if (x <= avgRate)
+                                                            {
+                                                                <img src="~/Assets/selected-star.png" style="width: 30px"/>
+                                                            }
+                                                            else
+                                                            {
+                                                                <img src="~/Assets/star-empty.png" style="width: 30px"/>
+                                                            }
+                                                        }
+                                                    }
+                                                </div>
+                                            </div>
+
+                                            <div class="position-relative d-flex justify-content-center grid-element">
+                                                <div class="mx-auto px-2 py-1 rounded-pill border duration d-flex grid-element z-1" style="background-color:white">
+                                                    @if (i.MissionType == "GOAL")
+                                                    {
+                                                        foreach (var gm in goalmissions.Where(m => m.MissionId == i.MissionId))
+                                                        {
+                                                            <span>@gm.GoalObjectiveText</span>
+                                                        }
+                                                    }
+
+                                                    else if (DateTime.Today > i.StartDate && DateTime.Today < i.EndDate)
+                                                    {
+                                                        <span>Ongoing Oppertunity</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span>From @i.StartDate?.ToString("dd/MM/yyyy") until @i.EndDate?.ToString("dd/MM/yyyy")</span>
+                                                    }
+                                                </div>
+                                                <hr class="position-absolute w-100">
+                                            </div>
+                                            <div class="d-flex justify-content-between mx-2 mt-2 grid-element">
+                                                <div class="d-flex">
+                                                    <img class="img1 mt-2 me-1" src="~/Assets/Seats-left.png" alt="Seats-left">
+                                                    <div>
+                                                        <span class="fs-6 mb-0">@i.Availability</span>
+                                                        <p class="m-0">Seats left</p>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="d-flex">
+                                                        @if (i.MissionType == "TIME")
+                                                        {
+                                                            <img class="img1 mt-2 me-1" src="~/Assets/hours.png" alt="Deadline">
+                                                            <div>
+                                                                <span class="fs-6 mb-0">@i.EndDate?.ToString("d")</span>
+                                                                <p class="m-0">Deadline</p>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
+                                                            <div>
+                                                                <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                                    <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                                                </div>
+                                                                <p class="m-0">8000 achieved</p>
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @* for apply button*@
+                                            <div class=" d-flex grid-element">
+                                                
+                                                    <a class="py-2 px-3 mx-auto apply nav-link" asp-action="volunteerpage" asp-controller="Mission" asp-route-Id="@i.MissionId">View Details <img src="~/Assets/right-arrow.png" alt="" class="ms-2"></a>
+                                                
+
+                                                
+
+                                            </div>
+
+                                            <div class="d-none justify-content-between mx-2 mt-2 flex-wrap card-start">
+                                                <div class="d-flex flex-wrap justify-content-between mb-2">
+                                                    <div class="d-flex me-2">
+                                                        <img class="img1 mt-2 me-1" src="~/Assets/Seats-left.png" alt="Seats-left">&nbsp;
+                                                        <div>
+                                                            <span class="fs-6 mb-0">@i.Availability</span>
+                                                            <p class="m-0">Seats left</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex me-2">
+                                                        @if (i.MissionType == "TIME")
+                                                        {
+                                                            <img class="img1 mt-2 me-1" src="~/Assets/hours.png" alt="Deadline">
+
+                                                            @:&nbsp;
+                                                            <div>
+                                                                <span class="fs-6 mb-0">@i.EndDate?.ToString("d")</span>
+                                                                <p class="m-0">Deadline</p>
+                                                            </div>
+                                                        }
+                                                        else
+                                                        {
+                                                            <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
+                                                            <div>
+                                                                <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25"
+                                                         aria-valuemin="0" aria-valuemax="100">
+                                                                    <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                                                </div>
+                                                                <p class="m-0">8000 achieved</p>
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                    <div class="d-flex me-2">
+                                                        <img class="img1 mt-2 me-1" src="~/Assets/calender.png" alt="Deadline">&nbsp;
+                                                        <div>
+                                                            <p class="m-0">From @i.StartDate?.ToString("d")</p>
+                                                            <p class="m-0">until @i.EndDate?.ToString("d")</p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="d-flex ">
+                                                        <img class="img1 mt-2 me-1" src="~/Assets/hours.png" alt="Deadline">&nbsp;
+                                                        <div>
+                                                            <span class="fs-6 mb-0">Skills</span>
+                                                            <p class="m-0">
+                                                                @foreach (var ms in missionskills)
+                                                                {
+                                                                    if (i.MissionId == ms.MissionId)
+                                                                    {
+                                                                        <span>@ms.Skill.SkillName, </span>
+                                                                    }
+                                                                }
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div>
+
+                                                    <a class="py-2 px-3 mx-auto apply nav-link" asp-action="volunteerpage" asp-controller="Mission" asp-route-Id="@i.MissionId">View Details <img src="~/Assets/right-arrow.png" alt="" class="ms-2"></a>
+
+                                                </div>
+                                            </div>
+                                            @*card-body end*@
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+                            }
+                        }
+                    </div>
+
+                    
+
+
+                </div>
+                <div class="d-flex justify-content-center page">
+                    @if (Model.Missions.PageCount > 1)
+                    {
+                        <div id="cnt" class="border px-2 h-100 rounded"></div>
+                        <ul class="pagination">
+
+                            @if (Model.Missions.HasPreviousPage)
+                            {
+                                <li class="page-item"> <a class="page-link" id="@Convert.ToInt32(@Model.Missions.PageNumber -1)"> &#60;&#60; </a></li>
+                            }
+                            else
+                            {
+                                <div class="page-item"> <a class="page-link disabled"> &#60;&#60; </a></div>
+                            }
+                            @for (int i = 1; i <= Model.Missions.PageCount; i++)
+                            {
+                                if (i == Model.Missions.PageNumber)
+                                {
+                                    <li class="page-item active"><a class="page-link" id="@i">@i</a></li>
+                                }
+                                else
+                                {
+                                    <li class="page-item"><a class="page-link" id="@i">@i</a></li>
+                                }
+
+
+                            }
+                            @if (Model.Missions.HasNextPage)
+                            {
+                                <li class="page-item"><a class="page-link" id="@Convert.ToInt32(@Model.Missions.PageNumber + 1)"> >></a></li>
+                            }
+                            else
+                            {
+                                <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.Missions.PageNumber + 1) "> >></a></div>
+                            }
+
+
+                        </ul>
+                    }
+                </div>
+                <div id="model" data-pageindex="@Model.Missions.PageNumber"></div>
+            }
+
+        </div>
+
+    </div>
+
+
+    
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="/js/plaltformLanding.js"></script>
+
+    <script>
+        function dispalyCout() {
+            let inputField = document.getElementById("displayOnExplore");
+            let spanField = document.getElementById("displayOnExploreOnThisFeild");
+            let inputValue = inputField.value;
+            console.log(inputValue);
+            spanField.textContent = inputValue;
+        }
+
+    </script>
+
+</body>
+
+</html>

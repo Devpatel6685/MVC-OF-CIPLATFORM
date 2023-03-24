@@ -1,0 +1,131 @@
+﻿@model CI_PLATFORM.Entities.ViewModels.storydetailviewmodel;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/css/story details.css">
+    <title>Story detail</title>
+</head>
+
+<body>
+    <partial name="header" model="Model" />
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="main">
+                    <div class="slider slider-for">
+                        <div><img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" class="w-100 imgheight" alt="" srcset=""></div>
+                        <div><img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" class="w-100 imgheight" alt="" srcset=""></div>
+                        <div><img src="~/Assets/img2.png" class="w-100 imgheight" alt="" srcset=""></div>
+                        <div><img src="~/Assets/img22.png" class="w-100 imgheight" alt="" srcset=""></div>
+                        <div><img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png " class="w-100 imgheight" alt="" srcset=""></div>
+                        <div><img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png " class="w-100 imgheight" alt="" srcset=""></div>
+                    </div>
+                    <div class="slider slider-nav w-100">
+                        <div><img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" class="w-100" alt="" srcset=""></div>
+                        <div><img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" class="w-100" alt="" srcset=""></div>
+                        <div><img src="~/Assets/img2.png" alt="" class="w-100" srcset=""></div>
+                        <div><img src="~/Assets/img22.png" alt="" class="w-100" srcset=""></div>
+                        <div><img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" class="w-100" alt="" srcset=""></div>
+                        <div><img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" class="w-100" alt="" srcset=""></div>
+                    </div>
+                    <!-- <div class="action">
+                      <a href="#" data-slide="3">go to slide 3</a>
+                      <a href="#" data-slide="4">go to slide 4</a>
+                      <a href="#" data-slide="5">go to slide 5</a>
+                    </div> -->
+                </div>
+            </div>
+
+
+            <div class=" col col-md-6 d-flex flex-column ps-3">
+
+                <div class="d-flex flex-column mt-2">
+
+                    <img src="~/Assets/volunteer1.png" class="rounded-circle image mt-2" alt="">
+                    <div class="d-flex mt-2 justify-content-between">
+                        <p>@Model.Story.User.FirstName @Model.Story.User.LastName</p>
+
+                        <div class="rounded-pill border px-2 py-1"><img src="~/Assets/eye.png" class="eye" alt="">12000views</div>
+                    </div>
+
+                </div>
+                <div class="mt-4">
+                    <p>
+                        @*Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum veritatis perspiciatis animi exercitationem expedita tempora architecto itaque harum quod ea, sed eos natus molestiae rem! Sequi esse, adipisci molestias quos quisquam labore repudiandae
+                        excepturi recusandae, harum mollitia unde ex reiciendis. Dolorum deleniti iste, consequuntur dolor non magni similique adipisci maiores esse eveniet fugiat neque explicabo enim, vel omnis accusamus voluptatum quidem aliquid quasi
+                        unde? Modi nihil consectetur, sunt rem nemo fugit veritatis ad molestiae officia blanditiis, nisi voluptatibus iusto obcaecati, maiores quidem corrupti. Ut, rem. Facilis aliquam iste perferendis repudiandae, atque tempore commodi
+                        voluptas rerum quia. Delectus, ducimus nesciunt. Neque, aut sunt! Rem maxime voluptas aperiam excepturi atque dicta recusandae nobis cupiditate veritatis iusto quidem enim deleniti ea tempore, earum, incidunt assumenda sunt sit
+*@
+                        @Model.Story.User.WhyIVolunteer
+                    </p>
+                </div>
+                <div class=" d-flex justify-context-between">
+                    <button class="py-2 px-3 mx-auto  btn rounded-pill border apply" >
+                        <img src="~/Assets/add1.png" alt=""
+                             class="ms-2"> Recommend to a
+                        Co-worker
+                    </button>
+
+                    <a class="py-2 px-3 mx-auto btn rounded-pill border apply" asp-action="volunteerpage" asp-controller="Mission" asp-route-id="@Model.Story.Mission.MissionId">
+                        Open Mission<img src="~/Assets/right-arrow.png" alt=""
+                                         class="ms-2">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 para ps-3">
+
+            <div class="h5 position-relative border-bottom">
+                @Model.Story.Mission.Title
+                <hr class="Border-black position-absolute">
+            </div>
+
+
+            <div>
+              @Model.Story.Description
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright mt-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-light">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Terms of Use</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 rights">
+                    <span class="text-light"> ©️ 2019 Optimy.com. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="/js/storydetails.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>

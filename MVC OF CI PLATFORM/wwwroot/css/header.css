@@ -1,0 +1,86 @@
+﻿@* For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860 *@ @ {
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.drop {
+    overflow-y: auto;
+    height: 100px;
+}
+
+.dropdown a img {
+    width: 50px;
+    height: 50px;
+}
+
+#prof-drop {
+    position: absolute;
+    right: 5px;
+    top: 3px;
+}
+
+#search-border {
+    border: none;
+}
+
+#navbarSupportedContent {
+    width: 240px;
+}
+
+#filter {
+    width: 240px;
+}
+
+.filter-list {
+    / padding:6px 10px;
+    / background-color: white;
+    border: 1px solid #808080;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.filter-close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+    color: #888;
+}
+
+.filters-section {
+    margin-top: 2%;
+}
+
+@media screen and (max-width:768px) {
+    #filter {
+        flex-direction: column !important;
+    }
+
+    .drop {
+        position: static !important;
+        transform: unset !important;
+    }
+
+    .noborder {
+        border: none !important;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    #hide {
+        display: none;
+    }
+
+    #drop-pos {
+        left: -62px;
+    }
+
+    .dropdown-border {
+        border: none;
+    }
+}
