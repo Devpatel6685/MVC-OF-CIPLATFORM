@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace CI_PLATFORM_.repository.Repository
 {
@@ -18,15 +19,16 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext= ciplatfromdbcontext;
         }
 
-        public StoryViewModel Getstorylist()
+        public StoryViewModel Getstorylist(int pageIndex)
         {
-           var stories = _ciplatfromdbcontext.Stories.Include(u => u.User).Include(t => t.Mission).ToList();
+            int pageSize = 9;
+            var stories = _ciplatfromdbcontext.Stories.Include(u => u.User).Include(t => t.Mission).ToList();
             var mission = _ciplatfromdbcontext.Missions.Include(m=>m.Theme).ToList();
             
             StoryViewModel story = new StoryViewModel()
             {
                Missions= mission,
-               Stories = stories,
+               Stories = stories.ToPagedList(pageIndex, pageSize),
             };
             return story;
 

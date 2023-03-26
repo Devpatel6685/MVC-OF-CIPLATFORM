@@ -14,16 +14,16 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _volunterstory = volunterstory;       
         }
 
-        public IActionResult volunteerstory()
+        public IActionResult volunteerstory(int pageIndex = 1)
         {    
-            var stories = _volunterstory.Getstorylist();
+            var stories = _volunterstory.Getstorylist(pageIndex);
             return View(stories);
         }
 
         public IActionResult Shareyourstory()
         {
 
-            var stories = _volunterstory.Getstorylist();
+            var stories = _volunterstory.Getstorylist(1);
             return View(stories);
         }
         public IActionResult storydetails(int id)

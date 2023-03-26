@@ -4908,11 +4908,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Mvc of ci platform\\CI PLATFORM .repository\\CI PLATFORM .repository.csproj",
+      "projectUniqueName": "E:\\DEV MVC OF CIPLATFORM\\CI PLATFORM .repository\\CI PLATFORM .repository.csproj",
       "projectName": "CI PLATFORM .repository",
-      "projectPath": "E:\\Mvc of ci platform\\CI PLATFORM .repository\\CI PLATFORM .repository.csproj",
+      "projectPath": "E:\\DEV MVC OF CIPLATFORM\\CI PLATFORM .repository\\CI PLATFORM .repository.csproj",
       "packagesPath": "C:\\Users\\DEV PATEL\\.nuget\\packages\\",
-      "outputPath": "E:\\Mvc of ci platform\\CI PLATFORM .repository\\obj\\",
+      "outputPath": "E:\\DEV MVC OF CIPLATFORM\\CI PLATFORM .repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4934,8 +4934,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Mvc of ci platform\\CI PLATFORM.Entities\\CI PLATFORM.Entities.csproj": {
-              "projectPath": "E:\\Mvc of ci platform\\CI PLATFORM.Entities\\CI PLATFORM.Entities.csproj"
+            "E:\\DEV MVC OF CIPLATFORM\\CI PLATFORM.Entities\\CI PLATFORM.Entities.csproj": {
+              "projectPath": "E:\\DEV MVC OF CIPLATFORM\\CI PLATFORM.Entities\\CI PLATFORM.Entities.csproj"
             }
           }
         }

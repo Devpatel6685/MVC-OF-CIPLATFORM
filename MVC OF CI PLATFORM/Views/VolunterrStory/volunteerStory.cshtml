@@ -1,8 +1,8 @@
 ﻿@model CI_PLATFORM.Entities.ViewModels.StoryViewModel;
+@using X.PagedList.Mvc.Core;
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
 
 <body>
     <partial name="header" model="Model" />
-   
+
     <div class="shareStory">
         <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" alt="" id="img">
         <div class="overlay">
@@ -57,17 +57,51 @@
                 </div>
             </div>
         }
-        </div>
+    </div>
+    <div class="d-flex justify-content-between mx-5 page">
+        @if (Model.Stories.PageCount > 1)
+        {
+            <div id="cnt" class="border px-2 h-100 rounded"></div>
+            <ul class="pagination">
+
+                @if (Model.Stories.HasPreviousPage)
+                {
+                    <li class="page-item"> <a class="page-link" id="@Convert.ToInt32(@Model.Stories.PageNumber -1)"> &#60;&#60; </a></li>
+                }
+                else
+                {
+                    <div class="page-item"> <a class="page-link disabled"> &#60;&#60; </a></div>
+                }
+                @for (int i = 1; i <= Model.Stories.PageCount; i++)
+                {
+                    if (i == Model.Stories.PageNumber)
+                    {
+                        <li class="page-item active"><a class="page-link" id="@i">@i</a></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><a class="page-link" id="@i">@i</a></li>
+                    }
+
+                }
+                @if (Model.Stories.HasNextPage)
+                {
+                    <li class="page-item"><a class="page-link" id="@Convert.ToInt32(@Model.Stories.PageNumber + 1)"> >></a></li>
+                }
+                else
+                {
+                    <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.Stories.PageNumber + 1) "> >></a></div>
+                }
 
 
-    @*<script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  integrity ="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>*@
-    <script src ="~/js/plaltformLanding.js"></script>
+            </ul>
+        }
+    </div>
+    <div id="model" data-pageindex="@Model.Stories.PageNumber"></div>
+
+
+
+    <script src="~/js/VolunteerStory.js"></script>
 </body>
 
 </html>

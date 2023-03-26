@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hNBwoRgxbpWlc2zBU3n5YYXrJ04pqI3xNfvhA0VQuMI=",
+  "Hash": "l6xvZkSIjgr0DHndwASbDz5pDAsIoTFNRregZR90H4E=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MVC OF CI PLATFORM\\wwwroot",
       "Source": "MVC OF CI PLATFORM",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MVC OF CI PLATFORM.styles.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MVC OF CI PLATFORM.styles.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "MVC OF CI PLATFORM.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MVC OF CI PLATFORM.styles.css"
+      "OriginalItemSpec": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MVC OF CI PLATFORM.styles.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVC OF CI PLATFORM.bundle.scp.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVC OF CI PLATFORM.bundle.scp.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Computed",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "MVC OF CI PLATFORM.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVC OF CI PLATFORM.bundle.scp.css"
+      "OriginalItemSpec": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MVC OF CI PLATFORM.bundle.scp.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\404-Page-image.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\404-Page-image.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/404-Page-image.png",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\404-Page-image.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\achieved.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\achieved.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/achieved.png",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\achieved.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\add.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\add.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/add.png",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\add.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\add1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\add1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/add1.png",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\add1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Already-volunteered.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Already-volunteered.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Already-volunteered.png",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Already-volunteered.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Animal-welfare-_-save-birds-campaign.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Animal-welfare-_-save-birds-campaign.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Animal-welfare-_-save-birds-campaign.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Animal-welfare-_-save-birds-campaign.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Animal-welfare-_-save-birds-campaign-1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Animal-welfare-_-save-birds-campaign-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Animal-welfare-_-save-birds-campaign-1.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Animal-welfare-_-save-birds-campaign-1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\arrow.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\arrow.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/arrow.png",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\arrow.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Assets.zip",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Assets.zip",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Assets.zip",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Assets.zip"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\bell.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\bell.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/bell.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\bell.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\bell-big.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\bell-big.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/bell-big.png",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\bell-big.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\bin.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\bin.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/bin.png",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\bin.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\calender.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\calender.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/calender.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\calender.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\cancel.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\cancel.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/cancel.png",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\cancel.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\cancel1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\cancel1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/cancel1.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\cancel1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\checked.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\checked.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/checked.png",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\checked.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\cross.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\cross.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/cross.png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\cross.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\deadline.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\deadline.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/deadline.png",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\deadline.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\doc.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\doc.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/doc.png",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\doc.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\down.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\down.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/down.png",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\down.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\drag-and-drop.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\drag-and-drop.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/drag-and-drop.png",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\drag-and-drop.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\drop-down.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\drop-down.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/drop-down.png",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\drop-down.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Education-Supplies-for-Every--Pair-of-Shoes-Sold.png",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\eye.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\eye.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/eye.png",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\eye.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\facebook.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\facebook.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/facebook.png",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\facebook.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\favorite.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\favorite.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/favorite.png",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\favorite.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\filter.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\filter.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/filter.png",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\filter.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\gift.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\gift.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/gift.png",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\gift.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\graph.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\graph.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/graph.png",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\graph.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\grid.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\grid.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/grid.png",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\grid.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability.png",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability-2.png",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability-3.png",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability-5.png",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\heart.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\heart.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/heart.png",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\heart.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\heart1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\heart1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/heart1.png",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\heart1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\hours.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\hours.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/hours.png",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\hours.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\image.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\image.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/image.png",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\image.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\image1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\image1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/image1.png",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\image1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\image2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\image2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/image2.png",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\image2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img.png",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img1.png",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img11.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img11.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img11.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img11.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img2.png",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img22.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img22.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img22.png",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img22.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img3.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img3.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img3.png",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img3.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img33.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\img33.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/img33.png",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\img33.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\info.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\info.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/info.png",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\info.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\left.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\left.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/left.png",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\left.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\left1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\left1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/left1.png",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\left1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\linkedin.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\linkedin.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/linkedin.png",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\linkedin.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\list.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\list.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/list.png",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\list.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\logo.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\logo.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/logo.png",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\logo.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\mission.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\mission.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/mission.png",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\mission.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\my-story.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\my-story.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/my-story.png",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\my-story.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\new-message.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\new-message.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/new-message.png",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\new-message.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\next.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\next.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/next.png",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\next.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Nourish-the-Children-in--African-country.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Nourish-the-Children-in--African-country.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Nourish-the-Children-in--African-country.png",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Nourish-the-Children-in--African-country.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Nourish-the-Children-in--African-country-1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Nourish-the-Children-in--African-country-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Nourish-the-Children-in--African-country-1.png",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Nourish-the-Children-in--African-country-1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Open-Volunteering-Requests.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Open-Volunteering-Requests.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Open-Volunteering-Requests.png",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Open-Volunteering-Requests.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\organization.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\organization.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/organization.png",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\organization.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\pdf.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\pdf.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/pdf.png",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\pdf.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\pin.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\pin.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/pin.png",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\pin.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\pin1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\pin1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/pin1.png",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\pin1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Plantation-and-Afforestation-programme.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Plantation-and-Afforestation-programme.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Plantation-and-Afforestation-programme.png",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Plantation-and-Afforestation-programme.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Plantation-and-Afforestation-programme-1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Plantation-and-Afforestation-programme-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Plantation-and-Afforestation-programme-1.png",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Plantation-and-Afforestation-programme-1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\previous.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\previous.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/previous.png",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\previous.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/right.png",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\right.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-arrow.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-arrow.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/right-arrow.png",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\right-arrow.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-arrow1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-arrow1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/right-arrow1.png",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\right-arrow1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-arrow2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-arrow2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/right-arrow2.png",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\right-arrow2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-white.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\right-white.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/right-white.png",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\right-white.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\search.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\search.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/search.png",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\search.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Seats-left.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Seats-left.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Seats-left.png",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Seats-left.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\selected-star.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\selected-star.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/selected-star.png",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\selected-star.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\settings.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\settings.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/settings.png",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\settings.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\star.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\star.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/star.png",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\star.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\star-empty.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\star-empty.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/star-empty.png",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\star-empty.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Thumbs.db",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Thumbs.db",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Thumbs.db",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Thumbs.db"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\twitter.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\twitter.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/twitter.png",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\twitter.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\up.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\up.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/up.png",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\up.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/user.png",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\user.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/user1.png",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\user1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user-img.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user-img.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/user-img.png",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\user-img.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user-img-large.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\user-img-large.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/user-img-large.png",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\user-img-large.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer1.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer1.png",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer1.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer2.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer2.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer2.png",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer2.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer3.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer3.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer3.png",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer3.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer4.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer4.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer4.png",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer4.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer5.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer5.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer5.png",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer5.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer6.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer6.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer6.png",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer6.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer7.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer7.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer7.png",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer7.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer8.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer8.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer8.png",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer8.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer9.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\volunteer9.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/volunteer9.png",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\volunteer9.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Volunteering-Rank.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Volunteering-Rank.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Volunteering-Rank.png",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Volunteering-Rank.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Voted-Missions.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\Voted-Missions.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/Voted-Missions.png",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Voted-Missions.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\web.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\web.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/web.png",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\web.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Assets\\xlsx.png",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Assets\\xlsx.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Assets/xlsx.png",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\Assets\\xlsx.png"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\header.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\header.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/header.css",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\login.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\login.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/login.css",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\page2.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\page2.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/page2.css",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\css\\page2.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\platformlandingStyle.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\platformlandingStyle.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/platformlandingStyle.css",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\css\\platformlandingStyle.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\registeration.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\registeration.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/registeration.css",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\css\\registeration.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\resetpage.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\resetpage.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/resetpage.css",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\css\\resetpage.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\Shareyourstory.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\Shareyourstory.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/Shareyourstory.css",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\css\\Shareyourstory.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\site.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\site.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\story details.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\story details.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/story details.css",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\css\\story details.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\volunterrpage.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\volunterrpage.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/volunterrpage.css",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\css\\volunterrpage.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\css\\volunterrstorycss.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\volunterrstorycss.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "css/volunterrstorycss.css",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\css\\volunterrstorycss.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\Document\\jquery.pdf",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Document\\jquery.pdf",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "Document/jquery.pdf",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\Document\\jquery.pdf"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\favicon.ico",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\favicon.ico",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\js\\plaltformLanding.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\plaltformLanding.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "js/plaltformLanding.js",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\js\\plaltformLanding.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\js\\Shareyourstory.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Shareyourstory.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "js/Shareyourstory.js",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\js\\Shareyourstory.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\js\\site.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\site.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\js\\storydetails.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\storydetails.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "js/storydetails.js",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\js\\storydetails.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\js\\Volunteerpage.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Volunteerpage.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "js/Volunteerpage.js",
       "AssetKind": "All",
@@ -2244,10 +2244,27 @@
       "OriginalItemSpec": "wwwroot\\js\\Volunteerpage.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\VolunteerStory.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "js/VolunteerStory.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\VolunteerStory.js"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2261,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2278,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2295,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2312,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2329,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2346,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2363,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2380,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2397,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2414,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2431,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2448,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2465,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2482,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2499,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2516,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2533,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2550,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2567,10 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2584,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2601,10 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2618,10 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2635,10 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2652,10 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2669,10 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2686,10 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2703,10 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2720,10 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2737,10 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2754,10 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2771,10 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2788,10 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2805,10 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2822,10 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2839,10 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2856,10 +2873,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2873,10 +2890,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2890,10 +2907,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2907,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2924,10 +2941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2941,10 +2958,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2958,10 +2975,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2975,10 +2992,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2992,10 +3009,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -3009,10 +3026,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -3026,10 +3043,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -3043,10 +3060,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -3060,10 +3077,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -3077,10 +3094,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -3094,10 +3111,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -3111,10 +3128,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -3128,10 +3145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -3145,10 +3162,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -3162,10 +3179,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -3179,10 +3196,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -3196,10 +3213,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Mvc of ci platform\\MVC OF CI PLATFORM\\wwwroot\\",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
       "BasePath": "_content/MVC OF CI PLATFORM",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

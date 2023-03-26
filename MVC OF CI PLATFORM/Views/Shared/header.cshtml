@@ -29,7 +29,6 @@
 
 </head>
 <body>
-
 <nav class="navbar navbar-expand-sm bg-body-light border-bottom">
     <div class="container-fluid mx-auto">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +63,7 @@
         </div>
     </div>
 </nav>
-@if (User.Identity.IsAuthenticated)
+@if (firstname_session!=null)
 {
     <div class="dropdown mx-5" id="prof-drop">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -98,21 +97,12 @@ else
 
 }
 
-
-@{
-    //var searchQuery = Context.Request.Query["q"];
-
-}
 <div class="container-fluid border-bottom navbar-expand-md">
     <div class="row mx-5 d-flex justify-content-between">
         <div class="col-11 col-md-4">
             <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
             <input class="form-control me-2 ps-5 pt-3 pb-3 search-border" id="search-input" type="search" placeholder="Search" aria-label="Search" name="SearchInputdata">
         </div>
-        @*<div class="d-flex col-11 col-md-4" role="search">
-        <img src="/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
-        <input class="form-control me-2 ps-5 pt-3 pb-3" id="search-border" type="search" placeholder="Search" aria-label="Search">
-        </div>*@
         <button class="navbar-toggler col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><img src="/Assets/filter.png" alt=""></span>
         </button>
@@ -150,6 +140,7 @@ else
     </div>
 </div>
 <div class="filters-section d-flex align-items-center flex-wrap justify-content-center">
+
 </div>
 <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

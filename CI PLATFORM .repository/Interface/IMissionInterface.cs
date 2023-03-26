@@ -22,13 +22,10 @@ namespace CI_PLATFORM_.repository.Interface
 
         public string recommend(List<long> userids, long misssionid, string fromuserId);
         public List<User> GetUsers();
-
-        /*public string comments(long missionid, long userId);*/
         public void comments(long missionid, long userId, string comment);
         public void apply(long missionid, long userId);
         public string Rating(long missionid, int rating, long userId);
         public string favroite (string userId, long missionid);
-        public string recomand(List<long> userids);
 
     }
 }

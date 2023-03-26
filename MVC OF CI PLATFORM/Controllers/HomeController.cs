@@ -58,10 +58,10 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                     ModelState.AddModelError("Password", entity);
                     return View("LOGIN");
                 }
-                var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, user.Email) },
+               /* var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, user.Email) },
                     CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);*/
                 var Users = entity.Split(',');
                 HttpContext.Session.SetString("username", Users[0]);
                 HttpContext.Session.SetString("userid", Users[1]);
@@ -73,7 +73,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult LogOut()
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+/*            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+*/           
             HttpContext.Session.Clear();
             return RedirectToAction("PlatformLanding", "Mission");
         }
@@ -161,10 +162,6 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return View();
         }
 
-     /*   [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }*/
+     
     }
 }

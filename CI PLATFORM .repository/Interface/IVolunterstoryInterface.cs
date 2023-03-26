@@ -10,7 +10,7 @@ namespace CI_PLATFORM_.repository.Interface
 {
     public interface IVolunterstoryInterface
     {
-        public StoryViewModel Getstorylist();
+        public StoryViewModel Getstorylist(int pageIndex);
 
         public storydetailviewmodel GetStory(int id);
 

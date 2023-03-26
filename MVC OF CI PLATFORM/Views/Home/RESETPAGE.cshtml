@@ -1,9 +1,8 @@
-﻿@model CI_PLATFORM.Entities.ViewModels.resetviemodel; 
+﻿@model CI_PLATFORM.Entities.ViewModels.resetviemodel;
 
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +68,6 @@
 
                 <form method="post" asp-action="RESETPAGE" asp-controller="home">
                     <div class=" mb-3 mx-3 form-group">
-                        @*<input type="hidden" asp-for="Token" />*@
                         <label for="NewPassword">New Password</label>
                         <input type="password" asp-for="Password" class="form-control" placeholder="*********">
                         <span asp-validation-for="Password" class="text-danger"></span>
@@ -120,9 +118,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous" asp-append-version="true"></script>
-   
-           <partial name="_ValidationScriptsPartial" />
-     
+
+    <partial name="_ValidationScriptsPartial" />
+
 </body>
 
 

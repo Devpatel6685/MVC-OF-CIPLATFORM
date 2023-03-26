@@ -33,18 +33,17 @@ namespace CI_PLATFORM_.repository.Repository
             int pagesize = 9;
             var mission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Where(model => (keyword == null || model.Title.Contains(keyword) || model.Theme.Title.Contains(keyword) || model.City.Name.Contains(keyword)) && ((countryids.Contains(model.CountryId)) || countryids.Count() == 0) && ((cityids.Contains(model.CityId)) || cityids.Count() == 0) && ((themeids.Contains(model.ThemeId)) || themeids.Count() == 0)).AsQueryable();
             var rates = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).Include(m => m.Mission).ToList();
-
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
-            var addfavrouitebyuserid = _cIPLATFORMDbContext.FavouriteMissions.Where(u=>u.UserId.ToString() == userid).ToList();
+            var addfavrouitebyuserid = _cIPLATFORMDbContext.FavouriteMissions.Where(u => u.UserId.ToString() == userid).ToList();
 
 
 
             MissionViewmodel listOfMission = new MissionViewmodel()
-            {   
-              totalrecords = mission.Count(),
+            {
+                totalrecords = mission.Count(),
                 rate = rates,
                 favorite = addfavorite
-                
+
             };
             //SORT BY
             var sortmission = mission.ToList();
@@ -66,13 +65,12 @@ namespace CI_PLATFORM_.repository.Repository
             }
             else if (sortId == 5)
             {
-                sortmission = sortmission.OrderByDescending(p =>addfavrouitebyuserid.Any(f => f.MissionId == p.MissionId)).ToList();
+                sortmission = sortmission.OrderByDescending(p => addfavrouitebyuserid.Any(f => f.MissionId == p.MissionId)).ToList();
             }
             listOfMission.Missions = sortmission.ToPagedList(pageIndex, pagesize);
             return listOfMission;
         }
-
-        public VolunteerMissionViewmodel GetMissionId(long Id, string userId , int pageIndex)
+        public VolunteerMissionViewmodel GetMissionId(long Id, string userId, int pageIndex)
         {
             List<string> skills = _cIPLATFORMDbContext.MissionSkills
                         .Where(m => m.MissionId == Id)
@@ -85,9 +83,9 @@ namespace CI_PLATFORM_.repository.Repository
             var rate = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).ToList();
             var mission_skills = _cIPLATFORMDbContext.MissionSkills.Include(m => m.Skill).ToList();
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.SingleOrDefault(m => m.MissionId == Id && m.UserId.ToString() == userId) == null ? false : true;
-            var applied =_cIPLATFORMDbContext.MissionApplications.SingleOrDefault(m=>m.MissionId == Id && m.UserId.ToString() == userId) == null ? false : true;
-            var comments = _cIPLATFORMDbContext.Comments.Include(m => m.User).Where(m => m.MissionId == mission.MissionId).OrderByDescending(c=>c.CreatedAt).ToList();
-            var missionapplication = _cIPLATFORMDbContext.MissionApplications.Include(m=>m.User).Where(m=>m.MissionId == mission.MissionId && m.UserId.ToString() != userId).ToList();
+            var applied = _cIPLATFORMDbContext.MissionApplications.SingleOrDefault(m => m.MissionId == Id && m.UserId.ToString() == userId) == null ? false : true;
+            var comments = _cIPLATFORMDbContext.Comments.Include(m => m.User).Where(m => m.MissionId == mission.MissionId).OrderByDescending(c => c.CreatedAt).ToList();
+            var missionapplication = _cIPLATFORMDbContext.MissionApplications.Include(m => m.User).Where(m => m.MissionId == mission.MissionId && m.UserId.ToString() != userId).ToList();
             var missiondocuments = _cIPLATFORMDbContext.MissionDocuments.Where(m => m.MissionId == mission.MissionId).ToList();
 
             VolunteerMissionViewmodel volunteerMission = new VolunteerMissionViewmodel()
@@ -115,7 +113,7 @@ namespace CI_PLATFORM_.repository.Repository
                 rate = rate,
                 applied = applied,
                 MissionApplications = missionapplication.ToPagedList(pageIndex, 9),
-                Documents= missiondocuments,
+                Documents = missiondocuments,
 
 
             };
@@ -151,7 +149,7 @@ namespace CI_PLATFORM_.repository.Repository
             }
             return "successfull";
         }
-       
+
         public void apply(long missionid, long userId)
         {
             var appliedmission = _cIPLATFORMDbContext.MissionApplications.Where(x => x.MissionId == missionid && x.UserId == userId).SingleOrDefault();
@@ -167,7 +165,8 @@ namespace CI_PLATFORM_.repository.Repository
         public string favroite(string userId, long missionid)
         {
             var Favroite1 = _cIPLATFORMDbContext.FavouriteMissions.SingleOrDefault(m => m.UserId.ToString() == userId && m.MissionId == missionid);
-            if (Favroite1 == null) {
+            if (Favroite1 == null)
+            {
                 FavouriteMission favroite = new FavouriteMission
                 {
                     MissionId = missionid,
@@ -202,13 +201,13 @@ namespace CI_PLATFORM_.repository.Repository
             _cIPLATFORMDbContext.Comments.Add(cmt);
             _cIPLATFORMDbContext.SaveChanges();
 
-           
+
         }
-      
+
         public relatedmissionviewmodel GetRelatedMission(long Id)
         {
             var missions = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Where(ms => ms.MissionId == Id).FirstOrDefault();
-            var RelatedMission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Where(ms =>ms.MissionId != missions.MissionId && (ms.City.Name == missions.City.Name || ms.Theme.Title == missions.Theme.Title || ms.Country.Name == missions.Country.Name)).ToList();
+            var RelatedMission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Where(ms => ms.MissionId != missions.MissionId && (ms.City.Name == missions.City.Name || ms.Theme.Title == missions.Theme.Title || ms.Country.Name == missions.Country.Name)).ToList();
             var goalmission = _cIPLATFORMDbContext.GoalMissions.ToList();
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
             var rates = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).Include(m => m.Mission).ToList();
@@ -232,8 +231,7 @@ namespace CI_PLATFORM_.repository.Repository
                 missionList = RelatedMission,
                 goalMissionList = goalmission,
                 favorite = addfavorite,
-                rate=rates,
-
+                rate = rates,
 
 
             };
@@ -247,7 +245,7 @@ namespace CI_PLATFORM_.repository.Repository
         }
         public string recommend(List<long> userids, long misssionid, string fromuserId)
         {
-          
+
             var mailBody = "<h1>Click this link to view mission</h1><br><h2><a href='https://localhost:7093/Mission/volunteerpage/?id=" + misssionid + "' >View Mission</h2>";
             var users = _cIPLATFORMDbContext.Users.Where(u => userids.Contains(u.UserId));
             var email = new MimeMessage();
@@ -257,7 +255,7 @@ namespace CI_PLATFORM_.repository.Repository
 
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("devppatel6685@gmail.com", "uvqekuakbgseptda"); 
+            smtp.Authenticate("devppatel6685@gmail.com", "uvqekuakbgseptda");
 
             foreach (var user in users)
             {
@@ -280,12 +278,9 @@ namespace CI_PLATFORM_.repository.Repository
 
 
 
-        public string recomand(List<long> userids)
-        {
-            throw new NotImplementedException();
-        }
+
     }
- }
+}
 
 
 

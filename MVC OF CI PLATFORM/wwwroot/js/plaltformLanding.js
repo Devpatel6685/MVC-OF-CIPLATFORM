@@ -1,6 +1,4 @@
 
-
-
 var pageLoaded = false;
 $(document).ready(function () {
   
@@ -15,12 +13,11 @@ $(document).ready(function () {
         $('#city').attr('disabled', false);
         $('#city').parent().find('a').attr('disabled', false);
         var link = "/Mission/City?id=";
-        /*        var id = $('.country:checkbox:checked');*/
+       
         var ids = []
         $('.country:checkbox:checked').each(function () {
             link = link + ($(this).attr("id")) + '&id=';
-        });
-        /*        ids = JSON.stringify( 'id'= ids);*/
+        });      
    
         $('#city').empty();
         $.ajax({
@@ -226,3 +223,5 @@ $(document).on('click', '.pagination li', function (e) {
     console.log($(this).find('a').attr('id'));
     filterMission();
 })
+
+

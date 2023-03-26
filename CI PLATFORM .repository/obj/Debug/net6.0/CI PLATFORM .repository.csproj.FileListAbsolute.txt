@@ -66,3 +66,20 @@ E:\Mvc of ci platform\CI PLATFORM .repository\obj\Debug\net6.0\refint\CI PLATFOR
 E:\Mvc of ci platform\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.pdb
 E:\Mvc of ci platform\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.genruntimeconfig.cache
 E:\Mvc of ci platform\CI PLATFORM .repository\obj\Debug\net6.0\ref\CI PLATFORM .repository.dll
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\bin\Debug\net6.0\CI PLATFORM .repository.deps.json
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\bin\Debug\net6.0\CI PLATFORM .repository.runtimeconfig.json
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\bin\Debug\net6.0\CI PLATFORM .repository.dll
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\bin\Debug\net6.0\CI PLATFORM .repository.pdb
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\bin\Debug\net6.0\CI PLATFORM.Entities.dll
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\bin\Debug\net6.0\CI PLATFORM.Entities.pdb
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.csproj.AssemblyReference.cache
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.AssemblyInfoInputs.cache
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.AssemblyInfo.cs
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.csproj.CoreCompileInputs.cache
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.csproj.CopyComplete
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.dll
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\refint\CI PLATFORM .repository.dll
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.pdb
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\CI PLATFORM .repository.genruntimeconfig.cache
+E:\DEV MVC OF CIPLATFORM\CI PLATFORM .repository\obj\Debug\net6.0\ref\CI PLATFORM .repository.dll

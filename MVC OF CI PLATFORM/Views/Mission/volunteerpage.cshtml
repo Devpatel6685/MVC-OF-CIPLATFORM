@@ -9,7 +9,6 @@
     var firstname_session = @Accessor.HttpContext.Session.GetString("username");
     var userid_session = @Accessor.HttpContext.Session.GetString("userid");
 }
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Mission Page</title>
-
-    @*    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    *@
-    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="/css/volunterrpage.css">
@@ -29,18 +25,9 @@
 
 <body>
     <partial name="header" model="Model" />
-    @*@if (firstname_session == null)
-    {
-    <h1> LOGIN TO ACCESS</h1>
-    }
-    else
-    {*@
-
     <div class="container">
         <div class="row">
-            <div class=" col-md-6">
-                <!-- <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png" class="img-fluid h-100"
-                    alt=""> -->
+            <div class=" col-md-6">              
                 <div class="container">
                     <div class="mySlides">
 
@@ -417,11 +404,11 @@
                                                 {
                                                     if (i <= avgRate)
                                                     {
-                                                        <img src="~/Assets/selected-star.png" style="width: 30px"/>
+                                                        <img src="~/Assets/selected-star.png" style="width: 30px" />
                                                     }
                                                     else
                                                     {
-                                                        <img src="~/Assets/star-empty.png" style="width: 30px"/>
+                                                        <img src="~/Assets/star-empty.png" style="width: 30px" />
                                                     }
                                                 }
                                             }
@@ -529,11 +516,11 @@
                                                     {
                                                         if (x <= avgRat)
                                                         {
-                                                            <img src="~/Assets/selected-star.png" style="width:30px"/>
+                                                            <img src="~/Assets/selected-star.png" style="width:30px" />
                                                         }
                                                         else
                                                         {
-                                                            <img src="~/Assets/star-empty.png" style="width: 30px"/>
+                                                            <img src="~/Assets/star-empty.png" style="width: 30px" />
                                                         }
                                                     }
                                                 }
@@ -592,33 +579,20 @@
         </div>
     </div>
 
-    @*}*@
     <div id="model" data-missionid="@Model.Item1.MissionId"
          data-totalitem="@Model.Item1.MissionApplications.TotalItemCount"
          data-userid="@userid_session"
-         data-pagenumber="@Model.Item1.MissionApplications.PageNumber"></div>
-
+         data-pagenumber="@Model.Item1.MissionApplications.PageNumber">
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    @*<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"> </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"  integrity ="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>*@
     <script src="~/js/Volunteerpage.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
-
-
-
-
-    @*<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>*@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    @*    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    *@
-    @*<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    *@
-
+    
 
 </body>
 
