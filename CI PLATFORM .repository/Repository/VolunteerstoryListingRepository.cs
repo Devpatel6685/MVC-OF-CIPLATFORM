@@ -44,7 +44,7 @@ namespace CI_PLATFORM_.repository.Repository
             return model;
 
         }
-        public void addstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid)
+        public void Shareyourstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid)
         {
             Story story = new Story
             {

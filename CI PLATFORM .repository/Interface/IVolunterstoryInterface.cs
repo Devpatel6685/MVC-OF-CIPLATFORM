@@ -16,7 +16,7 @@ namespace CI_PLATFORM_.repository.Interface
 
         public List<Mission> GetMissions(long userid);
 
-        public void addstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid);
+        public void Shareyourstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid);
 
         public AddStoryViewmodel getData(long userid);
 

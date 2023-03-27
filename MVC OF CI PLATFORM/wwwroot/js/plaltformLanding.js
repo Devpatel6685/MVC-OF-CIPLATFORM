@@ -231,8 +231,8 @@ function addFavourite(missionId) {
     if (!Model.attr('data-userid')) {
         showModal();
        
-    }
-    else {
+    } else {
+
         var button = $('.favourite')
 
         $.ajax({
@@ -246,10 +246,11 @@ function addFavourite(missionId) {
                 $(`.favbtnlanding-${missionId}`).html($(result).find(`.favbtnlanding-${missionId}`).html());
                 console.log(result);
             }
-        });
+        })
         filterMission();
     }
 }
+
 function showModal() {
     Swal.fire({
         icon: 'error',
@@ -259,4 +260,50 @@ function showModal() {
 }
 
 
+function recommend(mId) {
+    if (!Model.attr('data-userid')) {
+        showModal();
+    }
+    else {
+        var userids = [];
+        $('.modal-body input:checked').each(function () {
+            userids.push($(this).attr("id"));
+        })
+        console.log(userids);
+        $.ajax({
+            type: "POST",
+            url: "/Mission/recommend",
+            data: {
+                userIds: userids,
+                missionid: mId,
+            },
+            success: function (result) {
+                toastr.success('Invite Link Sent');
+
+            }
+        })
+    }
+}
+
+function getUsers(mId) {
+    missionId = mId;
+    if (!Model.attr('data-userid')) {
+        showModal();
+    } else {
+        var div = $('.modal-body');
+        $.ajax({
+            type: "GET",
+            url: "/Mission/User",
+            data: {},
+            dataType: "json",
+            success: function (result) {
+                div.empty();
+                $.each(result, function (i, data) {
+                    div.append('<div class="form-check ms-3"><input class="form-check-input checkbox" type="checkbox" value="' + data.firstName + " " + data.lastName + '" id=' + data.userId + '><label class="form-check-label" for=' + data.userId + '>' + data.firstName + " " + data.lastName + '</label></div>')
+                })
+
+            }
+        });
+    }
+}
 

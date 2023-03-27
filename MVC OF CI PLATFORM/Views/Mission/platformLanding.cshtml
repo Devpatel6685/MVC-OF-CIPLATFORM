@@ -29,6 +29,8 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
     <link rel="stylesheet" href="~/css/platformlandingStyle.css">
 
 </head>
@@ -100,35 +102,55 @@
                                             </div>
                                             <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
                                             <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
-                                                <a>
+                                                
                                                     @{
                                                         var fav = Model.favorite.Where(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session).ToList();
 
                                                         <div class="favbtnlanding-@i.MissionId">
                                                             @if (userid_session == null)
                                                             {
-                                                                
-                                                    <img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" class="ps-2 py-2">
+
+                                                                <img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" class="ps-2 py-2">
                                                             }
                                                             else
                                                             {
                                                                 if (fav.Count() == 0)
                                                                 {
-                                                                    <a  onclick="addFavourite(@i.MissionId);"
-                                                       ><img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
+                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
                                                                 }
                                                                 else
                                                                 {
-                                                                    <a  onclick="addFavourite(@i.MissionId);"
-                                                       ><img class="heart rounded-circle mb-1 mt-1" src="~/Assets/favorite.png" alt=""></a>
+                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle mb-1 mt-1" src="~/Assets/favorite.png" alt=""></a>
                                                                 }
                                                             }
                                                         </div>
                                                     }
 
 
-                                                </a>
-                                                <a><img class="heart rounded-circle icon p-2" src="~/Assets/add1.png" alt=""></a>
+                                                <button class="border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="getUsers(@i.MissionId);">
+                                                    <img src="~/Assets/add1.png" alt="" class="heart rounded-circle icon p-2 mb-1 mt-4">
+                                                </button>
+                                                <!-- Modal -->
+                                                @if (userid_session != null)
+                                                {
+                                                    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Invite Co-workers</h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="recommend()">Invite</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                }
+                                            
 
                                             </div>
                                             <div class="mx-auto d-flex position-absolute px-3 imgTitle">@i.Theme.Title</div>
@@ -398,6 +420,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="/js/plaltformLanding.js"></script>
     <script>
@@ -409,8 +433,8 @@
             spanField.textContent = inputValue;
         }
 
-        //For favourite button
-        
+                //For favourite button
+
     </script>
 
 </body>

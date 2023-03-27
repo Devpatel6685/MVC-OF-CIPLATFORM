@@ -88,7 +88,7 @@
                 </div>
                 <div>
                     <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;">Save</button>
-                    <button class="btn btn-outline-warning" style="border-radius: 50px;">Submit</button>
+                 
                     @if (Model.missionId != null)
                     {
 
@@ -162,7 +162,6 @@
 
         function saveDraft() {
             const missionId = $("#mission").val();
-            console.log("missionId")
             const title = $("#title").val();
             const date = $("#date").val();
             const video = $("#videoURL").val();
@@ -171,7 +170,6 @@
             const imagePaths = [];
             const images = $('#image-preview');
             const image_tag = images.find("img");
-            console.log("title", title);
             $('#image-preview img').each(function () {
                 console.log(typeof ($(this).attr('src')));
                 imagePaths.push($(this).attr('src'));

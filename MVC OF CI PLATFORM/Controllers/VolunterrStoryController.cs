@@ -14,33 +14,28 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             _volunterstory = volunterstory;       
         }
-
+        [HttpGet]
         public IActionResult volunteerstory(int pageIndex = 1)
         {    
             var stories = _volunterstory.Getstorylist(pageIndex);
             return View(stories);
         }
-
+        [HttpGet]
         public IActionResult Shareyourstory()
         {
-
-            var stories = _volunterstory.Getstorylist(1);
-            return View(stories);
-        }
-        public IActionResult addstory()
-        {
             long userid = long.Parse(HttpContext.Session.GetString("userid"));
-            if(userid == null){
+            if(userid == null)
+            {
                 return RedirectToAction("LOGIN","Home");
             }
             var data = _volunterstory.getData(userid);
             return View(data);
         }
         [HttpPost]
-        public IActionResult addstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths)
+        public IActionResult Shareyourstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths)
         {
             long userid = long.Parse(HttpContext.Session.GetString("userid"));
-             _volunterstory.addstory(missionId,title,date,videoURL,description,imagePaths,userid);
+             _volunterstory.Shareyourstory(missionId,title,date,videoURL,description,imagePaths,userid);
             return View();
                 
         }

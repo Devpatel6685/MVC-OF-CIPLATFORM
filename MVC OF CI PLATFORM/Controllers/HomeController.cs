@@ -63,6 +63,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                 var principal = new ClaimsPrincipal(identity);
                 HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);*/
                 var Users = entity.Split(',');
+             
                 HttpContext.Session.SetString("username", Users[0]);
                 HttpContext.Session.SetString("userid", Users[1]);
                 TempData["LOGIN"] = "successfully logged in";
