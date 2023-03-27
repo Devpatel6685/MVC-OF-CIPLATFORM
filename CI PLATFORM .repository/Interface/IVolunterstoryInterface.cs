@@ -14,7 +14,11 @@ namespace CI_PLATFORM_.repository.Interface
 
         public storydetailviewmodel GetStory(int id);
 
-/*        public string Shareyourstory(AddStoryViewmodel story);
-*/
+        public List<Mission> GetMissions(long userid);
+
+        public void addstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid);
+
+        public AddStoryViewmodel getData(long userid);
+
       }
 }

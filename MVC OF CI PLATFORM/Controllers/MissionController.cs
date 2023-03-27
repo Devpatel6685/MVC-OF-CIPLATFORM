@@ -54,6 +54,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var favorite = _missionRepository.favroite(userId, missionId);
             return View(volunteerpage);
         }
+
+        public IActionResult favbtnlandingpage(string userId, long missionId)
+        {
+            var favorite = _missionRepository.favroite(userId, missionId);
+            return RedirectToAction("platformLanding");
+        }
         public IActionResult ratingupdate(long missionid, int rating, long userId)
         {
             var rate = _missionRepository.Rating(missionid, rating, userId);

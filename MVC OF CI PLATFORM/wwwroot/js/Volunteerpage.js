@@ -99,6 +99,7 @@ function getUsers() {
 
 
 function applymission(missionid) {
+    
     if (!Model.attr('data-userid')) {
         showModal();
     }

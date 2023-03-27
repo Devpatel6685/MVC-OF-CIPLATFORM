@@ -9,20 +9,18 @@ namespace CI_PLATFORM.Entities.ViewModels
 {
     public class AddStoryViewmodel
     {
-        public long StoryMediaId { get; set; }
+        public string missionTitle { get; set; }
+       public long  missionId { get; set; }
+        public string title { get; set; }
+        public string description { get; set; }
+        public DateTime date { get; set; }
 
-        public long StoryId { get; set; }
+        public string videoURL { get; set; }
 
-        public string Type { get; set; } = null!;
+        public List<string> imagepaths { get; set; }
+            
+            
 
-        public string Path { get; set; } = null!;
-
-        public DateTime CreatedAt { get; set; }
-
-        public DateTime? UpdatedAt { get; set; }
-
-        public DateTime? DeletedAt { get; set; }
-
-        public virtual Story Story { get; set; } = null!;
+    
     }
 }

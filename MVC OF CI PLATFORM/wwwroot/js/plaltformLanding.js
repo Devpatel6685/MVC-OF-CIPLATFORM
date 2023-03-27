@@ -1,7 +1,7 @@
 
 var pageLoaded = false;
 $(document).ready(function () {
-  
+
     if (pageLoaded) return
     pageLoaded = true;
     getCountry();
@@ -13,17 +13,17 @@ $(document).ready(function () {
         $('#city').attr('disabled', false);
         $('#city').parent().find('a').attr('disabled', false);
         var link = "/Mission/City?id=";
-       
+
         var ids = []
         $('.country:checkbox:checked').each(function () {
             link = link + ($(this).attr("id")) + '&id=';
-        });      
-   
+        });
+
         $('#city').empty();
         $.ajax({
             url: link,
             data: ids,
-            method:"POST",
+            method: "POST",
             success: function (result) {
                 $.each(result, function (i, data) {
                     $('#city').append('<div class="form-check ms-3"><input class="form-check-input checkbox city" type="checkbox" value="' + data.name + '" id=' + data.cityId + '><label class="form-check-label" for=' + data.id + '>' + data.name + '</label></div>')
@@ -35,7 +35,7 @@ $(document).ready(function () {
         filterMission()
     })
 
-   
+
     $('#city').change(function () {
         $('.pagination .active').removeClass('active');
         $('.pagination .active').find('#1').parent().addClass('active');
@@ -62,6 +62,7 @@ $(document).ready(function () {
     });
 
     dispalyCout();
+
 });
 
 function filterMission() {
@@ -105,7 +106,7 @@ function filterMission() {
             skillids: skill,
             sortId: sid,
             SearchInputdata: keyword,
-            pageIndex: pageIndex 
+            pageIndex: pageIndex
 
         },
         success: function (response) {
@@ -118,7 +119,7 @@ function filterMission() {
             if (list) {
                 $('.btn-list').click();
             }
-         
+
         },
         Error: function () {
             alert('error in skill');
@@ -175,7 +176,7 @@ function showList(e) {
 
 function gridList(e) {
     var $gridCont = $('.grid-container')
-        // e.preventDefault();
+    // e.preventDefault();
     $gridCont.removeClass('list-view');
 }
 
@@ -209,7 +210,7 @@ function gridList(e) {
 
 $(document).on('click', '.btn-grid', gridList);
 $(document).on('click', '.btn-list', showList);
-    
+
 
 
 
@@ -223,5 +224,39 @@ $(document).on('click', '.pagination li', function (e) {
     console.log($(this).find('a').attr('id'));
     filterMission();
 })
+
+
+var Model = $('#model')
+function addFavourite(missionId) {
+    if (!Model.attr('data-userid')) {
+        showModal();
+       
+    }
+    else {
+        var button = $('.favourite')
+
+        $.ajax({
+            url: "/Mission/favbtnlandingpage",
+            type: "POST",
+            data: {
+                userId: Model.attr('data-userid'),
+                MissionId: missionId,
+            },
+            success: function (result) {
+                $(`.favbtnlanding-${missionId}`).html($(result).find(`.favbtnlanding-${missionId}`).html());
+                console.log(result);
+            }
+        });
+        filterMission();
+    }
+}
+function showModal() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Login!',
+    })
+}
+
 
 

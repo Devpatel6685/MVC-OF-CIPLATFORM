@@ -1,4 +1,4 @@
-﻿@model CI_PLATFORM.Entities.ViewModels.StoryViewModel;
+﻿@model CI_PLATFORM.Entities.ViewModels.AddStoryViewmodel;
 <!DOCTYPE html>
 
 <html lang="en">
@@ -19,7 +19,7 @@
 
     <partial name="header" model="Model" />
     <div class="shareyourstory">
-       
+
         <!--First Row Of Navbar is end-->
         <!--Second row is all about static text start-->
         <h1 style="font-weight:200" class="ps-3 mt-4">Share your story</h1>
@@ -30,32 +30,33 @@
             <div class="col-md-4 mt-1">
                 <label for="inputEmail4">Select Mission</label>
                 <select id="mission" class="form-control mt-1 ">
-                    @foreach (var m in Model.Missions)
+                    <option>Select your mission</option>
+                    @if (Model.missionTitle != null)
                     {
-                        <option value="@m.Title" id="@m.MissionId">@m.Title</option>
+                        <option value="@Model.missionId" id="@Model.missionId" selected>@Model.missionTitle</option>
                     }
 
                 </select>
             </div>
             <div class="col-md-4 mt-1">
                 <label for="inputEmail4">My Story Title</label>
-                <input type="text" id="title" class="form-control mt-1" placeholder="Story Title">
+                <input type="text" id="title" class="form-control mt-1" placeholder="Story Title" value="@Model.title">
             </div>
             <div class="col-md-4 mt-1">
                 <label for="inputEmail4">Date</label>
-                <input type="date" id="date" class="form-control mt-1" placeholder="date">
+                <input type="date" id="date" class="form-control mt-1" placeholder="date" value="@Model.date">
             </div>
         </div>
         <div class="row mx-2 mt-3">
             <div class="col-12 my-3">
                 <label for="inputEmail4">Date</label>
-                <textarea id="storytext" placeholder="I loved this mission because..."></textarea>
+                <textarea id="storytext" placeholder="I loved this mission because...">@Model.description</textarea>
             </div>
         </div>
         <div class="row mx-2 mt-1">
             <div class="col-12">
                 <label for="inputEmail4 ">Enter Video URL</label>
-                <input class="form-control mt-1" id="videoURL" type="text" placeholder="Enter video url">
+                <input class="form-control mt-1" id="videoURL" type="text" placeholder="Enter video url" value="@Model.videoURL">
             </div>
         </div>
         <div class="row mx-2 mt-1">
@@ -66,7 +67,18 @@
                     <input type="file" id="file-input" multiple accept="image/*,video/*" style="display: none;">
                 </div>
 
-                <div id="image-preview"></div>
+                <div id="image-preview">
+                    @if (Model.imagepaths != null)
+                    {
+                        @foreach (var data in Model.imagepaths)
+                        {
+                            <div class="image-container">
+                                <img class="image-preview" src="@data">
+                                <div class="remove-image">&#10006;</div>
+                            </div>
+                        }
+                    }
+                </div>
             </div>
         </div>
         <div class="row mx-2 mt-2">
@@ -77,80 +89,112 @@
                 <div>
                     <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;">Save</button>
                     <button class="btn btn-outline-warning" style="border-radius: 50px;">Submit</button>
+                    @if (Model.missionId != null)
+                    {
+
+                        <button class="btn btn-outline-warning" style="border-radius: 50px; id="submit">Submit</button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-outline-warning" style="border-radius: 50px; id="submit" disabled>Submit</button>
+
+
+                    }
+
                 </div>
             </div>
         </div>
 
-
-
-        <!--Formsectioni end-->
-        <!--footer satrt-->
-        <div class="copyright mt-5 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="copyright-menu">
-                            <ul>
-                                <li>
-                                    <a href="#" class="text-light">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-light">Cookie Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-light">Terms of Use</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 rights">
-                        <span class="text-light"> ©️ 2019 Optimy.com. All Right Reserved</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--footer end-->
     </div>
+
+
+    <!--Formsectioni end-->
+    <!--footer satrt-->
+    <div class="copyright mt-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-light">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Terms of Use</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 rights">
+                    <span class="text-light"> ©️ 2019 Optimy.com. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer end-->
 
 
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
     <script>
+        getmissions();
         tinymce.init({
             selector: '#storytext',
             plugins: 'link image code',
             toolbar: 'undo redo | bold italic | fontsizeselect | alignleft aligncenter alignright alignjustify | superscript subscript ',
             height: 300
         });
-        //function saveDraft() {
-        //    const missionId = $("#mission").val();
-        //    const title = $("#title").val();
-        //    const date = $("#date").val();
-        //    const video = $("#videoURL").val();
 
-        //    const textarea = $("#storytext").val();
-        //    const imagePaths = [];
-        //    const images = $('#image-preview');
-        //    const image_tag = images.find("img");
+        function getmissions() {
+            $.ajax({
+                url: "/volunterrstory/missions",
+                type: "GET",
+                success: function (result) {
+                    $(result).each(function (i, data) {
+                        $('#mission').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
+                    })
+                }
+            })
+        }
 
+        function saveDraft() {
+            const missionId = $("#mission").val();
+            console.log("missionId")
+            const title = $("#title").val();
+            const date = $("#date").val();
+            const video = $("#videoURL").val();
+            var textarea = tinymce.get("storytext").getContent();
+            var description = textarea.substring(3, textarea.length - 4);
+            const imagePaths = [];
+            const images = $('#image-preview');
+            const image_tag = images.find("img");
+            console.log("title", title);
+            $('#image-preview img').each(function () {
+                console.log(typeof ($(this).attr('src')));
+                imagePaths.push($(this).attr('src'));
+            })
 
-        //    $('#image-preview img').each(function () {
-        //        imagePaths.push($(this).attr('src'));
-        //    })
-        //    console.log(imagePaths);
-        //    console.log(textarea);
-        //    console.log(missionId);
-        //    console.log(title);
-        //    console.log(video);
-        //    // Store data in cookies
-        //    document.cookie = `mission=${missionId}; expires=${new Date(Date.now() + 86400000).toUTCString()}`;
-        //    document.cookie = `title=${title}; expires=${new Date(Date.now() + 86400000).toUTCString()}`;
-        //    document.cookie = `description=${textarea}; expires=${new Date(Date.now() + 86400000).toUTCString()}`;
-        //    document.cookie = `video=${video}; expires=${new Date(Date.now() + 86400000).toUTCString()}`;
-        //    alert ('cookie stored');
-        //    /*    document.cookie = `message=${message}; expires=${new Date(Date.now() + 86400000).toUTCString()}`;*/
-
-        //}
+            $.ajax({
+                url: "/VolunterrStory/addstory",
+                type: "POST",
+                data: {
+                    missionId: missionId,
+                    title: title,
+                    date: date,
+                    videoURL: video,
+                    description: description,
+                    imagePaths: imagePaths,
+                },
+                success: function (result) {
+                    $('#submit').removeClass('bg-secondary');
+                    $('#submit').removeAttr('disabled')
+                    console.log("data drafted")
+                }
+            })
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="/js/Shareyourstory.js"></script>
