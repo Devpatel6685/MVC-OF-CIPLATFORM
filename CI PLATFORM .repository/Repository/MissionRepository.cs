@@ -255,7 +255,7 @@ namespace CI_PLATFORM_.repository.Repository
 
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            smtp.Authenticate("devppatel6685@gmail.com", "uvqekuakbgseptda");
+            smtp.Authenticate("devppatel6685@gmail.com", "hpygmvoqamjvzkrl");
 
             foreach (var user in users)
             {

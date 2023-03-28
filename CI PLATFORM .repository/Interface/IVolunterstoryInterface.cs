@@ -21,5 +21,9 @@ namespace CI_PLATFORM_.repository.Interface
         public AddStoryViewmodel getData(long userid);
 
         public void submit(long storyId);
+
+        public string recommend(List<long> userids, long storyId, string fromuserId);
+
+        public List<User> GetUsers();
     }
 }

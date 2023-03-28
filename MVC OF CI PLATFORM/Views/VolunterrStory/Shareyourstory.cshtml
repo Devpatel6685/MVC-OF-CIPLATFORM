@@ -89,14 +89,14 @@
                 <div>
                     <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;">Save</button>
                  
-                    @if (Model.missionId != null)
+                    @if (Model.missionId != 0)
                     {
                         
                         <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit">Submit</button>
                     }
                     else
                     {
-                        <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit" disabled>Submit</button>
+                        <button class="btn btn-outline-warning bg-secondary"  style="border-radius: 50px;" id="submit" disabled>Submit</button>
 
 
                     }
@@ -201,7 +201,7 @@
                     storyid:storyid,
                 },
                 success: function (result) {
-                    window.location.reload
+                    window.location = result.redirectUrl;
                     console.log("data saved")
                 }
             })

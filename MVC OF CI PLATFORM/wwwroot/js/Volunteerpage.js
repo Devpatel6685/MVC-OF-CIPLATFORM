@@ -69,13 +69,7 @@ function recommend(mId) {
         })
     }
 }
-function showModal() {
-    Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Please Login!',
-    })
-}
+
 function getUsers() {
     if (!Model.attr('data-userid')) {
         showModal();
@@ -96,7 +90,13 @@ function getUsers() {
         });
     }
 }
-
+function showModal() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Please Login!',
+    })
+}
 
 function applymission(missionid) {
     

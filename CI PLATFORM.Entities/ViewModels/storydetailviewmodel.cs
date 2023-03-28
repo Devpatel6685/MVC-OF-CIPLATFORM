@@ -10,5 +10,7 @@ namespace CI_PLATFORM.Entities.ViewModels
     public class storydetailviewmodel
     {
         public Story Story { get; set; }
+
+        public long storyid { get; set; }
     }
 }

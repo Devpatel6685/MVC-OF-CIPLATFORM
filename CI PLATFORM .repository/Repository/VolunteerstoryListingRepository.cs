@@ -2,9 +2,12 @@
 using CI_PLATFORM.Entities.ViewModels;
 using CI_PLATFORM_.repository.Interface;
 using JetBrains.Annotations;
+using MailKit.Net.Smtp;
+using MailKit.Security;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using MimeKit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,39 +50,55 @@ namespace CI_PLATFORM_.repository.Repository
         }
         public void Shareyourstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid)
         {
-            Story story = new Story
+            Story storymodel = new Story()
             {
                 UserId = userid,
-                Title = title,
                 MissionId = missionId,
+                Title = title,
                 Description = description,
                 Status = "DRAFT",
-
             };
-            _ciplatfromdbcontext.Stories.Add(story);
+            var entity = _ciplatfromdbcontext.Stories.FirstOrDefault(m => m.UserId == userid && m.MissionId == missionId);
+            if (entity == null)
+            {
+                _ciplatfromdbcontext.Stories.Add(storymodel);
+            }
+            else
+            {
+                entity.UserId = userid;
+                entity.MissionId = missionId;
+                entity.Title = title;
+                entity.Description = description;
+                entity.Status = "DRAFT";
+            }
             _ciplatfromdbcontext.SaveChanges();
-            var Story = _ciplatfromdbcontext.Stories.FirstOrDefault(u => u.UserId == userid && u.MissionId == missionId);
-            var storyID = story.StoryId;
+            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(u => u.UserId == userid && u.MissionId == missionId);
+            var storyId = story.StoryId;
+            if (entity != null)
+            {
+                var mediaentity = _ciplatfromdbcontext.StoryMedia.Where(u => u.StoryId == storyId);
+                _ciplatfromdbcontext.StoryMedia.RemoveRange(mediaentity);
+            }
+
             foreach (var s in imagePaths)
             {
-                StoryMedium media = new StoryMedium()
+                StoryMedium storyMedia = new StoryMedium()
                 {
-                    StoryId = storyID,
-                    Type = "IMAGE",
-                    Path= s,
+                    StoryId = storyId,
+                    Type = "Image",
+                    Path = s,
                 };
-                _ciplatfromdbcontext.StoryMedia.Add(media);
+                _ciplatfromdbcontext.StoryMedia.Add(storyMedia);
             }
-            StoryMedium video = new StoryMedium()
+            StoryMedium storyvideo = new StoryMedium()
             {
-                StoryId = storyID,
+                StoryId = storyId,
                 Type = "Video",
                 Path = videoURL,
             };
-            _ciplatfromdbcontext.StoryMedia.Add(video);
+            _ciplatfromdbcontext.StoryMedia.Add(storyvideo);
             _ciplatfromdbcontext.SaveChanges();
         }
-
         public AddStoryViewmodel getData(long userid)
         {
             var story = _ciplatfromdbcontext.Stories.FirstOrDefault(u => u.UserId == userid && u.Status == "DRAFT");
@@ -119,7 +138,41 @@ namespace CI_PLATFORM_.repository.Repository
             return _ciplatfromdbcontext.Missions.Where(u => missionapplication.Contains(u.MissionId)).OrderBy(m => m.Title).ToList();
         }
 
+        public List<User> GetUsers()
+        {
+            return _ciplatfromdbcontext.Users.ToList();
+        }
+        public string recommend(List<long> userids, long storyId, string fromuserId)
+        {
 
+            var mailBody = "<h1>Click this link to view mission</h1><br><h2><a href='https://localhost:7093/VolunterrStory/storydetails/?id=" + storyId + "' >View story</h2>";
+            var users = _ciplatfromdbcontext.Users.Where(u => userids.Contains(u.UserId));
+            var email = new MimeMessage();
+            email.From.Add(MailboxAddress.Parse("devppatel6685@gmail.com"));
+
+            var name = _ciplatfromdbcontext.Users.SingleOrDefault(m => m.UserId == Convert.ToInt64(fromuserId));
+
+            using var smtp = new SmtpClient();
+            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate("devppatel6685@gmail.com", "hpygmvoqamjvzkrl");
+
+            foreach (var user in users)
+            {
+                StoryInvite model = new StoryInvite();
+                model.StoryId = storyId;
+                model.FromUserId = Convert.ToInt64(fromuserId);
+                model.ToUserId = user.UserId;
+                email.To.Add(MailboxAddress.Parse(user.Email));
+                email.Subject = name.FirstName + " " + name.LastName + " has recommended story to you";
+                email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = mailBody };
+                smtp.Send(email)
+;
+                _ciplatfromdbcontext.StoryInvites.Add(model);
+            }
+            _ciplatfromdbcontext.SaveChanges();
+            smtp.Disconnect(true);
+            return "success";
+        }
 
     }
 }
