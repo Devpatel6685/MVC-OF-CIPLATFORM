@@ -20,5 +20,6 @@ namespace CI_PLATFORM_.repository.Interface
 
         public AddStoryViewmodel getData(long userid);
 
-      }
+        public void submit(long storyId);
+    }
 }

@@ -97,7 +97,7 @@
                                                     <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
                                                 </div>
                                             }
-                                            <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
+                                            <div class="align-self-end position-absolute top-1 text-light bg-dark rounded-pill px-2 me-1 mt-1">
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>
                                             <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
@@ -110,13 +110,13 @@
                                                             @if (userid_session == null)
                                                             {
 
-                                                                <img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" class="ps-2 py-2">
-                                                            }
+                                                            <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle bg-dark  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
+                                                        }
                                                             else
                                                             {
                                                                 if (fav.Count() == 0)
                                                                 {
-                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
+                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle bg-dark  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
                                                                 }
                                                                 else
                                                                 {
@@ -128,7 +128,7 @@
 
 
                                                 <button class="border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="getUsers(@i.MissionId);">
-                                                    <img src="~/Assets/add1.png" alt="" class="heart rounded-circle icon p-2 mb-1 mt-4">
+                                                    <img src="~/Assets/add1.png" alt="" class="heart rounded-circle bg-dark p-2 mb-1 mt-4">
                                                 </button>
                                                 <!-- Modal -->
                                                 @if (userid_session != null)

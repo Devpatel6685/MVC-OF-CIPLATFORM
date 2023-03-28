@@ -34,13 +34,17 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         [HttpPost]
         public IActionResult Shareyourstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths)
         {
-            long userid = long.Parse(HttpContext.Session.GetString("userid"));
-             _volunterstory.Shareyourstory(missionId,title,date,videoURL,description,imagePaths,userid);
+            var userid = HttpContext.Session.GetString("userid");
+             _volunterstory.Shareyourstory(missionId,title,date,videoURL,description,imagePaths,long.Parse(userid));
             return View();
                 
         }
+        public IActionResult submit(long storyId)
+        {
+             _volunterstory.submit(storyId); 
+            return View(volunteerstory);
+        }
 
-      
 
         public IActionResult storydetails(int id)
         {

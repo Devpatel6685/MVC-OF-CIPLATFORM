@@ -78,9 +78,16 @@
         color: #fff;
     }
 
-
+.tox .tox-statusbar__path{
+    display:none
+}
+.tox .tox-statusbar a{
+    display:none
+}
+.tox .tox-notification--warning{
+    display: none
+}
 /*image drag and drop end*/
-
 .copyright {
     padding: 28px 0;
 }

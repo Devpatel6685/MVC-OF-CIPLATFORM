@@ -16,7 +16,8 @@ namespace CI_PLATFORM.Entities.ViewModels
         public DateTime date { get; set; }
 
         public string videoURL { get; set; }
-
+         
+        public long storyid { get; set; }
         public List<string> imagepaths { get; set; }
             
             

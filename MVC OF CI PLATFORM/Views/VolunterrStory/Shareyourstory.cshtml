@@ -27,9 +27,9 @@
         <!--Formsectioni start-->
 
         <div class="row mx-2 mt-3">
-            <div class="col-md-4 mt-1">
+            <div class="col-md-4 mt-1 g-3">
                 <label for="inputEmail4">Select Mission</label>
-                <select id="mission" class="form-control mt-1 ">
+                <select id="mission_id" class="form-control mt-1 ">
                     <option>Select your mission</option>
                     @if (Model.missionTitle != null)
                     {
@@ -38,11 +38,11 @@
 
                 </select>
             </div>
-            <div class="col-md-4 mt-1">
+            <div class="col-md-4 mt-1 g-3">
                 <label for="inputEmail4">My Story Title</label>
                 <input type="text" id="title" class="form-control mt-1" placeholder="Story Title" value="@Model.title">
             </div>
-            <div class="col-md-4 mt-1">
+            <div class="col-md-4 mt-1 g-3">
                 <label for="inputEmail4">Date</label>
                 <input type="date" id="date" class="form-control mt-1" placeholder="date" value="@Model.date">
             </div>
@@ -84,19 +84,19 @@
         <div class="row mx-2 mt-2">
             <div class="col-12 d-flex justify-content-between">
                 <div>
-                    <button type="button" class="btn btn-outline-warning" style="border-radius: 50px;">Cancel</button>
+                    <a type="button" class="btn btn-outline-warning"  asp-action="volunteerStory" style="border-radius: 50px;">Cancel</a>
                 </div>
                 <div>
                     <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;">Save</button>
                  
                     @if (Model.missionId != null)
                     {
-
-                        <button class="btn btn-outline-warning" style="border-radius: 50px; id="submit">Submit</button>
+                        
+                        <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit">Submit</button>
                     }
                     else
                     {
-                        <button class="btn btn-outline-warning" style="border-radius: 50px; id="submit" disabled>Submit</button>
+                        <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit" disabled>Submit</button>
 
 
                     }
@@ -154,14 +154,14 @@
                 type: "GET",
                 success: function (result) {
                     $(result).each(function (i, data) {
-                        $('#mission').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
+                        $('#mission_id').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
                     })
                 }
             })
         }
 
         function saveDraft() {
-            const missionId = $("#mission").val();
+            const missionId = $("#mission_id").val();
             const title = $("#title").val();
             const date = $("#date").val();
             const video = $("#videoURL").val();
@@ -169,18 +169,18 @@
             var description = textarea.substring(3, textarea.length - 4);
             const imagePaths = [];
             const images = $('#image-preview');
-            const image_tag = images.find("img");
+            const image_tag = images.find("img"); 
             $('#image-preview img').each(function () {
                 console.log(typeof ($(this).attr('src')));
                 imagePaths.push($(this).attr('src'));
             })
 
             $.ajax({
-                url: "/VolunterrStory/addstory",
+                url: "/VolunterrStory/Shareyourstory",
                 type: "POST",
                 data: {
                     missionId: missionId,
-                    title: title,
+                    title : title,
                     date: date,
                     videoURL: video,
                     description: description,
@@ -193,6 +193,20 @@
                 }
             })
         }
+        function submit(storyid) {
+            $.ajax({
+                url: "/VolunterrStory/submit",
+                type: "POST",
+                data: {
+                    storyid:storyid,
+                },
+                success: function (result) {
+                    window.location.reload
+                    console.log("data saved")
+                }
+            })
+        }
+        
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="/js/Shareyourstory.js"></script>

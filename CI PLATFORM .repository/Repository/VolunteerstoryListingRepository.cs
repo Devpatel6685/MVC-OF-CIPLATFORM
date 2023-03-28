@@ -4,6 +4,7 @@ using CI_PLATFORM_.repository.Interface;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,8 +89,9 @@ namespace CI_PLATFORM_.repository.Repository
                 var images = storyMedia.Where(m => m.Type == "Image").Select(s => s.Path).ToList();
                 var video = storyMedia.SingleOrDefault(m => m.Type == "video");
                 var missionTitle = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == story.MissionId);
+               
                 AddStoryViewmodel model = new AddStoryViewmodel()
-                {
+                {   storyid = story.StoryId,
                     missionTitle = missionTitle.Title,
                     missionId = story.MissionId,
                     title = story.Title,
@@ -103,7 +105,13 @@ namespace CI_PLATFORM_.repository.Repository
 
             return new AddStoryViewmodel();
         }
-
+        public void submit(long storyId)
+        {
+            var story = _ciplatfromdbcontext.Stories.SingleOrDefault(m => m.StoryId == storyId);
+            story.Status = "PUBLISHED";
+            _ciplatfromdbcontext.Update(story);
+            _ciplatfromdbcontext.SaveChanges();
+        }
         public List<Mission> GetMissions(long userid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.Where(m => m.UserId == userid).Select(u => u.MissionId);

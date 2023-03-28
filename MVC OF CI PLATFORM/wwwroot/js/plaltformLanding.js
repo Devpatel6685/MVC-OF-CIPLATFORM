@@ -230,8 +230,8 @@ var Model = $('#model')
 function addFavourite(missionId) {
     if (!Model.attr('data-userid')) {
         showModal();
-       
-    } else {
+    }
+    else {
 
         var button = $('.favourite')
 
@@ -247,9 +247,10 @@ function addFavourite(missionId) {
                 console.log(result);
             }
         })
-        filterMission();
+        filterMission()
     }
 }
+
 
 function showModal() {
     Swal.fire({
