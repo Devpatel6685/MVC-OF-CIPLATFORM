@@ -87,17 +87,29 @@
                     <a type="button" class="btn btn-outline-warning"  asp-action="volunteerStory" style="border-radius: 50px;">Cancel</a>
                 </div>
                 <div>
-                    <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;">Save</button>
-                 
-                    @if (Model.missionId != 0)
-                    {
-                        
-                        <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit">Submit</button>
-                    }
-                    else
-                    {
-                        <button class="btn btn-outline-warning bg-secondary"  style="border-radius: 50px;" id="submit" disabled>Submit</button>
+                    @if(Model.missionId==0){
 
+
+                        }
+                    else if ( Model.status == null )
+                    {
+                        <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;" >Save</button>
+
+                        <button class="btn btn-outline-warning bg-secondary" style="border-radius: 50px;" id="submit" disabled>Submit</button>
+                        
+                    }
+                    else if (Model.status == "DRAFT")
+                    {
+
+                        <button class="btn btn-outline-warning me-2" onclick="saveDraft();" style="border-radius: 50px;">Save</button>
+
+                        <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit">Submit</button>
+
+                    }
+                    else if (Model.status == "PUBLISHED")
+                    {
+                      
+                        <button class="btn btn-outline-warning me-2" onclick="Edit(@Model.storyid)" style="border-radius: 50px;">Edit</button>
 
                     }
 
@@ -185,10 +197,12 @@
                     videoURL: video,
                     description: description,
                     imagePaths: imagePaths,
+
                 },
                 success: function (result) {
-                    $('#submit').removeClass('bg-secondary');
-                    $('#submit').removeAttr('disabled')
+                    window.location = result.redirectUrl;
+                    //$('#submit').removeClass('bg-secondary');
+                    //$('#submit').removeAttr('disabled')
                     console.log("data drafted")
                 }
             })
@@ -207,6 +221,7 @@
             })
         }
         function submit(storyid) {
+           
             $.ajax({
                 url: "/VolunterrStory/submit",
                 type: "POST",
@@ -215,11 +230,47 @@
                 },
                 success: function (result) {
                     window.location = result.redirectUrl;
-                    console.log("data saved")
+                    
                 }
             })
         }
-        
+
+        function Edit() {
+            const missionId = $("#mission_id").val();
+            const title = $("#title").val();
+            const date = $("#date").val();
+            const video = $("#videoURL").val();
+            var textarea = tinymce.get("storytext").getContent();
+            var description = textarea.substring(3, textarea.length - 4);
+            const imagePaths = [];
+            const images = $('#image-preview');
+            const image_tag = images.find("img");
+            $('#image-preview img').each(function () {
+                console.log(typeof ($(this).attr('src')));
+                imagePaths.push($(this).attr('src'));
+            })
+
+            $.ajax({
+                url: "/VolunterrStory/Edit",
+                type: "POST",
+                data: {
+                    missionId: missionId,
+                    title: title,
+                    date: date,
+                    videoURL: video,
+                    description: description,
+                    imagePaths: imagePaths,
+
+                },
+                success: function (result) {
+                    window.location = result.redirectUrl;
+                    //$('#submit').removeClass('bg-secondary');
+                    //$('#submit').removeAttr('disabled')
+                    console.log("data edited")
+                }
+            })
+        }
+
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="/js/Shareyourstory.js"></script>

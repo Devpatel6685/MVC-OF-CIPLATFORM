@@ -12,5 +12,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         public Story Story { get; set; }
 
         public long storyid { get; set; }
+
+        public List<string> images { get; set; }
     }
 }

@@ -9,12 +9,14 @@ namespace CI_PLATFORM.Entities.ViewModels
 {
     public class AddStoryViewmodel
     {
-        public long stroyid { get; set; }
+  
         public string missionTitle { get; set; }
        public long  missionId { get; set; }
         public string title { get; set; }
         public string description { get; set; }
         public DateTime date { get; set; }
+
+        public string status { get; set; }
 
         public string videoURL { get; set; }
          

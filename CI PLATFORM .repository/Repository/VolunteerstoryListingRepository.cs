@@ -44,7 +44,9 @@ namespace CI_PLATFORM_.repository.Repository
         {
             storydetailviewmodel model = new storydetailviewmodel();
             Story story = _ciplatfromdbcontext.Stories.Include(m => m.User).Include(m => m.Mission).SingleOrDefault(s => s.StoryId == storyid);
+            var images = _ciplatfromdbcontext.StoryMedia.Where(m=>m.Type =="Image").Select(m=>m.Path).ToList();
             model.Story = story;
+            model.images= images;
             return model;
 
         }
@@ -113,8 +115,8 @@ namespace CI_PLATFORM_.repository.Repository
                 var video = storyMedia.SingleOrDefault(m => m.Type == "video");
                 var missionTitle = _ciplatfromdbcontext.Missions.FirstOrDefault(m => m.MissionId == story.MissionId);
                 AddStoryViewmodel model = new AddStoryViewmodel()
-                {
-                    stroyid = story.StoryId,
+                {  status = story.Status,
+                    storyid = story.StoryId,
                     missionTitle = missionTitle.Title,
                     missionId = story.MissionId,
                     title = story.Title,
@@ -139,6 +141,39 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext.Update(story);
             _ciplatfromdbcontext.SaveChanges();
         }
+        public void editStory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid)
+        {
+            var entity = _ciplatfromdbcontext.Stories.SingleOrDefault(m => m.UserId == userid && m.MissionId == missionId);
+            entity.UserId = userid;
+            entity.MissionId = missionId;
+            entity.Title = title;
+            entity.Description = description;
+            entity.Status = "PUBLISHED";
+            var mediaentity =_ciplatfromdbcontext.StoryMedia.Where(u => u.StoryId == entity.StoryId);
+            _ciplatfromdbcontext.StoryMedia.RemoveRange(mediaentity);
+            foreach (var s in imagePaths)
+            {
+                StoryMedium storyMedia = new StoryMedium()
+                {
+                    StoryId = entity.StoryId,
+                    Type = "Image",
+                    Path = s,
+                };
+                _ciplatfromdbcontext.StoryMedia.Add(storyMedia);
+            }
+            if (videoURL != null)
+            {
+                StoryMedium storyvideo = new StoryMedium()
+                {
+                    StoryId = entity.StoryId,
+                    Type = "Video",
+                    Path = videoURL,
+                };
+                _ciplatfromdbcontext.StoryMedia.Add(storyvideo);
+            }
+           _ciplatfromdbcontext.SaveChanges();
+        }
+
         public List<Mission> GetMissions(long userid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.Where(m => m.UserId == userid).Select(u => u.MissionId);

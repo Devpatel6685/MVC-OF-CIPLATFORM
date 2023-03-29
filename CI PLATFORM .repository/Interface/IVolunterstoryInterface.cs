@@ -22,6 +22,8 @@ namespace CI_PLATFORM_.repository.Interface
 
         public void submit(long storyId);
 
+        public void editStory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid);
+
         public string recommend(List<long> userids, long storyId, string fromuserId);
 
         public List<User> GetUsers();

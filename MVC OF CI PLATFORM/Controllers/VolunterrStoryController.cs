@@ -36,7 +36,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             var userid = HttpContext.Session.GetString("userid");
              _volunterstory.Shareyourstory(missionId,title,date,videoURL,description,imagePaths,long.Parse(userid));
-            return Json(new { redirectUrl = Url.Action("Shareyourstory", "VolunterrStory") });
+            return Json(new { redirectUrl = Url.Action("Shareyourstory", "VolunterrStory", new { missionid = missionId }) });
 
 
         }
@@ -51,7 +51,15 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return Json(new { redirectUrl = Url.Action("volunteerstory", "volunterrStory") });
            
         }
+       
+        public IActionResult Edit(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths)
+        {
+            var userid = HttpContext.Session.GetString("userid");
+            _volunterstory.editStory(missionId, title, date, videoURL, description, imagePaths, long.Parse(userid));
+            return Json(new { redirectUrl = Url.Action("volunteerstory", "VolunterrStory", new { missionid = missionId }) });
 
+
+        }
 
         public IActionResult storydetails(int id)
         {
