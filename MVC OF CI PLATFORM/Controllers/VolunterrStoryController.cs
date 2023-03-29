@@ -21,14 +21,14 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return View(stories);
         }
         [HttpGet]
-        public IActionResult Shareyourstory()
+        public IActionResult Shareyourstory(string missionid)
         {
-            long userid = long.Parse(HttpContext.Session.GetString("userid"));
-            if(userid == null)
+            var userid = HttpContext.Session.GetString("userid");
+            if (userid == null)
             {
                 return RedirectToAction("LOGIN","Home");
             }
-            var data = _volunterstory.getData(userid);
+            var data = _volunterstory.getData(long.Parse(userid), missionid);
             return View(data);
         }
         [HttpPost]
@@ -36,8 +36,14 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             var userid = HttpContext.Session.GetString("userid");
              _volunterstory.Shareyourstory(missionId,title,date,videoURL,description,imagePaths,long.Parse(userid));
-            return View();
-                
+            return Json(new { redirectUrl = Url.Action("Shareyourstory", "VolunterrStory") });
+
+
+        }
+        public IActionResult loadaddstory(string missionid)
+        {
+            return Json(new { redirectUrl = Url.Action("Shareyourstory", "VolunterrStory", new { missionid = missionid }) });
+
         }
         public IActionResult submit(long storyId)
         {

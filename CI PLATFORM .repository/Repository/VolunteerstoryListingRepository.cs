@@ -99,18 +99,22 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext.StoryMedia.Add(storyvideo);
             _ciplatfromdbcontext.SaveChanges();
         }
-        public AddStoryViewmodel getData(long userid)
+        public AddStoryViewmodel getData(long userid, string missionid)
         {
-            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(u => u.UserId == userid && u.Status == "DRAFT");
+            if (missionid == null)
+            {
+                return new AddStoryViewmodel();
+            }
+            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(u => u.UserId == userid && u.MissionId.ToString() == missionid);
             if (story != null)
             {
                 var storyMedia = _ciplatfromdbcontext.StoryMedia.Where(u => u.StoryId == story.StoryId);
                 var images = storyMedia.Where(m => m.Type == "Image").Select(s => s.Path).ToList();
                 var video = storyMedia.SingleOrDefault(m => m.Type == "video");
-                var missionTitle = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == story.MissionId);
-               
+                var missionTitle = _ciplatfromdbcontext.Missions.FirstOrDefault(m => m.MissionId == story.MissionId);
                 AddStoryViewmodel model = new AddStoryViewmodel()
-                {   storyid = story.StoryId,
+                {
+                    stroyid = story.StoryId,
                     missionTitle = missionTitle.Title,
                     missionId = story.MissionId,
                     title = story.Title,
@@ -121,8 +125,12 @@ namespace CI_PLATFORM_.repository.Repository
                 };
                 return model;
             }
-
-            return new AddStoryViewmodel();
+            var missionTitle1 = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == long.Parse(missionid));
+            AddStoryViewmodel model1 = new AddStoryViewmodel()
+            {   missionId = long.Parse(missionid),
+                missionTitle = missionTitle1.Title
+            };
+            return model1;
         }
         public void submit(long storyId)
         {

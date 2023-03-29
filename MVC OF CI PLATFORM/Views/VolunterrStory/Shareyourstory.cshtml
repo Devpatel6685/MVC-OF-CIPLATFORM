@@ -28,8 +28,8 @@
 
         <div class="row mx-2 mt-3">
             <div class="col-md-4 mt-1 g-3">
-                <label for="inputEmail4">Select Mission</label>
-                <select id="mission_id" class="form-control mt-1 ">
+                <label for="mission_id">Select Mission</label>
+                <select id="mission_id" onchange="handleMissionChange();" class="form-control mt-1 ">
                     <option>Select your mission</option>
                     @if (Model.missionTitle != null)
                     {
@@ -44,7 +44,7 @@
             </div>
             <div class="col-md-4 mt-1 g-3">
                 <label for="inputEmail4">Date</label>
-                <input type="date" id="date" class="form-control mt-1" placeholder="date" value="@Model.date">
+                <input type="date" id="date" class="form-control mt-1" placeholder="date" value="@Model.date.ToString("yyyy-MM-dd")">
             </div>
         </div>
         <div class="row mx-2 mt-3">
@@ -190,6 +190,19 @@
                     $('#submit').removeClass('bg-secondary');
                     $('#submit').removeAttr('disabled')
                     console.log("data drafted")
+                }
+            })
+        }
+        function handleMissionChange() {
+            const missionid = document.getElementById("mission_id").value;
+            $.ajax({
+                url: '/VolunterrStory/loadaddstory',
+                type: "GET",
+                data: {
+                    missionid: missionid,
+                },
+                success: function (result) {
+                    window.location = result.redirectUrl;
                 }
             })
         }

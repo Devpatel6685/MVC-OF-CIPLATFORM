@@ -18,7 +18,7 @@ namespace CI_PLATFORM_.repository.Interface
 
         public void Shareyourstory(long missionId, string title, DateTime date, string videoURL, string description, string[] imagePaths, long userid);
 
-        public AddStoryViewmodel getData(long userid);
+        public AddStoryViewmodel getData(long userid, string missionid);
 
         public void submit(long storyId);
 
