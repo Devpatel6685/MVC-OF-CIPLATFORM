@@ -112,7 +112,7 @@ namespace CI_PLATFORM_.repository.Repository
             {
                 var storyMedia = _ciplatfromdbcontext.StoryMedia.Where(u => u.StoryId == story.StoryId);
                 var images = storyMedia.Where(m => m.Type == "Image").Select(s => s.Path).ToList();
-                var video = storyMedia.SingleOrDefault(m => m.Type == "video");
+                var video = storyMedia.FirstOrDefault(m => m.Type == "video");
                 var missionTitle = _ciplatfromdbcontext.Missions.FirstOrDefault(m => m.MissionId == story.MissionId);
                 AddStoryViewmodel model = new AddStoryViewmodel()
                 {  status = story.Status,

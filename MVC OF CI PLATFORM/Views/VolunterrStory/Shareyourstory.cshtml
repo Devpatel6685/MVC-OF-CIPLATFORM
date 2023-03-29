@@ -68,7 +68,7 @@
                 </div>
 
                 <div id="image-preview">
-                    @if (Model.imagepaths != null)
+                   @* @if (Model.imagepaths != null)
                     {
                         @foreach (var data in Model.imagepaths)
                         {
@@ -77,7 +77,7 @@
                                 <div class="remove-image">&#10006;</div>
                             </div>
                         }
-                    }
+                    }*@
                 </div>
             </div>
         </div>
@@ -161,16 +161,21 @@
         });
 
         function getmissions() {
+            var mission = $('#mission_id').val();
             $.ajax({
                 url: "/volunterrstory/missions",
                 type: "GET",
                 success: function (result) {
                     $(result).each(function (i, data) {
+                         if (data.missionId != mission) {
                         $('#mission_id').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
+                         }
                     })
                 }
             })
         }
+        
+
 
         function saveDraft() {
             const missionId = $("#mission_id").val();
@@ -270,7 +275,7 @@
                 }
             })
         }
-
+        var listData = @Html.Raw(Json.Serialize(Model.imagepaths));
     </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="/js/Shareyourstory.js"></script>

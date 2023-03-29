@@ -14,8 +14,52 @@
 
 <body>
     <partial name="header" model="Model" />
-    
-        <div class="shareStory">
+    <div class="shareStory">
+        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-2.png" alt="" id="img">
+        <div class="overlay">
+            <div class="text">
+                <p class="d-none d-sm-block">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla eum aut voluptates accusamus repellat similique, rem libero, cumque, saepe repudiandae temporibus. Officia, odio. Exercitationem nostrum provident quae quaerat excepturi doloribus!
+                </p>
+                <a class="btn border rounded-pill py-1 px-2 text-light" asp-action="Shareyourstory" asp-controller="VolunterrStory">Share your Story <img src="~/Assets/right-arrow.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mx-auto mt-1 mb-3" id="result">
+        @foreach (var story in Model.Stories)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <div class="d-flex flex-column position-relative shareStory">
+                        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top" alt="Skyscrapers" />
+                        <div class="overlay">
+                            <div class="text">
+                                <a class="btn border rounded-pill py-1 px-2 text-light" asp-action="storydetails" asp-controller="VolunterrStory" asp-route-Id="@story.StoryId">view Details <img src="~/Assets/right-arrow.png" alt="" srcset=""></a>
+                            </div>
+                        </div>
+                        @{
+                            var theme = Model.Missions.SingleOrDefault(m => m.MissionId == story.MissionId);
+                        }
+                        <div class="position-absolute title rounded-pill border mx-auto px-2">@theme.Theme.Title</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@story.Title</h5>
+                        <p class="card-text truncate">
+                            @story.Description
+                        </p>
+                        <div class="d-flex">
+                            <img src="~/Assets/volunteer1.png" class="rounded-circle volunteer-img" alt="">
+                            <p class="my-auto">&nbsp; @story.User.FirstName @story.User.LastName</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+       @* <div class="shareStory">
             <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-login.png" alt="" id="img">
             <div class="overlay">
                 <div class="text">
@@ -58,7 +102,8 @@
                 </div>
             }
         </div>
-    </div>
+    </div>*@
+    <div id="model" data-pageindex="@Model.Stories.PageNumber"></div>
 
     <div class="d-flex justify-content-between mx-5 page">
         @if (Model.Stories.PageCount > 1)

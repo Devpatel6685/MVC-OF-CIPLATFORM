@@ -101,7 +101,7 @@
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>
                                             <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
-                                            <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
+                                            <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-3 pt-5 me-2">
                                                 
                                                     @{
                                                         var fav = Model.favorite.Where(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session).ToList();

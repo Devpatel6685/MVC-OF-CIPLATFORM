@@ -2,6 +2,22 @@
 const fileInput = document.getElementById("file-input");
 const imagePreview = document.getElementById("image-preview");
 const uploadedFiles = new Set();
+console.log(listData)
+if (listData != null) {
+    var files = new Array();
+    for (var img = 0; img < listData.length; img++) {
+        var byteCharacters = atob(listData[img].toString().split(',')[1]);
+        var byteNumbers = new Array(byteCharacters.length);
+        for (var i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        var byteArray = new Uint8Array(byteNumbers);
+        var blob = new Blob([byteArray], { type: "image/jpeg" });
+        var file = new File([blob], "image" + i + ".jpg", { type: "image/jpeg" });
+        files.push(file);
+    }
+    handleFiles(files);
+}
 
 dropZone.addEventListener("click", () => {
     fileInput.click();
