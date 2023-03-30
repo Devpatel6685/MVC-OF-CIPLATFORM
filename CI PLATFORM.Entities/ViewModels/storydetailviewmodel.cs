@@ -1,4 +1,5 @@
 ﻿using CI_PLATFORM.Entities.DataModels;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,8 @@ namespace CI_PLATFORM.Entities.ViewModels
         public Story Story { get; set; }
 
         public long storyid { get; set; }
-
+         
+        public int views { get; set; }
         public List<string> images { get; set; }
     }
 }

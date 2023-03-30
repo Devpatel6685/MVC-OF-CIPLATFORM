@@ -8,9 +8,9 @@ body {
     display: flex;
 }
 
-.row {
+/*.row {
     --bs-gutter-x: 0px !important;
-}
+}*/
 
 .part1 {
     top: 0px;

@@ -2,7 +2,7 @@
 const fileInput = document.getElementById("file-input");
 const imagePreview = document.getElementById("image-preview");
 const uploadedFiles = new Set();
-console.log(listData)
+
 if (listData != null) {
     var files = new Array();
     for (var img = 0; img < listData.length; img++) {

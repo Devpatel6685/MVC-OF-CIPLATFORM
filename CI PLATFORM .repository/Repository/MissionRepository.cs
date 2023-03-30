@@ -31,7 +31,8 @@ namespace CI_PLATFORM_.repository.Repository
         public MissionViewmodel GetAll(string keyword, int sortId, List<long> countryids, List<long> cityids, List<long> themeids, List<long> skillids, string userid, int pageIndex)
         {
             int pagesize = 9;
-            var mission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Where(model => (keyword == null || model.Title.Contains(keyword) || model.Theme.Title.Contains(keyword) || model.City.Name.Contains(keyword)) && ((countryids.Contains(model.CountryId)) || countryids.Count() == 0) && ((cityids.Contains(model.CityId)) || cityids.Count() == 0) && ((themeids.Contains(model.ThemeId)) || themeids.Count() == 0)).AsQueryable();
+            var skillfilter = _cIPLATFORMDbContext.MissionSkills.Where(s => skillids.Contains(s.SkillId)).Select(s => s.MissionId);
+            var mission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Where(model => (keyword == null || model.Title.Contains(keyword) || model.Theme.Title.Contains(keyword) || model.City.Name.Contains(keyword)) && ((countryids.Contains(model.CountryId)) || countryids.Count() == 0) && ((cityids.Contains(model.CityId)) || cityids.Count() == 0) && ((skillfilter.Contains(model.MissionId)) || skillids.Count() == 0) && ((themeids.Contains(model.ThemeId)) || themeids.Count() == 0)).AsQueryable();
             var rates = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).Include(m => m.Mission).ToList();
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
             var addfavrouitebyuserid = _cIPLATFORMDbContext.FavouriteMissions.Where(u => u.UserId.ToString() == userid).ToList();

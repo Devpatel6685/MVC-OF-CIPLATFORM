@@ -10,8 +10,7 @@ namespace CI_PLATFORM_.repository.Interface
 {
     public interface IVolunterstoryInterface
     {
-        public StoryViewModel Getstorylist(int pageIndex);
-
+        public StoryViewModel Getstorylist(int pageIndex, string keyword);
         public storydetailviewmodel GetStory(int id);
 
         public List<Mission> GetMissions(long userid);

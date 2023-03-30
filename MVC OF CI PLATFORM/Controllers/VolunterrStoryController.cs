@@ -15,9 +15,9 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _volunterstory = volunterstory;       
         }
         [HttpGet]
-        public IActionResult volunteerstory(int pageIndex = 1)
+        public IActionResult volunteerstory(int pageIndex = 1, string? SearchInputdata = "")
         {    
-            var stories = _volunterstory.Getstorylist(pageIndex);
+            var stories = _volunterstory.Getstorylist(pageIndex, SearchInputdata);
             return View(stories);
         }
         [HttpGet]

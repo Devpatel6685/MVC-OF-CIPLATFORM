@@ -26,10 +26,10 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext = ciplatfromdbcontext;
         }
 
-        public StoryViewModel Getstorylist(int pageIndex)
+        public StoryViewModel Getstorylist(int pageIndex , string keyword)
         {
             int pageSize = 9;
-            var stories = _ciplatfromdbcontext.Stories.Include(u => u.User).Include(t => t.Mission).ToList();
+            var stories = _ciplatfromdbcontext.Stories.Include(u => u.User).Include(t => t.Mission).Where(s => s.Status == "PUBLISHED" && (s.Title.Contains(keyword) || s.Mission.Theme.Title.Contains(keyword) || keyword == null));
             var mission = _ciplatfromdbcontext.Missions.Include(m => m.Theme).ToList();
 
             StoryViewModel story = new StoryViewModel()
@@ -46,7 +46,11 @@ namespace CI_PLATFORM_.repository.Repository
             Story story = _ciplatfromdbcontext.Stories.Include(m => m.User).Include(m => m.Mission).SingleOrDefault(s => s.StoryId == storyid);
             var images = _ciplatfromdbcontext.StoryMedia.Where(m=>m.Type =="Image").Select(m=>m.Path).ToList();
             model.Story = story;
+            model.views = story.Views+ 1;
             model.images= images;
+            story.Views = model.views;
+            _ciplatfromdbcontext.Update(story);
+            _ciplatfromdbcontext.SaveChanges();
             return model;
 
         }
