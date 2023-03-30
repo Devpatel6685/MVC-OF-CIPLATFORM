@@ -101,7 +101,7 @@
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>
                                             <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
-                                            <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-3 pt-5 me-2">
+                                            <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
                                                 
                                                     @{
                                                         var fav = Model.favorite.Where(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session).ToList();
@@ -128,7 +128,7 @@
 
 
                                                 <button class="border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="getUsers(@i.MissionId);">
-                                                    <img src="~/Assets/add1.png" alt="" class="heart rounded-circle bg-dark p-2 mb-1 mt-4">
+                                                    <img src="~/Assets/add1.png" alt="" class="heart rounded-circle bg-dark p-2 mb-1 mt-2">
                                                 </button>
                                                 <!-- Modal -->
                                                 @if (userid_session != null)
