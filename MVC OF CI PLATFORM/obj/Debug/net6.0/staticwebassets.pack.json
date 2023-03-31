@@ -529,6 +529,10 @@
       "PackagePath": "staticwebassets\\js\\storydetails.js"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\volunteertimesheet.js",
+      "PackagePath": "staticwebassets\\js\\volunteertimesheet.js"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

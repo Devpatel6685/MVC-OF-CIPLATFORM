@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CI_PLATFORM.Entities.DataModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace CI_PLATFORM_.repository.Interface
 {
-    public class IVolunteerInterface
+    public interface IVolunteerInterface
     {
+        public (List<Mission>, List<Mission>) getMissions(long userid);
+
     }
 }
