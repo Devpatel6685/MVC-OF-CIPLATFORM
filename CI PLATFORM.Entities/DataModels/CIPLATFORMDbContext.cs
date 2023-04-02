@@ -799,9 +799,8 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasColumnType("text")
                 .HasColumnName("notes");
             entity.Property(e => e.Status)
-                .HasMaxLength(1)
+                .HasMaxLength(20)
                 .IsUnicode(false)
-                .HasDefaultValueSql("('PENDING')")
                 .HasColumnName("status");
             entity.Property(e => e.Time).HasColumnName("time");
             entity.Property(e => e.UpdatedAt)

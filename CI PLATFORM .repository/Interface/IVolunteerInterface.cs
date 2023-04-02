@@ -1,4 +1,5 @@
 ﻿using CI_PLATFORM.Entities.DataModels;
+using CI_PLATFORM.Entities.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,9 @@ namespace CI_PLATFORM_.repository.Interface
     {
         public (List<Mission>, List<Mission>) getMissions(long userid);
 
+        public void addtimesheet(VolunteerTimesheetviewmodel model, string userid);
+
+        public void deleteTimesheet(int id);
+        public VolunteerTimesheetviewmodel GetAll(long userid);
     }
 }
