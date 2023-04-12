@@ -1,0 +1,266 @@
+﻿@model CI_PLATFORM.Entities.ViewModels.EditUserViewModel
+<html>
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/useredit.css">
+</head>
+
+<body>
+    <div>
+        @if (TempData["success"] != null)
+        {
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+            <script type="text/javascript">
+                console.log(@TempData["success"]);
+                toastr.success('@TempData["success"]');
+            </script>
+        }
+    </div>
+    <partial name="header" />
+    <div class="container mb-2">
+        <div class="row mt-4 gap-2">
+            <div class="col-md-2 text-center">
+                <div class="border adjust" style="height:320px;">
+                    <img src="~/Assets/user-img.png" class="rounded-circle mt-3" id="profile_img" alt="">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn rounded-pill apply" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Change Password</button>
+                    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <form method="post" asp-action="changePass" asp-controller="Home">
+                                    <div class="modal-body">
+                                        <div class="position-relative my-2 oldpass">
+                                            <input type="password" asp-for="oldpass" placeholder="Enter old password" class="form-control" />
+                                            <span onclick="password('.oldpass');" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
+                                        </div>
+                                        <div>
+                                            <span class="text-danger" asp-validation-for="oldpass"></span>
+                                        </div>
+
+                                        <div class="position-relative my-2 pass">
+                                            <input type="password" placeholder="Enter new password" class="form-control" />
+                                            <span onclick="password('.pass');" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
+                                        </div>
+                                        <div class="position-relative my-2 confirmPass">
+                                            <input type="password" placeholder="Enter confirm password" class="form-control" />
+                                            <span onclick="password('.confirmPass');" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn rounded-pill apply" data-bs-dismiss="modal">Change Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <form method="post">
+                    <div class="row">
+                        <h4 class="col-12 border-bottom pb-2 mb-2 ">
+                            BASIC INFORMATION
+                        </h4>
+                        <div class="row ">
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column">
+                                    <label for="name">Name</label>
+                                    <input type="text" asp-for="name" placeholder="Enter your name">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex flex-column">
+                                    <label for="surname">Surname</label>
+                                    <input type="text" asp-for="surname" placeholder="Enter your surname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mt-2">
+                                <div class="d-flex flex-column">
+                                    <label for="employeeId">Employee ID</label>
+                                    <input asp-for="employeeId" type="text" placeholder="Enter your Employee ID">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <div class="d-flex flex-column">
+                                    <label for="managerName">Manager</label>
+                                    <input type="text" asp-for="managerName" placeholder="Enter your manager name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 mt-2">
+                                <div class="d-flex flex-column">
+                                    <label for="title">Title</label>
+                                    <input type="text" asp-for="title" placeholder="Enter Title">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mt-2">
+                                <div class="d-flex flex-column">
+                                    <label for="department">Department</label>
+                                    <input asp-for="department" type="text" placeholder="Enter Department name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-column">
+                                <label for="profile">profile</label>
+                                <textarea asp-for="profile" name="" cols="30" rows="5" placeholder="Enter your comments..."></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-column">
+                                <label for="whyIVolunteer">why I volunteer</label>
+                                <textarea asp-for="whyIVolunteer" name="" cols="30" rows="3" placeholder="Enter your comments..."></textarea>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row mt-3 ">
+                            <h4 class="col-12 border-bottom py-2 mb-2">
+                                Address Information
+                            </h4>
+                            <div class="row justify-content-between">
+                                <div class="col-sm-6">
+                                    <div class="d-flex flex-column">
+                                        <label for="country">Country</label>
+                                        <select asp-for="countryId">
+                                            @if (Model.countryName == null)
+                                            {
+                                                <option>Select Country</option>
+                                            }
+                                            else
+                                            {
+                                                <option selected value="@Model.countryId">@Model.countryName</option>
+                                            }
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex flex-column">
+                                        <label for="city">City</label>
+                                        <select id="cities" asp-for="cityId">
+                                            @if (Model.cityName == null)
+                                            {
+                                                <option>Select City</option>
+                                            }
+                                            else
+                                            {
+                                                <option selected value="@Model.cityId">@Model.cityName</option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 ">
+                            <h4 class="col-12 border-bottom py-2 mb-2">
+                                Personal Infromation
+                            </h4>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="d-flex flex-column">
+                                        <label for="availability">Avaibility</label>
+                                        <input type="text" asp-for="availability">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="d-flex flex-column">
+                                        <label for="linkedinURL">Linkdin</label>
+                                        <input type="text" asp-for="linkedinURL">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3 ">
+                            <h4 class="col-12 border-bottom my-2 py-2 mb-2">
+                                MY Skills
+                            </h4>
+                            <div class="d-flex flex-column">
+                                <div class="skill-selected border w-100" style="min-height:40px">
+                                    @foreach (var s in Model.userSkills)
+                                    {
+                                        <div id="@s.SkillId">@s.Skill.SkillName</div>
+                                    }
+                                </div>
+                                <div class="col-3">
+                                    <button type="button" class="btn border rounded-pill mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Skills</button>
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Add your skills</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body d-flex">
+                                                    <div class="border p-3 available-skills" style="overflow-y:auto">
+                                                        @{
+                                                            var skills = Model.userSkills.Select(s => s.SkillId).ToList();
+                                                        }
+                                                        @foreach (var s in Model.skills)
+                                                        {
+                                                            if (skills.Contains(s.SkillId))
+                                                            {
+                                                                <div id="@s.SkillId" class="w-100 my-1 px-2 bg-light">@s.SkillName</div>
+                                                            }
+                                                            else
+                                                            {
+                                                                <div id="@s.SkillId" class="w-100 my-1 px-2">@s.SkillName</div>
+                                                            }
+                                                        }
+                                                    </div>
+                                                    <div class="d-flex flex-column align-self-center">
+                                                        <button type="button" class="btn" onclick="selectSkill();">
+                                                            <img src="~/Assets/right-arrow1.png" />
+                                                        </button>
+                                                        <button type="button" class="btn" onclick="deselectSkill();">
+                                                            <img src="~/Assets/left.png" />
+                                                        </button>
+                                                    </div>
+                                                    <div class="border p-3 w-50 selected-skills">
+                                                        @foreach (var s in Model.userSkills)
+                                                        {
+                                                            <div id="@s.SkillId">@s.Skill.SkillName</div>
+                                                        }
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn apply rounded-pill" data-bs-dismiss="modal" onclick="addskill();">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit" class="btn rounded-pill apply" onclick="saveSkill();">Save</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="~/js/Useredit.js"></script>
+</body>
+
+</html>

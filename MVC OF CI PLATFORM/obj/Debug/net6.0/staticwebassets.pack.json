@@ -493,6 +493,10 @@
       "PackagePath": "staticwebassets\\css\\story details.css"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useredit.css",
+      "PackagePath": "staticwebassets\\css\\useredit.css"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\volunterrpage.css",
       "PackagePath": "staticwebassets\\css\\volunterrpage.css"
     },
@@ -507,6 +511,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Shareyourstory.js",
       "PackagePath": "staticwebassets\\js\\Shareyourstory.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Useredit.js",
+      "PackagePath": "staticwebassets\\js\\Useredit.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\VolunteerStory.js",

@@ -20,3 +20,9 @@
 td, th {
     border: 0;
 }
+#minute{
+    width:150px;
+}
+#hour{
+    width:150px;
+}
