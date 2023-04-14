@@ -237,13 +237,11 @@ public partial class CIPLATFORMDbContext : DbContext
 
         modelBuilder.Entity<Contactu>(entity =>
         {
-            entity.HasKey(e => e.Contactusid).HasName("PK__contactu__E7FED8B5CB6263C1");
+            entity.HasKey(e => e.Contactusid).HasName("PK__contactu__E7FED8B5E3B39704");
 
             entity.ToTable("contactus");
 
-            entity.Property(e => e.Contactusid)
-                .ValueGeneratedNever()
-                .HasColumnName("contactusid");
+            entity.Property(e => e.Contactusid).HasColumnName("contactusid");
             entity.Property(e => e.Message)
                 .HasMaxLength(50)
                 .HasColumnName("message");
@@ -255,7 +253,7 @@ public partial class CIPLATFORMDbContext : DbContext
             entity.HasOne(d => d.User).WithMany(p => p.Contactus)
                 .HasForeignKey(d => d.Userid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__contactus__useri__0880433F");
+                .HasConstraintName("FK__contactus__useri__0B5CAFEA");
         });
 
         modelBuilder.Entity<Country>(entity =>

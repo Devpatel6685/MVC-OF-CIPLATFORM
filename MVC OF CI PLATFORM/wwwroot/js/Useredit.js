@@ -1,45 +1,29 @@
-﻿getCountry();
-if ($('#cities').val() == null) {
-    $('#cities').attr('disabled', true);
-}
+﻿
 
-$('#countryId').change(function () {
-    var id = $('#cities').val();
-    $('#cities').empty();
-    $('#cities').append('<option>Select City</option>')
-    $('#cities').attr('disabled', false);
-    var countryId = $('#countryId').val();
-    $.ajax({
-        url: '/Home/City',
-        data: {
-            id: countryId,
-        },
-        type: "POST",
-        success: function (result) {
-            $.each(result, function (i, data) {
-                if (data.cityId != id) {
-                    $('#cities').append('<option value=' + data.cityId + '>' + data.name + '</option>')
-                }
-            })
-        }
-    })
-})
+$(document).ready(function () {
+    $('#countryId').on('change', function () {
+       
+        ddlCity = $('#cities');
+        $.ajax({
+            url: '/Home/City',
+            type: 'POST',
+            dataType: 'json',
+            data: { id: $(this).val() },
+            success: function (d) {
+                console.log(d);
+                ddlCity.empty();
+                $('#cities').prepend('<option value="" selected>Select City</option>');
 
-function getCountry() {
-    var id = $('#countryId').val();
-    $.ajax({
-        url: '/Mission/Country',
-        type: 'POST',
-        success: function (result) {
-            $.each(result, function (i, data) {
-                if (data.countryId != id) {
-                    $('#countryId').append('<option value=' + data.countryId + '>' + data.name + '</option>');
-                }
-
-            })
-        },
-    })
-}
+                $.each(d, function (i, data) {
+                    ddlCity.append('<option value="' + data.cityId + '" id="' + data.cityId + '">' + data.name + '</option>');
+                });
+            },
+            error: function () {
+                alert('Error');
+            }
+        });
+    });
+});
 
 $('.available-skills div').click(function () {
     $(this).hasClass("bg-light") ? $(this).removeClass("bg-light") : $(this).addClass("bg-light");

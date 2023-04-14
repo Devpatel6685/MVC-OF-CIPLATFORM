@@ -2,6 +2,7 @@
 using CI_PLATFORM.Entities.ViewModels;
 using CI_PLATFORM_.repository.Interface;
 using MailKit.Security;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MimeKit;
 using System;
@@ -144,6 +145,19 @@ namespace CI_PLATFORM.repository.Repository
             var data = _cIPLATFORMDbContext.Users.Include(c => c.Country).Include(c => c.City).SingleOrDefault(x => x.UserId == userid);
             var user_skill = _cIPLATFORMDbContext.UserSkills.Where(s => s.UserId == userid).ToList();
             var skills = _cIPLATFORMDbContext.Skills.OrderBy(s => s.SkillName).ToList();
+            List<SelectListItem> list = new List<SelectListItem>();
+            var temp = _cIPLATFORMDbContext.Countries.ToList();
+            foreach (var item in temp)
+            {
+                list.Add(new SelectListItem() { Text = item.Name, Value = item.CountryId.ToString() });
+            }
+
+            List<SelectListItem> list1 = new List<SelectListItem>();
+            var temp1 = _cIPLATFORMDbContext.Cities.Where(c => c.CountryId == data.CountryId).ToList();
+            foreach (var item in temp1)
+            {
+                list1.Add(new SelectListItem() { Text = item.Name, Value = item.CityId.ToString() });
+            }
             EditUserViewModel model = new EditUserViewModel()
             {
                 name = data.FirstName,
@@ -153,8 +167,8 @@ namespace CI_PLATFORM.repository.Repository
                 department = data.Department,
                 profile = data.ProfileText,
                 whyIVolunteer = data.WhyIVolunteer,
-                countryName = data.Country.Name,
-                cityName = data.City.Name,
+                countryName = list,
+                cityName = list1,
                 countryId = data.Country.CountryId,
                 cityId = data.City.CityId,
                 linkedinURL = data.LinkedInUrl,

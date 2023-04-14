@@ -20,8 +20,7 @@ namespace CI_PLATFORM_.repository.Repository
         }
         public (List<Mission>, List<Mission>) getMissions(long userid)
         {
-            var timesheet =_ciplatfromdbcontext.Timesheets.Where(u => u.UserId == userid).Select(ts => ts.MissionId).ToList();
-            var missionApplication = _ciplatfromdbcontext.MissionApplications.Where(u => u.UserId == userid && !timesheet.Contains(u.MissionId)).Select(u => u.MissionId);
+            var missionApplication = _ciplatfromdbcontext.MissionApplications.Where(u => u.UserId == userid).Select(u => u.MissionId);
             var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "TIME").OrderBy(m => m.Title).ToList();
             var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "GOAL").OrderBy(m => m.Title).ToList();
             return (time, goal);

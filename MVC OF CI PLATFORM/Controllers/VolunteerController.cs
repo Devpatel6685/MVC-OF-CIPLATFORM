@@ -14,12 +14,19 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _Volunteer = volunteer;
         }
         [HttpGet] 
-        public ActionResult VolunteeringTimesheet()
+      
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult VolunteeringTimesheet()
         {
             var userid = HttpContext.Session.GetString("userid");
+            if (userid == null)
+            {
+                return RedirectToAction("LOGIN", "Home");
+            }
             var entity = _Volunteer.GetAll(long.Parse(userid));
             return View(entity);
         }
+
         [HttpPost]
         public IActionResult VolunteeringTimesheet(VolunteerTimesheetviewmodel model)
         {

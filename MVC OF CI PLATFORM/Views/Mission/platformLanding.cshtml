@@ -37,7 +37,7 @@
 
 <body>
     <partial name="header" model="Model" />
-    @* <div>
+     <div>
     @if (TempData["LOGIN"] != null)
     {
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
@@ -47,7 +47,7 @@
     toastr.success('@TempData["LOGIN"]');
     </script>
     }
-    </div>*@
+    </div>
 
     <div class="d-flex mt-4 mx-5 justify-content-between" id="gridList">
         <h3 class="ms-3">Explore <span id="displayOnExploreOnThisFeild" value="missons"> </span> missions</h3>

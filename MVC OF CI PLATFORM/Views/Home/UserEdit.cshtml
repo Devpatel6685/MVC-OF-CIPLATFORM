@@ -9,27 +9,35 @@
 </head>
 
 <body>
+    <partial name="header" model="Model" />
     <div>
         @if (TempData["success"] != null)
         {
+
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-            <script src="~/lib/jquery/dist/jquery.min.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-            <script type="text/javascript">
-                console.log(@TempData["success"]);
-                toastr.success('@TempData["success"]');
+            <script>
+                console.log("@TempData["success"]");
+                ("@TempData["success"]" == "Old password is incorrect" || "@TempData["success"]" == "Information is not provided correctly") ? toastr.error("@TempData["success"]") : toastr.success("@TempData["success"]");
+                @*toastr.success("@TempData["success"]");*@
             </script>
         }
     </div>
-    <partial name="header" model="Model" />
     <div class="container mb-2">
         <div class="row mt-4 gap-2">
             <div class="col-md-2 text-center">
-                <div class="border adjust" style="height:320px;">
-                    <img src="~/Assets/user-img.png" class="rounded-circle mt-3" id="profile_img" alt="">
+                <div class="adjust " style="height:200px;">
+                    <img src="~/Assets/user-img.png" class="rounded-circle mt-3" id="profile_img"  alt="">
+                    <div class="userName mt-3">
+                        <h3>@Model.name @Model.surname</h3>
+                    </div>
+                    <div class="button mt-3">
+                        <button type="button" class="btn rounded-pill apply px-1 py-2 justify-content-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Change Password</button>
+
+                    </div>
                 </div>
+                
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn rounded-pill apply" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Change Password</button>
                     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
                             <div class="modal-content">
@@ -39,7 +47,7 @@
                                 </div>
                                 <form method="post" asp-action="changePass" asp-controller="Home">
                                     <div class="modal-body">
-                                        <div class="position-relative my-2 oldpass">
+                                        <div class="position-relative mt-2 oldpass">
                                             <input type="password" asp-for="oldpass" placeholder="Enter old password" class="form-control" />
                                             <span onclick="password('.oldpass');" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
                                         </div>
@@ -47,18 +55,24 @@
                                             <span class="text-danger" asp-validation-for="oldpass"></span>
                                         </div>
 
-                                        <div class="position-relative my-2 pass">
+                                        <div class="position-relative mt-2 pass">
                                             <input type="password" asp-for="newpass" placeholder="Enter new password" class="form-control" />
                                             <span onclick="password('.pass');" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
                                         </div>
-                                        <div class="position-relative my-2 confirmPass">
-                                            <input type="password" asp-for="newpass" placeholder="Enter confirm password" class="form-control" />
+                                        <div>
+                                            <span class="text-danger" asp-validation-for="newpass"></span>
+                                        </div>
+                                        <div class="position-relative mt-2 confirmPass">
+                                            <input type="password" asp-for="confirmpass" placeholder="Enter confirm password" class="form-control" />
                                             <span onclick="password('.confirmPass');" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
+                                        </div>
+                                        <div>
+                                            <span class="text-danger" asp-validation-for="confirmpass"></span>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn rounded-pill apply" data-bs-dismiss="modal">Change Password</button>
+                                        <button type="submit" class="btn rounded-pill apply">Change Password</button>
                                     </div>
                                 </form>
                             </div>
@@ -76,13 +90,13 @@
                             <div class="col-sm-6">
                                 <div class="d-flex flex-column">
                                     <label for="name">Name</label>
-                                    <input type="text" asp-for="name" placeholder="Enter your name">
+                                    <input type="text" class="form-control" asp-for="name" placeholder="Enter your name">
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex flex-column">
                                     <label for="surname">Surname</label>
-                                    <input type="text" asp-for="surname" placeholder="Enter your surname">
+                                    <input type="text" class="form-control" asp-for="surname" placeholder="Enter your surname">
                                 </div>
                             </div>
                         </div>
@@ -90,13 +104,13 @@
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <label for="employeeId">Employee ID</label>
-                                    <input asp-for="employeeId" type="text" placeholder="Enter your Employee ID">
+                                    <input asp-for="employeeId" class="form-control" type="text" placeholder="Enter your Employee ID">
                                 </div>
                             </div>
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <label for="managerName">Manager</label>
-                                    <input type="text" asp-for="managerName" placeholder="Enter your manager name">
+                                    <input type="text" class="form-control" asp-for="managerName" placeholder="Enter your manager name">
                                 </div>
                             </div>
                         </div>
@@ -104,26 +118,26 @@
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <label for="title">Title</label>
-                                    <input type="text" asp-for="title" placeholder="Enter Title">
+                                    <input type="text" class="form-control" asp-for="title" placeholder="Enter Title">
                                 </div>
                             </div>
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <label for="department">Department</label>
-                                    <input asp-for="department" type="text" placeholder="Enter Department name">
+                                    <input asp-for="department" class="form-control" type="text" placeholder="Enter Department name">
                                 </div>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column">
                                 <label for="profile">profile</label>
-                                <textarea asp-for="profile" name="" cols="30" rows="5" placeholder="Enter your comments..."></textarea>
+                                <textarea asp-for="profile" cols="30" rows="5" placeholder="Enter your comments..."></textarea>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column">
                                 <label for="whyIVolunteer">why I volunteer</label>
-                                <textarea asp-for="whyIVolunteer" name="" cols="30" rows="3" placeholder="Enter your comments..."></textarea>
+                                <textarea asp-for="whyIVolunteer" cols="30" rows="3" placeholder="Enter your comments..."></textarea>
                             </div>
                         </div>
 
@@ -137,31 +151,16 @@
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="country">Country</label>
-                                        <select asp-for="countryId">
-                                            @if (Model.countryName == null)
-                                            {
-                                                <option>Select Country</option>
-                                            }
-                                            else
-                                            {
-                                                <option selected value="@Model.countryId">@Model.countryName</option>
-                                            }
-
+                                        <select id="countryId" asp-for="countryId" asp-items="@Model.countryName">
+                                            <option>Select Country</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="city">City</label>
-                                        <select id="cities" asp-for="cityId">
-                                            @if (Model.cityName == null)
-                                            {
-                                                <option>Select City</option>
-                                            }
-                                            else
-                                            {
-                                                <option selected value="@Model.cityId">@Model.cityName</option>
-                                            }
+                                        <select id="cities" asp-for="cityId" asp-items="@Model.cityName">
+                                            <option>Select City</option>
                                         </select>
                                     </div>
                                 </div>
@@ -286,7 +285,7 @@
                                                         <div class="my-2">
                                                             <label for="name">Name</label>
                                                             <input type="text" id="name" class="w-100" value="@Model.name" disabled />
-                                                            <span class="text-danger" asp-validation-for="oldpass"></span>
+                                                            <span class="text-danger" asp-validation-for="name"></span>
                                                         </div>
                                                         <div class="my-2">
                                                             <label for="Email">email Address</label>
@@ -298,10 +297,11 @@
                                                             <input type="text" id="subject" class="w-100" asp-for="Subject" />
                                                             <span class="text-danger" asp-validation-for="Subject"></span>
                                                         </div>
-                                                        <div class="my-2">
+                                                        <div class="my-3">
+                                                           
                                                             <label for="Message">Message</label>
-                                                            <input type="text" id="message" class="w-100" asp-for="Message" />
-                                                            <span class="text-danger" asp-validation-for="Message"></span>
+                                                            <textarea asp-for="Message" id="message" class="w-100" style="height:90px" placeholder="Enter your message"></textarea>
+                                                            <span asp-validation-for="Message" class="text-danger"></span>
                                                         </div>
 
                                                     </div>
@@ -330,7 +330,7 @@
     </div>
     <!--footer end-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+    <partial name="_ValidationScriptsPartial" />
     <script src="~/js/Useredit.js"></script>
 </body>
 

@@ -1,4 +1,5 @@
 ﻿using CI_PLATFORM.Entities.DataModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,16 +14,17 @@ namespace CI_PLATFORM.Entities.ViewModels
         public string name { get; set; }
         public string surname { get; set; }
         public string? employeeId { get; set; }
-        public string managerName { get; set; }
+        public string? managerName { get; set; }
         public string title { get; set; }
         public string department { get; set; }
         public string profile { get; set; }
         public string whyIVolunteer { get; set; }
-        public string countryName { get; set; }
-        public string cityName { get; set; }
+        public List<SelectListItem> countryName { get; set; }
+        public List<SelectListItem> cityName { get; set; }
+       
         public long cityId { get; set; }
         public long countryId { get; set; }
-        public string availability { get; set; }
+        public string? availability { get; set; }
         public string linkedinURL { get; set; }
         public string Email { get; set; } = null!;
         [Required(ErrorMessage = "Subject is required")]

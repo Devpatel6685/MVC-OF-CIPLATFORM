@@ -32,7 +32,9 @@
     display: inline-block;
     padding-left: 20px;
 }
-
+.line2 {
+    display:none;
+}
 
 
 .apply {

@@ -24,6 +24,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
 
         [AllowAnonymous]
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult platformLanding(List<long> skillids, List<long> themeids, List<long> cityids, List<long> countryids, int sortId, string? SearchInputdata = "", int pageIndex = 1)
         {
             ViewData["country"] = _subheaderInterface.GetCountryList();

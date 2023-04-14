@@ -29,8 +29,9 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {   
             return View();
         }
-
-        public IActionResult LOGIN()
+       
+		[ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult LOGIN()
 
         {
             if(HttpContext.Session.GetString("username")!=null){ 
@@ -193,6 +194,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _iuserRepository.addskill(skillids, userid);
         }
 
+     
         public IActionResult changePass(EditUserViewModel model)
         {
             var userid = HttpContext.Session.GetString("userid");
@@ -200,14 +202,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             if (result == "success")
             {
                 TempData["success"] = "Password Updated Successfully";
-                return RedirectToAction("UserEdit", "Home");
             }
             else
             {
-                TempData["error"] = "password is updated";
-                return RedirectToAction("UserEdit", "Home");
-
+                TempData["success"] = "Old password is incorrect";
             }
+            return RedirectToAction("UserEdit");
 
         }
         [HttpPost]
