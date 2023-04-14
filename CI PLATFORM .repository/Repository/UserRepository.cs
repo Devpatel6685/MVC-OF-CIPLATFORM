@@ -160,10 +160,27 @@ namespace CI_PLATFORM.repository.Repository
                 linkedinURL = data.LinkedInUrl,
                 userSkills = user_skill,
                 skills = skills,
+                Email= data.Email,
+                
+                
             };
             return model;
         }
+        public void getcontact(EditUserViewModel model,long userid)
+        {
+            Contactu ctn = new Contactu()
+            {
+                Userid= userid,
+                Subject=model.Subject,
+                Message=model.Message,
+            };
+            _cIPLATFORMDbContext.Contactus.Add(ctn);
+            _cIPLATFORMDbContext.SaveChanges();
+            
 
+
+            
+        }
         public void editUserDetails(EditUserViewModel model, long userid)
         {
             var user = _cIPLATFORMDbContext.Users.SingleOrDefault(u => u.UserId == userid);
@@ -177,6 +194,7 @@ namespace CI_PLATFORM.repository.Repository
             user.CountryId = model.countryId;
             user.CityId = model.cityId;
             user.LinkedInUrl = model.linkedinURL;
+
             _cIPLATFORMDbContext.SaveChanges();
         }
 
@@ -195,6 +213,7 @@ namespace CI_PLATFORM.repository.Repository
             }
             _cIPLATFORMDbContext.SaveChanges();
         }
+        
         public string changepass(EditUserViewModel model, string userid)
         {
             var user = _cIPLATFORMDbContext.Users.SingleOrDefault(u => u.UserId.ToString() == userid);

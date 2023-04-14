@@ -24,6 +24,11 @@ namespace CI_PLATFORM.Entities.ViewModels
         public long countryId { get; set; }
         public string availability { get; set; }
         public string linkedinURL { get; set; }
+        public string Email { get; set; } = null!;
+        [Required(ErrorMessage = "Subject is required")]
+        public string Subject { get; set; } = null!;
+        [Required(ErrorMessage = "Message is required")]
+        public string Message { get; set; } = null!;
         public List<UserSkill> userSkills { get; set; }
         public List<Skill> skills { get; set; }
 

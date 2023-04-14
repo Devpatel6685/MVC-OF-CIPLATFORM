@@ -16,6 +16,7 @@ builder.Services.AddScoped<ISubheaderInterface,SubHeaderRepository>();
 builder.Services.AddScoped<IMissionInterface,MissionRepository>();
 builder.Services.AddScoped<IVolunterstoryInterface,VolunteerstoryListingRepository>();
 builder.Services.AddScoped<IVolunteerInterface,VolunteerRepository>();
+builder.Services.AddScoped<IAdminInterface, AdminRepository>();
 
 
 builder.Services.AddHttpContextAccessor();

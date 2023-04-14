@@ -179,25 +179,36 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             TempData["success"] = "Profile updated successfully";
             return RedirectToAction("UserEdit");
         }
+        public IActionResult ContactUs(EditUserViewModel model)
+        {
+            var userid = HttpContext.Session.GetString("userid");
+            _iuserRepository.getcontact(model, long.Parse(userid));
+            return RedirectToAction("UserEdit");
 
+
+        }
         public void addskill(List<int> skillids)
         {
             var userid = HttpContext.Session.GetString("userid");
             _iuserRepository.addskill(skillids, userid);
         }
 
-        public void changePass(EditUserViewModel model)
+        public IActionResult changePass(EditUserViewModel model)
         {
             var userid = HttpContext.Session.GetString("userid");
             var result = _iuserRepository.changepass(model, userid);
             if (result == "success")
             {
                 TempData["success"] = "Password Updated Successfully";
+                return RedirectToAction("UserEdit", "Home");
             }
             else
             {
-                TempData["success"] = "Old password is incorrect";
+                TempData["error"] = "password is updated";
+                return RedirectToAction("UserEdit", "Home");
+
             }
+
         }
         [HttpPost]
         public JsonResult City(int id)

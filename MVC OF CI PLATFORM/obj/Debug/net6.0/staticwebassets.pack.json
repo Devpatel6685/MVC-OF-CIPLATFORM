@@ -449,6 +449,10 @@
       "PackagePath": "staticwebassets\\Document\\jquery.pdf"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\AdminPage.css",
+      "PackagePath": "staticwebassets\\css\\AdminPage.css"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\Shareyourstory.css",
       "PackagePath": "staticwebassets\\css\\Shareyourstory.css"
     },
@@ -475,6 +479,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\platformlandingStyle.css",
       "PackagePath": "staticwebassets\\css\\platformlandingStyle.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\privacypolicy.css",
+      "PackagePath": "staticwebassets\\css\\privacypolicy.css"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\registeration.css",
@@ -507,6 +515,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Adminpage.js",
+      "PackagePath": "staticwebassets\\js\\Adminpage.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Shareyourstory.js",

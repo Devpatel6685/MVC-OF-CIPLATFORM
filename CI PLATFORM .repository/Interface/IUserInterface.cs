@@ -24,5 +24,6 @@ namespace CI_PLATFORM_.repository.Interface
         public void editUserDetails(EditUserViewModel model, long userid);
         public void addskill(List<int> skillids, string userid);
         public string changepass(EditUserViewModel model, string userid);
+        public void getcontact(EditUserViewModel model, long userid);
     }
 }

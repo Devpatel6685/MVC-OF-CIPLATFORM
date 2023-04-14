@@ -25,6 +25,8 @@ public partial class CIPLATFORMDbContext : DbContext
 
     public virtual DbSet<Comment> Comments { get; set; }
 
+    public virtual DbSet<Contactu> Contactus { get; set; }
+
     public virtual DbSet<Country> Countries { get; set; }
 
     public virtual DbSet<FavouriteMission> FavouriteMissions { get; set; }
@@ -231,6 +233,29 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__comment__user_id__75A278F5");
+        });
+
+        modelBuilder.Entity<Contactu>(entity =>
+        {
+            entity.HasKey(e => e.Contactusid).HasName("PK__contactu__E7FED8B5CB6263C1");
+
+            entity.ToTable("contactus");
+
+            entity.Property(e => e.Contactusid)
+                .ValueGeneratedNever()
+                .HasColumnName("contactusid");
+            entity.Property(e => e.Message)
+                .HasMaxLength(50)
+                .HasColumnName("message");
+            entity.Property(e => e.Subject)
+                .HasMaxLength(50)
+                .HasColumnName("subject");
+            entity.Property(e => e.Userid).HasColumnName("userid");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Contactus)
+                .HasForeignKey(d => d.Userid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__contactus__useri__0880433F");
         });
 
         modelBuilder.Entity<Country>(entity =>
