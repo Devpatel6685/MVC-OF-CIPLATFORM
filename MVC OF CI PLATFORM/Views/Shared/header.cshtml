@@ -16,6 +16,7 @@
 }
 @{
     var firstname_session = @Accessor.HttpContext.Session.GetString("username");
+    var avtar = Accessor.HttpContext.Session.GetString("avtar");
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +68,8 @@
 {
     <div class="dropdown mx-5" id="prof-drop">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/Assets/user-img.png" class="rounded-circle" alt="profile">
+                @*            <img src="/Assets/user-img.png" class="rounded-circle" alt="profile">*@ 
+           <img src="@avtar" alt="" class=" rounded-circle" id="profile-photo">
             <span id="hide">@firstname_session</span>
         </a>
         <ul class="dropdown-menu" id="drop-pos">

@@ -1,5 +1,6 @@
 ﻿using CI_PLATFORM.Entities.DataModels;
 using CI_PLATFORM.Entities.ViewModels;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,5 +26,8 @@ namespace CI_PLATFORM_.repository.Interface
         public void addskill(List<int> skillids, string userid);
         public string changepass(EditUserViewModel model, string userid);
         public void getcontact(EditUserViewModel model, long userid);
+
+        public void editimage(IFormFile Image, long userid);
+
     }
 }

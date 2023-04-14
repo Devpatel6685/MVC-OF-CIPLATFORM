@@ -2,8 +2,11 @@
 using CI_PLATFORM.Entities.ViewModels;
 using CI_PLATFORM_.repository.Interface;
 using MailKit.Security;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 using MimeKit;
 using System;
 using System.Collections.Generic;
@@ -22,9 +25,12 @@ namespace CI_PLATFORM.repository.Repository
     public class UserRepository : IUserInterface
     {
         private readonly CIPLATFORMDbContext _cIPLATFORMDbContext;
-        public UserRepository(CIPLATFORMDbContext cIPLATFORMDbContext)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public UserRepository(CIPLATFORMDbContext cIPLATFORMDbContext, IWebHostEnvironment hostEnvironment)
         {
             _cIPLATFORMDbContext = cIPLATFORMDbContext;
+            _hostEnvironment = hostEnvironment;
+
         }
 
         public string login(LoginViewModel user)
@@ -42,7 +48,23 @@ namespace CI_PLATFORM.repository.Repository
                 return "invalid password";
             }
 
-            return userpassword.FirstName + "," + userpassword.UserId;
+            return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar;
+
+        }
+        public void editimage(IFormFile Image, long userid)
+        {
+            var user = _cIPLATFORMDbContext.Users.FirstOrDefault(u => u.UserId == userid);
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+            string fileName = Guid.NewGuid().ToString();
+            var uploads = Path.Combine(wwwRootPath, @"Images");
+            var extension = Path.GetExtension(Image.FileName);
+            using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+            {
+                Image.CopyTo(fileStreams);
+            }
+            user.Avatar = @"\Images\" + fileName + extension;
+            _cIPLATFORMDbContext.SaveChanges();
+
 
         }
 
@@ -160,6 +182,7 @@ namespace CI_PLATFORM.repository.Repository
             }
             EditUserViewModel model = new EditUserViewModel()
             {
+                Avatar=data.Avatar,
                 name = data.FirstName,
                 surname = data.LastName,
                 title = data.Title,

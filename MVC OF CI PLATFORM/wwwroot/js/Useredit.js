@@ -94,3 +94,48 @@ function password(passw) {
         pass.attr('type', 'password')
     }
 }
+
+function handleSelectedFile(file) {
+
+
+    var formData = new FormData();
+    formData.append("Image", file);
+    $.ajax({
+        type: 'POST',
+        url: '/Home/AddImage',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function (result) {
+            alert('success');
+            window.location = result.redirectUrl;
+
+        }
+    });
+    // Read the file as a data URL
+}
+var img1 = $('#model-img');
+
+var img = document.getElementById("profile-photo");
+img.src = img1.attr('data-avtar');
+
+$('.img-wrapper').mouseover(function () {
+    $('#boot-icon').removeClass("d-none")
+})
+$('.img-wrapper').mouseout(function () {
+    $('#boot-icon').addClass("d-none")
+})
+
+
+document.getElementById("profileimg").onclick = function () {
+    alert("sucess");
+    document.getElementById("file-input").click();
+}
+document.getElementById("boot-icon").onclick = function () {
+    alert("sucess");
+    document.getElementById("file-input").click();
+}
+document.getElementById("file-input").onchange = function () {
+    alert('inside file');
+    handleSelectedFile(this.files[0]);
+}

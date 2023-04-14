@@ -44,5 +44,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         [Required(ErrorMessage = "Enter ConfirmPassword")]
         [Compare("newpass", ErrorMessage = "Confirm Password is not match with Password")]
         public string confirmpass { get; set; }
+
+        public string Avatar { get; set; }
     }
 }

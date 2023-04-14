@@ -67,6 +67,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
              
                 HttpContext.Session.SetString("username", Users[0]);
                 HttpContext.Session.SetString("userid", Users[1]);
+                HttpContext.Session.SetString("avtar", Users[2]);
                 TempData["LOGIN"] = "successfully logged in";
                 return RedirectToAction("PlatformLanding", "Mission");
             }
@@ -211,11 +212,22 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         }
         [HttpPost]
+        public IActionResult AddImage(IFormFile Image)
+        {
+
+            var user_id = long.Parse(HttpContext.Session.GetString("userid"));
+            _iuserRepository.editimage(Image, user_id);
+            return Json(new { redirectUrl = Url.Action("UserEdit", "Home") });
+
+        }
+        [HttpPost]
         public JsonResult City(int id)
         {
             var city = _iuserRepository.GetCities(id);
             return Json(city);
         }
+
+       
 
     }
 }

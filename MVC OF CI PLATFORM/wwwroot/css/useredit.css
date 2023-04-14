@@ -27,6 +27,23 @@
 .rights {
     text-align: right;
 }
+.img-wrapper {
+    position: relative;
+}
+
+    .img-wrapper:hover img {
+        opacity: 0.5;
+    }
+
+    .img-wrapper:hover .icon {
+        display: block;
+    }
+
+.icon {
+    position: absolute;
+    top: 13%;
+        left:  36%;
+}
 
 .copyright-menu li {
     display: inline-block;

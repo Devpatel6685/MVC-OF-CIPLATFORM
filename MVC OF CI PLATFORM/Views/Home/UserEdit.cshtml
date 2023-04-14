@@ -26,7 +26,12 @@
     <div class="container mb-2">
         <div class="row mt-4 gap-2">
             <div class="col-md-2 text-center">
-                <div class="adjust " style="height:200px;">
+                <div class="border adjust img-wrapper position-relative" style="height:320px;">
+                    <img src="@Model.Avatar" class="rounded-circle mt-3" id="profileimg" alt="">
+                    <span id="boot-icon" class="bi bi-pencil icon d-none" style="font-size: 31px; color: rgb(0, 0, 0); opacity: 1; -webkit-text-stroke-width: 0.5px;"></span>
+                    <input type="file" id="file-input" style="display:none">
+                </div>
+               @* <div class="adjust " style="height:200px;">
                     <img src="~/Assets/user-img.png" class="rounded-circle mt-3" id="profile_img"  alt="">
                     <div class="userName mt-3">
                         <h3>@Model.name @Model.surname</h3>
@@ -35,7 +40,7 @@
                         <button type="button" class="btn rounded-pill apply px-1 py-2 justify-content-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Change Password</button>
 
                     </div>
-                </div>
+                </div>*@
                 
                 <div class="d-flex justify-content-center">
                     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -331,6 +336,7 @@
     <!--footer end-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <partial name="_ValidationScriptsPartial" />
+    <div id="model-img" data-avtar="@Model.Avatar"></div>
     <script src="~/js/Useredit.js"></script>
 </body>
 

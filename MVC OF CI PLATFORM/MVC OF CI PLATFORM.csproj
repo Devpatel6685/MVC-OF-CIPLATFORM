@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Views\LOGIN\" />
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
   <ItemGroup>
