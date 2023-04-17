@@ -203,20 +203,44 @@ namespace CI_PLATFORM.repository.Repository
             };
             return model;
         }
-        public void getcontact(EditUserViewModel model,long userid)
+        /* public void getcontact(EditUserViewModel model,long userid)
+         {
+             Contactu ctn = new Contactu()
+             {
+                 Userid= userid,
+                 Subject=model.Subject,
+                 Message=model.Message,
+             };
+             _cIPLATFORMDbContext.Contactus.Add(ctn);
+             _cIPLATFORMDbContext.SaveChanges();
+
+
+
+
+         }*/
+        public void editcontact(string subject, string message, long userid)
         {
-            Contactu ctn = new Contactu()
+            var contact = _cIPLATFORMDbContext.Users.FirstOrDefault(c => c.UserId == userid);
+            var model1 = new Contactu
             {
-                Userid= userid,
-                Subject=model.Subject,
-                Message=model.Message,
+                Userid = userid,
+                Subject = subject,
+                Message = message
+
             };
-            _cIPLATFORMDbContext.Contactus.Add(ctn);
+            _cIPLATFORMDbContext.Add(model1);
             _cIPLATFORMDbContext.SaveChanges();
-            
+        }
 
-
-            
+        public Contactusmodel addcontact(string userid)
+        {
+            var user = _cIPLATFORMDbContext.Users.FirstOrDefault(u => u.UserId.ToString() == userid);
+            var model = new Contactusmodel
+            {
+                Email = user.Email,
+                FirstName = user.FirstName,
+            };
+            return model;
         }
         public void editUserDetails(EditUserViewModel model, long userid)
         {

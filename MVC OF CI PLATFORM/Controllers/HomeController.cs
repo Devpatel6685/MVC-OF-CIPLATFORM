@@ -181,12 +181,19 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             TempData["success"] = "Profile updated successfully";
             return RedirectToAction("UserEdit");
         }
-        public IActionResult ContactUs(EditUserViewModel model)
-        {
-            var userid = HttpContext.Session.GetString("userid");
-            _iuserRepository.getcontact(model, long.Parse(userid));
-            return RedirectToAction("UserEdit");
+        /* public IActionResult ContactUs(EditUserViewModel model)
+         {
+             var userid = HttpContext.Session.GetString("userid");
+             _iuserRepository.getcontact(model, long.Parse(userid));
+             return RedirectToAction("UserEdit");
 
+
+         }*/
+        public string editcontact(string subject, string message)
+        {
+            var user_id = long.Parse(HttpContext.Session.GetString("userid"));
+            _iuserRepository.editcontact(subject, message, user_id);
+            return "success";
 
         }
         public void addskill(List<int> skillids)
@@ -195,7 +202,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _iuserRepository.addskill(skillids, userid);
         }
 
-     
+        public IActionResult Addcontact(string Userid)
+        {
+            var contact = _iuserRepository.addcontact(Userid);
+            return PartialView("_modalcontactus", contact);
+        }
         public IActionResult changePass(EditUserViewModel model)
         {
             var userid = HttpContext.Session.GetString("userid");

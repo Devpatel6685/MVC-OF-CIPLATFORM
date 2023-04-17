@@ -449,6 +449,14 @@
       "PackagePath": "staticwebassets\\Document\\jquery.pdf"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\67e2406b-c004-4a70-9803-d397c974abc0.png",
+      "PackagePath": "staticwebassets\\Images\\67e2406b-c004-4a70-9803-d397c974abc0.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png",
+      "PackagePath": "staticwebassets\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\AdminPage.css",
       "PackagePath": "staticwebassets\\css\\AdminPage.css"
     },
@@ -537,6 +545,18 @@
       "PackagePath": "staticwebassets\\js\\Volunteerpage.js"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\cmspartial.js",
+      "PackagePath": "staticwebassets\\js\\cmspartial.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionapplication.js",
+      "PackagePath": "staticwebassets\\js\\missionapplication.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionpartial.js",
+      "PackagePath": "staticwebassets\\js\\missionpartial.js"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\plaltformLanding.js",
       "PackagePath": "staticwebassets\\js\\plaltformLanding.js"
     },
@@ -547,6 +567,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\storydetails.js",
       "PackagePath": "staticwebassets\\js\\storydetails.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\userpartial.js",
+      "PackagePath": "staticwebassets\\js\\userpartial.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\volunteertimesheet.js",

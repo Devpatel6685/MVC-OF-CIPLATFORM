@@ -42,7 +42,7 @@
 .icon {
     position: absolute;
     top: 13%;
-        left:  36%;
+    left: 36% ;
 }
 
 .copyright-menu li {
@@ -73,4 +73,9 @@
         .adjust img {
             margin-top: 0px;
         }
+    .icon {
+        position: absolute;
+        top: 35%;
+        left: 47%;
+    }
 }
