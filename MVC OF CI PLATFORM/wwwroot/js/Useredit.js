@@ -107,7 +107,7 @@ function handleSelectedFile(file) {
         processData: false,
         contentType: false,
         success: function (result) {
-            alert('success');
+            /*alert('success');*/
             window.location = result.redirectUrl;
 
         }
@@ -128,14 +128,18 @@ $('.img-wrapper').mouseout(function () {
 
 
 document.getElementById("profileimg").onclick = function () {
-    alert("sucess");
+    /*alert("sucess");*/
     document.getElementById("file-input").click();
 }
 document.getElementById("boot-icon").onclick = function () {
-    alert("sucess");
+   /* alert("sucess");*/
     document.getElementById("file-input").click();
 }
 document.getElementById("file-input").onchange = function () {
-    alert('inside file');
+   /* alert('inside file');*/
     handleSelectedFile(this.files[0]);
+}
+
+function clearform() {
+    $('#changePasswordForm')[0].reset();
 }

@@ -351,7 +351,9 @@ public partial class CIPLATFORMDbContext : DbContext
             entity.ToTable("mission");
 
             entity.Property(e => e.MissionId).HasColumnName("mission_id");
-            entity.Property(e => e.Availability).HasColumnName("availability");
+            entity.Property(e => e.Availibility)
+                .HasMaxLength(90)
+                .IsUnicode(false);
             entity.Property(e => e.CityId).HasColumnName("city_id");
             entity.Property(e => e.CountryId).HasColumnName("country_id");
             entity.Property(e => e.CreatedAt)
@@ -390,6 +392,7 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasMaxLength(128)
                 .IsUnicode(false)
                 .HasColumnName("title");
+            entity.Property(e => e.TotalSeats).HasColumnName("Total_seats");
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");

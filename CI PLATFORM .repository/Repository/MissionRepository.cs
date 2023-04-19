@@ -58,11 +58,11 @@ namespace CI_PLATFORM_.repository.Repository
             }
             else if (sortId == 3)
             {
-                sortmission = sortmission.OrderBy(p => p.Availability).ToList();
+                sortmission = sortmission.OrderBy(p => p.TotalSeats).ToList();
             }
             else if (sortId == 4)
             {
-                sortmission = sortmission.OrderByDescending(p => p.Availability).ToList();
+                sortmission = sortmission.OrderByDescending(p => p.TotalSeats).ToList();
             }
             else if (sortId == 5)
             {
@@ -105,7 +105,7 @@ namespace CI_PLATFORM_.repository.Repository
                 Status = mission.Status,
                 OrganizationName = mission.OrganizationName,
                 OrganizationDetail = mission.OrganizationDetail,
-                Availability = mission.Availability,
+                Availability = mission.TotalSeats,
                 MissionSkills = mission_skills,
                 goalvalue = 0,
                 goalObjective = "",

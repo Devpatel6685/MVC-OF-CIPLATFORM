@@ -31,13 +31,15 @@ public partial class Mission
 
     public string? OrganizationDetail { get; set; }
 
-    public int? Availability { get; set; }
+    public int? TotalSeats { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 
     public DateTime? DeletedAt { get; set; }
+
+    public string? Availibility { get; set; }
 
     public virtual City City { get; set; } = null!;
 

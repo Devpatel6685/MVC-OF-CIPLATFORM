@@ -69,28 +69,35 @@ function filterMission() {
 
     var country = [];
     $('.filters-section').empty()
+    if ($('.filters-section').empty()) {
+        $('.filters-section').append('<button class="filter-list ps-3  pe-3 me-2 text-danger" id="clear">  clear  </button>')
+    }
     $('.country:checkbox:checked').each(function () {
         country.push($(this).attr("id"));
-        $('.filters-section').append('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross" onclick="cross(' + "country_" + $(this).attr("id") + ');" style="background-color:white" id=' + "country_" + $(this).attr("id") + ' >  &times;</button> </span>')
+        $('.filters-section').prepend('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross" onclick="cross(' + "country_" + $(this).attr("id") + ');" style="background-color:white" id=' + "country_" + $(this).attr("id") + ' >  &times;</button> </span>')
     })
 
     var city = [];
     $('.city:checkbox:checked').each(function () {
         city.push($(this).attr("id"));
-        $('.filters-section').append('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross" onclick="cross(city_' + $(this).attr("id") + ');" style="background-color:white" id=' + "city_" + $(this).attr("id") + ' >  &times;</button> </span>')
+        $('.filters-section').prepend('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross" onclick="cross(city_' + $(this).attr("id") + ');" style="background-color:white" id=' + "city_" + $(this).attr("id") + ' >  &times;</button> </span>')
     })
 
     var theme = [];
     $('.theme:checkbox:checked').each(function () {
         theme.push($(this).attr("id"));
-        $('.filters-section').append('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross" onclick="cross(theme_' + $(this).attr("id") + ');" style="background-color:white" id=' + "theme_" + $(this).attr("id") + ' >  &times;</button> </span>')
+        $('.filters-section').prepend('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross" onclick="cross(theme_' + $(this).attr("id") + ');" style="background-color:white" id=' + "theme_" + $(this).attr("id") + ' >  &times;</button> </span>')
     })
 
     var skill = [];
     $('.skill:checkbox:checked').each(function () {
         skill.push($(this).attr("id"));
-        $('.filters-section').append('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross " onclick="cross(skill_' + $(this).attr("id") + ';)" style="background-color:white" id=' + "skill_" + $(this).attr("id") + ' >  &times;</button> </span>')
+        $('.filters-section').prepend('<span class="filter-list ps-3  pe-3 me-2">' + $(this).val() + '&nbsp; <button class="border-0 fs-4 cross " onclick="cross(skill_' + $(this).attr("id") + ';)" style="background-color:white" id=' + "skill_" + $(this).attr("id") + ' >  &times;</button> </span>')
     })
+
+    if ($('.filters-section .filter-list').length == 1) {
+        $('.filters-section').empty();
+    }
     var sid = $('#sort').val();
     var keyword = $('#search-input').val();
     var pageIndex = $('.pagination .active a').attr('id');
@@ -127,9 +134,28 @@ function filterMission() {
     })
 
 }
+$(document).on('click', '#clear', function () {
+    console.log("clear")
+    $('.country:checkbox:checked').each(function () {
+        $(this).prop('checked', false)
+    })
+    $('.city:checkbox:checked').each(function () {
+        $(this).prop('checked', false)
+    })
+    $('.theme:checkbox:checked').each(function () {
+        $(this).prop('checked', false)
+    })
+    $('.skill:checkbox:checked').each(function () {
+        $(this).prop('checked', false)
+    })
+    $('.filters-section').empty();
+    filterMission();
+});
 function cross(btnid) {
     var lst = $(btnid).attr("id").split("_");
     $('#' + lst[0] + ' #' + lst[1]).prop("checked", false);
+    $('.pagination .active').removeClass('active');
+    $('.pagination .active').find('#1').parent().addClass('active');
     filterMission();
 }
 

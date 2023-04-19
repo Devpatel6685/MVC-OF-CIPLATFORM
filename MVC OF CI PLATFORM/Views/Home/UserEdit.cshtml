@@ -55,9 +55,9 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Change Password</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="clearform();" aria-label="Close"></button>
                                 </div>
-                                <form method="post" asp-action="changePass" asp-controller="Home">
+                                <form method="post" asp-action="changePass" asp-controller="Home" id="changePasswordForm">
                                     <div class="modal-body">
                                         <div class="position-relative mt-2 oldpass">
                                             <input type="password" asp-for="oldpass" placeholder="Enter old password" class="form-control" />
@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary rounded-pill" onclick="clearform();" data-bs-dismiss="modal">Cancel</button>
                                         <button type="submit" class="btn rounded-pill apply">Change Password</button>
                                     </div>
                                 </form>
@@ -143,13 +143,13 @@
                         <div class="col-12">
                             <div class="d-flex flex-column">
                                 <label for="profile">profile</label>
-                                <textarea asp-for="profile" cols="30" rows="5" placeholder="Enter your comments..."></textarea>
+                                <textarea asp-for="profile" class="form-control" cols="30" rows="5" placeholder="Enter your comments..."></textarea>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column">
                                 <label for="whyIVolunteer">why I volunteer</label>
-                                <textarea asp-for="whyIVolunteer" cols="30" rows="3" placeholder="Enter your comments..."></textarea>
+                                <textarea asp-for="whyIVolunteer" class="form-control" cols="30" rows="3" placeholder="Enter your comments..."></textarea>
                             </div>
                         </div>
 
@@ -163,7 +163,7 @@
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="country">Country</label>
-                                        <select id="countryId" asp-for="countryId" asp-items="@Model.countryName">
+                                        <select id="countryId" class="form-control" asp-for="countryId" asp-items="@Model.countryName">
                                             <option>Select Country</option>
                                         </select>
                                     </div>
@@ -171,7 +171,7 @@
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="city">City</label>
-                                        <select id="cities" asp-for="cityId" asp-items="@Model.cityName">
+                                        <select id="cities" class="form-control" asp-for="cityId" asp-items="@Model.cityName">
                                             <option>Select City</option>
                                         </select>
                                     </div>
@@ -187,13 +187,13 @@
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="availability">Avaibility</label>
-                                        <input type="text" asp-for="availability">
+                                        <input type="text" class="form-control" asp-for="availability">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="linkedinURL">Linkdin</label>
-                                        <input type="text" asp-for="linkedinURL">
+                                        <input type="text" class="form-control" asp-for="linkedinURL">
                                     </div>
                                 </div>
                             </div>
@@ -251,7 +251,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn btn-secondary rounded-pill"  data-bs-dismiss="modal">Cancel</button>
                                                     <button type="button" class="btn apply rounded-pill" data-bs-dismiss="modal" onclick="addskill();">Save</button>
                                                 </div>
                                             </div>
