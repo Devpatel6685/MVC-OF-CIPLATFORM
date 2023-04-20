@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iMo8k6Sd38c83M31QufNgXqeJV7dOCGA4QJQiwfLrOI=",
+  "Hash": "PqVBEkoCKx74Onkse2C1c+meIGLLGEzA+YlGe6b2M8s=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -1989,6 +1989,23 @@
       "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionpartial.css",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "css/missionpartial.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\missionpartial.css"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\page2.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2142,6 +2159,23 @@
       "OriginalItemSpec": "wwwroot\\css\\useredit.css"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\userpartail.css",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "css/userpartail.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\userpartail.css"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\VolunteeringTimeSheet.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2261,6 +2295,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/ad769a15-2042-4ac1-b98b-538b1c45cb9f.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\fac8d1c5-2f9e-4b7a-ae63-56364af564a4.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2327,6 +2378,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\missionapplication.js"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionedit.js",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "js/missionedit.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\missionedit.js"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionpartial.js",

@@ -457,6 +457,10 @@
       "PackagePath": "staticwebassets\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png",
+      "PackagePath": "staticwebassets\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\fac8d1c5-2f9e-4b7a-ae63-56364af564a4.png",
       "PackagePath": "staticwebassets\\Images\\fac8d1c5-2f9e-4b7a-ae63-56364af564a4.png"
     },
@@ -483,6 +487,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionpartial.css",
+      "PackagePath": "staticwebassets\\css\\missionpartial.css"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\page2.css",
@@ -515,6 +523,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useredit.css",
       "PackagePath": "staticwebassets\\css\\useredit.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\userpartail.css",
+      "PackagePath": "staticwebassets\\css\\userpartail.css"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\volunterrpage.css",
@@ -555,6 +567,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionapplication.js",
       "PackagePath": "staticwebassets\\js\\missionapplication.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionedit.js",
+      "PackagePath": "staticwebassets\\js\\missionedit.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\missionpartial.js",

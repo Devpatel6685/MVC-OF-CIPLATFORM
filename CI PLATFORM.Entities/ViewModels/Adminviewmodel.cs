@@ -9,12 +9,12 @@ using X.PagedList;
 namespace CI_PLATFORM.Entities.ViewModels
 {
     public class Adminviewmodel
-    {   public IPagedList<User> user { get; set; }
+    {
+        public IPagedList<User> users { get; set; }
+        public IPagedList<Mission> Missions { get; set; }
 
-        public IPagedList<Mission> missions { get; set; }
+        /* public IPagedList<MissionApplication> missionApplications { get; set; }
 
-        public IPagedList<MissionApplication> missionApplications { get; set; }
-
-        public IPagedList<CmsPage> cmsPages { get; set; }
+         public IPagedList<CmsPage> cmsPages { get; set; }*/
     }
 }

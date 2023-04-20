@@ -92,8 +92,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col" asp-action="UserEdit" id="userEditForm">
-                <form method="post">
+            <div class="col" >
+                <form method="post" asp-action="UserEdit" id="userEditForm">
                     <div class="row">
                         <h4 class="col-12 border-bottom pb-2 mb-2 ">
                             BASIC INFORMATION
@@ -364,11 +364,13 @@
         </div>
     </div>
     <!--footer end-->*@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <partial name="_ValidationScriptsPartial" />
-    <div id="model-img" data-avtar="@Model.Avatar"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+@*    <partial name="_ValidationScriptsPartial" />
+*@    
+<div id="model-img" data-avtar="@Model.Avatar"></div>
     <script src="~/js/Useredit.js"></script>
 </body>
 
