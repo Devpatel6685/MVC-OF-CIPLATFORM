@@ -47,6 +47,15 @@
     toastr.success('@TempData["LOGIN"]');
     </script>
     }
+    @if (TempData["success"] != null)
+    {
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript">
+    toastr.success('@TempData["success"]');
+    </script>
+    }
     </div>
 
     <div class="d-flex mt-4 mx-5 justify-content-between" id="gridList">

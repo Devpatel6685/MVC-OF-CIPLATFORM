@@ -179,7 +179,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var userid = HttpContext.Session.GetString("userid");
             _iuserRepository.editUserDetails(model, long.Parse(userid));
             TempData["success"] = "Profile updated successfully";
-            return RedirectToAction("UserEdit");
+            return RedirectToAction("platformLanding", "Mission");
         }
         /* public IActionResult ContactUs(EditUserViewModel model)
          {

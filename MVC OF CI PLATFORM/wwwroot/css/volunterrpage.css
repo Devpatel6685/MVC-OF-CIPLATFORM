@@ -1,4 +1,50 @@
-﻿.icon {
+﻿
+.main {
+    font-family: Arial;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.action {
+    display: block;
+    margin: 100px auto;
+    width: 100%;
+    text-align: center;
+}
+
+    .action a {
+        display: inline-block;
+        padding: 5px 10px;
+        background: #f30;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        .action a:hover {
+            background: #000;
+        }
+
+.slick-dots {
+    display: none !important;
+}
+
+.slider button {
+    display: none !important;
+}
+
+
+
+.slider-nav img {
+    height: 100px;
+    width: 98%;
+}
+
+.slider-for img {
+    height: 480px;
+}
+
+.icon {
     background-color: rgba(0, 0, 0, 0.45);
 }
 

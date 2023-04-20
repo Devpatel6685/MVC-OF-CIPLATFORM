@@ -62,7 +62,7 @@ function addskill() {
     })
 }
 
-function saveSkill() {
+/*function saveSkill() {
     console.log("add skills");
     var skillids = [];
     $('.skill-selected div').each(function () {
@@ -78,6 +78,25 @@ function saveSkill() {
             console.log("profile updated successfully");
         }
     })
+}*/
+function saveSkill() {
+    console.log("add skills");
+    var skillids = [];
+    $('.skill-selected div').each(function () {
+        skillids.push($(this).attr('id'));
+    });
+    if ($('#userEditForm').valid()) {
+        $.ajax({
+            url: "/home/addskill",
+            type: "POST",
+            data: {
+                skillids: skillids,
+            },
+            success: function (result) {
+                console.log("profile updated successfully");
+            }
+        })
+    }
 }
 
 function password(passw) {

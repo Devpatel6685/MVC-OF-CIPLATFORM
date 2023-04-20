@@ -11,20 +11,36 @@ namespace CI_PLATFORM.Entities.ViewModels
 {
     public class EditUserViewModel
     {
+
+
+        [Required(ErrorMessage = "Enter Firstname")]
+
         public string name { get; set; }
+        [Required(ErrorMessage = "Enter Lastname")]
+
         public string surname { get; set; }
+        [Required(ErrorMessage = "Enter EmployeeId")]
+
         public string? employeeId { get; set; }
         public string? managerName { get; set; }
+        [Required(ErrorMessage = "Enter Title")]
+
         public string title { get; set; }
+        [Required(ErrorMessage = "Enter Department")]
         public string department { get; set; }
+        [Required(ErrorMessage = "Enter Profile text")]
+
         public string profile { get; set; }
         public string whyIVolunteer { get; set; }
         public List<SelectListItem> countryName { get; set; }
         public List<SelectListItem> cityName { get; set; }
-       
+
         public long cityId { get; set; }
         public long countryId { get; set; }
+
         public string? availability { get; set; }
+        [Required(ErrorMessage = "Enter Linked in url")]
+
         public string linkedinURL { get; set; }
         public string Email { get; set; } = null!;
         [Required(ErrorMessage = "Subject is required")]

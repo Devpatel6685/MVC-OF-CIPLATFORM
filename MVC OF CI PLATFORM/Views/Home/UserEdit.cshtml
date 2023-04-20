@@ -92,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" asp-action="UserEdit" id="userEditForm">
                 <form method="post">
                     <div class="row">
                         <h4 class="col-12 border-bottom pb-2 mb-2 ">
@@ -103,12 +103,15 @@
                                 <div class="d-flex flex-column">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" asp-for="name" placeholder="Enter your name">
+                                    <span asp-validation-for="name" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex flex-column">
                                     <label for="surname">Surname</label>
                                     <input type="text" class="form-control" asp-for="surname" placeholder="Enter your surname">
+                                    <span asp-validation-for="surname" class="text-danger"></span>
+
                                 </div>
                             </div>
                         </div>
@@ -117,12 +120,15 @@
                                 <div class="d-flex flex-column">
                                     <label for="employeeId">Employee ID</label>
                                     <input asp-for="employeeId" class="form-control" type="text" placeholder="Enter your Employee ID">
+                                    <span asp-validation-for="employeeId" class="text-danger"></span>
+
                                 </div>
                             </div>
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <label for="managerName">Manager</label>
                                     <input type="text" class="form-control" asp-for="managerName" placeholder="Enter your manager name">
+
                                 </div>
                             </div>
                         </div>
@@ -131,12 +137,16 @@
                                 <div class="d-flex flex-column">
                                     <label for="title">Title</label>
                                     <input type="text" class="form-control" asp-for="title" placeholder="Enter Title">
+                                    <span asp-validation-for="title" class="text-danger"></span>
+
                                 </div>
                             </div>
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <label for="department">Department</label>
                                     <input asp-for="department" class="form-control" type="text" placeholder="Enter Department name">
+                                    <span asp-validation-for="department" class="text-danger"></span>
+
                                 </div>
                             </div>
                         </div>
@@ -144,12 +154,16 @@
                             <div class="d-flex flex-column">
                                 <label for="profile">profile</label>
                                 <textarea asp-for="profile" class="form-control" cols="30" rows="5" placeholder="Enter your comments..."></textarea>
+                                <span asp-validation-for="profile" class="text-danger"></span>
+
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="d-flex flex-column">
                                 <label for="whyIVolunteer">why I volunteer</label>
                                 <textarea asp-for="whyIVolunteer" class="form-control" cols="30" rows="3" placeholder="Enter your comments..."></textarea>
+                                <span asp-validation-for="whyIVolunteer" class="text-danger"></span>
+
                             </div>
                         </div>
 
@@ -166,6 +180,8 @@
                                         <select id="countryId" class="form-control" asp-for="countryId" asp-items="@Model.countryName">
                                             <option>Select Country</option>
                                         </select>
+                                        <span asp-validation-for="countryId" class="text-danger"></span>
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
@@ -174,6 +190,8 @@
                                         <select id="cities" class="form-control" asp-for="cityId" asp-items="@Model.cityName">
                                             <option>Select City</option>
                                         </select>
+                                        <span asp-validation-for="cityId" class="text-danger"></span>
+
                                     </div>
                                 </div>
                             </div>
@@ -188,12 +206,15 @@
                                     <div class="d-flex flex-column">
                                         <label for="availability">Avaibility</label>
                                         <input type="text" class="form-control" asp-for="availability">
+
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <label for="linkedinURL">Linkdin</label>
                                         <input type="text" class="form-control" asp-for="linkedinURL">
+                                        <span asp-validation-for="linkedinURL" class="text-danger"></span>
+
                                     </div>
                                 </div>
                             </div>
@@ -344,6 +365,8 @@
     </div>
     <!--footer end-->*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <partial name="_ValidationScriptsPartial" />
     <div id="model-img" data-avtar="@Model.Avatar"></div>
     <script src="~/js/Useredit.js"></script>

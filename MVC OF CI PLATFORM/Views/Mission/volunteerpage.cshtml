@@ -20,6 +20,8 @@
      <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
     <link rel="stylesheet" href="/css/volunterrpage.css">
 </head>
 
@@ -27,67 +29,72 @@
     <partial name="header" model="Model" />
     <div class="container">
         <div class="row">
-            <div class=" col-md-6">              
-                <div class="container">
-                    <div class="mySlides">
+            <div class=" col-md-6">
+                <div class="main">
 
-                        <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-
-                        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-
-                        <img src="~/Assets/img2.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-
-                        <img src="~/Assets/img22.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-
-                        <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" style="width:100%">
-                    </div>
-
-                    <div class="mySlides">
-
-                        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" style="width:100%">
-                    </div>
-                    <div class="row mt-3">
-                        <div class="column">
-                            <a class="prev" onclick="plusSlides(-1)">❮</a>
-
-                            <img class="cursor" src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" style="width:100%" onclick="currentSlide(1)"
-                                 alt="The Woods">
-                        </div>
-                        <div class="column ">
-                            <img class=" cursor" src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" style="width:100%" onclick="currentSlide(2)"
-                                 alt="Snowy Mountains">
-                        </div>
-                        <div class="column ">
-                            <img class=" cursor" src="~/Assets/img2.png" style="width:100%" onclick="currentSlide(3)"
-                                 alt="Cinque Terre">
-                        </div>
-                        <div class="column ">
-                            <img class=" cursor" src="~/Assets/img22.png" style="width:100%"
-                                 onclick="currentSlide(4)" alt="Mountains and fjords">
-                        </div>
-                        <div class="column">
-                            <img class=" cursor" src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" style="width:100%" onclick="currentSlide(5)"
-                                 alt="Northern Lights">
-                        </div>
-                        <div class="column">
-                            <img class=" cursor" src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" style="width:100%" onclick="currentSlide(6)"
-                                 alt="Nature and sunrise">
-                            <a class="next" onclick="plusSlides(1)">❯</a>
+                    <div class="slider slider-for">
+                        @*                        @{
+                        foreach (var image in @Model.storyMediaForImages)
+                        {
+                        <div>
+                        <img src="@image.Path" class="w-100"
+                        alt="" srcset="">
                         </div>
 
+                        }
+                        }*@
+
+                        <div>
+                            <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" class="w-100"
+                                 alt="" srcset="">
+                        </div>
+                        <div>
+                            <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" class="w-100"
+                                 alt="" srcset="">
+                        </div>
+                        <div><img src="~/Assets/img2.png" class="w-100" alt="" srcset=""></div>
+                        <div><img src="~/Assets/img22.png" class="w-100" alt="" srcset=""></div>
+                        <div>
+                            <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" class="w-100"
+                                 alt="" srcset="">
+                        </div>
+                        <div>
+                            <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" class="w-100"
+                                 alt="" srcset="">
+                        </div>
                     </div>
+                    <div class="slider slider-nav w-100 mt-1">
+
+                        @*                     @{
+                        foreach (var image in @Model.storyMediaForImages)
+                        {
+                        <div>
+                        <img src="@image.Path" class="story_image_class"
+                        alt="" srcset="">
+                        </div>
+
+                        }
+                        }*@
+                        <div>
+                            <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" alt=""
+                                 srcset="">
+                        </div>
+                        <div>
+                            <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" alt=""
+                                 srcset="">
+                        </div>
+                        <div><img src="~/Assets/img2.png" alt="" srcset=""></div>
+                        <div><img src="~/Assets/img22.png" alt="" srcset=""></div>
+                        <div>
+                            <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" alt=""
+                                 srcset="">
+                        </div>
+                        <div>
+                            <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-4.png" alt=""
+                                 srcset="">
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="col col-md-6">
@@ -585,14 +592,25 @@
          data-pagenumber="@Model.Item1.MissionApplications.PageNumber">
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @*<script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+         <script type="text/javascript" mailto:src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="~/js/Volunteerpage.js"></script>
+
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>*@
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="~/js/Volunteerpage.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    
+
 
 </body>
 
