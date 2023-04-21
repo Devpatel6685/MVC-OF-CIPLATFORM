@@ -154,11 +154,15 @@ namespace CI_PLATFORM_.repository.Repository
         public void apply(long missionid, long userId)
         {
             var appliedmission = _cIPLATFORMDbContext.MissionApplications.Where(x => x.MissionId == missionid && x.UserId == userId).SingleOrDefault();
-            MissionApplication application = new MissionApplication();
-            application.UserId = userId;
-            application.MissionId = missionid;
-            application.ApprovalStatus = "APPROVE";
-            application.AppliedAt = DateTime.Now;
+            MissionApplication application = new MissionApplication()
+            {
+                MissionId = missionid,
+                UserId = userId,
+                AppliedAt = DateTime.Now,
+                ApprovalStatus = "APPROVE",
+            };
+            Mission mission = _cIPLATFORMDbContext.Missions.SingleOrDefault(m => m.MissionId == missionid);
+            mission.TotalSeats = mission.TotalSeats - 1;
             _cIPLATFORMDbContext.MissionApplications.Add(application)
 ;
             _cIPLATFORMDbContext.SaveChanges();

@@ -1,4 +1,8 @@
-﻿.copyright {
+﻿
+.line2{
+    display:none;
+}
+.copyright {
     padding: 28px 0;
 }
 

@@ -119,13 +119,13 @@
                                                             @if (userid_session == null)
                                                             {
 
-                                                            <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
+                                                            <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon  mb-1 mt-1 p-1" src="~/Assets/heart.png" alt=""></a>
                                                         }
                                                             else
                                                             {
                                                                 if (fav.Count() == 0)
                                                                 {
-                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon  mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
+                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon p-1 mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
                                                                 }
                                                                 else
                                                                 {
@@ -137,7 +137,7 @@
 
 
                                                 <button class="border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="getUsers(@i.MissionId);">
-                                                    <img src="~/Assets/add1.png" alt="" class="heart rounded-circle icon p-2 mb-1 mt-2">
+                                                    <img src="~/Assets/add1.png" id="carddis" alt="" class="heart rounded-circle icon p-2 mb-1 mt-2">
                                                 </button>
                                                 <!-- Modal -->
                                                 @if (userid_session != null)
@@ -447,6 +447,16 @@
         }
 
                 //For favourite button
+            $(document).ready(function () {
+                $('#carddis').click(function () {
+                   
+                    $('.card').css({
+                        'box-shadow': 'none',
+                        'transition': 'none'
+                    });
+                    $('.card:hover').css('transform', 'none');
+                });
+            });
 
     </script>
 

@@ -13,6 +13,8 @@ $('#contact-link').click(() => {
             success: function (result) {
                 $('#modal-contact').html(result);
                 $('#staticBackdrop3').modal('show');
+/*                alert("submit is succesfull");
+*/
 
             }
         })
@@ -21,6 +23,9 @@ $('#contact-link').click(() => {
 function contactsave() {
     var subject = $('#subject').val();
     var message = $('#message').val();
+    $('#contact-form').valid()
+
+    if (!$('#contact-form').valid()) return;
 
     $.ajax({
         url: '/Home/editcontact',
@@ -32,7 +37,7 @@ function contactsave() {
         success: function (result) {
             console.log(result);
             
-            toastr.success('Problem is sent!', '', { "timeOut": 0 });
+            toastr.success('Problem is sent!');
         }
     })
 }

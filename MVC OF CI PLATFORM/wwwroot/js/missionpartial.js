@@ -1,7 +1,7 @@
 ﻿
 $(document).ready(function () {
     $('#staticBackdrop').on('show.bs.modal', function (event) {
-        alert("modal called");
+        /*alert("modal called");*/
         var button = $(event.relatedTarget); // Button that triggered the modal
         var missionId = button.data('missionid'); // Extract missionid from data attribute
         console.log("the mission id", missionId);
@@ -14,7 +14,7 @@ $(document).ready(function () {
 });
 
 function DeleteMission(missionId) {
-    alert("delete misson called");
+   /* alert("delete misson called");*/
     $.ajax({
         url: '/admin/DeleteMission',
         type: 'GET',
@@ -52,7 +52,7 @@ function filtermissions() {
             pageindex: pageIndex
         },
         success: function (response) {
-            alert("hello");
+           /* alert("hello");*/
             $('.table').html($(response).find('.table').html());
             $('.pagination').html($(response).find('.pagination').html());
 
@@ -63,7 +63,7 @@ function filtermissions() {
 $(document).ready(function () {
 
     $('#searchmission').keyup(function () {
-        alert('hi');
+        /*alert('hi');*/
         $('.pagination .misactive').removeClass('misactive');
         filterSearch();
 
@@ -81,7 +81,7 @@ function filterSearch() {
 
         },
         success: function (response) {
-            alert('called');
+            /*alert('called');*/
 
             $('.table').empty().html($(response).find('.table').html());
             $('.page').empty().html($(response).find('.page').html());
@@ -93,7 +93,7 @@ function filterSearch() {
 $(function () {
     $('#missionpage').on('click', function () {
 
-        alert('success');
+       /* alert('success');*/
         $.ajax({
             url: '/admin/missionadd',
             type: 'GET',

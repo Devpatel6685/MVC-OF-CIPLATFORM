@@ -34,7 +34,7 @@
 
                     <div class="slider slider-for">
                         @*                        @{
-                        foreach (var image in @Model.storyMediaForImages)
+                        foreach (var image in @Model.storyMediaForAssets)
                         {
                         <div>
                         <img src="@image.Path" class="w-100"
@@ -66,7 +66,7 @@
                     <div class="slider slider-nav w-100 mt-1">
 
                         @*                     @{
-                        foreach (var image in @Model.storyMediaForImages)
+                        foreach (var image in @Model.storyMediaForAssets)
                         {
                         <div>
                         <img src="@image.Path" class="story_image_class"
@@ -258,7 +258,7 @@
                             @if (@userid_session == null)
                             {
                                 <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
-                                    Apply Now<img src="~/Images/right-arrow.png" alt=""
+                                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
                                       class="ms-2">
                                 </button>
                             }
@@ -280,7 +280,15 @@
                                 }
 
                             }
+
                         }
+
+                    }
+                    else
+                    {
+                        <button class="py-2 px-3 mx-auto apply" disabled>
+                            Mission Closed
+                        </button>
                     }
 
                 </div>

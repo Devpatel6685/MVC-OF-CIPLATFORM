@@ -41,8 +41,8 @@
 
 .icon {
     position: absolute;
-    top: 13%;
-    left: 36% ;
+    top: 18%;
+    left: 38% ;
 }
 
 .copyright-menu li {
@@ -75,7 +75,7 @@
         }
     .icon {
         position: absolute;
-        top: 35%;
+        top: 20%;
         left: 47%;
     }
 }

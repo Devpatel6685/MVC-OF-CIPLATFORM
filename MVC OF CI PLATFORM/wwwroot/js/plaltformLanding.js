@@ -148,6 +148,7 @@ $(document).on('click', '#clear', function () {
     $('.skill:checkbox:checked').each(function () {
         $(this).prop('checked', false)
     })
+    $('#search-input').val('');
     $('.filters-section').empty();
     filterMission();
 });
@@ -333,4 +334,5 @@ function getUsers(mId) {
         });
     }
 }
+
 
