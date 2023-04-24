@@ -22,5 +22,8 @@ namespace CI_PLATFORM.Entities.ViewModels
         public List<MissionSkill> MissionSkills { get; set; }
 
         public List<FavouriteMission> favorite { get; set; }
+
+        public List<MissionApplication> MissionApplications { get; set; }
+
     }
 }

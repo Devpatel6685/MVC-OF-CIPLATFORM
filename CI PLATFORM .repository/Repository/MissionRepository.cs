@@ -36,6 +36,7 @@ namespace CI_PLATFORM_.repository.Repository
             var rates = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).Include(m => m.Mission).ToList();
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
             var addfavrouitebyuserid = _cIPLATFORMDbContext.FavouriteMissions.Where(u => u.UserId.ToString() == userid).ToList();
+            var missionapplication = _cIPLATFORMDbContext.MissionApplications.ToList();
 
 
 
@@ -43,7 +44,8 @@ namespace CI_PLATFORM_.repository.Repository
             {
                 totalrecords = mission.Count(),
                 rate = rates,
-                favorite = addfavorite
+                favorite = addfavorite,
+                MissionApplications = missionapplication
 
             };
             //SORT BY
@@ -105,6 +107,7 @@ namespace CI_PLATFORM_.repository.Repository
                 Status = mission.Status,
                 OrganizationName = mission.OrganizationName,
                 OrganizationDetail = mission.OrganizationDetail,
+                days=mission.Availibility,
                 Availability = mission.TotalSeats,
                 MissionSkills = mission_skills,
                 goalvalue = 0,
@@ -159,7 +162,7 @@ namespace CI_PLATFORM_.repository.Repository
                 MissionId = missionid,
                 UserId = userId,
                 AppliedAt = DateTime.Now,
-                ApprovalStatus = "APPROVE",
+                ApprovalStatus = "PENDING",
             };
             Mission mission = _cIPLATFORMDbContext.Missions.SingleOrDefault(m => m.MissionId == missionid);
             mission.TotalSeats = mission.TotalSeats - 1;

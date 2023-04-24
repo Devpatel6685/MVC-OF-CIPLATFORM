@@ -64,8 +64,15 @@
     border-bottom: 15px solid transparent;
     border-left: 15px solid #ffc107;
 }
+.arrow-right-a {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #198754;
+}
 
-.badge1 {
+    .badge1 {
     width: 87px;
     display: inline-block;
     padding: 0.35em .65em;

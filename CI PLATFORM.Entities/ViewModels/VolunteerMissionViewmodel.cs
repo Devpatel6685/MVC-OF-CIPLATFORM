@@ -43,6 +43,9 @@ namespace CI_PLATFORM.Entities.ViewModels
         public string? OrganizationDetail { get; set; }
 
         public int? Availability { get; set; }
+
+
+        public string? days { get; set; }
         public bool favorite { get; set; }
 
         public bool applied { get; set; }

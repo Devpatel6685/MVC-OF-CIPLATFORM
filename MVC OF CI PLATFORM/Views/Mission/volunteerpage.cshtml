@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Mission Page</title>
-     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -245,50 +245,96 @@
                     </div>
                 </div>
                 <div class="mt-2 d-flex applybtn">
-                    @if (Model.Item1.EndDate > DateTime.Today)
-                    {
-                        @if (@Model.Item1.applied)
+             @*       @{
+                        var apply = Model.Item1.MissionApplications.FirstOrDefault(m => m.UserId.ToString() == userid_session);
+                        @if (@userid_session == null)
                         {
-                            <button class="py-2 px-3 mx-auto apply " disabled>
-                                Applied
+                            <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
+                                Apply Now<img src="~/Assets/right-arrow.png" alt=""
+                                      class="ms-2">
                             </button>
                         }
+
                         else
                         {
-                            @if (@userid_session == null)
+                            if (apply == null)
                             {
-                                <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
-                                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
-                                      class="ms-2">
+                                <button class="py-2 px-3 mx-auto app" onclick="applymission(@Model.Item1.MissionId)">
+                                    Apply Now in this <img src="~/Assets/right-arrow.png" alt="" class="ms-2">
                                 </button>
+
                             }
                             else
                             {
-
-                                @if (@Model.Item1.applied)
+                                if (apply.ApprovalStatus == "PENDING")
                                 {
-                                    <button class="py-2 px-3 mx-auto apply" disabled>
-                                        Applied
+                                    <button class="py-2 px-3 mx-auto app" disabled>
+                                        PENDING<img src="~/Assets/right-arrow.png" alt=""
+                                    class="ms-2">
                                     </button>
                                 }
-                                else
+                                else if (apply.ApprovalStatus == "APPROVE")
                                 {
-                                    <button class="py-2 px-3 mx-auto apply" onclick="applymission(@Model.Item1.MissionId)">
-                                        Apply Now<img src="~/Assets/right-arrow.png" alt=""
-                                      class="ms-2">
+                                    <button class="py-2 px-3 mx-auto app" disabled>
+                                        Approved<img src="~/Assets/right-arrow.png" alt=""
+                                     class="ms-2">
+                                    </button>
+                                }
+                                else if (apply.ApprovalStatus == "DECLINE")
+                                {
+                                    <button class="py-2 px-3 mx-auto app"  disabled>
+                                        Your Request is Declined<img src="~/Assets/right-arrow.png" alt=""
+                                                     class="ms-2">
                                     </button>
                                 }
 
                             }
-
                         }
+                    }*@
+                        @if (Model.Item1.EndDate > DateTime.Today)
+                    {
+                    @if (@Model.Item1.applied)
+                    {
+                    <button class="py-2 px-3 mx-auto apply " disabled>
+                    Applied
+                    </button>
+                    }
+                    else
+                    {
+                    @if (@userid_session == null)
+                    {
+                    <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
+                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
+                    class="ms-2">
+                    </button>
+                    }
+                    else
+                    {
+
+                    @if (@Model.Item1.applied)
+                    {
+                    <button class="py-2 px-3 mx-auto apply" disabled>
+                    Applied
+                    </button>
+                    }
+                    else
+                    {
+                    <button class="py-2 px-3 mx-auto apply" onclick="applymission(@Model.Item1.MissionId)">
+                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
+                    class="ms-2">
+                    </button>
+                    }
+
+                    }
+
+                    }
 
                     }
                     else
                     {
-                        <button class="py-2 px-3 mx-auto apply" disabled>
-                            Mission Closed
-                        </button>
+                    <button class="py-2 px-3 mx-auto apply" disabled>
+                    Mission Closed
+                    </button>
                     }
 
                 </div>
@@ -401,7 +447,7 @@
                             </tr>
                             <tr>
                                 <td>Days</td>
-                                <td>Weekend only</td>
+                                <td>@Model.Item1.days</td>
                             </tr>
                             <tr>
                                 <td>Rating</td>
@@ -602,7 +648,7 @@
 
     @*<script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-         <script type="text/javascript" mailto:src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" mailto:src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="~/js/Volunteerpage.js"></script>
 
@@ -613,8 +659,8 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="~/js/Volunteerpage.js"></script>   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="~/js/Volunteerpage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

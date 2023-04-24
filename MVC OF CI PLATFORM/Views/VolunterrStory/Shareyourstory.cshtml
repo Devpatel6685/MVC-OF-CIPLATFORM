@@ -57,7 +57,7 @@
         <div class="row mx-2 mt-3">
             <div class="col-12 my-3">
                 <label for="inputEmail4">Date</label>
-                <textarea id="storytext" placeholder="I loved this mission because...">@Model.description</textarea>
+                <textarea id="storytext" placeholder="I loved this mission because...">@Html.Raw(@Model.description)</textarea>
                 <span class="text-danger d-none" id="storytextValidate">Enter your experience</span>
 
             </div>
@@ -120,7 +120,7 @@
                         <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit">Submit</button>
 
                     }
-                    else if (Model.status == "PUBLISHED")
+                    else if (Model.status == "PUBLISHED" || Model.status == "DECLINED")
                     {
 
                         <button class="btn btn-outline-warning me-2" onclick="Edit(@Model.storyid)" style="border-radius: 50px;">Edit</button>

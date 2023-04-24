@@ -17,11 +17,17 @@ namespace CI_PLATFORM_.repository.Interface
         public List<MissionTheme> getthemes();
         public void deletemission(string missionid);
         public void Addmission(MissionAddViewModel model);
-        /*public Adminviewmodel getuserdata(int pageindex, int pageSize);
-        public Adminviewmodel getmissiondata(int pageindex, int pageSize);
-        public Adminviewmodel getapplication(int pageindex, int pageSize);
-
-        public Adminviewmodel getcmspage(int pageindex, int pageSize);*/
+        public void Addskill(SkillAddViewModel model);
+        public Adminviewmodel getthemedata(int pageindex, int pageSize, string SearchInputdata);
+        public void Addtheme(ThemeAddViewModel model);
+        public void deletetheme(string themeid);
+        public Adminviewmodel getskilldata(int pageindex, int pageSize, string SearchInputdata);
+        public Adminviewmodel getmissionapplicationdata(int pageindex, int pageSize, string SearchInputdata);
+        public void approveapplication(string applicationid);
+        public void declineapplication(string applicationid);
+        public Adminviewmodel getstorydata(int pageindex, int pageSize, string SearchInputdata);
+        public void approvestory(string storyid);
+        public void declinestory(string storyid);
 
     }
 }

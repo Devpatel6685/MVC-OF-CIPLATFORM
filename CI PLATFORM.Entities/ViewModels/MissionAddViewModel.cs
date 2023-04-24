@@ -17,6 +17,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         public DateTime? EndDate { get; set; }
         public long ThemeId { get; set; }
         public int? TotalSeats { get; set; }
+        public string? ShortDescription { get; set; }
         public List<SelectListItem> countries { get; set; }
         public List<SelectListItem> cities { get; set; }
         public List<SelectListItem> Themes { get; set; }
@@ -30,6 +31,6 @@ namespace CI_PLATFORM.Entities.ViewModels
         public List<Skill> skills { get; set; }
         public string? Availibility { get; set; }
         public string? MissionType { get; set; }
-        public int GoalValue { get; set; }
+        public string? GoalObjectiveText { get; set; }
     }
 }

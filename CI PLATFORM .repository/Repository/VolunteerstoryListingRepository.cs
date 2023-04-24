@@ -141,7 +141,7 @@ namespace CI_PLATFORM_.repository.Repository
         public void submit(long storyId)
         {
             var story = _ciplatfromdbcontext.Stories.SingleOrDefault(m => m.StoryId == storyId);
-            story.Status = "PUBLISHED";
+            story.Status = "PENDING";
             _ciplatfromdbcontext.Update(story);
             _ciplatfromdbcontext.SaveChanges();
         }
@@ -152,7 +152,7 @@ namespace CI_PLATFORM_.repository.Repository
             entity.MissionId = missionId;
             entity.Title = title;
             entity.Description = description;
-            entity.Status = "PUBLISHED";
+            entity.Status = "PENDING";
             var mediaentity =_ciplatfromdbcontext.StoryMedia.Where(u => u.StoryId == entity.StoryId);
             _ciplatfromdbcontext.StoryMedia.RemoveRange(mediaentity);
             foreach (var s in imagePaths)

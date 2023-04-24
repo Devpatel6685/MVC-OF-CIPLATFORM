@@ -1,0 +1,9 @@
+﻿.stactive .page-link {
+    background-color: orange !important;
+    color: white !important
+}
+
+.page-item .disabled {
+    background-color: lightgrey !important;
+    color: white !important;
+}

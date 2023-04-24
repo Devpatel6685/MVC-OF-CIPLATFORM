@@ -1,20 +1,26 @@
 ﻿
-$(document).ready(function () {
-    $('#staticBackdrop').on('show.bs.modal', function (event) {
-        /*alert("modal called");*/
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var missionId = button.data('missionid'); // Extract missionid from data attribute
-        console.log("the mission id", missionId);
-        var modal = $(this);
-        modal.find('.modal-footer button.btn.apply').on('click', function () {
-            DeleteMission(missionId); // Call DeleteMission function with missionid parameter
-            //console.log("this is the id of mission", missionId);
-        });
-    });
-});
-
+function showModal(id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "This Mission will be de-activated",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            DeleteMission(id);
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            )
+        }
+    })
+}
 function DeleteMission(missionId) {
-   /* alert("delete misson called");*/
+    alert("delete misson called");
     $.ajax({
         url: '/admin/DeleteMission',
         type: 'GET',
@@ -43,27 +49,25 @@ $(document).on('click', '.mis li', function (e) {
 function filtermissions() {
 
     var pageIndex = $('.mis .misactive a').attr('id');
-
+    var keyword = $('#searchmission').val();
     $.ajax({
         url: "/Admin/Mission",
         type: "POST",
         data: {
-            //  SearchInputdata: keyword,
+            SearchInputdata: keyword,
             pageindex: pageIndex
         },
         success: function (response) {
-           /* alert("hello");*/
+            alert("hello");
             $('.table').html($(response).find('.table').html());
             $('.pagination').html($(response).find('.pagination').html());
-
-
         }
     })
 }
 $(document).ready(function () {
 
     $('#searchmission').keyup(function () {
-        /*alert('hi');*/
+        alert('hi');
         $('.pagination .misactive').removeClass('misactive');
         filterSearch();
 
@@ -81,7 +85,7 @@ function filterSearch() {
 
         },
         success: function (response) {
-            /*alert('called');*/
+            alert('called');
 
             $('.table').empty().html($(response).find('.table').html());
             $('.page').empty().html($(response).find('.page').html());
@@ -90,49 +94,16 @@ function filterSearch() {
     })
 }
 
-/*$(function () {
-    $('#missionpage').on('click', function () {
+/* $(function () {
+     $('#missionpage').on('click', function () {
 
-       *//* alert('success');*//*
-        $.ajax({
-            url: '/admin/missionadd',
-            type: 'GET',
-            success: function (result) {
-                $('#loadPartialView').html(result);
-            }
-        });
-    });
-});*/
-
-
-
-/*
-$(document).on('click', '.paginationmis li', function (e) {
-    e.preventDefault();
-    $('.paginationmis li').each(function () {
-        $(this).removeClass('missionactive');
-    })
-    $(this).addClass('missionactive');
-    console.log($(this).children().attr("id"))
-    filtermission();
-});
-function filtermission() {
-    var pageIndex = $('.paginationmis .missionactive a').attr('id');
-    $.ajax({
-        url: "/Admin/Mission",
-        type: "POST",
-        data: {
-            //  SearchInputdata: keyword,
-            pageindex: pageIndex
-        },
-        success: function (result) {
-
-            $('.table').html($(result).find('.table').html());
-            $('.paginationmis').html($(result).find('.paginationmis').html());
-
-            // Change the URL in the browser to reflect the updated page state
-            // history.pushState(null, null, "/Admin/UserpageInAdmin?pageindex=" + pageIndex);
-
-        }
-    })
-}*/
+         alert('success');
+         $.ajax({
+             url: '/admin/missionadd',
+             type: 'GET',
+             success: function (result) {
+                 $('#loadPartialView').html(result);
+             }
+         });
+     });
+ });*/

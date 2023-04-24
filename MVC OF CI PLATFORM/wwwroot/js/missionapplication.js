@@ -1,30 +1,96 @@
 ﻿
-$(document).on('click', '.paginationapplication li', function (e) {
-    e.preventDefault();
-    $('.paginationapplication li').each(function () {
-        $(this).removeClass('activeapplication');
-    })
-    $(this).addClass('activeapplication');
-    console.log($(this).children().attr("id"))
-    filtercms();
+
+$('.nav-link').each(function () {
+    $(this).parent().removeClass('bg-light');
+    $(this).css('color', 'white');
 });
-function filtercms() {
-    var pageIndex = $('.paginationapplication .activeapplication a').attr('id');
+$('.nav-link.missionapplication').parent().addClass('bg-light');
+$('.nav-link.missionapplication ').css('color', 'orange');
+
+
+
+$(document).on('click', '.miapp li', function (e) {
+    e.preventDefault();
+    $('.miapp li').each(function () {
+        $(this).removeClass('mipactive');
+    })
+    $(this).addClass('mipactive');
+    filterskills();
+});
+function filterskills() {
+
+    var pageIndex = $('.miapp .mipactive a').attr('id');
+    var keyword = $('#applicationsearch').val();
     $.ajax({
         url: "/Admin/MissionApplication",
         type: "POST",
         data: {
-            //  SearchInputdata: keyword,
+            SearchInputdata: keyword,
             pageindex: pageIndex
         },
-        success: function (result) {
+        success: function (response) {
+            alert("hello");
+            $('.table').html($(response).find('.table').html());
+            $('.pagination').html($(response).find('.pagination').html());
 
-            $('.table').html($(result).find('.table').html());
-            $('.paginationapplication').html($(result).find('.paginationapplication').html());
 
-            // Change the URL in the browser to reflect the updated page state
-            // history.pushState(null, null, "/Admin/UserpageInAdmin?pageindex=" + pageIndex);
+        }
+    })
+}
+$(document).ready(function () {
 
+    $('#applicationsearch').keyup(function () {
+        alert('hi');
+        $('.pagination .mipactive').removeClass('mipactive');
+        filterSearch();
+
+    });
+});
+
+function filterSearch() {
+    var keyword = $('#applicationsearch').val();
+
+    $.ajax({
+        url: "/Admin/MissionApplication",
+        type: "POST",
+        data: {
+            SearchInputdata: keyword,
+
+        },
+        success: function (response) {
+            alert('called');
+
+            $('.table').empty().html($(response).find('.table').html());
+            $('.page').empty().html($(response).find('.page').html());
+
+        }
+    })
+}
+function approveapplication(miappid) {
+    $.ajax({
+        url: "/Admin/ApproveApplication",
+        type: "POST",
+        data: {
+            Applicationid: miappid,
+        },
+        success: function (response) {
+            alert('called');
+            $('#loadPartialView').html($(result).find('#loadPartialView').html());
+            toastr.success("Application is Approved");
+        }
+    })
+}
+function declineapplication(miappid) {
+    $.ajax({
+        url: "/Admin/DeclineApplication",
+        type: "POST",
+        data: {
+            Applicationid: miappid,
+        },
+        success: function (response) {
+            alert('called');
+            $('#loadPartialView').html($(result).find('#loadPartialView').html());
+            toastr.success("Application is Decline Succesfully");
         }
     })
 }

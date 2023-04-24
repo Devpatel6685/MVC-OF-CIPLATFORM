@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Shared\_application.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Views\LOGIN\" />
     <Folder Include="wwwroot\Images\" />
   </ItemGroup>
@@ -34,10 +30,6 @@
   <ItemGroup>
     <ProjectReference Include="..\CI PLATFORM .repository\CI PLATFORM .repository.csproj" />
     <ProjectReference Include="..\CI PLATFORM.Entities\CI PLATFORM.Entities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Shared\_application.cshtml" />
   </ItemGroup>
 
 </Project>

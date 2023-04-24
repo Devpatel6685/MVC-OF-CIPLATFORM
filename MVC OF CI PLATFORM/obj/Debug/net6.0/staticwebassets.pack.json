@@ -509,6 +509,14 @@
       "PackagePath": "staticwebassets\\css\\login.css"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionadd.css",
+      "PackagePath": "staticwebassets\\css\\missionadd.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionapplication.css",
+      "PackagePath": "staticwebassets\\css\\missionapplication.css"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionpartial.css",
       "PackagePath": "staticwebassets\\css\\missionpartial.css"
     },
@@ -537,8 +545,20 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\sklillpartial.css",
+      "PackagePath": "staticwebassets\\css\\sklillpartial.css"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\story details.css",
       "PackagePath": "staticwebassets\\css\\story details.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\storypartial.css",
+      "PackagePath": "staticwebassets\\css\\storypartial.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\themepartail.css",
+      "PackagePath": "staticwebassets\\css\\themepartail.css"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useredit.css",
@@ -605,8 +625,20 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\skillpartial.js",
+      "PackagePath": "staticwebassets\\js\\skillpartial.js"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\storydetails.js",
       "PackagePath": "staticwebassets\\js\\storydetails.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\storypartial.js",
+      "PackagePath": "staticwebassets\\js\\storypartial.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\themepartail.js",
+      "PackagePath": "staticwebassets\\js\\themepartail.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\userpartial.js",

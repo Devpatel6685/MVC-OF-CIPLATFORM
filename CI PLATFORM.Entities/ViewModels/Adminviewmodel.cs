@@ -12,9 +12,9 @@ namespace CI_PLATFORM.Entities.ViewModels
     {
         public IPagedList<User> users { get; set; }
         public IPagedList<Mission> Missions { get; set; }
-
-        /* public IPagedList<MissionApplication> missionApplications { get; set; }
-
-         public IPagedList<CmsPage> cmsPages { get; set; }*/
+        public IPagedList<MissionTheme> MissionThemes { get; set; }
+        public IPagedList<Skill> Skills { get; set; }
+        public IPagedList<MissionApplication> MissionApplications { get; set; }
+        public IPagedList<Story> Stories { get; set; }
     }
 }

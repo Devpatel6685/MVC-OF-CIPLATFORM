@@ -100,12 +100,31 @@
                                     <div class=" card  d-flex">
 
                                         <div class="d-flex flex-column position-relative">
-                                            @if (i.EndDate < DateTime.Now)
+                                            @{
+                                                if (userid_session != null)
+                                                {
+                                                    var applied = Model.MissionApplications.SingleOrDefault(m => m.MissionId == i.MissionId && m.UserId.ToString() == userid_session);
+                                                    if (applied != null && applied.ApprovalStatus == "APPROVE")
+                                                    {
+                                                        <div class="d-flex position-absolute pt-2 badgeclass">
+                                                            <span class="badge1 bg-success text-dark ms-1 pt-2">Applied</span><div class="arrow-right-a"></div>
+                                                        </div>
+                                                    }
+                                                    else if (i.EndDate < DateTime.Now)
+                                                    {
+                                                        <div class="d-flex position-absolute pt-2 badgeclass">
+                                                            <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
+                                                        </div>
+                                                    }
+                                                }
+
+                                            }
+                                           @* @if (i.EndDate < DateTime.Now)
                                             {
                                                 <div class="d-flex position-absolute pt-2 badgeclass">
                                                     <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
                                                 </div>
-                                            }
+                                            }*@
                                             <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>

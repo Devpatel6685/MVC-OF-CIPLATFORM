@@ -45,7 +45,8 @@
                     <div class="card-body">
                         <h5 class="card-title">@story.Title</h5>
                         <p class="card-text truncate">
-                            @story.Description
+                            @Html.Raw(@story.Description)
+                            
                         </p>
                         <div class="d-flex">
                             <img src="~/Assets/volunteer1.png" class="rounded-circle volunteer-img" alt="">
