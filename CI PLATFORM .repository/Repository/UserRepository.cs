@@ -51,7 +51,7 @@ namespace CI_PLATFORM.repository.Repository
             return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar;
 
         }
-        public void editimage(IFormFile Image, long userid)
+        public String editimage(IFormFile Image, long userid)
         {
             var user = _cIPLATFORMDbContext.Users.FirstOrDefault(u => u.UserId == userid);
             string wwwRootPath = _hostEnvironment.WebRootPath;
@@ -64,7 +64,7 @@ namespace CI_PLATFORM.repository.Repository
             }
             user.Avatar = @"\Images\" + fileName + extension;
             _cIPLATFORMDbContext.SaveChanges();
-
+            return user.Avatar;
 
         }
 

@@ -90,10 +90,10 @@ function filterSearch() {
     })
 }
 
-$(function () {
+/*$(function () {
     $('#missionpage').on('click', function () {
 
-       /* alert('success');*/
+       *//* alert('success');*//*
         $.ajax({
             url: '/admin/missionadd',
             type: 'GET',
@@ -102,7 +102,7 @@ $(function () {
             }
         });
     });
-});
+});*/
 
 
 

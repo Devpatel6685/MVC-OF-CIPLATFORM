@@ -61,6 +61,7 @@ namespace CI_PLATFORM_.repository.Repository
         }
         public void Addmission(MissionAddViewModel model)
         {
+            
             var model1 = new Mission
             {
                 Title = model.Title,
@@ -75,11 +76,20 @@ namespace CI_PLATFORM_.repository.Repository
                 Availibility = model.Availibility,
                 ThemeId = model.ThemeId,
                 Status = model.Status,
-                MissionType = model.MissionType
+                MissionType = model.MissionType,  
             };
+            
+       _ciplatfromdbcontext.Add(model1);
+      _ciplatfromdbcontext.SaveChanges();
+           
+            var model2 = new GoalMission
+            {   
+                
+                GoalValue = model.GoalValue,
+            };
+            _ciplatfromdbcontext.Add(model2);
 
-            _ciplatfromdbcontext.Add(model1);
-            _ciplatfromdbcontext.SaveChanges();
+
             string wwwRootPath = _hostEnvironment.WebRootPath;
             string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
             string MainfolderPath = Path.Combine(imagesFolderPath, "Mission");

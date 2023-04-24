@@ -227,7 +227,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
 
             var user_id = long.Parse(HttpContext.Session.GetString("userid"));
-            _iuserRepository.editimage(Image, user_id);
+            var avtar = _iuserRepository.editimage(Image, user_id);
+            HttpContext.Session.SetString("avtar",avtar);
             return Json(new { redirectUrl = Url.Action("UserEdit", "Home") });
 
         }

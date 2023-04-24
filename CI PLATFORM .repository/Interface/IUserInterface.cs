@@ -28,7 +28,7 @@ namespace CI_PLATFORM_.repository.Interface
         public Contactusmodel addcontact(string userid);
         public void editcontact(string subject, string message, long userid);
 
-        public void editimage(IFormFile Image, long userid);
+        public String editimage(IFormFile Image, long userid);
 
     }
 }

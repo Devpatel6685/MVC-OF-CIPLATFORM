@@ -67,3 +67,33 @@ function getcountry() {
         }
     })
 }
+function Mission() {
+    alert('change call');
+    var type = $('#avail12').val();
+    console.log("type of mission", type);
+    if (type == "time") {
+        $('#timefields').removeClass('d-none');
+        $('#goalfields').addClass('d-none');
+
+
+    }
+    else {
+        $('#goalfields').removeClass('d-none');
+        $('#timefields').addClass('d-none');
+    }
+
+}
+/*function Mission() {
+    alert('change')
+    var type = $('#avail2').val();
+    console.log("type", type);
+    if (type == "time") {
+        $('#totalseat').removeClass('d-none');
+        $('#goalvalue').addClass('d-none');
+
+    }
+    else {
+        $('#goalvalue').removeClass('d-none');
+        $('#totalseat').addClass('d-none');
+    }
+}*/

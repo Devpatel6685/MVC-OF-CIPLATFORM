@@ -30,5 +30,6 @@ namespace CI_PLATFORM.Entities.ViewModels
         public List<Skill> skills { get; set; }
         public string? Availibility { get; set; }
         public string? MissionType { get; set; }
+        public int GoalValue { get; set; }
     }
 }

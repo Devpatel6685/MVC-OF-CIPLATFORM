@@ -449,6 +449,10 @@
       "PackagePath": "staticwebassets\\Document\\jquery.pdf"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\087e8a52-7001-4153-a78c-914327fe4ad5.png",
+      "PackagePath": "staticwebassets\\Images\\087e8a52-7001-4153-a78c-914327fe4ad5.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\67c9bfe1-d8b0-4399-a44f-2f5a36fc4dbe.png",
       "PackagePath": "staticwebassets\\Images\\67c9bfe1-d8b0-4399-a44f-2f5a36fc4dbe.png"
     },
@@ -475,6 +479,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\fac8d1c5-2f9e-4b7a-ae63-56364af564a4.png",
       "PackagePath": "staticwebassets\\Images\\fac8d1c5-2f9e-4b7a-ae63-56364af564a4.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\fe9272c9-bb0d-4cb1-94ad-dea607d8514e.png",
+      "PackagePath": "staticwebassets\\Images\\fe9272c9-bb0d-4cb1-94ad-dea607d8514e.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\AdminPage.css",

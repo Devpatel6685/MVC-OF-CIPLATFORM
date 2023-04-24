@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sPgR2QIVR3dJBPsHBRtJjKDDULkVBJtHjDP9N0nzXSM=",
+  "Hash": "CMrsmm8vfd8Avng7FZaT7CptzsadloAFSYwcDdfrGjI=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -2261,6 +2261,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\087e8a52-7001-4153-a78c-914327fe4ad5.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/087e8a52-7001-4153-a78c-914327fe4ad5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\087e8a52-7001-4153-a78c-914327fe4ad5.png"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\67c9bfe1-d8b0-4399-a44f-2f5a36fc4dbe.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2344,6 +2361,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\fac8d1c5-2f9e-4b7a-ae63-56364af564a4.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\fe9272c9-bb0d-4cb1-94ad-dea607d8514e.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/fe9272c9-bb0d-4cb1-94ad-dea607d8514e.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\fe9272c9-bb0d-4cb1-94ad-dea607d8514e.png"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Dark blue\\c0f6ce9b-5940-48a9-bfb1-dcaaabd596f9.png",
