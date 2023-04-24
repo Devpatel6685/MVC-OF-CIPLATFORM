@@ -29,8 +29,12 @@
                     </select>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn apply rounded-pill">Cancel</button>
-                    <button type="submit" class="btn apply  rounded-pill">Submit</button>
+                    <button type="button" class="btn btn-secondary rounded-pill">
+                        <a asp-action="Theme" asp-controller="Admin" asp-route-SearchInputdata="" asp-route-pageindex=1 asp-route-pageSize=2 class="text-decoration-none text-white">Cancel</a>
+                    </button>
+@*                    <button type="button" class="btn apply rounded-pill">Cancel</button>
+*@                   
+                  <button type="submit" class="btn apply  rounded-pill">Submit</button>
                 </div>
             </form>
         </div>

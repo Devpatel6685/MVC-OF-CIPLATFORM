@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xyf/ZamE63kdbPrIJe0+o/gcsNZFSNGkYGzrLIeXB/4=",
+  "Hash": "wf2b3rbTgusSL6qreqZlb405MPgFRWRl5e+BIMHZ48Q=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -2463,6 +2463,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\fe9272c9-bb0d-4cb1-94ad-dea607d8514e.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\cricket match\\16596c6e-19e9-4662-bffe-e8184323dceb.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/Mission/cricket match/16596c6e-19e9-4662-bffe-e8184323dceb.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Mission\\cricket match\\16596c6e-19e9-4662-bffe-e8184323dceb.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\cricket match\\b53e4cf9-d8b1-4629-8860-5b330e323c4a.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/Mission/cricket match/b53e4cf9-d8b1-4629-8860-5b330e323c4a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Mission\\cricket match\\b53e4cf9-d8b1-4629-8860-5b330e323c4a.png"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Dark blue\\c0f6ce9b-5940-48a9-bfb1-dcaaabd596f9.png",
