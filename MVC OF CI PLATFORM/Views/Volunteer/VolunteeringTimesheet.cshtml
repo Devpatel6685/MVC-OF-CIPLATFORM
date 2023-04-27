@@ -1,24 +1,51 @@
 ﻿@model CI_PLATFORM.Entities.ViewModels.VolunteerTimesheetviewmodel
 @inject IHttpContextAccessor Accessor;
 @{
-    var userid_session = @Accessor.HttpContext.Session.GetString("userid");
+    var userid = @Accessor.HttpContext.Session.GetString("userid");
 }
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="~/css/VolunteeringTimeSheet.css">
+     <link rel="stylesheet" href="~/css/VolunteeringTimeSheet.css">
 </head>
 <body>
-    <partial name="header" model="Model" />
-    <div class="container my-3">
+ @*   @if (TempData["timesheet"] != null)
+    {
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: "@TempData["timesheet"]",
+                showConfirmButton: false,
+                timer: 1500
+            })
+        </script>
+    }*@
+    <div>
+        @if (TempData["timesheet"] != null)
+        {
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+            <script type="text/javascript">
+                toastr.success('@TempData["timesheet"]');
+            </script>
+        }
+        
+        
+    </div>
+    <partial name="header"/>
+    <div class="container my-3" id="result">
         <p class="display-6">Volunteering Timesheet</p>
         <div class="row  gap-2 mx-2">
             <div class="col  border p-4 mt-2">
                 <div class="d-flex justify-content-between">
                     <span class="align-self-center">Volunteering Hours</span>
-                    <button class="apply btn rounded-pill" data-bs-toggle="modal" onclick="getmissions();" data-bs-target="#staticBackdrop1"> + Add</button>
+                    <button class="apply btn rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" onclick="getmissions();"> + Add</button>
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
@@ -27,47 +54,42 @@
                                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Please input below volunteering hours</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form method="post" asp-action="VolunteeringTimesheet" asp-controller="Volunteer">
-                                    <div class="modal-body">
-                                        <div class="d-flex flex-column">
-                                            <label for="missionid">Mission</label>
-                                            <select asp-for="missionid" id="missionTime">
-                                            </select>
-                                            <span asp-validation-for="missionid" class="text-danger"></span>
-
-                                        </div>
-                                        <div class="d-flex flex-column mt-2">
-
-                                            <label for="dateTime">Date Volunteered</label>
-                                            <input type="date" asp-for="date" placeholder="select date" />
+                                <form method="post" asp-action="addTimesheet" asp-controller="Volunteer">
+                                <div class="modal-body">
+                                        <input type="text" class="form-control" id="timesheetId" asp-for="timesheetid" hidden />
+                                    <div class="d-flex flex-column">
+                                        <label for="missionid">Mission</label>
+                                            <select class="form-select" asp-for="missionid" id="missionTime">
+                                        </select>
+                                        <span asp-validation-for="missionid" class="text-danger"></span>
+                                    </div>
+                                    <div class="d-flex flex-column mt-2">
+                                        <label for="dateTime">Date Volunteered</label>
+                                            <input type="date" class="form-control" asp-for="date" id="dateTime" placeholder="select date" />
                                             <span asp-validation-for="date" class="text-danger"></span>
-
-                                        </div>
-                                        <div class="d-flex mt-2 justify-content-between">
-                                            <div class="d-flex flex-column">
-                                                <label for="hour">Hours</label>
-                                                <input type="number" asp-for="hour" />
+                                    </div>
+                                    <div class="d-flex mt-2 justify-content-between row">
+                                        <div class="d-flex flex-column col-6">
+                                            <label for="hour">Hours</label>
+                                                <input type="number" class="form-control" id="hour" asp-for="hour" min="0" max="23" />
                                                 <span asp-validation-for="hour" class="text-danger"></span>
-                                            </div>
-                                            <div class="d-flex flex-column mt-8">
-                                                <label for="minute">Minutes</label>
-                                                <input type="number" asp-for="minute" />
-                                                <span asp-validation-for="minute" class="text-danger"></span>
-
-                                            </div>
                                         </div>
-                                        <div class="d-flex flex-column">
-                                            <label for="messageTime">Message</label>
-                                            <textarea asp-for="message" placeholder="Enter your message"></textarea>
-                                            <span asp-validation-for="message" class="text-danger"></span>
+                                        <div class="d-flex flex-column  col-6">
+                                            <label for="minute">Minutes</label>
+                                                <input type="number" class="form-control" id="minute" asp-for="minute" min="0" max="59" />
+                                            <span asp-validation-for="minute" class="text-danger"></span>
                                         </div>
                                     </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
-                                            <button type="submit" class="btn apply rounded-pill edit" data-bs-dismiss="modal">Submit</button>
-                                        </div>
-
-
+                                    <div class="d-flex flex-column">
+                                        <label for="messageTime">Message</label>
+                                            <textarea asp-for="message" class="form-control" id="messageTime" placeholder="Enter your message"></textarea>
+                                            <span asp-validation-for="message" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn  apply rounded-pill edit" >Submit</button>
+                                </div>
                                 </form>
                             </div>
                         </div>
@@ -76,25 +98,24 @@
                 <table class="w-100 mt-2">
                     <thead>
                         <tr>
-                            <th>Mission</th>
-                            <th>Date</th>
-                            <th>Hour</th>
-                            <th>Minute</th>
-                            <th></th>
-                            <th></th>
+                            <th class="p-1">Mission</th>
+                            <th class="p-1">Date</th>
+                            <th class="p-1">Hour</th>
+                            <th class="p-1">Minute</th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var mission in Model.TimeMission)
-                        {
-                            <tr>
-                                <td id="mission-@mission.MissionId">@mission.Mission.Title</td>
-                                <td>@mission.DateVolunteered.ToString("d")</td>
-                                <td class="ps-2">@mission.Time?.ToString("hh")</td>
-                                <td class="ps-2">@mission.Time?.ToString("mm")</td>
-                                <td class="p-2"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" onclick="edit('time',@mission.MissionId);"><i class="bi bi-pencil-square icon"></i></a></td>
-                                <td class="p-2"><a class="nav-link" asp-action="deleteTimesheet" asp-controller="Volunteer" asp-route-id="@mission.TimesheetId"><i class="bi bi-trash3"></i></a></td>
-                            </tr>
+                        @foreach(var mission in Model.TimeMission){
+                            <tr class="border-bottom border-opacity-10">
+                            <td id="mission-@mission.MissionId">@mission.Mission.Title</td>
+                            <td>@mission.DateVolunteered.ToString("d")</td>
+                            <td class="ps-2">@mission.Time?.ToString("hh")</td>
+                            <td class="ps-2">@mission.Time?.ToString("mm")</td>
+                                <td class="p-2"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" onclick="edit('time',@mission.MissionId,@mission.TimesheetId);"><i class="bi bi-pencil-square icon"></i></a></td>
+                                <td class="p-2"><a class="nav-link" onclick="deleteTimesheet(@mission.TimesheetId);"><i class="bi bi-trash3"></i></a></td>
+                        </tr>
                         }
                     </tbody>
                 </table>
@@ -102,7 +123,7 @@
             <div class="col  border p-4 mt-2">
                 <div class="d-flex justify-content-between">
                     <span class="align-self-center">Volunteering Goals</span>
-                    <button class="apply btn rounded-pill" data-bs-toggle="modal" onclick="getmissions();" data-bs-target="#staticBackdrop2"> + Add</button>
+                    <button class="apply btn rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="getmissions();"> + Add</button>
                     <!-- Modal -->
                     <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
@@ -111,43 +132,35 @@
                                     <h1 class="modal-title fs-5" id="staticBackdropLabel">Please input below volunteering goal</h1>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <form method="post" asp-action="VolunteeringTimesheet" asp-controller="Volunteer">
-
-                                    <div class="modal-body">
-                                        <div class="d-flex flex-column">
-                                            <label for="missionid">Mission</label>
-                                            <select id="missionGoal" asp-for="missionid">
-                                            </select>
+                                <form method="post" asp-action="addTimesheet" asp-controller="Volunteer">
+                                <div class="modal-body">
+                                        <input type="text" class="form-control" id="goalsheetId" asp-for="timesheetid" hidden />
+                                    <div class="d-flex flex-column">
+                                        <label for="missionid">Mission</label>
+                                            <select class="form-select" asp-for="missionid" id="missionGoal">
+                                        </select>
                                             <span asp-validation-for="missionid" class="text-danger"></span>
-
-                                        </div>
-                                        <div class="d-flex flex-column mt-2">
-                                            <label>Actions</label>
-                                            <input type="text" id="action" asp-for="action" />
+                                    </div>
+                                    <div class="d-flex flex-column mt-2">
+                                        <label for="action">Actions</label>
+                                            <input class="form-control" type="text" id="action" asp-for="action" />
                                             <span asp-validation-for="action" class="text-danger"></span>
-
-                                        </div>
-                                        <div class="d-flex flex-column mt-2">
-                                            <label for="date">Date Volunteered</label>
-                                            <input type="date" asp-for="date" placeholder="select date" />
+                                    </div>
+                                    <div class="d-flex flex-column mt-2">
+                                        <label for="date">Date Volunteered</label>
+                                            <input class="form-control" type="date" id="dateGoal" asp-for="date" placeholder="select date" />
                                             <span asp-validation-for="date" class="text-danger"></span>
-
-                                        </div>
-                                        <div class="d-flex flex-column">
-                                            @* <label>Message</label>
-                                            <textarea id="messageGoal" asp-for="message" as placeholder="Enter your message"></textarea>
-                                            <span asp-validation-for="message"></span>*@
-                                            <label for="message">Message</label>
-                                            <textarea asp-for="message" placeholder="Enter your message"></textarea>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <label for="message">Message</label>
+                                            <textarea class="form-control" asp-for="message" id="messageGoal"  placeholder="Enter your message"></textarea>
                                             <span asp-validation-for="message" class="text-danger"></span>
-
-                                        </div>
                                     </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn  apply rounded-pill edit" data-bs-dismiss="modal" >Submit</button>
-                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn  apply rounded-pill edit" >Submit</button>
+                                </div>
                                 </form>
                             </div>
                         </div>
@@ -156,22 +169,22 @@
                 <table class="w-100 mt-2">
                     <thead>
                         <tr>
-                            <th>Mission</th>
-                            <th>Date</th>
-                            <th>Action</th>
-                            <th></th>
-                            <th></th>
+                            <th class="p-1">Mission</th>
+                            <th class="p-1">Date</th>
+                            <th class="p-1">Action</th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var mission in Model.GoalMission)
+                        @foreach(var mission in Model.GoalMission)
                         {
-                            <tr class="timesheetRow">
+                            <tr class="timesheetRow border-bottom border-opacity-10">
                                 <td id="mission-@mission.MissionId">@mission.Mission.Title</td>
                                 <td>@mission.DateVolunteered.ToString("d")</td>
                                 <td>@mission.Action</td>
-                                <td class="p-2"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="edit('goal',@mission.MissionId);"><i class="bi bi-pencil-square icon"></i></a></td>
-                                <td class="p-2"><a class="nav-link" asp-action="deleteTimesheet" asp-controller="Volunteer" asp-route-id="@mission.TimesheetId"><i class="bi bi-trash3"></i></a></td>
+                                <td class="p-2"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="edit('goal',@mission.MissionId,@mission.TimesheetId);"><i class="bi bi-pencil-square icon"></i></a></td>
+                                <td class="p-2"><a class="nav-link" onclick="deleteTimesheet(@mission.TimesheetId);"><i class="bi bi-trash3"></i></a></td>
                             </tr>
                         }
                     </tbody>
@@ -181,6 +194,21 @@
     </div>
     <partial name="_footer">
 
-    <script src="~/js/volunteertimesheet.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+     <script src="~/js/volunteertimesheet.js"></script>
 </body>
 </html>

@@ -120,7 +120,7 @@
                         <button class="btn btn-outline-warning" onclick="submit(@Model.storyid)" style="border-radius: 50px;" id="submit">Submit</button>
 
                     }
-                    else if (Model.status == "PUBLISHED" || Model.status == "DECLINED")
+                    else if (Model.status == "PUBLISHED" || Model.status == "DECLINED" || Model.status == "PENDING")
                     {
 
                         <button class="btn btn-outline-warning me-2" onclick="Edit(@Model.storyid)" style="border-radius: 50px;">Edit</button>
@@ -140,216 +140,21 @@
 
         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
         <script>
-            getmissions();
-            tinymce.init({
-                selector: '#storytext',
-                plugins: 'link image code',
-                toolbar: 'undo redo | bold italic | fontsizeselect | alignleft aligncenter alignright alignjustify | superscript subscript ',
-                height: 300
-            });
 
-            function getmissions() {
-                var mission = $('#mission_id').val();
-                $.ajax({
-                    url: "/volunterrstory/missions",
-                    type: "GET",
-                    success: function (result) {
-                        $(result).each(function (i, data) {
-                            if (data.missionId != mission) {
-                                $('#mission_id').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
-                            }
-                        })
-                    }
-                })
-            }
-
-
-
-            function saveDraft() {
-                const missionId = $("#mission_id").val();
-                const title = $("#title").val();
-                const date = $("#date").val();
-                const video = $("#videoURL").val();
-                var textarea = tinymce.get("storytext").getContent();
-                var description = textarea.substring(3, textarea.length - 4);
-                const imagePaths = [];
-                const images = $('#image-preview');
-                const image_tag = images.find("img");
-                $('#image-preview img').each(function () {
-                    console.log(typeof ($(this).attr('src')));
-                    imagePaths.push($(this).attr('src'));
-                })
-                if (isValidated()){
-                    $.ajax({
-                        url: "/VolunterrStory/Shareyourstory",
-                        type: "POST",
-                        data: {
-                            missionId: missionId,
-                            title: title,
-                            date: date,
-                            videoURL: video,
-                            description: description,
-                            imagePaths: imagePaths,
-
-                        },
-                        success: function (result) {
-                            window.location = result.redirectUrl;
-                            //$('#submit').removeClass('bg-secondary');
-                            //$('#submit').removeAttr('disabled')
-                            console.log("data drafted")
-                        }
-                    })
-                }
-            }
-            function handleMissionChange() {
-                const missionid = document.getElementById("mission_id").value;
-                $.ajax({
-                    url: '/VolunterrStory/loadaddstory',
-                    type: "GET",
-                    data: {
-                        missionid: missionid,
-                    },
-                    success: function (result) {
-                        window.location = result.redirectUrl;
-                    }
-                })
-            }
-            function submit(storyid) {
-
-                $.ajax({
-                    url: "/VolunterrStory/submit",
-                    type: "POST",
-                    data: {
-                        storyid: storyid,
-                    },
-                    success: function (result) {
-                        window.location = result.redirectUrl;
-
-                    }
-                })
-            }
-
-            function Edit() {
-                const missionId = $("#mission_id").val();
-                const title = $("#title").val();
-                const date = $("#date").val();
-                const video = $("#videoURL").val();
-                var textarea = tinymce.get("storytext").getContent();
-                var description = textarea.substring(3, textarea.length - 4);
-                const imagePaths = [];
-                const images = $('#image-preview');
-                const image_tag = images.find("img");
-                $('#image-preview img').each(function () {
-                    console.log(typeof ($(this).attr('src')));
-                    imagePaths.push($(this).attr('src'));
-                })
-
-                if (isValidated()) {
-                    console.log("hello");
-
-                    $.ajax({
-                        url: "/VolunterrStory/Edit",
-                        type: "POST",
-                        data: {
-                            missionId: missionId,
-                            title: title,
-                            date: date,
-                            videoURL: video,
-                            description: description,
-                            imagePaths: imagePaths,
-
-                        },
-                        success: function (result) {
-                            window.location = result.redirectUrl;
-                            //$('#submit').removeClass('bg-secondary');
-                            //$('#submit').removeAttr('disabled')
-                            console.log("data edited")
-                        }
-                    })
-                }
-            }
-
-            function isValidated() {
-                console.log("hello");
-                const missionId = $("#mission").val();
-                const title = $("#title").val();
-                const date = $("#date").val();
-                const video = $("#videoURL").val();
-                var textarea = tinymce.get("storytext").getContent();
-                const imagePaths = [];
-                validate = true;
-                if (missionId == "") {
-                    validate = false;
-                    $('#missionValidate').removeClass('d-none');
-                } else {
-                    $('#missionValidate').addClass('d-none');
-                }
-                if (title == "") {
-                    validate = false;
-                    $('#titleValidate').removeClass('d-none');
-                } else {
-                    $('#titleValidate').addClass('d-none');
-                }
-                if (date == "") {
-                    validate = false;
-                    $('#dateValidate').removeClass('d-none');
-                } else {
-                    $('#dateValidate').addClass('d-none');
-                }
-                if (video == "") {
-                    validate = false;
-                    $('#videoValidate').removeClass('d-none');
-                } else {
-                    $('#videoValidate').addClass('d-none');
-                }
-                if (textarea == "") {
-                    validate = false;
-                    $('#storytextValidate').removeClass('d-none');
-                } else {
-                    $('#storytextValidate').addClass('d-none');
-                }
-                if (imagePaths.length > 20) {
-                    validate = false;
-                    $('#ImageValidate').removeClass('d-none');
-                } else {
-                    $('#ImageValidate').addClass('d-none');
-                }
-                return validate;
-            }
-
-            $('input').keyup(function () {
-                isValidated();
-            })
-
-            $('input').click(function () {
-                isValidated();
-            })
-
-            $('input').change(function () {
-                isValidated();
-            })
-            $('select').change(function () {
-                isValidated();
-            })
-
-            $('#storytext').keyup(function () {
-                isValidated();
-            })
-
-            $('#storytext').click(function () {
-                isValidated();
-            })
             var listData = @Html.Raw(Json.Serialize(Model.imagepaths));
         </script>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="/js/Shareyourstory.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-        @*        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
-        *@
-        <a href="~/lib/jquery/dist/jquery.min.map"></a>
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/lib/jquery/dist/jquery.js"></script>
+       
+@*        <a href="~/lib/jquery/dist/jquery.min.map"></a>
+*@        
 </body>
 
 </html>

@@ -569,6 +569,10 @@
       "PackagePath": "staticwebassets\\css\\themepartail.css"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useradd.css",
+      "PackagePath": "staticwebassets\\css\\useradd.css"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useredit.css",
       "PackagePath": "staticwebassets\\css\\useredit.css"
     },
@@ -647,6 +651,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\themepartail.js",
       "PackagePath": "staticwebassets\\js\\themepartail.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\useraddpartail.js",
+      "PackagePath": "staticwebassets\\js\\useraddpartail.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\userpartial.js",

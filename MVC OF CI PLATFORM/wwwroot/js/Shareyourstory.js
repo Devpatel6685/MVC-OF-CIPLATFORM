@@ -75,3 +75,214 @@ function handleFiles(files) {
     }
 }
 
+getmissions();
+tinymce.init({
+    selector: '#storytext',
+    plugins: 'link image code',
+    toolbar: 'undo redo | bold italic | fontsizeselect | alignleft aligncenter alignright alignjustify | superscript subscript ',
+    height: 300
+});
+
+function getmissions() {
+    var mission = $('#mission_id').val();
+    $.ajax({
+        url: "/volunterrstory/missions",
+        type: "GET",
+        success: function (result) {
+            $(result).each(function (i, data) {
+                if (data.missionId != mission) {
+                    $('#mission_id').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
+                }
+            })
+        }
+    })
+}
+
+
+
+function saveDraft() {
+    const missionId = $("#mission_id").val();
+    const title = $("#title").val();
+    const date = $("#date").val();
+    const video = $("#videoURL").val();
+    var textarea = tinymce.get("storytext").getContent();
+    var description = textarea.substring(3, textarea.length - 4);
+    const imagePaths = [];
+    const images = $('#image-preview');
+    const image_tag = images.find("img");
+    $('#image-preview img').each(function () {
+        console.log(typeof ($(this).attr('src')));
+        imagePaths.push($(this).attr('src'));
+    })
+    if (isValidated()) {
+        $.ajax({
+            url: "/VolunterrStory/Shareyourstory",
+            type: "POST",
+            data: {
+                missionId: missionId,
+                title: title,
+                date: date,
+                videoURL: video,
+                description: description,
+                imagePaths: imagePaths,
+
+            },
+            success: function (result) {
+                window.location = result.redirectUrl;
+                //$('#submit').removeClass('bg-secondary');
+                //$('#submit').removeAttr('disabled')
+                console.log("data drafted")
+            }
+        })
+    }
+}
+function handleMissionChange() {
+    const missionid = document.getElementById("mission_id").value;
+    $.ajax({
+        url: '/VolunterrStory/loadaddstory',
+        type: "GET",
+        data: {
+            missionid: missionid,
+        },
+        success: function (result) {
+            window.location = result.redirectUrl;
+        }
+    })
+}
+function submit(storyid) {
+
+    $.ajax({
+        url: "/VolunterrStory/submit",
+        type: "POST",
+        data: {
+            storyid: storyid,
+        },
+        success: function (result) {
+            window.location = result.redirectUrl;
+
+        }
+    })
+}
+
+function Edit() {
+    const missionId = $("#mission_id").val();
+    const title = $("#title").val();
+    const date = $("#date").val();
+    const video = $("#videoURL").val();
+    var textarea = tinymce.get("storytext").getContent();
+    var description = textarea.substring(3, textarea.length - 4);
+    const imagePaths = [];
+    const images = $('#image-preview');
+    const image_tag = images.find("img");
+    $('#image-preview img').each(function () {
+        console.log(typeof ($(this).attr('src')));
+        imagePaths.push($(this).attr('src'));
+    })
+
+    if (isValidated()) {
+        console.log("hello");
+
+        $.ajax({
+            url: "/VolunterrStory/Edit",
+            type: "POST",
+            data: {
+                missionId: missionId,
+                title: title,
+                date: date,
+                videoURL: video,
+                description: description,
+                imagePaths: imagePaths,
+
+            },
+            success: function (result) {
+                window.location = result.redirectUrl;
+                //$('#submit').removeClass('bg-secondary');
+                //$('#submit').removeAttr('disabled')
+                console.log("data edited")
+            }
+        })
+    }
+}
+
+function isValidated() {
+    console.log("hello");
+    const missionId = $("#mission").val();
+    const title = $("#title").val();
+    const date = $("#date").val();
+    const video =$("#videoURL").val();
+    var textarea = tinymce.get("storytext").getContent();
+    const imagePaths = [];
+    validate = true;
+    if (missionId == "") {
+        validate = false;
+        $('#missionValidate').removeClass('d-none');
+    } else {
+        $('#missionValidate').addClass('d-none');
+    }
+    if (title == "") {
+        validate = false;
+        $('#titleValidate').removeClass('d-none');
+    } else {
+        $('#titleValidate').addClass('d-none');
+    }
+    if (date == "") {
+        validate = false;
+        $('#dateValidate').removeClass('d-none');
+    } else {
+        $('#dateValidate').addClass('d-none');
+    }
+
+    const youtubeUrlRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=)?([a-zA-Z0-9_-]{11})$/;
+    if (video.trim() === '' || !youtubeUrlRegex.test(video)) {
+        validate = false;
+        $('#videoValidate').removeClass('d-none');
+    } else {
+        $('#videoValidate').addClass('d-none');
+    }
+
+
+
+ 
+  /*  if (video == "") {
+        validate = false;
+        $('#videoValidate').removeClass('d-none');
+    } else {
+        $('#videoValidate').addClass('d-none');
+    }*/
+    if (textarea == "") {
+        validate = false;
+        $('#storytextValidate').removeClass('d-none');
+    } else {
+        $('#storytextValidate').addClass('d-none');
+    }
+    if (imagePaths.length > 20) {
+        validate = false;
+        $('#ImageValidate').removeClass('d-none');
+    } else {
+        $('#ImageValidate').addClass('d-none');
+    }
+    return validate;
+}
+
+$('input').keyup(function () {
+    isValidated();
+})
+
+$('input').click(function () {
+    isValidated();
+})
+
+$('input').change(function () {
+    isValidated();
+})
+$('select').change(function () {
+    isValidated();
+})
+
+$('#storytext').keyup(function () {
+    isValidated();
+})
+
+$('#storytext').click(function () {
+    isValidated();
+})

@@ -18,28 +18,33 @@ namespace CI_PLATFORM_.repository.Repository
         {
             _ciplatfromdbcontext = ciplatfromdbcontext;
         }
-        public (List<Mission>, List<Mission>) getMissions(long userid)
-        {
-            var missionApplication = _ciplatfromdbcontext.MissionApplications.Where(u => u.UserId == userid).Select(u => u.MissionId);
-            var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "TIME").OrderBy(m => m.Title).ToList();
-            var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "GOAL").OrderBy(m => m.Title).ToList();
-            return (time, goal);
-        }
- 
         public VolunteerTimesheetviewmodel GetAll(long userid)
         {
             var entity = _ciplatfromdbcontext.Timesheets.Include(m => m.Mission).Where(ts => ts.UserId == userid).AsQueryable();
             var time = entity.Where(ts => ts.Mission.MissionType == "TIME");
             var goal = entity.Where(ts => ts.Mission.MissionType == "GOAL");
-           VolunteerTimesheetviewmodel TS = new VolunteerTimesheetviewmodel();
+            VolunteerTimesheetviewmodel TS = new VolunteerTimesheetviewmodel();
             TS.TimeMission = time.ToList();
-            TS.GoalMission = goal.ToList(); 
+            TS.GoalMission = goal.ToList();
             return TS;
         }
 
-        public void addtimesheet(VolunteerTimesheetviewmodel model, string userid)
+        public VolunteerTimesheetviewmodel getTimesheet(long timesheetid)
         {
-            var timesheet = _ciplatfromdbcontext.Timesheets.SingleOrDefault(ts => ts.UserId.ToString() == userid && ts.MissionId == model.missionid);
+            Timesheet ts = _ciplatfromdbcontext.Timesheets.SingleOrDefault(t => t.TimesheetId == timesheetid);
+            VolunteerTimesheetviewmodel model = new VolunteerTimesheetviewmodel()
+            {
+                action = ts.Action,
+                date = ts.DateVolunteered,
+                hour = int.Parse(ts.Time?.ToString("hh")),
+                minute = int.Parse(ts.Time?.ToString("mm")),
+                message = ts.Notes
+            };
+            return model;
+        }
+        public void addTimesheet(VolunteerTimesheetviewmodel model, string userid)
+        {
+            var timesheet = _ciplatfromdbcontext.Timesheets.SingleOrDefault(ts => ts.TimesheetId.ToString() == model.timesheetid);
             if (timesheet == null)
             {
                 Timesheet ts = new Timesheet()
@@ -70,8 +75,15 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext.Timesheets.Remove(timesheet);
             _ciplatfromdbcontext.SaveChanges();
         }
+        public (List<Mission>, List<Mission>) getMissions(long userid)
+        {
+            var missionApplication = _ciplatfromdbcontext.MissionApplications.Where(u => u.UserId == userid).Select(u => u.MissionId);
+            var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "TIME").OrderBy(m => m.Title).ToList();
+            var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "GOAL").OrderBy(m => m.Title).ToList();
+            return (time, goal);
+        }
 
-      
+
     }
     
 }

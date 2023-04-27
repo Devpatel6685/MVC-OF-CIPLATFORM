@@ -9,7 +9,7 @@ namespace CI_PLATFORM.Entities.ViewModels
     public class SkillAddViewModel
     {
         public string? SkillName { get; set; }
-
+        public int SkillId { get; set; }
         public byte Status { get; set; }
     }
 }

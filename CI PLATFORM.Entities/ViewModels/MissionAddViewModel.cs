@@ -22,15 +22,17 @@ namespace CI_PLATFORM.Entities.ViewModels
         public List<SelectListItem> cities { get; set; }
         public List<SelectListItem> Themes { get; set; }
         public List<IFormFile> Images { get; set; }
+        public List<IFormFile> Documents { get; set; }
         public long CountryId { get; set; }
         public int? Status { get; set; }
         public long CityId { get; set; }
         public string? OrganizationName { get; set; }
         public string? OrganizationDetail { get; set; }
         public List<UserSkill> userSkills { get; set; }
-        public List<Skill> skills { get; set; }
+        public List<Skill> Skills { get; set; }
         public string? Availibility { get; set; }
         public string? MissionType { get; set; }
         public string? GoalObjectiveText { get; set; }
+        public int GoalValue { get; set; }
     }
 }

@@ -23,7 +23,7 @@
 
         @if (Model.Skills.Count() == 0)
         {
-              <div class="page"> </div>
+            <div class="page"> </div>
             <div class="d-flex mt-5 flex-column my-3 table">
                 <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No skill found</h3></div>
             </div>
@@ -66,8 +66,24 @@
                                     }
                                 }
                                 <td class="d-flex">
-                                    <button class="btn border-0"><i class="bi bi-pencil-square icon"></i></button>
+                                    <button class="btn border-0">
+                                        <a asp-action="editskilldata" asp-controller="Admin" asp-route-skillid="@skill.SkillId">
+                                            <i class="bi bi-pencil-square icon"></i>
+                                        </a>
+                                    </button>
                                     <a class="nav-link text-black deleteMission p-2" onclick="showModal(@skill.SkillId)" type="button"><i class="bi bi-trash3"></i></a>
+
+                                    @*@{
+                            var appliedskill = Model.MissionSkills.FirstOrDefault(ms => ms.SkillId == skill.SkillId);
+                            if (appliedskill == null)
+                            {
+                            <a class="nav-link text-black deleteMission p-2" onclick="showModal(@skill.SkillId)" type="button"><i class="bi bi-trash3"></i></a>
+                            }
+                            else
+                            {
+                            <a class="nav-link text-black deleteMission p-2" onclick="errormodal()" type="button"><i class="bi bi-trash3"></i></a>
+                            }
+                            }*@
                                 </td>
 
                             </tr>

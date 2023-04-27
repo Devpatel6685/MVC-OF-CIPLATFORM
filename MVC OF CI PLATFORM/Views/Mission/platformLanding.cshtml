@@ -100,6 +100,7 @@
                                     <div class=" card  d-flex">
 
                                         <div class="d-flex flex-column position-relative">
+                                      
                                             @{
                                                 if (userid_session != null)
                                                 {
@@ -464,18 +465,6 @@
             console.log(inputValue);
             spanField.textContent = inputValue;
         }
-
-                //For favourite button
-            $(document).ready(function () {
-                $('#carddis').click(function () {
-                   
-                    $('.card').css({
-                        'box-shadow': 'none',
-                        'transition': 'none'
-                    });
-                    $('.card:hover').css('transform', 'none');
-                });
-            });
 
     </script>
 

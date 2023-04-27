@@ -67,7 +67,7 @@ function filterSearch() {
     })
 }
 
-function showModal(id) {
+function showModal(skillid) {
     Swal.fire({
         title: 'Are you sure?',
         text: "This Theme will be de-activated",
@@ -78,25 +78,40 @@ function showModal(id) {
         confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
         if (result.isConfirmed) {
-            DeleteTheme(id);
-            Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
+            DeleteSkill(skillid);
         }
     })
 }
-function DeleteTheme(themeId) {
+function DeleteSkill(skillid) {
     alert("delete theme called");
     $.ajax({
-        url: '/admin/DeleteTheme',
+        url: '/admin/DeleteSkill',
         type: 'GET',
         data: {
-            themeid: themeId
+            skillId: skillid
         },
         success: function (result) {
-            $('#loadPartialView').html($(result).find('#loadPartialView').html());
+            alert('result called');
+            console.log(result);
+            if (result == true) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Deleted',
+                    text: 'Your skill is been deleted',
+                    footer: '<a href="">You cannot de-activate it</a>'
+                }).then(() => {
+                    window.location = "/Admin/Skill/"
+                })
+
+            }
+            else if (result == false) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'This Skill is already used by Mission or User',
+                    footer: '<a href="">You cannot de-activate it</a>'
+                })
+            }
         }
     });
 }

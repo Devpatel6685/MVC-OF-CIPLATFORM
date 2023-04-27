@@ -11,9 +11,8 @@ namespace CI_PLATFORM_.repository.Interface
     public interface IVolunteerInterface
     {
         public (List<Mission>, List<Mission>) getMissions(long userid);
-
-        public void addtimesheet(VolunteerTimesheetviewmodel model, string userid);
-
+        public VolunteerTimesheetviewmodel getTimesheet(long timesheetid);
+        public void addTimesheet(VolunteerTimesheetviewmodel model, string userid);
         public void deleteTimesheet(int id);
         public VolunteerTimesheetviewmodel GetAll(long userid);
 

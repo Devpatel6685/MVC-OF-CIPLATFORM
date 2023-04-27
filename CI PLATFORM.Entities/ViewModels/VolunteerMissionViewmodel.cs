@@ -48,7 +48,9 @@ namespace CI_PLATFORM.Entities.ViewModels
         public string? days { get; set; }
         public bool favorite { get; set; }
 
-        public bool applied { get; set; }
+/*        public bool applied { get; set; }
+*/        public int applied { get; set; }
+
         public string? goalObjective { get; set; }
         public int? goalvalue { get; set; }
     }

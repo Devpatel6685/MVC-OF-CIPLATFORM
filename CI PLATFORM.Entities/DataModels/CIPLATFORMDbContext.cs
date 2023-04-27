@@ -120,12 +120,15 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("deleted_at");
             entity.Property(e => e.Image)
-                .HasMaxLength(1)
+                .HasMaxLength(200)
                 .IsUnicode(false)
                 .HasColumnName("image");
             entity.Property(e => e.SortOrder)
                 .HasDefaultValueSql("((0))")
                 .HasColumnName("sort_order");
+            entity.Property(e => e.Status)
+                .HasMaxLength(20)
+                .IsUnicode(false);
             entity.Property(e => e.Text)
                 .HasColumnType("text")
                 .HasColumnName("text");

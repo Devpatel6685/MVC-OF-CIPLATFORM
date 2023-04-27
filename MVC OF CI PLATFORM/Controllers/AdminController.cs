@@ -10,7 +10,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
     public class AdminController : Controller
     {
         private readonly ILogger<AdminController> _logger;
-        private readonly IAdminInterface  _adminInterface;
+        private readonly IAdminInterface _adminInterface;
 
         public AdminController(ILogger<AdminController> logger, IAdminInterface adminRepository)
         {
@@ -93,7 +93,13 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
         public IActionResult missionadd()
         {
-            return PartialView("_missionedit");
+            var model = _adminInterface.getmissionmodeldata();
+            return PartialView("_missionedit", model);
+        }
+        public IActionResult useradd()
+        {
+
+            return PartialView("_useradd");
         }
         public IActionResult themeadd()
         {
@@ -103,11 +109,26 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             return PartialView("_skilladd");
         }
-        public IActionResult AddMission(MissionAddViewModel model)
+        public IActionResult editskilldata(string skillid)
         {
-            _adminInterface.Addmission(model);
+            var model = _adminInterface.getskill(skillid);
+            return PartialView("_skilladd", model);
+        }
+        public IActionResult AddMission(MissionAddViewModel model, List<int> selectedSkills)
+        {
+            _adminInterface.Addmission(model, selectedSkills);
             return RedirectToAction("Mission", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
         }
+        /*        public IActionResult AddUser(UserAddViewModel model)
+                {
+                    if (model.UserId == null)
+                    {
+                        _adminInterface.Adduser(model);
+                        return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
+                    }
+
+
+                }*/
         public IActionResult AddTheme(ThemeAddViewModel model)
         {
             _adminInterface.Addtheme(model);
@@ -115,9 +136,23 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
         public IActionResult AddSkill(SkillAddViewModel model)
         {
-            _adminInterface.Addskill(model);
+            if (model.SkillId == null)
+            {
+                _adminInterface.Addskill(model);
+                TempData["success"] = "skill is added";
+            }
+            else
+            {
+                _adminInterface.editskilldatabase(model);
+                TempData["success"] = "skill is added";
+            }
             return RedirectToAction("Skill", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
 
+        }
+        public IActionResult edituser(string id)
+        {
+            var usermodel = _adminInterface.edituserdata(id);
+            return PartialView("_useradd", usermodel);
         }
         public IActionResult DeleteMission(string missionid)
         {
@@ -130,5 +165,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _adminInterface.deletetheme(themeid);
             return RedirectToAction("Theme", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
         }
+        public bool DeleteSkill(string skillId)
+        {
+            var delete = _adminInterface.deleteskill(skillId);
+            return delete;
+        }
     }
 }
+

@@ -245,97 +245,47 @@
                     </div>
                 </div>
                 <div class="mt-2 d-flex applybtn">
-             @*       @{
-                        var apply = Model.Item1.MissionApplications.FirstOrDefault(m => m.UserId.ToString() == userid_session);
-                        @if (@userid_session == null)
-                        {
-                            <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
-                                Apply Now<img src="~/Assets/right-arrow.png" alt=""
+                    @if (@userid_session == null)
+                    {
+                        <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
+                            Apply Now<img src="~/Assets/right-arrow.png" alt=""
                                       class="ms-2">
-                            </button>
-                        }
-
-                        else
+                        </button>
+                    }
+                    else
+                    {
+                        @if (Model.Item1.EndDate > DateTime.Today)
                         {
-                            if (apply == null)
+                            @if (@Model.Item1.applied == 1)
                             {
-                                <button class="py-2 px-3 mx-auto app" onclick="applymission(@Model.Item1.MissionId)">
-                                    Apply Now in this <img src="~/Assets/right-arrow.png" alt="" class="ms-2">
+                                <button class="py-2 px-3 mx-auto apply " disabled>
+                                    Applied
                                 </button>
-
+                            }
+                            else if (Model.Item1.applied == 2)
+                            {
+                                <button class="py-2 px-3 mx-auto apply " disabled>Pending Request </button>
+                            }
+                            else if (Model.Item1.applied == 3)
+                            {
+                                <button class="py-2 px-3 mx-auto apply " disabled>Request Declined</button>
                             }
                             else
                             {
-                                if (apply.ApprovalStatus == "PENDING")
-                                {
-                                    <button class="py-2 px-3 mx-auto app" disabled>
-                                        PENDING<img src="~/Assets/right-arrow.png" alt=""
-                                    class="ms-2">
-                                    </button>
-                                }
-                                else if (apply.ApprovalStatus == "APPROVE")
-                                {
-                                    <button class="py-2 px-3 mx-auto app" disabled>
-                                        Approved<img src="~/Assets/right-arrow.png" alt=""
-                                     class="ms-2">
-                                    </button>
-                                }
-                                else if (apply.ApprovalStatus == "DECLINE")
-                                {
-                                    <button class="py-2 px-3 mx-auto app"  disabled>
-                                        Your Request is Declined<img src="~/Assets/right-arrow.png" alt=""
-                                                     class="ms-2">
-                                    </button>
-                                }
-
+                                <button class="py-2 px-3 mx-auto apply" onclick="applymission(@Model.Item1.MissionId);">
+                                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
+                                      class="ms-2">
+                                </button>
                             }
                         }
-                    }*@
-                        @if (Model.Item1.EndDate > DateTime.Today)
-                    {
-                    @if (@Model.Item1.applied)
-                    {
-                    <button class="py-2 px-3 mx-auto apply " disabled>
-                    Applied
-                    </button>
+                        else
+                            {
+                            <button class="py-2 px-3 mx-auto apply " disabled>
+                                Mission Closed
+                            </button>
+                        }
                     }
-                    else
-                    {
-                    @if (@userid_session == null)
-                    {
-                    <button class="py-2 px-3 mx-auto apply" onclick="showModal()">
-                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
-                    class="ms-2">
-                    </button>
-                    }
-                    else
-                    {
-
-                    @if (@Model.Item1.applied)
-                    {
-                    <button class="py-2 px-3 mx-auto apply" disabled>
-                    Applied
-                    </button>
-                    }
-                    else
-                    {
-                    <button class="py-2 px-3 mx-auto apply" onclick="applymission(@Model.Item1.MissionId)">
-                    Apply Now<img src="~/Assets/right-arrow.png" alt=""
-                    class="ms-2">
-                    </button>
-                    }
-
-                    }
-
-                    }
-
-                    }
-                    else
-                    {
-                    <button class="py-2 px-3 mx-auto apply" disabled>
-                    Mission Closed
-                    </button>
-                    }
+                    
 
                 </div>
             </div>

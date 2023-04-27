@@ -90,7 +90,23 @@ namespace CI_PLATFORM_.repository.Repository
             var comments = _cIPLATFORMDbContext.Comments.Include(m => m.User).Where(m => m.MissionId == mission.MissionId).OrderByDescending(c => c.CreatedAt).ToList();
             var missionapplication = _cIPLATFORMDbContext.MissionApplications.Include(m => m.User).Where(m => m.MissionId == mission.MissionId && m.UserId.ToString() != userId).ToList();
             var missiondocuments = _cIPLATFORMDbContext.MissionDocuments.Where(m => m.MissionId == mission.MissionId).ToList();
-
+            var misApplication =_cIPLATFORMDbContext.MissionApplications.SingleOrDefault(m => m.MissionId == mission.MissionId && m.UserId.ToString() == userId);
+            int apply = 0;
+            if (misApplication != null)
+            {
+                if (misApplication.ApprovalStatus == "APPROVE")
+                {
+                    apply = 1;
+                }
+                else if (misApplication.ApprovalStatus == "PENDING")
+                {
+                    apply = 2;
+                }
+                else
+                {
+                    apply = 3;
+                }
+            }
             VolunteerMissionViewmodel volunteerMission = new VolunteerMissionViewmodel()
 
             {
@@ -115,7 +131,7 @@ namespace CI_PLATFORM_.repository.Repository
                 favorite = addfavorite,
                 comments = comments,
                 rate = rate,
-                applied = applied,
+                applied = apply,
                 MissionApplications = missionapplication.ToPagedList(pageIndex, 9),
                 Documents = missiondocuments,
 
