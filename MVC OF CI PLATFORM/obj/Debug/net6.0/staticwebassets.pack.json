@@ -465,6 +465,18 @@
       "PackagePath": "staticwebassets\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\img.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\img.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\volunteer2.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\volunteer2.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\volunteer3.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\volunteer3.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Dark blue\\c0f6ce9b-5940-48a9-bfb1-dcaaabd596f9.png",
       "PackagePath": "staticwebassets\\Images\\Mission\\Dark blue\\c0f6ce9b-5940-48a9-bfb1-dcaaabd596f9.png"
     },
@@ -503,6 +515,14 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\VolunteeringTimeSheet.css",
       "PackagePath": "staticwebassets\\css\\VolunteeringTimeSheet.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\banneradd.css",
+      "PackagePath": "staticwebassets\\css\\banneradd.css"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\bannerpage.css",
+      "PackagePath": "staticwebassets\\css\\bannerpage.css"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\bootstrap.min.css",
@@ -611,6 +631,14 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Volunteerpage.js",
       "PackagePath": "staticwebassets\\js\\Volunteerpage.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\banneraddpartial.js",
+      "PackagePath": "staticwebassets\\js\\banneraddpartial.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\bannerpartial.js",
+      "PackagePath": "staticwebassets\\js\\bannerpartial.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\cmspartial.js",

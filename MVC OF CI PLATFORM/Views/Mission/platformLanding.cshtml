@@ -37,25 +37,25 @@
 
 <body>
     <partial name="header" model="Model" />
-     <div>
-    @if (TempData["LOGIN"] != null)
-    {
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script type="text/javascript">
-    toastr.success('@TempData["LOGIN"]');
-    </script>
-    }
-    @if (TempData["success"] != null)
-    {
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script type="text/javascript">
-    toastr.success('@TempData["success"]');
-    </script>
-    }
+    <div>
+        @if (TempData["LOGIN"] != null)
+        {
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+            <script type="text/javascript">
+                toastr.success('@TempData["LOGIN"]');
+            </script>
+        }
+        @if (TempData["success"] != null)
+        {
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+            <script type="text/javascript">
+                toastr.success('@TempData["success"]');
+            </script>
+        }
     </div>
 
     <div class="d-flex mt-4 mx-5 justify-content-between" id="gridList">
@@ -100,7 +100,7 @@
                                     <div class=" card  d-flex">
 
                                         <div class="d-flex flex-column position-relative">
-                                      
+
                                             @{
                                                 if (userid_session != null)
                                                 {
@@ -120,40 +120,40 @@
                                                 }
 
                                             }
-                                           @* @if (i.EndDate < DateTime.Now)
-                                            {
-                                                <div class="d-flex position-absolute pt-2 badgeclass">
-                                                    <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
-                                                </div>
-                                            }*@
+                                            @* @if (i.EndDate < DateTime.Now)
+                                {
+                                <div class="d-flex position-absolute pt-2 badgeclass">
+                                <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
+                                </div>
+                                }*@
                                             <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>
                                             <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
                                             <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
-                                                
-                                                    @{
-                                                        var fav = Model.favorite.Where(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session).ToList();
 
-                                                        <div class="favbtnlanding-@i.MissionId">
-                                                            @if (userid_session == null)
-                                                            {
+                                                @{
+                                                    var fav = Model.favorite.Where(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session).ToList();
+
+                                                    <div class="favbtnlanding-@i.MissionId">
+                                                        @if (userid_session == null)
+                                                        {
 
                                                             <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon  mb-1 mt-1 p-1" src="~/Assets/heart.png" alt=""></a>
                                                         }
+                                                        else
+                                                        {
+                                                            if (fav.Count() == 0)
+                                                            {
+                                                                <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon p-1 mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
+                                                            }
                                                             else
                                                             {
-                                                                if (fav.Count() == 0)
-                                                                {
-                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle icon p-1 mb-1 mt-1" src="~/Assets/heart.png" alt=""></a>
-                                                                }
-                                                                else
-                                                                {
-                                                                    <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle mb-1 mt-1" src="~/Assets/favorite.png" alt=""></a>
-                                                                }
+                                                                <a onclick="addFavourite(@i.MissionId);"><img class="heart rounded-circle mb-1 mt-1" src="~/Assets/favorite.png" alt=""></a>
                                                             }
-                                                        </div>
-                                                    }
+                                                        }
+                                                    </div>
+                                                }
 
 
                                                 <button class="border-0 bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="getUsers(@i.MissionId);">
@@ -179,7 +179,7 @@
                                                         </div>
                                                     </div>
                                                 }
-                                            
+
 
                                             </div>
                                             <div class="mx-auto d-flex position-absolute px-3 imgTitle">@i.Theme.Title</div>
@@ -294,12 +294,19 @@
                                                         }
                                                         else
                                                         {
+                                                            var timeSheet = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
+                                                            var goal = Model.goalMissionList.Where(goal => goal.MissionId == i.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
+
+
+
+                                                            var sumOfgaol = timeSheet.Sum(t => t.Action);
+                                                            var progressbar = ((double)sumOfgaol / goal) * 100;
                                                             <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
                                                             <div>
                                                                 <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                                    <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                                                    <div class="progress-bar bg-warning" style="width: @progressbar%"></div>
                                                                 </div>
-                                                                <p class="m-0">8000 achieved</p>
+                                                                <p class="m-0">@sumOfgaol achieved</p>
                                                             </div>
                                                         }
                                                     </div>
@@ -337,13 +344,19 @@
                                                         }
                                                         else
                                                         {
+                                                            var timeSheet = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
+                                                            var goal = Model.goalMissionList.Where(goal => goal.MissionId == i.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
+
+
+
+                                                            var sumOfgaol = timeSheet.Sum(t => t.Action);
+                                                            var progressbar = ((double)sumOfgaol / goal) * 100;
                                                             <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
                                                             <div>
-                                                                <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25"
-                                                         aria-valuemin="0" aria-valuemax="100">
-                                                                    <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                                                <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                                                    <div class="progress-bar bg-warning" style="width: @progressbar%"></div>
                                                                 </div>
-                                                                <p class="m-0">8000 achieved</p>
+                                                                <p class="m-0">@sumOfgaol achieved</p>
                                                             </div>
                                                         }
                                                     </div>
@@ -443,30 +456,21 @@
         </div>
 
     </div>
+   
     <partial name="_footer">
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="/js/plaltformLanding.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script src="/js/plaltformLanding.js"></script>
         <script src="/js/site.js"></script>
 
-    <script>
-        function dispalyCout() {
-            let inputField = document.getElementById("displayOnExplore");
-            let spanField = document.getElementById("displayOnExploreOnThisFeild");
-            let inputValue = inputField.value;
-            console.log(inputValue);
-            spanField.textContent = inputValue;
-        }
-
-    </script>
 
 </body>
 

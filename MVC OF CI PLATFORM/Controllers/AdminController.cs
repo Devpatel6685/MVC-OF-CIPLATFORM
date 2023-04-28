@@ -34,6 +34,16 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getmissiondata(pageindex, pageSize, SearchInputdata);
             return PartialView("_missionpage", model);
         }
+        public IActionResult Banner(string SearchInputdata = "", int pageindex = 1)
+        {
+            var model = _adminInterface.getbannerdata(pageindex, SearchInputdata);
+            return PartialView("_bannerpage", model);
+        }
+        public IActionResult banneradd()
+        {
+            return PartialView("_banneradd");
+        }
+
         public IActionResult Theme(string SearchInputdata = "", int pageindex = 1, int pageSize = 2)
         {
             var model = _adminInterface.getthemedata(pageindex, pageSize, SearchInputdata);
@@ -44,7 +54,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getskilldata(pageindex, pageSize, SearchInputdata);
             return PartialView("_skillpage", model);
         }
-        public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 1)
+        public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 5)
         {
             var model = _adminInterface.getstorydata(pageindex, pageSize, SearchInputdata);
             return PartialView("_storypage", model);
@@ -53,6 +63,20 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             var model = _adminInterface.getmissionapplicationdata(pageindex, pageSize, SearchInputdata);
             return PartialView("_missionapplicationpage", model);
+        }
+        public IActionResult AddBanner(BannerAddViewModel model)
+        {
+            if (model.BannerId == 0)
+            {
+                _adminInterface.addBanner(model);
+                TempData["success"] = "Banner added successfully";
+            }
+            else
+            {
+                _adminInterface.editBanner(model);
+                TempData["success"] = "Banner edited successfully";
+            }
+            return RedirectToAction("Banner");
         }
         public IActionResult ApproveApplication(string Applicationid)
         {
@@ -136,6 +160,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
             }
 
+        }
+        public IActionResult EditBanner(string id)
+        {
+            var model = _adminInterface.getBanner(id)
+;
+            return PartialView("_banneradd", model);
         }
         public IActionResult AddTheme(ThemeAddViewModel model)
         {

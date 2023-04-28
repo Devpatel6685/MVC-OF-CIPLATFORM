@@ -37,6 +37,8 @@ namespace CI_PLATFORM_.repository.Repository
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
             var addfavrouitebyuserid = _cIPLATFORMDbContext.FavouriteMissions.Where(u => u.UserId.ToString() == userid).ToList();
             var missionapplication = _cIPLATFORMDbContext.MissionApplications.ToList();
+            var timesheet = _cIPLATFORMDbContext.Timesheets.ToList();
+            var goalmission = _cIPLATFORMDbContext.GoalMissions.ToList();
 
 
 
@@ -45,7 +47,9 @@ namespace CI_PLATFORM_.repository.Repository
                 totalrecords = mission.Count(),
                 rate = rates,
                 favorite = addfavorite,
-                MissionApplications = missionapplication
+                MissionApplications = missionapplication,
+                timeSheetEntryList= timesheet,
+                goalMissionList= goalmission,
 
             };
             //SORT BY
@@ -91,6 +95,8 @@ namespace CI_PLATFORM_.repository.Repository
             var missionapplication = _cIPLATFORMDbContext.MissionApplications.Include(m => m.User).Where(m => m.MissionId == mission.MissionId && m.UserId.ToString() != userId).ToList();
             var missiondocuments = _cIPLATFORMDbContext.MissionDocuments.Where(m => m.MissionId == mission.MissionId).ToList();
             var misApplication =_cIPLATFORMDbContext.MissionApplications.SingleOrDefault(m => m.MissionId == mission.MissionId && m.UserId.ToString() == userId);
+            var timesheet = _cIPLATFORMDbContext.Timesheets.ToList();
+            var goalmission = _cIPLATFORMDbContext.GoalMissions.ToList();
             int apply = 0;
             if (misApplication != null)
             {
@@ -123,7 +129,7 @@ namespace CI_PLATFORM_.repository.Repository
                 Status = mission.Status,
                 OrganizationName = mission.OrganizationName,
                 OrganizationDetail = mission.OrganizationDetail,
-                days=mission.Availibility,
+                days = mission.Availibility,
                 Availability = mission.TotalSeats,
                 MissionSkills = mission_skills,
                 goalvalue = 0,
@@ -134,6 +140,8 @@ namespace CI_PLATFORM_.repository.Repository
                 applied = apply,
                 MissionApplications = missionapplication.ToPagedList(pageIndex, 9),
                 Documents = missiondocuments,
+                timeSheetEntryList = timesheet,
+                goalMissionList=goalmission,
 
 
             };

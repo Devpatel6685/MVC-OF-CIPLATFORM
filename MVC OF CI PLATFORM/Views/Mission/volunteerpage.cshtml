@@ -132,13 +132,29 @@
                     </div>
                     <div class="">
                         <div class="d-flex">
-                            <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
-                            <div>
-                                <div class="progress mt-2" id="progrss" role="progressbar" aria-label="Basic example"
+@*                            <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
+*@                            <div>
+                                @{
+                                var timeSheet = Model.Item1.timeSheetEntryList.Where(timesheet => timesheet.MissionId == Model.Item1.MissionId).ToList();
+                                    var goal = Model.Item1.goalMissionList.Where(goal => goal.MissionId == Model.Item1.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
+
+
+
+                                var sumOfgaol = timeSheet.Sum(t => t.Action);
+                                var progressbar = ((double)sumOfgaol / goal) * 100;
+                                <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
+                                <div>
+                                    <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="@Model.Item1.goalvalue">
+                                        <div class="progress-bar bg-warning" style="width: @progressbar%"></div>
+                                    </div>
+                                    <p class="m-0">@sumOfgaol achieved</p>
+                                </div>
+                                }
+                               @* <div class="progress mt-2" id="progrss" role="progressbar" aria-label="Basic example"
                                      aria-valuenow="25" aria-valuemin="0" aria-valuemax=@Model.Item1.goalvalue>
                                     <div class="progress-bar bg-warning" style="width: 25%"></div>
                                 </div>
-                                <p class="m-0">8000 achieved</p>
+                                <p class="m-0">8000 achieved</p>*@
                             </div>
                         </div>
                     </div>

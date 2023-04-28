@@ -17,6 +17,9 @@ namespace CI_PLATFORM.Entities.ViewModels
         public IPagedList<Mission> Missions { get; set; }
         public List<Skill> Skill { get; set; }
         public List<MissionTheme> MissionThemes { get; set; }
+        public List<Timesheet> timeSheetEntryList { get; set; }
+
+        public List<GoalMission> goalMissionList { get; set; }
 
         public List<MissionRating> rate { get; set; }
         public List<MissionSkill> MissionSkills { get; set; }

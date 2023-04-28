@@ -287,6 +287,14 @@ function showModal() {
     })
 }
 
+function dispalyCout() {
+    let inputField = document.getElementById("displayOnExplore");
+    if (inputField == null || inputField == undefined) return;
+    let spanField = document.getElementById("displayOnExploreOnThisFeild");
+    let inputValue = inputField.value;
+    console.log(inputValue);
+    spanField.textContent = inputValue;
+}
 
 function recommend(mId) {
     if (!Model.attr('data-userid')) {

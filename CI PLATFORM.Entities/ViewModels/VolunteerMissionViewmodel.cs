@@ -18,7 +18,9 @@ namespace CI_PLATFORM.Entities.ViewModels
 
         public List<Comment> comments { get; set; }
         public List<MissionSkill> MissionSkills { get; set; }
+        public List<Timesheet> timeSheetEntryList { get; set; }
 
+        public List<GoalMission> goalMissionList { get; set; }
         public IPagedList<MissionApplication> MissionApplications { get; set; }
         public long CountryId { get; set; }
 

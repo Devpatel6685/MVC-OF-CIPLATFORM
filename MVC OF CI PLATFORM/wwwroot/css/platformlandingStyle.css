@@ -1,16 +1,11 @@
 
 
-/*.card {
-    margin-bottom: 1rem;
-}
-.card {
+
+.card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
     transition: transform 0.3s !important;
 }
 
-    .card:hover {
-        transform: scale(1.05) !important;
-    }*/
 
 .list-view .row > [class*=col-] {
     max-width: 100%;

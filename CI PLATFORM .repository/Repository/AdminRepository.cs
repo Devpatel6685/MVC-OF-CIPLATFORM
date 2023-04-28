@@ -12,6 +12,9 @@ using System.Threading.Tasks;
 using X.PagedList;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Http;
+using System.Net;
+using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
 
 namespace CI_PLATFORM_.repository.Repository
 {
@@ -20,9 +23,9 @@ namespace CI_PLATFORM_.repository.Repository
         private readonly CIPLATFORMDbContext _ciplatfromdbcontext;
         private readonly IWebHostEnvironment _hostEnvironment;
 
-        public AdminRepository(CIPLATFORMDbContext ciplatformcontext, IWebHostEnvironment hostEnvironment)
+        public AdminRepository(CIPLATFORMDbContext ciplatfromdbcontext, IWebHostEnvironment hostEnvironment)
         {
-            _ciplatfromdbcontext = ciplatformcontext;
+            _ciplatfromdbcontext = ciplatfromdbcontext;
             _hostEnvironment = hostEnvironment;
         }
             public Adminviewmodel getuserdata(int pageindex, int pageSize, string SearchInputdata)
@@ -73,7 +76,7 @@ namespace CI_PLATFORM_.repository.Repository
         {
             var stories = _ciplatfromdbcontext.Stories.Include(s => s.User).Include(s => s.Mission).Where(s => s.Status != "DRAFT" && ((SearchInputdata == null) || (s.Mission.Title.Contains(SearchInputdata)) || (s.User.FirstName.Contains(SearchInputdata)))).ToList();
             var model = new Adminviewmodel();
-            model.Stories = stories.ToPagedList(pageindex, 1);
+            model.Stories = stories.ToPagedList(pageindex, 5);
             return model;
         }
         public Adminviewmodel getmissiondata(int pageindex, int pageSize, string SearchInputdata)
@@ -128,6 +131,94 @@ namespace CI_PLATFORM_.repository.Repository
             
             return model;
 
+        }
+        public Adminviewmodel getbannerdata(int pageindex, string SearchInputdata)
+        {
+            var banners = _ciplatfromdbcontext.Banners.Where(b => (SearchInputdata == null) || EF.Functions.Like(b.Text, $"%{SearchInputdata}%") || b.Title.Contains(SearchInputdata)).OrderByDescending(m => m.Status).ToList();
+            var model = new Adminviewmodel();
+            model.Banners = banners.ToPagedList(pageindex, 5);
+            return model;
+        }
+        public BannerAddViewModel getBanner(string bannerid)
+        {
+            Banner banner = _ciplatfromdbcontext.Banners.SingleOrDefault(b => b.BannerId.ToString() == bannerid);
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+
+            string fullPath = wwwRootPath + banner.Image;
+            using (var stream = new FileStream(fullPath, FileMode.Open))
+            {
+                IFormFile file = new FormFile(stream, 0, new FileInfo(fullPath).Length, null, Path.GetFileName(fullPath));
+
+                BannerAddViewModel model = new BannerAddViewModel()
+                {
+                    BannerId = banner.BannerId,
+                    Text = banner.Text,
+                    Title = banner.Title,
+                    Image = file,
+                    SortOrder = banner.SortOrder,
+                    Status = banner.Status
+                };
+                return model;
+            }
+        }
+        public void editBanner(BannerAddViewModel model)
+        {
+            Banner banner = _ciplatfromdbcontext.Banners.SingleOrDefault(b => b.BannerId == model.BannerId);
+            if (model.Image != null)
+            {
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string imageFolderPath = Path.Combine(wwwRootPath, "Images");
+                string mainFolderPath = Path.Combine(imageFolderPath, "Banner");
+                String[] files = Directory.GetFiles(mainFolderPath);
+                if (!Directory.Exists(mainFolderPath))
+                {
+                    Directory.CreateDirectory(mainFolderPath);
+                }
+                string fullPath = Path.Combine(mainFolderPath, model.Image.FileName);
+                if (!File.Exists(fullPath))
+                {
+                    using (var fileStreams = new FileStream(Path.Combine(mainFolderPath, model.Image.FileName), FileMode.Create))
+                    {
+                        model.Image.CopyTo(fileStreams);
+                    }
+                }
+                banner.Image = @"\Images\Banner\" + model.Image.FileName;
+            }
+            banner.SortOrder = model.SortOrder;
+            banner.Text = WebUtility.HtmlDecode(model.Text);
+            banner.Title = model.Title;
+            banner.Status = model.Status;
+           _ciplatfromdbcontext.Update(banner);
+           _ciplatfromdbcontext.SaveChanges();
+        }
+        public void addBanner(BannerAddViewModel model)
+        {
+
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+            string imageFolderPath = Path.Combine(wwwRootPath, "Images");
+            string mainFolderPath = Path.Combine(imageFolderPath, "Banner");
+            if (!Directory.Exists(mainFolderPath))
+            {
+                Directory.CreateDirectory(mainFolderPath);
+            }
+            string fullPath = Path.Combine(mainFolderPath, model.Image.FileName);
+            if (!File.Exists(fullPath))
+            {
+                using (var fileStreams = new FileStream(Path.Combine(mainFolderPath, model.Image.FileName), FileMode.Create))
+                {
+                    model.Image.CopyTo(fileStreams);
+                }
+            }
+            Banner banner = new Banner
+            {
+                Text = WebUtility.HtmlDecode(model.Text),
+                Title = model.Title,
+                Image = @"\Images\Banner\" + model.Image.FileName,
+                SortOrder = model.SortOrder,
+                Status = model.Status,
+            };
+            _ciplatfromdbcontext.Add(banner);
+            _ciplatfromdbcontext.SaveChanges();
         }
         public void updateuser(UserAddViewModel model)
         {

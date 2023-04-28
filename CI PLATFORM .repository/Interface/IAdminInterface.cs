@@ -15,6 +15,10 @@ namespace CI_PLATFORM_.repository.Interface
         public List<Country> getcountries();
         public List<City> getcities(string countryid);
         public List<MissionTheme> getthemes();
+        public Adminviewmodel getbannerdata(int pageindex, string SearchInputdata);
+        public void addBanner(BannerAddViewModel model);
+        public void editBanner(BannerAddViewModel model);
+        public BannerAddViewModel getBanner(string bannerid);
         public void deletemission(string missionid);
         public void Addmission(MissionAddViewModel model, List<int> selectedSkills);
         public SkillAddViewModel getskill(string skillid);

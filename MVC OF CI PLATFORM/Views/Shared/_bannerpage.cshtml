@@ -1,0 +1,133 @@
+﻿@model CI_PLATFORM.Entities.ViewModels.Adminviewmodel
+@{
+    Layout = "~/Views/Admin/UserpageInAdmin.cshtml";
+}
+<!-- user page  -->
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css//bannerpage.css">
+</head>
+<body>
+    <h4 class="mt-2 ms-3 border-bottom pb-3">
+        <span class="borderbottom">Banner</span>
+    </h4>
+    <div class=" ms-2 d-flex justify-content-between mt-4 position-sticky">
+        <div class="col-6 position-relative" role="search">
+            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-2 ps-1">
+            <input class="form-control me-2 ps-5" id="bannersearch" type="search" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col-4  d-flex justify-content-end">
+            <button class="px-3 btn btn-warning rounded-pill"> <a asp-action="banneradd" class="text-decoration-none text-white" asp-controller="Admin">+ Add</a></button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+
+        @if (Model.Banners.Count() == 0)
+        {
+            <div class="page"> </div>
+            <div class="d-flex mt-5 flex-column my-3 table">
+                <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No Banner found</h3></div>
+            </div>
+
+        }
+
+        else
+        {
+            <div class="table">
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Banner Title</th>
+                            <th scope="col">Banner Text</th>
+                            <th scope="col">Sort Order</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        @foreach (var banner in Model.Banners)
+                        {
+                            <tr>
+                                <td><img src="@banner.Image" style="width:200px;height:200px" /></td>
+                                <td>@banner.Title</td>
+                                <td>@Html.Raw(banner.Text)</td>
+                                <td>@banner.SortOrder</td>
+                                @if (banner.Status == "Active")
+                                {
+                                    <td class="text-success fw-bold">@banner.Status</td>
+                                }
+                                else
+                                {
+                                    <td class="text-danger fw-bold">@banner.Status</td>
+                                }
+                                <td class="d-flex">
+                                    <a class="me-1" asp-action="EditBanner" asp-controller="admin" asp-route-id="@banner.BannerId"><i class="bi bi-pencil-square icon"></i></a>
+                                    <a class="ms-1 text-black"><i class="bi bi-trash3"></i></a>
+                                </td>
+                            </tr>
+                        }
+
+
+                    </tbody>
+
+
+                </table>
+            </div>
+            <div class="d-flex justify-content-center page">
+                @if (Model.Banners.PageCount > 1)
+                {
+                    <ul class="pagination banner">
+
+                        @if (Model.Banners.HasPreviousPage && Model.Banners.PageNumber > 1)
+                        {
+                            <li class="page-item"> <a class="page-link" id="@Convert.ToInt32(@Model.Banners.PageNumber -1)"> &#60;&#60; </a></li>
+                        }
+                        else
+                        {
+                            <div class="page-item"> <a class="page-link disabled" id="@Convert.ToInt32(@Model.Banners.PageNumber -1)"> &#60;&#60; </a></div>
+                        }
+                        @for (int i = 1; i <= Model.Banners.PageCount; i++)
+                        {
+                            if (i == Model.Banners.PageNumber)
+                            {
+                                <li class="page-item banactive"><a class="page-link" id="@i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li class="page-item"><a class="page-link" id="@i">@i</a></li>
+                            }
+
+                        }
+                        @if (Model.Banners.HasNextPage && Model.Banners.PageNumber < Model.Banners.PageCount)
+                        {
+                            <li class="page-item"><a class="page-link" id="@Convert.ToInt32(@Model.Banners.PageNumber + 1)"> >></a></li>
+                        }
+                        else
+                        {
+                            <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.Banners.PageNumber + 1) "> >></a></div>
+                        }
+
+
+                    </ul>
+                }
+
+            </div>
+        }
+
+
+
+    </div>
+    @*       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/bannerpartial.js"></script>
+</body>
+
