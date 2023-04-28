@@ -233,7 +233,13 @@ function isValidated() {
     }
 
     const youtubeUrlRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=)?([a-zA-Z0-9_-]{11})$/;
-    if (video.trim() === '' || !youtubeUrlRegex.test(video)) {
+    if (video.trim() === '') {
+        $('#videoValidate').html("Enter Video URL")
+        validate = false;
+        $('#videoValidate').removeClass('d-none');
+    }
+    else if (!youtubeUrlRegex.test(video)) {
+        $('#videoValidate').html("Enter Valid Video URL")
         validate = false;
         $('#videoValidate').removeClass('d-none');
     } else {

@@ -132,6 +132,7 @@ public partial class CIPLATFORMDbContext : DbContext
             entity.Property(e => e.Text)
                 .HasColumnType("text")
                 .HasColumnName("text");
+            entity.Property(e => e.Title).HasMaxLength(100);
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("updated_at");
@@ -383,6 +384,9 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("organization_name");
+            entity.Property(e => e.RegistrationDeadline)
+                .HasColumnType("datetime")
+                .HasColumnName("registrationDeadline");
             entity.Property(e => e.ShortDescription)
                 .HasColumnType("text")
                 .HasColumnName("short_description");

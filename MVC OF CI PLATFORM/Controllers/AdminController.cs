@@ -119,16 +119,24 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             _adminInterface.Addmission(model, selectedSkills);
             return RedirectToAction("Mission", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
         }
-        /*        public IActionResult AddUser(UserAddViewModel model)
-                {
-                    if (model.UserId == null)
-                    {
-                        _adminInterface.Adduser(model);
-                        return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
-                    }
+        public IActionResult AddUser(UserAddViewModel model)
+        {
+            if (model.UserId == 0)
+            {
+                _adminInterface.Adduser(model);
+                TempData["success"] = "User is added succesfully";
 
+                return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
+            }
+            else
+            {
+                _adminInterface.updateuser(model);
+                TempData["success"] = "User is updated succesfully";
+                return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
 
-                }*/
+            }
+
+        }
         public IActionResult AddTheme(ThemeAddViewModel model)
         {
             _adminInterface.Addtheme(model);

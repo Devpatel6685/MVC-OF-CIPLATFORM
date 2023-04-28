@@ -242,7 +242,7 @@ $(document).on('click', '.btn-list', showList);
 
 
 $(document).on('click', '.pagination li', function (e) {
-    debugger;
+   
     e.preventDefault();
     $('.pagination li').each(function () {
         $(this).removeClass('active');

@@ -20,4 +20,6 @@ public partial class Banner
     public DateTime? DeletedAt { get; set; }
 
     public string? Status { get; set; }
+
+    public string? Title { get; set; }
 }

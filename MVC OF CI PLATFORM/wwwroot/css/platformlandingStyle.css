@@ -1,6 +1,6 @@
 
 
-.card {
+/*.card {
     margin-bottom: 1rem;
 }
 .card {
@@ -10,7 +10,7 @@
 
     .card:hover {
         transform: scale(1.05) !important;
-    }
+    }*/
 
 .list-view .row > [class*=col-] {
     max-width: 100%;

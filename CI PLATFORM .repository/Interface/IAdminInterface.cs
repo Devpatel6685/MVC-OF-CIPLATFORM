@@ -33,6 +33,7 @@ namespace CI_PLATFORM_.repository.Interface
         public MissionAddViewModel getmissionmodeldata();
         public void Adduser(UserAddViewModel model);
 
+        public void updateuser(UserAddViewModel model);
 
         public UserAddViewModel edituserdata(string userid);
 

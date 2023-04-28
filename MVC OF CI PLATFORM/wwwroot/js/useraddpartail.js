@@ -17,6 +17,7 @@ $(document).ready(function () {
                 countryid: countryId
             },
             success: function (result) {
+                
                 $('#usercityselect').empty();
                 if (result.length === 0) {
                     $('#usercityselect').html('<option>No cities Found</option>');
@@ -34,17 +35,20 @@ $(document).ready(function () {
     });
 });
 function getcountry() {
+   
     var countryid = $('#usercountryselect').val();
     $.ajax({
         url: "/Admin/Country",
         type: "GET",
 
         success: function (result) {
+            
 
             if (result.length === 0) {
                 $('#usercountryselect').html('<option>No countries selected</option>');
             } else {
                 $.each(result, function (i, data) {
+                    console.log(result)
                     if (countryid == null) {
                         $('#usercountryselect').append('<option value="' + data.countryId + '" id="' + data.countryId + '">' + data.name + '</option>');
                     }
@@ -74,6 +78,7 @@ document.getElementById("file-input").onchange = function (event) {
 const uploadedFiles = new Set();
 function handleFiles(files) {
     $('#showImage').empty();
+    const file = files[0];
     console.log(files);
     for (let i = 0; i < files.length; i++) {
         const file = files[i];
