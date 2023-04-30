@@ -38,8 +38,13 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             
             return RedirectToAction ("platformLanding","Mission");
             }
-       
-            return View();
+            LoginViewModel model = new LoginViewModel()
+            {
+                banners = _iuserRepository.getbanners()
+            };
+
+
+            return View(model);
         }
         
         [HttpPost]
@@ -84,7 +89,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult FORGOTPASSWORD()
         {
-            return View();
+            forgotviewmodel model = new forgotviewmodel()
+            {
+                banners = _iuserRepository.getbanners()
+            };
+            return View(model);
+            
         }
         [HttpPost]
         public IActionResult FORGOTPASSWORD(forgotviewmodel user)
@@ -110,7 +120,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             {
                 return NotFound("Link Expired");
             }
-            return View();
+            resetviemodel model = new resetviemodel()
+            {
+                banners = _iuserRepository.getbanners()
+            };
+            return View(model);
+            
         }
 
         [HttpPost]
@@ -140,7 +155,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult REGISTRATIONPAGE()
         {
-            return View();
+            registerviewmodel model = new registerviewmodel()
+            {
+                banners = _iuserRepository.getbanners()
+            };
+            return View(model);
         }
 
         [HttpPost]

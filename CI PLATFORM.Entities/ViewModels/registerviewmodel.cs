@@ -38,5 +38,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         public long CityId = 1;
 
         public long CountryId = 1;
+        public List<string> banners { get; set; }
+
     }
 }

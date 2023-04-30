@@ -23,3 +23,8 @@
 .text-color {
     color: white;
 }
+
+.borderbottom {
+    border-bottom: solid 3.5px #333333;
+    padding-bottom: 13.5px;
+}

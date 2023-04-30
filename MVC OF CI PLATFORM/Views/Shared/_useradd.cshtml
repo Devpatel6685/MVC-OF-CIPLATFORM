@@ -6,7 +6,7 @@
 <head>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="~/css/useradd.css">
+    <link rel="stylesheet" href="~/css/useraddpartial.css">
 </head>
 <body>
     <div class="container">
@@ -14,7 +14,7 @@
             <form method="post" asp-action="AddUser" asp-controller="Admin" enctype="multipart/form-data">
                 <div class="col-12 text-center">
 
-                    <div class="border adjust img-wrapper" style="height:320px;">
+                    <div class="border adjust img-wrapper" style="height:140px;">
                         @if (Model == null)
                         {
                             <img src="~/Assets/volunteer1.png" class="rounded-circle mt-3" id="profileimg" alt="">
@@ -52,7 +52,7 @@
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <span>Employee ID</span>
-                                    <input type="text" asp-for="EmployeeId" class="form-control">
+                                    <input type="text" asp-for="@Model.EmployeeId" class="form-control">
                                     <span class="text-danger" asp-validation-for="EmployeeId"></span>
                                 </div>
                             </div>
@@ -64,12 +64,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-2">
+                          @*  <div class="col-12 mt-2">
                                 <div class="d-flex flex-column">
                                     <span>Title</span>
                                     <input type="text" class="form-control" asp-for="Title">
                                 </div>
-                            </div>
+                            </div>*@
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column">
                                     <span>Department</span>
@@ -93,13 +93,13 @@
 
                                 </div>
                             </div>
-                            <div class="col-12">
+                           @* <div class="col-12">
                                 <div class="d-flex flex-column">
                                     <span>why I volunteer</span>
                                     <textarea cols="30" rows="3" asp-for="@Model.WhyIVolunteer" class="form-control">@Model.WhyIVolunteer</textarea>
                                     <span class="text-danger" asp-validation-for="WhyIVolunteer"></span>
                                 </div>
-                            </div>
+                            </div*@
 
                         </div>
 
@@ -107,50 +107,53 @@
                             <div class="col-12 border-bottom">
                                 Address Information
                             </div>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    @if (Model == null)
-                                    {
-                                        <div class="col-sm-4 d-flex flex-column my-3">
-                                            <label for="theme">Theme</label>
-                                            <select class="form-select dropdown-toggle" id="usercityselect" data-toggle="dropdown" asp-for="CityId">
-                                                <option value="">Select List</option>
+                            @if (Model == null)
+                            {
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex flex-column">
+                                            <span>City</span>
+                                            <select id="usercityselect" asp-for="CityId" class="form-control">
+                                                <option> Select city</option>
                                             </select>
                                         </div>
-                                    }
-                                    else
-                                    {
-                                        <div class="col-sm-4 d-flex flex-column my-3">
-                                            <label for="theme">Theme</label>
-                                            <select class="form-select dropdown-toggle" id="usercityselect" data-toggle="dropdown" asp-for="CityId" asp-items="@Model.cities">
-                                                <option value="">Select List</option>
-                                            </select>
-                                        </div>
-                                    }
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex flex-column">
+                                            <span>Country</span>
 
-                                </div>
-                                <div class="col-sm-6">
-                                    @if (Model == null)
-                                    {
-                                        <div class="col-sm-4 d-flex flex-column my-3">
-                                            <label for="theme">Theme</label>
-                                            <select class="form-select dropdown-toggle" id="usercountryselect" data-toggle="dropdown" asp-for="CountryId">
-                                                <option value="">Select List</option>
-                                            </select>
-                                        </div>
-                                    }
-                                    else
-                                    {
-                                        <div class="col-sm-4 d-flex flex-column my-3">
-                                            <label for="theme">Theme</label>
-                                            <select class="form-select dropdown-toggle" id="usercountryselect" data-toggle="dropdown" asp-for="CountryId" asp-items="@Model.countries">
-                                                <option value="">Select List</option>
-                                            </select>
-                                        </div>
-                                    }
+                                            <select id="usercountryselect" asp-for="CountryId" class="form-control">
+                                                <option value="defselect">Select country</option>
 
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            }
+                            else
+                            {
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex flex-column">
+                                            <span>City</span>
+                                            <select id="usercityselect" asp-for="CityId" class="form-control" asp-items="@Model.cities">
+                                                <option>Select city</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="d-flex flex-column">
+                                            <span>Country</span>
+
+                                            <select id="usercountryselect" asp-for="CountryId" class="form-control" asp-items="@Model.countries">
+                                                <option>Select country</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
                         </div>
 
                         <div class="row mt-3">
@@ -170,7 +173,7 @@
                                 <div class="col-sm-6">
                                     <div class="d-flex flex-column">
                                         <span>Linkdin</span>
-                                        <input type="text" asp-for="@Model.LinkedInUrl" class="form-control">
+                                        <input type="text" asp-for="LinkedInUrl" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -188,10 +191,10 @@
         </div>
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="~/js/useraddpartail.js"></script>
 </body>
 
 <partial name="_ValidationScriptsPartial" />
-

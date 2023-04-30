@@ -22,18 +22,22 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getuserdata(pageindex, pageSize, SearchInputdata);
             return View(model);
         }
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
 
         public IActionResult User(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
-        {
+       {
             var model = _adminInterface.getuserdata(pageindex, pageSize, SearchInputdata);
             return PartialView("_userpage", model);
         }
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
 
         public IActionResult Mission(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
         {
             var model = _adminInterface.getmissiondata(pageindex, pageSize, SearchInputdata);
             return PartialView("_missionpage", model);
         }
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+
         public IActionResult Banner(string SearchInputdata = "", int pageindex = 1)
         {
             var model = _adminInterface.getbannerdata(pageindex, SearchInputdata);
@@ -43,6 +47,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             return PartialView("_banneradd");
         }
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
 
         public IActionResult Theme(string SearchInputdata = "", int pageindex = 1, int pageSize = 2)
         {
@@ -54,6 +59,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getskilldata(pageindex, pageSize, SearchInputdata);
             return PartialView("_skillpage", model);
         }
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+
         public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 5)
         {
             var model = _adminInterface.getstorydata(pageindex, pageSize, SearchInputdata);
@@ -120,6 +127,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getmissionmodeldata();
             return PartialView("_missionedit", model);
         }
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+
         public IActionResult useradd()
         {
 

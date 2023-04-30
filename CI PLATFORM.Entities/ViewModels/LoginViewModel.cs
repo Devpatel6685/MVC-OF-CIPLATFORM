@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CI_PLATFORM.Entities.DataModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         public string Email { get; set; }
         [Required(ErrorMessage = "Enter Password")]
         public string Password { get; set; }
+
+        public List<string> banners { get; set; }
     }
 }

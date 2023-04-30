@@ -465,8 +465,32 @@
       "PackagePath": "staticwebassets\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\image2.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\image2.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\img.png",
       "PackagePath": "staticwebassets\\Images\\Banner\\img.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\img1.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\img1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\img2.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\img2.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\img22.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\img22.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\user-img.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\user-img.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\volunteer1.png",
+      "PackagePath": "staticwebassets\\Images\\Banner\\volunteer1.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\volunteer2.png",
@@ -491,6 +515,18 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\cricket match\\b53e4cf9-d8b1-4629-8860-5b330e323c4a.png",
       "PackagePath": "staticwebassets\\Images\\Mission\\cricket match\\b53e4cf9-d8b1-4629-8860-5b330e323c4a.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\1a54b90f-7f63-49f0-b9ec-ad26dc43724f.png",
+      "PackagePath": "staticwebassets\\Images\\UserProfileImages\\1a54b90f-7f63-49f0-b9ec-ad26dc43724f.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer3.png",
+      "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer3.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer3.png.png",
+      "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer3.png.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png",
@@ -589,8 +625,8 @@
       "PackagePath": "staticwebassets\\css\\themepartail.css"
     },
     {
-      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useradd.css",
-      "PackagePath": "staticwebassets\\css\\useradd.css"
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useraddpartial.css",
+      "PackagePath": "staticwebassets\\css\\useraddpartial.css"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\useredit.css",
@@ -659,6 +695,10 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\plaltformLanding.js",
       "PackagePath": "staticwebassets\\js\\plaltformLanding.js"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\register.js",
+      "PackagePath": "staticwebassets\\js\\register.js"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\site.js",

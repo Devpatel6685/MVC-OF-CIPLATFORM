@@ -126,9 +126,10 @@ namespace CI_PLATFORM_.repository.Repository
                 countries = list,
                 Email = user.Email,
                 Status = user.Status,
-                avtar = user.Avatar
+                avtar = user.Avatar,
+                UserId = user.UserId
             };
-            
+
             return model;
 
         }
@@ -222,7 +223,7 @@ namespace CI_PLATFORM_.repository.Repository
         }
         public void updateuser(UserAddViewModel model)
         {
-            var user =_ciplatfromdbcontext.Users.FirstOrDefault(u => u.UserId == model.UserId);
+            var user = _ciplatfromdbcontext.Users.FirstOrDefault(u => u.UserId == model.UserId);
             string wwwRootPath = _hostEnvironment.WebRootPath;
             string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
             string MainfolderPath = Path.Combine(imagesFolderPath, "UserProfileImages");
@@ -237,7 +238,6 @@ namespace CI_PLATFORM_.repository.Repository
             string uploads = Path.Combine(MainfolderPath, fileName_exist);
             if (!File.Exists(fullPath))
             {
-                // string fileName = Guid.NewGuid().ToString();
                 string fileName = fileName_exist;
                 string filePath = Path.Combine(MainfolderPath, fileName);
                 using (var inputStream = model.Avatar.OpenReadStream())
@@ -248,11 +248,11 @@ namespace CI_PLATFORM_.repository.Repository
                     }
                 }
                 user.Avatar = @"\Images\UserProfileImages\" + fileName;
-               _ciplatfromdbcontext.SaveChanges();
+                _ciplatfromdbcontext.SaveChanges();
             }
             user.FirstName = model.FirstName;
             user.LastName = model.LastName;
-            user.Password= model.Password;
+            user.Password = model.Password;
             user.LinkedInUrl = model.LinkedInUrl;
             user.EmployeeId = model.EmployeeId;
             user.Department = model.Department;
@@ -335,6 +335,43 @@ namespace CI_PLATFORM_.repository.Repository
             return model;
         }
 
+   /*     public void Adduser(UserAddViewModel model)
+        {
+            var model1 = new User
+            {
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Email = model.Email,
+                Password = model.Password,
+                EmployeeId = model.EmployeeId,
+                Department = model.Department,
+                CityId = model.CityId,
+                CountryId = model.CountryId,
+                ProfileText = model.ProfileText,
+                Status = model.Status,
+            };
+            _ciplatfromdbcontext.Add(model1);
+            _ciplatfromdbcontext.SaveChanges();
+            var user = _ciplatfromdbcontext.Users.FirstOrDefault(u => u.UserId == model1.UserId);
+            string wwwRootPath = _hostEnvironment.WebRootPath;
+            string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
+            string MainfolderPath = Path.Combine(imagesFolderPath, "UserProfileImages");
+            if (!Directory.Exists(MainfolderPath))
+            {
+                Directory.CreateDirectory(MainfolderPath);
+            }
+            string fileName = Guid.NewGuid().ToString();
+
+            var uploads = Path.Combine(MainfolderPath, fileName + Path.GetExtension(model.Avatar.FileName));
+
+            using (var fileStreams = new FileStream(uploads, FileMode.Create))
+            {
+                model.Avatar.CopyTo(fileStreams);
+            }
+            user.Avatar = @"\Images\UserProfileImages\" + fileName + Path.GetExtension(model.Avatar.FileName);
+            _ciplatfromdbcontext.SaveChanges();
+
+        }*/
         public void Adduser(UserAddViewModel model)
         {
             var model1 = new User
@@ -360,15 +397,15 @@ namespace CI_PLATFORM_.repository.Repository
             {
                 Directory.CreateDirectory(MainfolderPath);
             }
-            string fileName = Guid.NewGuid().ToString();
+            string fileName = model.Avatar.FileName;
 
-            var uploads = Path.Combine(MainfolderPath, fileName + Path.GetExtension(model.Avatar.FileName));
+            var uploads = Path.Combine(MainfolderPath, fileName );
 
             using (var fileStreams = new FileStream(uploads, FileMode.Create))
             {
                 model.Avatar.CopyTo(fileStreams);
             }
-            user.Avatar = @"\Images\UserProfileImages\" + fileName + Path.GetExtension(model.Avatar.FileName);
+            user.Avatar = @"\Images\UserProfileImages\" + fileName ;
             _ciplatfromdbcontext.SaveChanges();
 
         }
@@ -429,7 +466,7 @@ namespace CI_PLATFORM_.repository.Repository
             foreach (var Image in model.Images)
             {
                 string fileName = Guid.NewGuid().ToString();
-                var uploads = Path.Combine(folderPath, fileName + Path.GetExtension(Image.FileName));
+                var uploads = Path.Combine(folderPath, fileName );
                 using (var fileStreams = new FileStream(uploads, FileMode.Create))
                 {
                     Image.CopyTo(fileStreams);
@@ -439,7 +476,7 @@ namespace CI_PLATFORM_.repository.Repository
                     MissionId = mission.MissionId,
                     MediaName = fileName,
                     MediaType = "Imag",
-                    MediaPath = @"\Images\Mission\" + folderName + @"\" + fileName + Path.GetExtension(Image.FileName),
+                    MediaPath = @"\Images\Mission\" + folderName + @"\" + fileName ,
                 };
                 _ciplatfromdbcontext.Add(viewModel);
                 _ciplatfromdbcontext.SaveChanges();
@@ -455,7 +492,7 @@ namespace CI_PLATFORM_.repository.Repository
             foreach (var doc in model.Documents)
             {
                 string fileName = Guid.NewGuid().ToString();
-                var uploads = Path.Combine(folderPath, fileName + Path.GetExtension(doc.FileName));
+                var uploads = Path.Combine(folderPath, fileName );
                 using (var fileStreams = new FileStream(uploads, FileMode.Create))
                 {
                     doc.CopyTo(fileStreams);
@@ -464,7 +501,7 @@ namespace CI_PLATFORM_.repository.Repository
                 {
                     MissionId = mission.MissionId,
                     DocumentName = doc.FileName,
-                    DocumentPath = @"\Documents\Mission\" + folderName + @"\" + fileName + Path.GetExtension(doc.FileName),
+                    DocumentPath = @"\Documents\Mission\" + folderName + @"\" + fileName ,
                 };
 
                 switch (Path.GetExtension(doc.FileName))

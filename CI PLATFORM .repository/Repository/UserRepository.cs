@@ -47,9 +47,15 @@ namespace CI_PLATFORM.repository.Repository
             {
                 return "invalid password";
             }
-
+            
             return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar;
-
+            
+        }
+        public List<string> getbanners()
+        {
+            var banner = _cIPLATFORMDbContext.Banners.Select(c => c.Image).ToList();
+            
+            return banner;
         }
         public String editimage(IFormFile Image, long userid)
         {
