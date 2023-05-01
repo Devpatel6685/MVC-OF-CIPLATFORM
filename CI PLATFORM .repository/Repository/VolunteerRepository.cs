@@ -78,8 +78,8 @@ namespace CI_PLATFORM_.repository.Repository
         public (List<Mission>, List<Mission>) getMissions(long userid)
         {
             var missionApplication = _ciplatfromdbcontext.MissionApplications.Where(u => u.UserId == userid).Select(u => u.MissionId);
-            var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "TIME").OrderBy(m => m.Title).ToList();
-            var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "GOAL").OrderBy(m => m.Title).ToList();
+            var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "time").OrderBy(m => m.Title).ToList();
+            var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "goal").OrderBy(m => m.Title).ToList();
             return (time, goal);
         }
 

@@ -15,6 +15,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using X.PagedList;
+using System.Reflection;
 
 namespace CI_PLATFORM_.repository.Repository
 {
@@ -32,7 +33,7 @@ namespace CI_PLATFORM_.repository.Repository
         {
             int pagesize = 9;
             var skillfilter = _cIPLATFORMDbContext.MissionSkills.Where(s => skillids.Contains(s.SkillId)).Select(s => s.MissionId);
-            var mission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Where(model => (keyword == null || model.Title.Contains(keyword) || model.Theme.Title.Contains(keyword) || model.City.Name.Contains(keyword)) && ((countryids.Contains(model.CountryId)) || countryids.Count() == 0) && ((cityids.Contains(model.CityId)) || cityids.Count() == 0) && ((skillfilter.Contains(model.MissionId)) || skillids.Count() == 0) && ((themeids.Contains(model.ThemeId)) || themeids.Count() == 0)).AsQueryable();
+            var mission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m=>m.MissionMedia).Where(model => (keyword == null || model.Title.Contains(keyword) || model.Theme.Title.Contains(keyword) || model.City.Name.Contains(keyword)) && ((countryids.Contains(model.CountryId)) || countryids.Count() == 0) && ((cityids.Contains(model.CityId)) || cityids.Count() == 0) && ((skillfilter.Contains(model.MissionId)) || skillids.Count() == 0) && ((themeids.Contains(model.ThemeId)) || themeids.Count() == 0) && model.Status == 1).AsQueryable();
             var rates = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).Include(m => m.Mission).ToList();
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
             var addfavrouitebyuserid = _cIPLATFORMDbContext.FavouriteMissions.Where(u => u.UserId.ToString() == userid).ToList();
@@ -50,6 +51,7 @@ namespace CI_PLATFORM_.repository.Repository
                 MissionApplications = missionapplication,
                 timeSheetEntryList= timesheet,
                 goalMissionList= goalmission,
+                
 
             };
             //SORT BY
@@ -97,6 +99,7 @@ namespace CI_PLATFORM_.repository.Repository
             var misApplication =_cIPLATFORMDbContext.MissionApplications.SingleOrDefault(m => m.MissionId == mission.MissionId && m.UserId.ToString() == userId);
             var timesheet = _cIPLATFORMDbContext.Timesheets.ToList();
             var goalmission = _cIPLATFORMDbContext.GoalMissions.ToList();
+
             int apply = 0;
             if (misApplication != null)
             {
@@ -156,7 +159,7 @@ namespace CI_PLATFORM_.repository.Repository
         public string Rating(long missionid, int rating, long userId)
         {
             var mission_rating = _cIPLATFORMDbContext.MissionRatings.Include(m => m.Mission).Include(m => m.User).ToList();
-            var rate1update = mission_rating.SingleOrDefault(m => m.User.UserId == userId && m.MissionId == missionid);
+            var rate1update = mission_rating.FirstOrDefault(m => m.User.UserId == userId && m.MissionId == missionid);
 
             if (rate1update != null)
             {
@@ -238,11 +241,13 @@ namespace CI_PLATFORM_.repository.Repository
 
         public relatedmissionviewmodel GetRelatedMission(long Id)
         {
-            var missions = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Where(ms => ms.MissionId == Id).FirstOrDefault();
-            var RelatedMission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Where(ms => ms.MissionId != missions.MissionId && (ms.City.Name == missions.City.Name || ms.Theme.Title == missions.Theme.Title || ms.Country.Name == missions.Country.Name)).ToList();
+            var missions = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Where(ms => ms.MissionId == Id ).FirstOrDefault();
+            var RelatedMission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m => m.Country).Include(m=>m.MissionMedia).Where(ms => ms.MissionId != missions.MissionId && (ms.City.Name == missions.City.Name || ms.Theme.Title == missions.Theme.Title || ms.Country.Name == missions.Country.Name) && ms.Status == 1).ToList();
             var goalmission = _cIPLATFORMDbContext.GoalMissions.ToList();
             var addfavorite = _cIPLATFORMDbContext.FavouriteMissions.ToList();
             var rates = _cIPLATFORMDbContext.MissionRatings.Include(m => m.User).Include(m => m.Mission).ToList();
+            var media = _cIPLATFORMDbContext.MissionMedia.Where(m => m.MissionId == missions.MissionId && m.MediaType == "Imag").ToList();
+
 
 
             if (RelatedMission.Any(rml => rml.City.Name == missions.City.Name))
@@ -264,6 +269,7 @@ namespace CI_PLATFORM_.repository.Repository
                 goalMissionList = goalmission,
                 favorite = addfavorite,
                 rate = rates,
+                missionMedia = media,
 
 
             };

@@ -38,13 +38,13 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             
             return RedirectToAction ("platformLanding","Mission");
             }
-            LoginViewModel model = new LoginViewModel()
+            LoginViewModel loginViewModel = new LoginViewModel()
             {
-                banners = _iuserRepository.getbanners()
+                Banners = _iuserRepository.GetBanners(),
             };
 
 
-            return View(model);
+            return View(loginViewModel);
         }
         
         [HttpPost]
@@ -89,11 +89,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult FORGOTPASSWORD()
         {
-            forgotviewmodel model = new forgotviewmodel()
+            forgotviewmodel forgotPassViewModel = new forgotviewmodel()
             {
-                banners = _iuserRepository.getbanners()
+                Banners = _iuserRepository.GetBanners(),
             };
-            return View(model);
+            return View(forgotPassViewModel);
             
         }
         [HttpPost]
@@ -120,11 +120,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             {
                 return NotFound("Link Expired");
             }
-            resetviemodel model = new resetviemodel()
+            resetviemodel forgotPassViewModel = new resetviemodel()
             {
-                banners = _iuserRepository.getbanners()
+                Banners = _iuserRepository.GetBanners(),
             };
-            return View(model);
+            return View(forgotPassViewModel);
             
         }
 
@@ -155,11 +155,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult REGISTRATIONPAGE()
         {
-            registerviewmodel model = new registerviewmodel()
+            
+            registerviewmodel registerViewModel = new registerviewmodel()
             {
-                banners = _iuserRepository.getbanners()
+                Banners = _iuserRepository.GetBanners(),
             };
-            return View(model);
+            return View(registerViewModel);
         }
 
         [HttpPost]

@@ -11,6 +11,7 @@ namespace CI_PLATFORM.Entities.ViewModels
 {
     public class MissionAddViewModel
     {
+        public long MissionId { get; set; }
         public string Title { get; set; } = null!;
         public DateTime? StartDate { get; set; }
         public string? Description { get; set; }
@@ -34,5 +35,6 @@ namespace CI_PLATFORM.Entities.ViewModels
         public string? MissionType { get; set; }
         public string? GoalObjectiveText { get; set; }
         public int GoalValue { get; set; }
+        public List<int> skillids { get; set; }
     }
 }

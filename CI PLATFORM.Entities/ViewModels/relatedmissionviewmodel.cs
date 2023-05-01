@@ -19,6 +19,8 @@ namespace CI_PLATFORM.Entities.ViewModels
         public List<FavouriteMission> favorite { get; set; }
 
         public List<MissionRating> rate { get; set; }
+        public List<MissionMedium> missionMedia { get; set; }
+
 
     }
 }

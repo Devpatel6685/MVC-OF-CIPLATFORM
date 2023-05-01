@@ -1,1 +1,226 @@
-﻿@model CI_PLATFORM.Entities.ViewModels.MissionAddViewModel@{    Layout = "~/Views/Admin/UserpageInAdmin.cshtml";}<head>    @*    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    *@    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">    <link rel="stylesheet" href="~/css/missionadd.css"></head><body>    <div class="container mt-2">        <div class="col-12 bg-light border p-2">            Add        </div>        <form method="post" asp-action="AddMission" asp-controller="Admin" enctype="multipart/form-data">            <div class="container mt-2">                <div class=" p-2 border">                    <div class="col-12 d-flex flex-column my-2">                        <label for="title">Mission Title</label>                        <input type="text" id="title" class="form-control" asp-for="Title">                    </div>                    <div class="col-12 d-flex flex-column my-2">                        <label for="orgname">Mission Organisation Name</label>                        <input type="text" id="orgname" class="form-control" asp-for="OrganizationName">                    </div>                    <div class="col-12 d-flex flex-column my-2">                        <label for="orgname">Mission Short Descrition</label>                        <input type="text" id="orgname" class="form-control" asp-for="ShortDescription">                    </div>                    <div class="col-12 d-flex flex-column my-2">                        <label for="orgdetail">Mission Organisation Detail</label>                        <textarea id="orgdetail" cols="30" rows="5" class="form-control" asp-for="OrganizationDetail"></textarea>                    </div>                    <div class="col-12 my-3 d-flex flex-column ">                        <label for="desc">Mission Description</label>                        <textarea id="storytext" placeholder="I loved this mission because..." asp-for="Description"></textarea>                        <span id="textValidate" class="text-danger d-none">Text is Required</span>                    </div>                    <div class="row">                        <div class="col-6 d-flex flex-column">                            <label>Country</label>                            <select class="form-select dropdown-toggle" asp-for="CountryId" id="countryselect">                                <option value="">Select List</option>                            </select>                        </div>                        <div class="col-6 d-flex flex-column">                            <label>City</label>                            <select class="form-select dropdown-toggle" data-toggle="dropdown" asp-for="CityId" id="cityselect">                                <option value="">Select List</option>                            </select>                        </div>                    </div>                    <div class="row">                        <div class="col-sm-4 d-flex flex-column my-3">                            <label for="theme">Theme</label>                            <select class="form-select dropdown-toggle" id="themeselect" data-toggle="dropdown" asp-for="ThemeId">                                <option value="">Select List</option>                            </select>                        </div>                        <div class="col-sm-4  d-flex flex-column my-3">                            <label for="missionType">MissionType</label>                            <select class="form-select dropdown-toggle" id="avail12" data-toggle="dropdown" asp-for="MissionType" onchange="Mission()">                                <option value="0">Select Availibility</option>                                <option value="time">Time</option>                                <option value="goal">Goal</option>                            </select>                        </div>                        <div class="dropdown col-sm-4 my-3">                            <button class="btn btn-primary bg-transparent text-dark border-dark w-100 float-start form-select my-3" type="button" id="dropdownMenuButton"                                    data-bs-toggle="dropdown" aria-expanded="false">                                Select Skills                            </button>                            <ul class="dropdown-menu  w-100" aria-labelledby="dropdownMenuButton" style="overflow-y :auto;height:100px;">                                @foreach (var skill in Model.Skills)                                {                                        <li>                                            <a class="dropdown-item " href="#">                                                <div class="form-check">                                                    <input class="form-check-input" type="checkbox" name="selectedSkills" value="@skill.SkillId" id="@skill.SkillId" />                                                    <label class="form-check-label" for="@skill.SkillId">@skill.SkillName</label>                                                </div>                                            </a>                                        </li>                                }                            </ul>                        </div>                    </div>                    <div class="row">                        <div class="col-md-4 d-flex flex-column">                            <label for="sdate">StartDate</label>                            <input type="date" id="sdate" class="form-control" asp-for="StartDate">                        </div>                        <div class="col-md-4 d-flex flex-column">                            <label for="edate">EndDate</label>                            <input type="date" id="edate" class="form-control" asp-for="EndDate">                        </div>                    </div>                    <div id="goalfields" class="row d-none my-3">                        <div class="col-md-6 d-flex flex-column">                            <label for="seat">GoalDescription</label>                            <input type="text" id="seat" class="form-control" asp-for="GoalObjectiveText">                        </div>                        <div class="col-md-6 d-flex flex-column">                            <label for="sdate">GoalValue</label>                            <input type="date" id="sdate" class="form-control" asp-for="GoalValue">                        </div>                    </div>                    <div id="timefields" class="row d-none">                        <div class="col-md-6 d-flex flex-column my-3">                            <label for="rdead">Registration Deadline</label>                            <input type="date" id="rdead" class="form-control">                        </div>                        <div class="col-sm-6 d-flex flex-column my-3">                            <label for="seat">Total Seats</label>                            <input type="text" id="seat" class="form-control" asp-for="TotalSeats">                        </div>                    </div>                    <div class="row">                        <div class="col-6 d-flex flex-column">                            <label for="status">Status</label>                            <select class="form-select dropdown-toggle" id="status" asp-for="Status">                                <option value="1" selected>Active</option>                                <option value="0">In-Active</option>                            </select>                        </div>                        <div class="col-sm-6  d-flex flex-column">                            <label for="avail">Availability</label>                            <select class="form-select dropdown-toggle" id="avail" data-toggle="dropdown" asp-for="Availibility">                                <option value="0">Select Availibility</option>                                <option value="daily">Daily</option>                                <option value="monthly">Monthly</option>                                <option value="weekly">Weekly</option>                                <option value="week-end">Week-end</option>                            </select>                        </div>                    </div>                    @* <div class="col-12 d-flex flex-column">                        <label for="skills">Mission Skills</label>  form-select                        <textarea name="" id="skills" cols="30" rows="5" class="form-control"></textarea>                        </div>*@                    @*<button type="button" class="btn my-3 border  rounded-pill ">Add skill</button>*@                    <div class="mb-3">                        <label for="Image" class="form-label">Images</label>                        <input asp-for="Images" class="form-control" type="file" id="Images" multiple>                        <div class="mt-2 d-flex flex-wrap" id="showImage"></div>                    </div>                    <div class="mb-3">                        <label for="document" class="form-label">Documents</label>                        <input asp-for="Documents" class="form-control" type="file" id="document" multiple>                    </div>                    <div class="mt-2 d-flex flex-wrap flex-column" id="showDocument"></div>                    <div class="d-flex justify-content-end">                        <button type="button" class="btn rounded-pill">Cancel</button>                        <button type="submit" class="btn rounded-pill">Submit</button>                    </div>                </div>            </div>        </form>    </div>    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    <script src="~/js/missionedit.js"></script></body>
+﻿@model CI_PLATFORM.Entities.ViewModels.MissionAddViewModel
+
+@{
+    Layout = "~/Views/Admin/UserpageInAdmin.cshtml";
+}
+<head>
+    @*    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    *@
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/missionadd.css">
+
+
+</head>
+<body>
+
+    <div class="container mt-2">
+
+        <div class="col-12 bg-light border p-2">
+            Add
+        </div>
+        <form method="post" asp-action="AddMission" asp-controller="Admin" enctype="multipart/form-data">
+            <div class="container mt-2">
+
+                <div class=" p-2 border">
+
+                    <div class="col-12 d-flex flex-column my-2">
+                        <label for="title">Mission Title</label>
+                        <input type="text" id="title" class="form-control" asp-for="Title">
+                    </div>
+                    <input asp-for="MissionId" id="missionhide" hidden />
+                    <div class="col-12 d-flex flex-column my-2">
+                        <label for="orgname">Mission Organisation Name</label>
+                        <input type="text" id="orgname" class="form-control" asp-for="OrganizationName">
+                    </div>
+                    <div class="col-12 d-flex flex-column my-2">
+                        <label for="orgname">Mission Short Descrition</label>
+                        <input type="text" id="orgname" class="form-control" asp-for="ShortDescription">
+                    </div>
+                    <div class="col-12 d-flex flex-column my-2">
+                        <label for="orgdetail">Mission Organisation Detail</label>
+                        <textarea id="orgdetail" cols="30" rows="5" class="form-control" asp-for="OrganizationDetail"></textarea>
+                    </div>
+
+                    <div class="col-12 my-3 d-flex flex-column ">
+                        <label for="desc">Mission Description</label>
+                        <textarea id="storytext" placeholder="I loved this mission because..." asp-for="Description"></textarea>
+                        <span id="textValidate" class="text-danger d-none">Text is Required</span>
+                    </div>
+                    @if (Model == null)
+                    {
+                        <div class="row">
+                            <div class="col-6 d-flex flex-column">
+                                <label>Country</label>
+                                <select class="form-select dropdown-toggle" asp-for="CountryId" id="countryselect">
+                                    <option value="countryselect">Select List</option>
+                                </select>
+                            </div>
+                            <div class="col-6 d-flex flex-column">
+                                <label>City</label>
+                                <select class="form-select dropdown-toggle" data-toggle="dropdown" asp-for="CityId" id="cityselect">
+                                    <option value="">Select List</option>
+                                </select>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="row">
+                            <div class="col-6 d-flex flex-column">
+                                <label>Country</label>
+                                <select class="form-select dropdown-toggle" asp-for="CountryId" id="countryselect" asp-items="@Model.countries">
+                                    <option value="">Select List</option>
+                                </select>
+                            </div>
+                            <div class="col-6 d-flex flex-column">
+                                <label>City</label>
+                                <select class="form-select dropdown-toggle" data-toggle="dropdown" asp-for="CityId" id="cityselect" asp-items="@Model.cities">
+                                    <option value="">Select List</option>
+                                </select>
+                            </div>
+                        </div>
+                    }
+
+
+                    <div class="row">
+                        @if (Model == null)
+                        {
+                            <div class="col-sm-4 d-flex flex-column my-3">
+                                <label for="theme">Theme</label>
+                                <select class="form-select dropdown-toggle" id="themeselect" data-toggle="dropdown" asp-for="ThemeId">
+                                    <option value="themeselect" selected>Select List</option>
+                                </select>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-sm-4 d-flex flex-column my-3">
+                                <label for="theme">Theme</label>
+                                <select class="form-select dropdown-toggle" id="themeselect" data-toggle="dropdown" asp-for="ThemeId" asp-items="@Model.Themes">
+                                    <option value="">Select List</option>
+                                </select>
+                            </div>
+                        }
+
+                        <div class="col-sm-4  d-flex flex-column my-3">
+                            <label for="missionType">MissionType</label>
+                            <select class="form-select dropdown-toggle" id="avail12" data-toggle="dropdown" asp-for="MissionType" onchange="Mission()">
+                                <option value="0">Select Availibility</option>
+                                <option value="time">Time</option>
+                                <option value="goal">Goal</option>
+                            </select>
+                        </div>
+                        <div class="dropdown col-sm-4 my-3">
+                            <button class="btn btn-primary bg-transparent text-dark border-dark w-100 float-start form-select my-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Select Skills
+                            </button>
+                            <ul class="dropdown-menu  w-100" aria-labelledby="dropdownMenuButton" style="overflow-y :auto;height:100px;">
+                                @foreach (var skill in Model.Skills)
+                                {
+                                    <li>
+                                        <a class="dropdown-item " href="#">
+                                            @if (Model.skillids != null && Model.skillids.Contains(skill.SkillId))
+                                            {
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="selectedSkills" checked value="@skill.SkillId" id="@skill.SkillId" />
+                                                    <label class="form-check-label" for="@skill.SkillId">@skill.SkillName</label>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="selectedSkills" value="@skill.SkillId" id="@skill.SkillId" />
+                                                    <label class="form-check-label" for="@skill.SkillId">@skill.SkillName</label>
+                                                </div>
+                                            }
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+
+
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 d-flex flex-column">
+                            <label for="sdate">StartDate</label>
+                            <input type="date" id="sdate" class="form-control" asp-for="StartDate">
+                        </div>
+                        <div class="col-md-4 d-flex flex-column my-3">
+                            <label for="rdead">Registration Deadline</label>
+                            <input type="date" id="rdead" class="form-control">
+                        </div>
+                        <div class="col-md-4 d-flex flex-column my-3">
+                            <label for="seat">Total Seats</label>
+                            <input type="text" id="seat" class="form-control" asp-for="TotalSeats">
+                        </div>
+                    </div>
+                    <div id="goalfields" class="row d-none my-3">
+                        <div class="col-md-6 d-flex flex-column">
+                            <label for="seat">GoalDescription</label>
+                            <input type="text" id="seat" class="form-control" asp-for="GoalObjectiveText">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column">
+                            <label for="sdate">GoalValue</label>
+                            <input type="number" id="sdate" class="form-control" asp-for="GoalValue">
+                        </div>
+                    </div>
+                    <div id="timefields" class="row d-none">
+                        <div class="col-md-6 d-flex flex-column">
+                            <label for="edate">EndDate</label>
+                            <input type="date" id="edate" class="form-control" asp-for="EndDate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 d-flex flex-column">
+                            <label for="status">Status</label>
+                            <select class="form-select dropdown-toggle" id="status" asp-for="Status">
+                                <option value="1" selected>Active</option>
+                                <option value="0">In-Active</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6  d-flex flex-column">
+                            <label for="avail">Availability</label>
+                            <select class="form-select dropdown-toggle" id="avail" data-toggle="dropdown" asp-for="Availibility">
+                                <option value="0">Select Availibility</option>
+                                <option value="daily">Daily</option>
+                                <option value="monthly">Monthly</option>
+                                <option value="weekly">Weekly</option>
+                                <option value="week-end">Week-end</option>
+                            </select>
+                        </div>
+                    </div>
+                    @* <div class="col-12 d-flex flex-column">
+                    <label for="skills">Mission Skills</label>  form-select
+                    <textarea name="" id="skills" cols="30" rows="5" class="form-control"></textarea>
+                    </div>*@
+
+
+                    @*<button type="button" class="btn my-3 border  rounded-pill ">Add skill</button>*@
+                    <div class="mb-3">
+                        <label for="Image" class="form-label">Images</label>
+                        <input asp-for="Images" class="form-control" type="file" id="Images" multiple>
+                        <div class="mt-2 d-flex flex-wrap" id="showImage"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="document" class="form-label">Documents</label>
+                        <input asp-for="Documents" class="form-control" type="file" id="document" multiple>
+                    </div>
+                    <div class="mt-2 d-flex flex-wrap flex-column" id="showDocument"></div>
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn rounded-pill">Cancel</button>
+                        <button type="submit" class="btn rounded-pill">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+
+    <script src="~/js/missionedit.js"></script>
+</body>
+

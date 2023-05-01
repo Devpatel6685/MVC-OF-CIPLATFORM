@@ -54,7 +54,10 @@
                                 <td>@mission.StartDate</td>
                                 <td>@mission.EndDate</td>
                                 <td class="d-flex">
-                                    <button class="btn border-0"><i class="bi bi-pencil-square icon"></i></button>
+                                    <button class="btn border-0">
+                                        <a asp-action="editmission" asp-controller="Admin" asp-route-id="@mission.MissionId"><i class="bi bi-pencil-square icon"></i></a>
+                                    </button>
+
                                     <a class="nav-link text-black deleteMission p-2" onclick="showModal(@mission.MissionId)" type="button"><i class="bi bi-trash3"></i></a>
                                     @*                                    <a class="nav-link text-black deleteMission p-2" data-missionid="@mission.MissionId" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-trash3"></i></a>
                             *@

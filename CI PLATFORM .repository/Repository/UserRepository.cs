@@ -51,11 +51,10 @@ namespace CI_PLATFORM.repository.Repository
             return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar;
             
         }
-        public List<string> getbanners()
+        public List<Banner> GetBanners()
         {
-            var banner = _cIPLATFORMDbContext.Banners.Select(c => c.Image).ToList();
-            
-            return banner;
+            List<Banner> banners = _cIPLATFORMDbContext.Banners.Where(b => b.Status == "Active").OrderBy(b => b.SortOrder).ToList();
+            return banners;
         }
         public String editimage(IFormFile Image, long userid)
         {

@@ -102,8 +102,13 @@
                 <div>
                     @Model.Item1.ShortDescription
                 </div>
+                @{
+                    var timeSheet1 = Model.Item1.timeSheetEntryList.Where(timesheet => timesheet.MissionId == Model.Item1.MissionId).ToList();
+                    var goals = Model.Item1.goalMissionList.SingleOrDefault(goal => goal.MissionId == Model.Item1.MissionId);
+                    var sumOfgoal = timeSheet1.Sum(t => t.Action);
+                }
                 <div class="mx-auto px-2 py-1 rounded-pill border mt-3 pill position-relative z-1">
-                    @if (Model.Item1.StartDate < DateTime.Today && Model.Item1.EndDate > DateTime.Today)
+                 @*   @if (Model.Item1.StartDate < DateTime.Today && Model.Item1.EndDate > DateTime.Today)
                     {
                         <>Ongoing Oppertunity</>
                     }
@@ -118,8 +123,23 @@
                     else
                     {
                         <>from @Model.Item1.StartDate until @Model.Item1.EndDate</>
+                    }*@
+                    @if (Model.Item1.StartDate < DateTime.Today && ((Model.Item1.MissionType == "TIME" && Model.Item1.EndDate > DateTime.Today) || (Model.Item1.MissionType == "GOAL" && goals.GoalValue > sumOfgoal)))
+                    {
+                        <span>Ongoing Oppertunity</span>
                     }
-
+                    else if ((Model.Item1.MissionType == "TIME" && Model.Item1.EndDate < DateTime.Today) || (Model.Item1.MissionType == "GOAL" && goals.GoalValue == sumOfgoal))
+                    {
+                        <span class="text-danger">Mission Completed</span>
+                    }
+                    else if (@Model.Item1.MissionType == "GOAL")
+                    {
+                        @Model.Item1.goalObjective
+                    }
+                    else
+                    {
+                        <span>from @Model.Item1.StartDate?.ToString("d") until @Model.Item1.EndDate?.ToString("d")</span>
+                    }
                 </div>
                 <hr id="hr">
                 <div class="d-flex justify-content-between  border-bottom pb-4">
@@ -305,12 +325,12 @@
                                 </button>
                             }
                         }
-                        else
+                       @* else
                         {
                             <button class="py-2 px-3 mx-auto apply " disabled>
                                 Mission Closed
                             </button>
-                        }
+                        }*@
                     }
 
 
@@ -516,7 +536,8 @@
                                     <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
                                         <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                     </div>
-                                    <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top"
+                                    <img src="@i.MissionMedia.FirstOrDefault(m=>m.MissionId==i.MissionId && m.MediaType=="Imag").MediaPath" class="relCardImage"
+                                 @*  <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top" *@
                              alt="Skyscrapers" />
                                     <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
                                         @{

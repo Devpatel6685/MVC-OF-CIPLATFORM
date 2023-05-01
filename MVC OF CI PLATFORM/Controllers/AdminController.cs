@@ -12,43 +12,28 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         private readonly ILogger<AdminController> _logger;
         private readonly IAdminInterface _adminInterface;
 
-        public AdminController(ILogger<AdminController> logger, IAdminInterface adminRepository)
+        public AdminController(ILogger<AdminController> logger, IAdminInterface adminInterface)
         {
             _logger = logger;
-            _adminInterface = adminRepository;
+            _adminInterface = adminInterface;
         }
         public IActionResult UserpageInAdmin(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
         {
             var model = _adminInterface.getuserdata(pageindex, pageSize, SearchInputdata);
             return View(model);
         }
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
 
         public IActionResult User(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
-       {
+        {
             var model = _adminInterface.getuserdata(pageindex, pageSize, SearchInputdata);
             return PartialView("_userpage", model);
         }
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
 
         public IActionResult Mission(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
         {
             var model = _adminInterface.getmissiondata(pageindex, pageSize, SearchInputdata);
             return PartialView("_missionpage", model);
         }
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-
-        public IActionResult Banner(string SearchInputdata = "", int pageindex = 1)
-        {
-            var model = _adminInterface.getbannerdata(pageindex, SearchInputdata);
-            return PartialView("_bannerpage", model);
-        }
-        public IActionResult banneradd()
-        {
-            return PartialView("_banneradd");
-        }
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-
         public IActionResult Theme(string SearchInputdata = "", int pageindex = 1, int pageSize = 2)
         {
             var model = _adminInterface.getthemedata(pageindex, pageSize, SearchInputdata);
@@ -59,9 +44,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getskilldata(pageindex, pageSize, SearchInputdata);
             return PartialView("_skillpage", model);
         }
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-
-        public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 5)
+        public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 1)
         {
             var model = _adminInterface.getstorydata(pageindex, pageSize, SearchInputdata);
             return PartialView("_storypage", model);
@@ -71,19 +54,10 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getmissionapplicationdata(pageindex, pageSize, SearchInputdata);
             return PartialView("_missionapplicationpage", model);
         }
-        public IActionResult AddBanner(BannerAddViewModel model)
+        public IActionResult Banner(string SearchInputdata = "", int pageindex = 1)
         {
-            if (model.BannerId == 0)
-            {
-                _adminInterface.addBanner(model);
-                TempData["success"] = "Banner added successfully";
-            }
-            else
-            {
-                _adminInterface.editBanner(model);
-                TempData["success"] = "Banner edited successfully";
-            }
-            return RedirectToAction("Banner");
+            var model = _adminInterface.getbannerdata(pageindex, SearchInputdata);
+            return PartialView("_bannerpage", model);
         }
         public IActionResult ApproveApplication(string Applicationid)
         {
@@ -127,11 +101,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getmissionmodeldata();
             return PartialView("_missionedit", model);
         }
-        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-
         public IActionResult useradd()
         {
-
             return PartialView("_useradd");
         }
         public IActionResult themeadd()
@@ -147,10 +118,38 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getskill(skillid);
             return PartialView("_skilladd", model);
         }
+        public IActionResult banneradd()
+        {
+            return PartialView("_banneradd");
+        }
         public IActionResult AddMission(MissionAddViewModel model, List<int> selectedSkills)
         {
-            _adminInterface.Addmission(model, selectedSkills);
+            if (model.MissionId == 0)
+            {
+                _adminInterface.Addmission(model, selectedSkills);
+                TempData["success"] = "Mission is added successfully";
+            }
+            else
+            {
+                _adminInterface.Editmission(model, selectedSkills);
+                TempData["success"] = "Mission is edited successfully";
+            }
+
             return RedirectToAction("Mission", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
+        }
+        public IActionResult AddBanner(BannerAddViewModel model)
+        {
+            if (model.BannerId == 0)
+            {
+                _adminInterface.addBanner(model);
+                TempData["success"] = "Banner added successfully";
+            }
+            else
+            {
+                _adminInterface.editBanner(model);
+                TempData["success"] = "Banner edited successfully";
+            }
+            return RedirectToAction("Banner");
         }
         public IActionResult AddUser(UserAddViewModel model)
         {
@@ -166,15 +165,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                 _adminInterface.updateuser(model);
                 TempData["success"] = "User is updated succesfully";
                 return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
-
             }
 
-        }
-        public IActionResult EditBanner(string id)
-        {
-            var model = _adminInterface.getBanner(id)
-;
-            return PartialView("_banneradd", model);
         }
         public IActionResult AddTheme(ThemeAddViewModel model)
         {
@@ -183,7 +175,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
         public IActionResult AddSkill(SkillAddViewModel model)
         {
-            if (model.SkillId == null)
+            if (model.SkillId == 0)
             {
                 _adminInterface.Addskill(model);
                 TempData["success"] = "skill is added";
@@ -191,15 +183,26 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             else
             {
                 _adminInterface.editskilldatabase(model);
-                TempData["success"] = "skill is added";
+                TempData["success"] = "skill is updated";
             }
             return RedirectToAction("Skill", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
 
+        }
+        public IActionResult EditBanner(string id)
+        {
+            var model = _adminInterface.getBanner(id)
+;
+            return PartialView("_banneradd", model);
         }
         public IActionResult edituser(string id)
         {
             var usermodel = _adminInterface.edituserdata(id);
             return PartialView("_useradd", usermodel);
+        }
+        public IActionResult editmission(string id)
+        {
+            var model = _adminInterface.editmissondata(id);
+            return PartialView("_missionedit", model);
         }
         public IActionResult DeleteMission(string missionid)
         {

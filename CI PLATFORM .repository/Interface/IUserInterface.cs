@@ -19,7 +19,7 @@ namespace CI_PLATFORM_.repository.Interface
         public string FORGOTPASSWORD(forgotviewmodel user);
 
         public string RESETPAGE(resetviemodel password,string Token);
-        public List<string> getbanners();
+        public List<Banner> GetBanners();
 
         public List<City> GetCities(int id);
         public EditUserViewModel getUserDetails(long userid);

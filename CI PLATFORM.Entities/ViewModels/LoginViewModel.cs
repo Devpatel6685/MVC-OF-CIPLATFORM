@@ -16,6 +16,9 @@ namespace CI_PLATFORM.Entities.ViewModels
         [Required(ErrorMessage = "Enter Password")]
         public string Password { get; set; }
 
-        public List<string> banners { get; set; }
+        /*        public List<string> banners { get; set; }
+        */
+        public List<Banner>? Banners { get; set; }
+
     }
 }

@@ -1,5 +1,81 @@
 ﻿@model CI_PLATFORM.Entities.ViewModels.BannerAddViewModel
-@{    Layout = "~/Views/Admin/UserpageInAdmin.cshtml";}<html lang="en"><head></head><body>    <div class="container mt-2">        <div class="">            @if (Model == null)            {                <div class="col-12 bg-light border p-2">Add</div>            }            else            {                <div class="col-12 bg-light border p-2">Edit</div>            }        </div>        <div class=" p-2 border">            <form asp-action="AddBanner" asp-controller="admin" method="post" enctype="multipart/form-data" id="form">                <input type="number" asp-for="BannerId" hidden />                <div class=" d-flex flex-column mb-2">                    <label asp-for="Title">Enter Title</label>                    <input asp-for="Title" type="text" class="form-control" placeholder="Enter Title">                    <span asp-validation-for="Title" class="text-danger"></span>                </div>                <div class=" d-flex flex-column mb-2">                    <label asp-for="SortOrder">Enter Sort Order</label>                    <input asp-for="SortOrder" type="number" class="form-control" placeholder="Enter Sort Order">                    <span asp-validation-for="SortOrder" class="text-danger"></span>                </div>                <div class="d-flex flex-column mb-2">                    <label asp-for="Text">Banner Text</label>                    <textarea id="storytext" placeholder="I loved this mission because..." asp-for="Text"></textarea>                    <span asp-validation-for="Text" class="text-danger d-none">Text is Required</span>                    @*     <textarea asp-for="Text" cols="30" rows="5" class="form-control" placeholder="Enter Banner Text"></textarea>                    <span asp-validation-for="Text" class="text-danger"></span>*@                </div>                <div class="d-flex flex-column mb-2">                    <label asp-for="Image">Image</label>                    <input type="file" asp-for="Image" id="imageInput" />                    <span class="text-danger d-none" id="imageValidate">Select Image</span>                </div>                @if (Model != null)
-                {                    <input id="fileValue" value="@Model.Image" hidden />                    <div class="d-flex flex-wrap mb-2" id="showImage">                        <img src="~/Images/Banner/@Model.Image.FileName" />                    </div>                }
+@{
+    Layout = "~/Views/Admin/UserpageInAdmin.cshtml";
+}
+<html lang="en">
+<head>
+</head>
+<body>
+    <div class="container mt-2">
+        <div class="">
+
+            @if (Model == null)
+            {
+                <div class="col-12 bg-light border p-2">Add</div>
+            }
+            else
+            {
+                <div class="col-12 bg-light border p-2">Edit</div>
+            }
+
+        </div>
+        <div class=" p-2 border">
+            <form asp-action="AddBanner" asp-controller="admin" method="post" enctype="multipart/form-data" id="form">
+                <input type="number" asp-for="BannerId" hidden />
+                <div class=" d-flex flex-column mb-2">
+                    <label asp-for="Title">Enter Title</label>
+                    <input asp-for="Title" type="text" class="form-control" placeholder="Enter Title">
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class=" d-flex flex-column mb-2">
+                    <label asp-for="SortOrder">Enter Sort Order</label>
+                    <input asp-for="SortOrder" type="number" class="form-control" placeholder="Enter Sort Order">
+                    <span asp-validation-for="SortOrder" class="text-danger"></span>
+                </div>
+                <div class="d-flex flex-column mb-2">
+                    <label asp-for="Text">Banner Text</label>
+                    <textarea id="storytext" placeholder="I loved this mission because..." asp-for="Text"></textarea>
+                    <span asp-validation-for="Text" class="text-danger d-none">Text is Required</span>
+                    @*     <textarea asp-for="Text" cols="30" rows="5" class="form-control" placeholder="Enter Banner Text"></textarea>
+                    <span asp-validation-for="Text" class="text-danger"></span>*@
+                </div>
+                <div class="d-flex flex-column mb-2">
+                    <label asp-for="Image">Image</label>
+                    <input type="file" asp-for="Image" id="imageInput" />
+                    <span class="text-danger d-none" id="imageValidate">Select Image</span>
+                </div>
+                @if (Model != null)
+                {
+                    <input id="fileValue" value="@Model.Image" hidden />
+                    <div class="d-flex flex-wrap mb-2" id="showImage">
+                        <img src="~/Images/Banner/@Model.Image.FileName" />
+                    </div>
+                }
                 else
-                {                    <div class="d-flex flex-wrap mb-2" id="showImage">                        <img />                    </div>                }                <div class="row">                    <div class="col-4 d-flex flex-column mb-2">                        <label for="status">Status</label>                        <select asp-for="Status" class="form-select dropdown-toggle" id="status" data-toggle="dropdown">                            <option value="Active" selected>Active</option>                            <option value="In-Active">In-Active</option>                        </select>                    </div>                </div>                <div class="d-flex mt-3 justify-content-end">                    <a class="btn btn-secondary rounded-pill me-1" asp-action="BannerManagement" asp-controller="admin">Cancel</a>                    <button type="submit" class="btn apply rounded-pill">Save</button>                </div>            </form>        </div>    </div>    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>    <script src="~/lib/jquery/dist/jquery.min.js"></script>    <script src="~/js/banneraddpartial.js"></script></body><partial name="_ValidationScriptsPartial" /></html>
+                {
+                    <div class="d-flex flex-wrap mb-2" id="showImage">
+                        <img />
+                    </div>
+                }
+                <div class="row">
+                    <div class="col-4 d-flex flex-column mb-2">
+                        <label for="status">Status</label>
+                        <select asp-for="Status" class="form-select dropdown-toggle" id="status" data-toggle="dropdown">
+                            <option value="Active" selected>Active</option>
+                            <option value="In-Active">In-Active</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex mt-3 justify-content-end">
+                    <a class="btn btn-secondary rounded-pill me-1" asp-action="BannerManagement" asp-controller="admin">Cancel</a>
+                    <button type="submit" class="btn apply rounded-pill">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/banneraddpartial.js"></script>
+</body>
+<partial name="_ValidationScriptsPartial" />
+</html>

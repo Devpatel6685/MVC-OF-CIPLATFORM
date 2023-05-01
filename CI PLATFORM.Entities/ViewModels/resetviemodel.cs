@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CI_PLATFORM.Entities.DataModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -17,8 +18,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         [Compare("Password", ErrorMessage = "Confirm Password is not match with Password")]
         public string ConfirmPassword { get; set; } = null!;
 
-        public List<string> banners { get; set; }
-
+        public List<Banner>? Banners { get; set; }
 
     }
 }

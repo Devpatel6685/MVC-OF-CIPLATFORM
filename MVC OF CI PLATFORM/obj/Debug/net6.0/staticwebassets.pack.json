@@ -449,6 +449,46 @@
       "PackagePath": "staticwebassets\\Document\\jquery.pdf"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\ANIMAL WELFARE 2\\New doc Jul 20, 2022 6.08 PM.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\ANIMAL WELFARE 2\\New doc Jul 20, 2022 6.08 PM.pdf"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\ANIMAL WELFARE\\New doc Jul 20, 2022 6.08 PM.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\ANIMAL WELFARE\\New doc Jul 20, 2022 6.08 PM.pdf"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\CHILDREN CARING\\New doc Jul 20, 2022 6.08 PM (1).doc",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\CHILDREN CARING\\New doc Jul 20, 2022 6.08 PM (1).doc"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\CSR INITIATIVE\\Database1.accdb",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\CSR INITIATIVE\\Database1.accdb"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\GREEN WORLD\\SEM 7 FINAL REPORT (1).docx",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\GREEN WORLD\\SEM 7 FINAL REPORT (1).docx"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\MATCHES\\SEM 7 FINAL REPORT (1).docx",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\MATCHES\\SEM 7 FINAL REPORT (1).docx"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\MISSION SUNDAY HBH\\javascript interview questions.docx",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\MISSION SUNDAY HBH\\javascript interview questions.docx"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\NOURISH THE CHILD\\SEM 7 FINAL REPORT (1).docx",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\NOURISH THE CHILD\\SEM 7 FINAL REPORT (1).docx"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\PLANTATION AND AFFORESTRATION PROGRAM\\19BECE30038.CNS.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\PLANTATION AND AFFORESTRATION PROGRAM\\19BECE30038.CNS.pdf"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\TREES PLANTATION\\CI-Good to have.pdf",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\TREES PLANTATION\\CI-Good to have.pdf"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\087e8a52-7001-4153-a78c-914327fe4ad5.png",
       "PackagePath": "staticwebassets\\Images\\087e8a52-7001-4153-a78c-914327fe4ad5.png"
     },
@@ -501,6 +541,22 @@
       "PackagePath": "staticwebassets\\Images\\Banner\\volunteer3.png"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\ANIMAL WELFARE 2\\Animal-welfare-_-save-birds-campaign-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\ANIMAL WELFARE 2\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Animal Welfare\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\Animal Welfare\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\CHILDREN CARING\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\CHILDREN CARING\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\CSR INITIATIVE\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\CSR INITIATIVE\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Dark blue\\c0f6ce9b-5940-48a9-bfb1-dcaaabd596f9.png",
       "PackagePath": "staticwebassets\\Images\\Mission\\Dark blue\\c0f6ce9b-5940-48a9-bfb1-dcaaabd596f9.png"
     },
@@ -509,12 +565,44 @@
       "PackagePath": "staticwebassets\\Images\\Mission\\Dark blue\\f245d678-ed7c-4bb4-9eb9-f5ea064227fe.png"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\GREEN WORLD\\Plantation-and-Afforestation-programme-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\GREEN WORLD\\Plantation-and-Afforestation-programme-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\MATCHES\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\MATCHES\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\MISSION SUNDAY HBH\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\MISSION SUNDAY HBH\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\NOURISH THE CHILD\\Nourish-the-Children-in--African-country-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\NOURISH THE CHILD\\Nourish-the-Children-in--African-country-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Plantation and afforestration program\\Plantation-and-Afforestation-programme-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\Plantation and afforestration program\\Plantation-and-Afforestation-programme-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\TREES PLANTATION\\Grow-Trees-On-the-path-to-environment-sustainability-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\TREES PLANTATION\\Grow-Trees-On-the-path-to-environment-sustainability-1.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\cricket match\\16596c6e-19e9-4662-bffe-e8184323dceb.png",
       "PackagePath": "staticwebassets\\Images\\Mission\\cricket match\\16596c6e-19e9-4662-bffe-e8184323dceb.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\cricket match\\b53e4cf9-d8b1-4629-8860-5b330e323c4a.png",
       "PackagePath": "staticwebassets\\Images\\Mission\\cricket match\\b53e4cf9-d8b1-4629-8860-5b330e323c4a.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\grows\\Animal-welfare-_-save-birds-campaign-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\grows\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\india match\\Animal-welfare-_-save-birds-campaign-1.png.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\india match\\Animal-welfare-_-save-birds-campaign-1.png.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\1a54b90f-7f63-49f0-b9ec-ad26dc43724f.png",

@@ -95,7 +95,11 @@
                     <div class="row g-4 mx-auto mt-1">
                         @{
                             foreach (var i in Model.Missions)
+
                             {
+                                var goals = Model.goalMissionList.SingleOrDefault(goal => goal.MissionId == i.MissionId);
+                                var timeSheet = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
+                                var sumOfgoal = timeSheet.Sum(t => t.Action);
                                 <div class="col-md-6 col-lg-4 item">
                                     <div class=" card  d-flex">
 
@@ -111,7 +115,7 @@
                                                             <span class="badge1 bg-success text-dark ms-1 pt-2">Applied</span><div class="arrow-right-a"></div>
                                                         </div>
                                                     }
-                                                    else if (i.EndDate < DateTime.Now)
+                                                    else if ((i.MissionType == "time" && i.RegistrationDeadline < DateTime.Now) || (i.MissionType == "goal" && goals.GoalValue == sumOfgoal));
                                                     {
                                                         <div class="d-flex position-absolute pt-2 badgeclass">
                                                             <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
@@ -120,16 +124,13 @@
                                                 }
 
                                             }
-                                            @* @if (i.EndDate < DateTime.Now)
-                                {
-                                <div class="d-flex position-absolute pt-2 badgeclass">
-                                <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
-                                </div>
-                                }*@
+
                                             <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>
-                                            <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" />
+                                            <img src="@i.MissionMedia.FirstOrDefault(m=>m.MissionId==i.MissionId && m.MediaType=="Imag").MediaPath" class="w-100 cardImage" />
+
+                                            @*  <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" /> *@
                                             <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
 
                                                 @{
@@ -255,7 +256,7 @@
 
                                             <div class="position-relative d-flex justify-content-center grid-element">
                                                 <div class="mx-auto px-2 py-1 rounded-pill border duration d-flex grid-element z-1" style="background-color:white">
-                                                    @if (i.MissionType == "GOAL")
+                                                    @if (i.MissionType == "goal")
                                                     {
                                                         foreach (var gm in goalmissions.Where(m => m.MissionId == i.MissionId))
                                                         {
@@ -284,7 +285,7 @@
                                                 </div>
                                                 <div>
                                                     <div class="d-flex">
-                                                        @if (i.MissionType == "TIME")
+                                                        @if (i.MissionType == "time")
                                                         {
                                                             <img class="img1 mt-2 me-1" src="~/Assets/hours.png" alt="Deadline">
                                                             <div>
@@ -294,12 +295,12 @@
                                                         }
                                                         else
                                                         {
-                                                            var timeSheet = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
+                                                            var timeSheet1 = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
                                                             var goal = Model.goalMissionList.Where(goal => goal.MissionId == i.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
 
 
 
-                                                            var sumOfgaol = timeSheet.Sum(t => t.Action);
+                                                            var sumOfgaol = timeSheet1.Sum(t => t.Action);
                                                             var progressbar = ((double)sumOfgaol / goal) * 100;
                                                             <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
                                                             <div>
@@ -344,12 +345,12 @@
                                                         }
                                                         else
                                                         {
-                                                            var timeSheet = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
+                                                            var timeSheet2 = Model.timeSheetEntryList.Where(timesheet => timesheet.MissionId == i.MissionId).ToList();
                                                             var goal = Model.goalMissionList.Where(goal => goal.MissionId == i.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
 
 
 
-                                                            var sumOfgaol = timeSheet.Sum(t => t.Action);
+                                                            var sumOfgaol = timeSheet2.Sum(t => t.Action);
                                                             var progressbar = ((double)sumOfgaol / goal) * 100;
                                                             <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
                                                             <div>
@@ -456,7 +457,7 @@
         </div>
 
     </div>
-   
+
     <partial name="_footer">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
