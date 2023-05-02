@@ -21,19 +21,19 @@ builder.Services.AddScoped<IAdminInterface, AdminRepository>();
 
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddCloudscribePagination();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-   .AddCookie(option =>
-   {
-       option.ExpireTimeSpan = TimeSpan.FromMinutes(60);
-       option.LoginPath = "/Home/LOGIN";
-       option.AccessDeniedPath = "/Home/LOGIN";
-   }
-    );
-builder.Services.AddSession(Options =>
-{  Options.IdleTimeout = TimeSpan.FromMinutes(15);
-    Options.Cookie.HttpOnly= true;
-    Options.Cookie.IsEssential= true;   
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).
+    AddCookie(option =>
+    {
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(60 * 1);
+        option.LoginPath = "/Home/LOGIN";
+        option.AccessDeniedPath = "/Mission/platformLanding";
     });
+builder.Services.AddSession(option =>
+{
+    option.IdleTimeout = TimeSpan.FromMinutes(5);
+    option.Cookie.HttpOnly = true;
+    option.Cookie.IsEssential = true;
+});
 var app = builder.Build();
  
 // Configure the HTTP request pipeline.

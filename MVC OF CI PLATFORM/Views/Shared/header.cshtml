@@ -30,87 +30,92 @@
 
 </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-body-light border-bottom">
-    <div class="container-fluid mx-auto">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-start" id="navbarSupportedContent" tabindex="-1">
-            <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Explore
-                    </a>
-                    <ul class="dropdown-menu dropdown-border">
-                        <li><a class="dropdown-item" href="#">Policy</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link active" aria-current="page"  asp-controller="VolunterrStory" asp-action="volunteerstory">Stories</a>
-                </li>
-                <li class="nav-item @*dropdown*@">
+    <nav class="navbar navbar-expand-sm bg-body-light border-bottom">
+        <div class="container-fluid mx-auto">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-start" id="navbarSupportedContent" tabindex="-1">
+                <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore
+                        </a>
+                        <ul class="dropdown-menu dropdown-border">
+                            <li><a class="dropdown-item" href="#">Policy</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" asp-controller="VolunterrStory" asp-action="volunteerstory">Stories</a>
+                    </li>
+                    <li class="nav-item @*dropdown*@">
                         <a class="nav-link active" aria-current="page" asp-controller="Mission" asp-action="platformLanding">Home</a>
 
-                    @*<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                        @*<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Policy
-                    </a>
-                    <ul class="dropdown-menu dropdown-border">
+                        </a>
+                        <ul class="dropdown-menu dropdown-border">
                         <li><a class="dropdown-item" href="#">Policy</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
                         <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>*@
-                </li>
-            </ul>
+                        </ul>*@
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link active" aria-current="page" asp-controller="Admin" asp-action="User">Admin</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-@if (firstname_session!=null)
-{
-    <div class="dropdown mx-5" id="prof-drop">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                @*            <img src="/Assets/user-img.png" class="rounded-circle" alt="profile">*@ 
-           <img src="@avtar" alt="" class=" rounded-circle" id="profile-photo">
-            <span id="hide">@firstname_session</span>
-        </a>
-        <ul class="dropdown-menu" id="drop-pos">
+    </nav>
+    @if (firstname_session != null)
+    {
+        <div class="dropdown mx-5" id="prof-drop">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                @*            <img src="/Assets/user-img.png" class="rounded-circle" alt="profile">*@
+                <img src="@avtar" alt="" class=" rounded-circle" id="profile-photo">
+                <span id="hide">@firstname_session</span>
+            </a>
+            <ul class="dropdown-menu" id="drop-pos">
                 <li><a class="dropdown-item" asp-action="UserEdit" asp-controller="Home">Add Profile</a></li>
 
 
                 <li><a class="dropdown-item" asp-action="VolunteeringTimesheet" asp-controller="Volunteer">VolunteeringTimesheet</a></li>
-            <li><a class="dropdown-item" asp-action="LogOut" asp-controller="Home">Logout</a></li>
-        </ul>
-    </div>
-}
-else
-{
-    <div class="dropdown mx-5 d-flex" id="prof-drop">
-
-        <ul class="navbar-nav log-register flex-row">
-            <li class="nav-item ">
-                <a class="nav-link active me-2 btn btn-outline-light btn-warning" aria-current="page" asp-action="LOGIN" asp-controller="HOME">Login</a>
-            </li>
-            <li class="nav-item ms-1">
-                <a class="nav-link active btn btn-outline-light  btn-warning" aria-current="page" asp-action="REGISTRATIONPAGE" asp-controller="HOME">Register</a>
-            </li>
-        </ul>
-
-
-    </div>
-
-}
-
-<div class="container-fluid border-bottom navbar-expand-md line2">
-    <div class="row mx-5 d-flex justify-content-between">
-        <div class="col-11 col-md-4">
-            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
-                <input class="form-control me-2 ps-5 pt-2 pb-2 search-border" style="margin-top:8px" id="search-input" type="search" placeholder="Search" aria-label="Search" name="SearchInputdata">
+                <li><a class="dropdown-item" asp-action="LogOut" asp-controller="Home">Logout</a></li>
+            </ul>
         </div>
-        <button class="navbar-toggler col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><img src="/Assets/filter.png" alt=""></span>
-        </button>
-        <div id="filter" class="offcanvas offcanvas-start d-flex flex-row col-md-8" tabindex="-1">
+    }
+    else
+    {
+        <div class="dropdown mx-5 d-flex" id="prof-drop">
+
+            <ul class="navbar-nav log-register flex-row">
+                <li class="nav-item ">
+                    <a class="nav-link active me-2 btn btn-outline-light btn-warning" aria-current="page" asp-action="LOGIN" asp-controller="HOME">Login</a>
+                </li>
+                <li class="nav-item ms-1">
+                    <a class="nav-link active btn btn-outline-light  btn-warning" aria-current="page" asp-action="REGISTRATIONPAGE" asp-controller="HOME">Register</a>
+                </li>
+            </ul>
+
+
+        </div>
+
+    }
+
+    <div class="container-fluid border-bottom navbar-expand-md line2">
+        <div class="row mx-5 d-flex justify-content-between">
+            <div class="col-11 col-md-4">
+                <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
+                <input class="form-control me-2 ps-5 pt-2 pb-2 search-border" style="margin-top:8px" id="search-input" type="search" placeholder="Search" aria-label="Search" name="SearchInputdata">
+            </div>
+            <button class="navbar-toggler col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#filter" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="/Assets/filter.png" alt=""></span>
+            </button>
+            <div id="filter" class="offcanvas offcanvas-start d-flex flex-row col-md-8" tabindex="-1">
                 <li class="list-group-item  dropdown border-start col-md-3 border-end pt-3 pb-3 noborder">
                     <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Country
@@ -139,14 +144,13 @@ else
                     <ul class="dropdown-menu drop" aria-labelledby="navbarDropdown" id="skill">
                     </ul>
                 </li>
-              
+
+            </div>
         </div>
     </div>
-</div>
-<div class="filters-section d-flex align-items-center flex-wrap justify-content-center">
-
-</div>
-<script src="~/lib/jquery/dist/jquery.js"></script>
+    <div class="filters-section d-flex align-items-center flex-wrap justify-content-center">
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

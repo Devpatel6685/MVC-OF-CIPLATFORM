@@ -25,7 +25,7 @@ $('#countryselect').on('change', function () {
     })
 });
 $('.skillselect:checkbox:checked').each(function () {
-    alert('span called');
+    
     var skillname = $(this).next('label').text();
     var id = $(this).val();
     $('.skill-section').append('<span class="filter-list ps-3 pe-3 me-2 rounded-pill border btn btn-warning text-white">' + skillname + '</span>')
@@ -36,7 +36,7 @@ if ($('.skill-section .filter-list').length > 0) {
 function Addskill() {
     $('.skill-section').empty();
     $('.skillselect:checkbox:checked').each(function () {
-        alert('span called');
+       
         var skillname = $(this).next('label').text();
         var id = $(this).val();
         $('.skill-section').append('<span class="filter-list ps-3 pe-3 me-2 rounded-pill border btn btn-warning text-white">' + skillname + '</span>')
@@ -143,7 +143,7 @@ function handleFiles(files) {
     }
 }
 $('#missionForm').submit(function (event) {
-    alert('mission valid');
+    
     var textarea = tinymce.get("storytext").getContent();
     event.preventDefault();
     if ($('#showImage').children().length == 0) {
@@ -154,7 +154,7 @@ $('#missionForm').submit(function (event) {
     if ($('#showDocument').children().length == 0) {
         $('#docValidate').text("Select Images")
     }
-    else if ($('#missionForm').valid()) {
+    else if ($('#missionForm').valid) {
         $('#missionForm')[0].submit();
     }
 })

@@ -108,21 +108,21 @@
                     var sumOfgoal = timeSheet1.Sum(t => t.Action);
                 }
                 <div class="mx-auto px-2 py-1 rounded-pill border mt-3 pill position-relative z-1">
-                 @*   @if (Model.Item1.StartDate < DateTime.Today && Model.Item1.EndDate > DateTime.Today)
+                    @*   @if (Model.Item1.StartDate < DateTime.Today && Model.Item1.EndDate > DateTime.Today)
                     {
-                        <>Ongoing Oppertunity</>
+                    <>Ongoing Oppertunity</>
                     }
                     else if (Model.Item1.EndDate < DateTime.Today)
                     {
-                        <span class="text-danger">Mission Completed</span>
+                    <span class="text-danger">Mission Completed</span>
                     }
                     else if (@Model.Item1.MissionType == "GOAL")
                     {
-                        @Model.Item1.goalObjective
+                    @Model.Item1.goalObjective
                     }
                     else
                     {
-                        <>from @Model.Item1.StartDate until @Model.Item1.EndDate</>
+                    <>from @Model.Item1.StartDate until @Model.Item1.EndDate</>
                     }*@
                     @if (Model.Item1.StartDate < DateTime.Today && ((Model.Item1.MissionType == "time" && Model.Item1.EndDate > DateTime.Today) || (Model.Item1.MissionType == "goal" && goals.GoalValue > sumOfgoal)))
                     {
@@ -134,7 +134,9 @@
                     }
                     else if (@Model.Item1.MissionType == "goal")
                     {
-                        @Model.Item1.goalObjective
+                        <div> plant <span>@Model.Item1.goalvalue </span> Tress </div>
+
+                        @* @Model.Item1.goalObjective*@
                     }
                     else
                     {
@@ -152,41 +154,41 @@
                     </div>
                     <div class="">
                         <div class="d-flex">
-                            
-
-                                @if (Model.Item1.MissionType == "goal")
-                                {
-                                    <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
-                                    <div>
-                                        @{
-                                            var timeSheet = Model.Item1.timeSheetEntryList.Where(timesheet => timesheet.MissionId == Model.Item1.MissionId).ToList();
-                                            var goal = Model.Item1.goalMissionList.Where(goal => goal.MissionId == Model.Item1.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
 
 
+                            @if (Model.Item1.MissionType == "goal")
+                            {
+                                <img class="img1 mt-2 me-2" src="~/Assets/achieved.png" alt="Seats-left">
+                                <div>
+                                    @{
+                                        var timeSheet = Model.Item1.timeSheetEntryList.Where(timesheet => timesheet.MissionId == Model.Item1.MissionId).ToList();
+                                        var goal = Model.Item1.goalMissionList.Where(goal => goal.MissionId == Model.Item1.MissionId).Select(goal => goal.GoalValue).FirstOrDefault();
 
-                                            var sumOfgaol = timeSheet.Sum(t => t.Action);
-                                            var progressbar = ((double)sumOfgaol / goal) * 100;
-                                            <div>
-                                                <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="@Model.Item1.goalvalue">
-                                                    <div class="progress-bar bg-warning" style="width: @progressbar%"></div>
-                                                </div>
-                                                <p class="m-0">@sumOfgaol achieved</p>
+
+
+                                        var sumOfgaol = timeSheet.Sum(t => t.Action);
+                                        var progressbar = ((double)sumOfgaol / goal) * 100;
+                                        <div>
+                                            <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="@Model.Item1.goalvalue">
+                                                <div class="progress-bar bg-warning" style="width: @progressbar%"></div>
                                             </div>
-                                        }
-                                    </div>
-                                }
-                                else
-                                {
-                                    <img class="img1 mt-2 me-2" src="~/Assets/hours.png" alt="Seats-left">
-                                    <div>
-                                        <span class="fs-6 mb-0">@Model.Item1.EndDate?.ToString("d")</span>
-                                        <p class="m-0">Deadline</p>
-                                    </div>
-                                }
+                                            <p class="m-0">@sumOfgaol achieved</p>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <img class="img1 mt-2 me-2" src="~/Assets/hours.png" alt="Seats-left">
+                                <div>
+                                    <span class="fs-6 mb-0">@Model.Item1.EndDate?.ToString("d")</span>
+                                    <p class="m-0">Deadline</p>
+                                </div>
+                            }
 
 
 
-                            
+
                         </div>
                     </div>
                 </div>
@@ -337,9 +339,9 @@
                         else
                         {
                             <button class="py-2 px-3 mx-auto apply " disabled>
-                               Registration DeadLine Closed
+                                Registration DeadLine Closed
                             </button>
-                            
+
                         }
 
                     }
@@ -548,8 +550,8 @@
                                         <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                     </div>
                                     <img src="@i.MissionMedia.FirstOrDefault(m=>m.MissionId==i.MissionId && m.MediaType=="Imag").MediaPath" class="relCardImage"
-                                 @*  <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top" *@
-                             alt="Skyscrapers" />
+                                 @* <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top" *@
+                                 alt="Skyscrapers" />
                                     <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
                                         @{
                                             var fav = Model.Item2.favorite.FirstOrDefault(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session);
@@ -610,7 +612,7 @@
                                                 <span>Ongoing Oppertunity</span>
                                             }
                                             else
-                                            {  
+                                            {
                                                 <span>From @i.StartDate?.ToString("dd/MM/yyyy") until @i.EndDate?.ToString("dd/MM/yyyy")</span>
                                             }
                                         </div>
@@ -652,7 +654,10 @@
     <div id="model" data-missionid="@Model.Item1.MissionId"
          data-totalitem="@Model.Item1.MissionApplications.TotalItemCount"
          data-userid="@userid_session"
-         data-pagenumber="@Model.Item1.MissionApplications.PageNumber">
+         data-pagenumber="@Model.Item1.MissionApplications.PageNumber"
+        data-applied = "@Model.Item1.applied"   >
+    </div>
+
     </div>
 
     @*<script src="~/lib/jquery/dist/jquery.js"></script>

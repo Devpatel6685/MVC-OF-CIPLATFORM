@@ -48,7 +48,7 @@ namespace CI_PLATFORM.repository.Repository
                 return "invalid password";
             }
             
-            return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar;
+            return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar + "," + userpassword.Role;
             
         }
         public List<Banner> GetBanners()

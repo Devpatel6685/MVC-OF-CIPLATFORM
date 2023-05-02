@@ -39,8 +39,9 @@ namespace CI_PLATFORM.Entities.ViewModels
         public long countryId { get; set; }
 
         public string? availability { get; set; }
-        [Required(ErrorMessage = "Enter Linked in url")]
 
+        [Required(ErrorMessage = "Linkedin url  is required")]
+        [RegularExpression("^[a-z]{2,3}\\.linkedin\\.com\\/.*$", ErrorMessage = "Please Enter valid URL")]
         public string linkedinURL { get; set; }
         public string Email { get; set; } = null!;
         [Required(ErrorMessage = "Subject is required")]

@@ -54,15 +54,19 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             {
                 
                 var entity = _iuserRepository.login(user);
+                LoginViewModel model = new LoginViewModel()
+                {
+                    Banners = _iuserRepository.GetBanners()
+                };
                 if (entity == "User Does not Exists" )
                 {
                     ModelState.AddModelError("Email", entity);
-                    return View("LOGIN");
+                    return View("LOGIN",model);
                 }
                 if (entity == "invalid password")
                 {
                     ModelState.AddModelError("Password", entity);
-                    return View("LOGIN");
+                    return View("LOGIN",model);
                 }
                /* var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, user.Email) },
                     CookieAuthenticationDefaults.AuthenticationScheme);
@@ -73,7 +77,13 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                 HttpContext.Session.SetString("username", Users[0]);
                 HttpContext.Session.SetString("userid", Users[1]);
                 HttpContext.Session.SetString("avtar", Users[2]);
+                HttpContext.Session.SetString("role", Users[3]);
                 TempData["LOGIN"] = "successfully logged in";
+                var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Role, Users[3]) },
+                            CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var principal = new ClaimsPrincipal(identity);
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
                 return RedirectToAction("PlatformLanding", "Mission");
             }
             return View("LOGIN");
@@ -81,8 +91,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult LogOut()
         {
-/*            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-*/           
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            
             HttpContext.Session.Clear();
             return RedirectToAction("PlatformLanding", "Mission");
         }
@@ -102,6 +112,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             if (ModelState.IsValid)
             {
                 var entity = _iuserRepository.FORGOTPASSWORD(user);
+
                 if (entity == null)
                 {
                     ModelState.AddModelError("Email", "User not found");

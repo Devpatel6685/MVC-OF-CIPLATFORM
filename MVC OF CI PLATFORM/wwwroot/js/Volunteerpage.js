@@ -99,7 +99,7 @@ function showModal() {
 }
 
 function applymission(missionid) {
-    
+
     if (!Model.attr('data-userid')) {
         showModal();
     }
@@ -127,8 +127,13 @@ function applymission(missionid) {
 function changeRating(starNum, missionId) {
     if (!Model.attr('data-userid')) {
         showModal();
-    }
-    else {
+    } else if (Model.attr('data-applied') != 1) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You have not applied for this mission!',
+        })
+    } else {
         var star = document.getElementById(`star-${missionId}-${starNum}`);
         console.log(star)
         var isStarSelected = star.getAttribute("src").endsWith("selected-star.png");
@@ -144,20 +149,21 @@ function changeRating(starNum, missionId) {
                 currentStar.setAttribute("src", "/Assets/star-empty.png");
             }
         }
-    
-    $.ajax({
-        url: "/Mission/ratingupdate",
-        type: "POST",
-        data: {
-            missionid: missionId,
-            rating: ratingstar,
-            userId: Model.attr('data-userid')
-        },
-        success: function (result) {
-            $('.rate').html($(result).find('.rate').html());
 
-        }
-    });
+
+        $.ajax({
+            url: "/Mission/ratingupdate",
+            type: "POST",
+            data: {
+                missionid: missionId,
+                rating: ratingstar,
+                userId: Model.attr('data-userid')
+            },
+            success: function (result) {
+                $('.rate').html($(result).find('.rate').html());
+
+            }
+        });
     }
 }
 

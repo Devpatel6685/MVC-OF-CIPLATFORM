@@ -187,7 +187,7 @@
                             var sum = Model.GoalMission.Where(m => m.MissionId == mission.MissionId).Select(g => g.Action).Sum();
                             <tr class="timesheetRow border-bottom border-opacity-10">
                                 <td id="mission-@mission.MissionId">@mission.Mission.Title</td>
-                                <td>@mission.DateVolunteered.ToString("d")</td>
+                                <td class="p-2">@mission.DateVolunteered.ToString("d")</td>
                                 <td>@mission.Action</td>
                                 <td class="p-2"><a class="nav-link" data-bs-toggle="modal" data-totalachieved="@sum" data-goalvalue="@goalValue" data-bs-target="#staticBackdrop2" id="timesheet-@mission.TimesheetId" onclick="edit('goal',@mission.MissionId,@mission.TimesheetId);"><i class="bi bi-pencil-square icon"></i></a></td>
                                 <td class="p-2"><a class="nav-link" onclick="deleteTimesheet(@mission.TimesheetId);"><i class="bi bi-trash3"></i></a></td>
