@@ -125,7 +125,7 @@ function handleFiles(files) {
         const file = files[i];
         if (!file.type.startsWith("image/")) continue;
         if (uploadedFiles.has(file.name)) {
-            alert(`File "${file.name}" has already been uploaded.`);
+            /* alert(`File "${file.name}" has already been uploaded.`);*/
             continue;
         }
         uploadedFiles.add(file.name);
@@ -148,17 +148,38 @@ $('#missionForm').submit(function (event) {
     event.preventDefault();
     if ($('#showImage').children().length == 0) {
         $('#imgValidate').text("Select Images")
+    } if (textarea == "") {
+        $('#textValidate').text("Text is Required");
+    }
+    if ($('#showDocument').children().length == 0) {
+        $('#docValidate').text("Select Images")
+    }
+    else if ($('#missionForm').valid()) {
+        $('#missionForm')[0].submit();
+    }
+})
+/*$('#missionForm').submit(function (event) {
+    alert('mission valid');
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    var textarea = tinymce.get("storytext").getContent();
+    event.preventDefault();
+    if ($('#showImage').children().length == 0) {
+        $('#imgValidate').text("Select Images")
     } else if (textarea == "") {
         $('#textValidate').text("Text is Required");
     }
     else if ($('#showDocument').children().length == 0) {
         $('#docValidate').text("Select Images")
-    }
-    if
-    else if ($('#missionForm').valid()) {
+    } else if ($('#missionForm').valid()) {
+
+        // Form is valid, submit it
         $('#missionForm')[0].submit();
     }
-})
+    *//* else if ($('#missionForm').valid()) {
+        $('#missionForm')[0].submit();
+    }*//*
+})*/
 
 
 

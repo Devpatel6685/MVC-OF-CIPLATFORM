@@ -55,6 +55,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         [Required(ErrorMessage = "Enter Goal Value")]
 
         public int GoalValue { get; set; }
+
         public List<int> skillids { get; set; }
     }
 }

@@ -21,11 +21,13 @@ namespace CI_PLATFORM_.repository.Repository
         public VolunteerTimesheetviewmodel GetAll(long userid)
         {
             var entity = _ciplatfromdbcontext.Timesheets.Include(m => m.Mission).Where(ts => ts.UserId == userid).AsQueryable();
-            var time = entity.Where(ts => ts.Mission.MissionType == "TIME");
-            var goal = entity.Where(ts => ts.Mission.MissionType == "GOAL");
+            var time = entity.Where(ts => ts.Mission.MissionType == "time");
+            var goal = entity.Where(ts => ts.Mission.MissionType == "goal");
+            var goalMissions = _ciplatfromdbcontext.GoalMissions.ToList();
             VolunteerTimesheetviewmodel TS = new VolunteerTimesheetviewmodel();
             TS.TimeMission = time.ToList();
             TS.GoalMission = goal.ToList();
+            TS.Goals = goalMissions;
             return TS;
         }
 
@@ -78,9 +80,20 @@ namespace CI_PLATFORM_.repository.Repository
         public (List<Mission>, List<Mission>) getMissions(long userid)
         {
             var missionApplication = _ciplatfromdbcontext.MissionApplications.Where(u => u.UserId == userid).Select(u => u.MissionId);
-            var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "time").OrderBy(m => m.Title).ToList();
-            var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "goal").OrderBy(m => m.Title).ToList();
+            var time = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "time" && u.EndDate > DateTime.Now && u.Status == 1).OrderBy(m => m.Title).ToList();
+            var goal = _ciplatfromdbcontext.Missions.Where(u => missionApplication.Contains(u.MissionId) && u.MissionType == "goal" && u.Status == 1).OrderBy(m => m.Title).ToList();
             return (time, goal);
+        }
+        public Tuple<int, int> getGoal(int id)
+        {
+            int goal = _ciplatfromdbcontext.GoalMissions.SingleOrDefault(m => m.MissionId == id).GoalValue;
+            var timesheet = _ciplatfromdbcontext.Timesheets.Where(m => m.MissionId == id).ToList();
+            int sum = 0;
+            if (timesheet.Count() != 0)
+            {
+                sum = (int)timesheet.Select(s => s.Action).Sum();
+            }
+            return new Tuple<int, int>(goal, sum);
         }
 
 

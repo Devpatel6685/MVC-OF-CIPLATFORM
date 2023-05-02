@@ -27,5 +27,6 @@ namespace CI_PLATFORM.Entities.ViewModels
         [Required(ErrorMessage = "enter action value")]
         public int? action { get; set; }
         public string missionTitle { get; set; }
+        public List<GoalMission> Goals { get; set; }
     }
 }

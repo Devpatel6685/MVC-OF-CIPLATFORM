@@ -15,6 +15,6 @@ namespace CI_PLATFORM_.repository.Interface
         public void addTimesheet(VolunteerTimesheetviewmodel model, string userid);
         public void deleteTimesheet(int id);
         public VolunteerTimesheetviewmodel GetAll(long userid);
-
+        public Tuple<int, int> getGoal(int id);
     }
 }

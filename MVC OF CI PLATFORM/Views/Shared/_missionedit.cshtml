@@ -170,6 +170,8 @@
                             <label for="rdead">Registration Deadline</label>
                             <input type="date" id="rdead" class="form-control" asp-for="RegistrationDeadline">
                             <span type="text" class="text-danger"></span>
+                            <span type="text" class="text-danger" asp-validation-for="RegistrationDeadline"></span>
+
 
                         </div>
                         <div class="col-md-4 d-flex flex-column my-3">
@@ -248,7 +250,7 @@
                         <input asp-for="Documents" class="form-control" type="file" id="document" multiple>
                         <span type="text" class="text-danger" asp-validation-for="Documents"></span>
                     </div>
-                      <span id="docValidate" class="text-danger"></span>
+                    <span id="docValidate" class="text-danger"></span>
                     @if (Model.Documents != null)
                     {
                         <div class="mt-2 d-flex flex-wrap" id="showDocument">
@@ -270,13 +272,16 @@
             </div>
         </form>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
     <script src="~/js/missionedit.js"></script>
+
+
 </body>
-<partial name="_ValidationScriptsPartial" />
+<partial name="_ValidationScriptsPartial"/>
 
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nZDXihxne4nusF32M1wpGqAB22RfupX/Ge6bmtbBAz4=",
+  "Hash": "zagS28+oQTFoBvIfDkR9H7WPlWs059ojm0thaSKFEkE=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -2482,6 +2482,23 @@
       "OriginalItemSpec": "wwwroot\\Documents\\Mission\\CSR INITIATIVE\\Database1.accdb"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\goal mission\\SEM 7 FINAL REPORT (1).docx",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Documents/Mission/goal mission/SEM 7 FINAL REPORT (1).docx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Documents\\Mission\\goal mission\\SEM 7 FINAL REPORT (1).docx"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\GREEN WORLD\\SEM 7 FINAL REPORT (1).docx",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2924,6 +2941,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\Mission\\ANIMAL WELFARE 2\\Animal-welfare-_-save-birds-campaign-1.png"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Animal Welfare\\Animal-welfare-_-save-birds-campaign-1.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/Mission/Animal Welfare/Animal-welfare-_-save-birds-campaign-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Mission\\Animal Welfare\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Animal Welfare\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -3041,6 +3075,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Mission\\Dark blue\\f245d678-ed7c-4bb4-9eb9-f5ea064227fe.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\goal mission\\Animal-welfare-_-save-birds-campaign-1.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/Mission/goal mission/Animal-welfare-_-save-birds-campaign-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Mission\\goal mission\\Animal-welfare-_-save-birds-campaign-1.png"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\GREEN WORLD\\Plantation-and-Afforestation-programme-1.png",

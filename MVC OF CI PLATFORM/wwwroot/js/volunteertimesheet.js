@@ -15,7 +15,7 @@
                 }
             })
             $('#missionGoal').empty();
-            $('#missionGoal').append('<option>Select Mission</option>')
+            $('#missionGoal').append('<option value="">Select Mission</option>')
             $(result.goal).each(function (i, data) {
                 if (data.missionId != mission) {
                     $('#missionGoal').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
@@ -24,6 +24,31 @@
         }
     })
 }
+
+$('#goalForm').submit(function (event) {
+    debugger;
+    $('#validaction').addClass('d-none');
+    event.preventDefault();
+    var validgoalvalue = parseInt($('#goalvalue1').val()) - parseInt($('#totalgoalachieve').val());
+    console.log($('#action').val());
+    console.log(validgoalvalue);
+    if ($('#action').val() == "") {
+        $('#validaction').removeClass('d-none');
+    }
+    else if (validgoalvalue == 0) {
+        $('#validaction').removeClass('d-none').text("Your Goal is achieved you can't edit");
+    }
+    else if (parseInt($('#action').val()) >= validgoalvalue) {
+        $('#validaction').removeClass('d-none').text('The value must be less than ' + validgoalvalue);
+    }
+
+    else if ($('#goalForm').valid()) {
+
+        $('#validaction').addClass('d-none');
+
+        $('#goalForm')[0].submit();
+    }
+});
 
 function deleteTimesheet(id) {
     Swal.fire({
@@ -55,9 +80,22 @@ function deleteTimesheet(id) {
     })
 }
 
-
+$('#missionGoal').change(function () {
+    $.ajax({
+        url: "/Volunteer/getGoal",
+        data: {
+            id: parseInt($(this).val())
+        },
+        success: function (result) {
+            var modal = $('#staticBackdrop2');
+            modal.find('#goalvalue1').val(result.goal);
+            modal.find('#totalgoalachieve').val(result.sum);
+        }
+    })
+})
 
 function edit(missionType, missionid, timesheetId) {
+
     $('.edit').html("Edit");
     $.ajax({
         url: "/Volunteer/getTimesheet",
@@ -84,6 +122,13 @@ function edit(missionType, missionid, timesheetId) {
                 $('#dateGoal').val(isoDate);
                 $('#action').val(result.action);
                 $('#messageGoal').val(result.message);
+                var button = $('#timesheet-' + timesheetId); // Button that triggered the modal
+                console.log(button.html())
+                var goalvalue = button.data('goalvalue');
+                var totalgoalachieve = button.data('totalachieved');
+                var modal = $('#staticBackdrop2');
+                modal.find('#goalvalue1').val(goalvalue);
+                modal.find('#totalgoalachieve').val(totalgoalachieve);
             }
         }
     })
@@ -103,3 +148,4 @@ function edit(missionType, missionid, timesheetId) {
 
     console.log($('#mission-' + missionid).html())
 }
+

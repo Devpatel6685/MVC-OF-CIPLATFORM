@@ -184,7 +184,7 @@ namespace CI_PLATFORM_.repository.Repository
                 MissionId = mission.MissionId,
                 skillids = skillids_mission,
                 Skills = skills,
-                RegistrationDeadline = mission.RegistrationDeadline
+                RegistrationDeadline = mission.RegistrationDeadline,
             };
             foreach (var m in missionMedia)
             {
@@ -667,9 +667,11 @@ namespace CI_PLATFORM_.repository.Repository
                 Availibility = model.Availibility,
                 ThemeId = model.ThemeId,
                 Status = model.Status,
-                MissionType = model.MissionType
+                MissionType = model.MissionType,
+                RegistrationDeadline = model.RegistrationDeadline
             };
             _ciplatfromdbcontext.Add(model1);
+            
             foreach (var skill in selectedSkills)
             {
                 var model3 = new MissionSkill

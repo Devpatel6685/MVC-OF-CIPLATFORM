@@ -76,6 +76,11 @@ namespace CI_PLATFORM_.repository.Repository
             {
                 sortmission = sortmission.OrderByDescending(p => addfavrouitebyuserid.Any(f => f.MissionId == p.MissionId)).ToList();
             }
+            else if (sortId == 6)
+            {
+                sortmission = sortmission.OrderBy(p => p.RegistrationDeadline).ToList();
+
+            }
             listOfMission.Missions = sortmission.ToPagedList(pageIndex, pagesize);
             return listOfMission;
         }
@@ -145,10 +150,11 @@ namespace CI_PLATFORM_.repository.Repository
                 Documents = missiondocuments,
                 timeSheetEntryList = timesheet,
                 goalMissionList=goalmission,
-
+                Deadline = mission.RegistrationDeadline,
+                Seats = mission.TotalSeats
 
             };
-            if (mission.MissionType == "GOAL")
+            if (mission.MissionType == "goal")
             {
                 var goal = _cIPLATFORMDbContext.GoalMissions.SingleOrDefault(m => m.MissionId == Id);
                 volunteerMission.goalObjective = goal.GoalObjectiveText;

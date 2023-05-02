@@ -124,15 +124,15 @@
                     {
                         <>from @Model.Item1.StartDate until @Model.Item1.EndDate</>
                     }*@
-                    @if (Model.Item1.StartDate < DateTime.Today && ((Model.Item1.MissionType == "TIME" && Model.Item1.EndDate > DateTime.Today) || (Model.Item1.MissionType == "GOAL" && goals.GoalValue > sumOfgoal)))
+                    @if (Model.Item1.StartDate < DateTime.Today && ((Model.Item1.MissionType == "time" && Model.Item1.EndDate > DateTime.Today) || (Model.Item1.MissionType == "goal" && goals.GoalValue > sumOfgoal)))
                     {
                         <span>Ongoing Oppertunity</span>
                     }
-                    else if ((Model.Item1.MissionType == "TIME" && Model.Item1.EndDate < DateTime.Today) || (Model.Item1.MissionType == "GOAL" && goals.GoalValue == sumOfgoal))
+                    else if ((Model.Item1.MissionType == "time" && Model.Item1.EndDate < DateTime.Today) || (Model.Item1.MissionType == "goal" && goals.GoalValue == sumOfgoal))
                     {
                         <span class="text-danger">Mission Completed</span>
                     }
-                    else if (@Model.Item1.MissionType == "GOAL")
+                    else if (@Model.Item1.MissionType == "goal")
                     {
                         @Model.Item1.goalObjective
                     }
@@ -281,7 +281,15 @@
                         }
                         else
                         {
-                            <p>From @Model.Item1.StartDate?.ToString("dd/MM/yyyy") until @Model.Item1.EndDate?.ToString("dd/MM/yyyy")</p>
+                            if (Model.Item1.MissionType == "time")
+                            {
+                                <p>From @Model.Item1.StartDate?.ToString("dd/MM/yyyy") until @Model.Item1.EndDate?.ToString("dd/MM/yyyy")</p>
+                            }
+                            else
+                            {
+                                <p>From @Model.Item1.StartDate?.ToString("dd/MM/yyyy") until Goal achieved</p>
+
+                            }
                         }
 
                     </div>
@@ -301,7 +309,7 @@
                     }
                     else
                     {
-                        @if (Model.Item1.EndDate > DateTime.Today)
+                        @if (Model.Item1.Deadline > DateTime.Now && Model.Item1.Seats > 0)
                         {
                             @if (@Model.Item1.applied == 1)
                             {
@@ -324,13 +332,16 @@
                                       class="ms-2">
                                 </button>
                             }
+
                         }
-                       @* else
+                        else
                         {
                             <button class="py-2 px-3 mx-auto apply " disabled>
-                                Mission Closed
+                               Registration DeadLine Closed
                             </button>
-                        }*@
+                            
+                        }
+
                     }
 
 
@@ -586,7 +597,7 @@
                                             </div>
                                         </div>
                                         <div class="mx-auto px-2 py-1 rounded-pill border duration pill z-1">
-                                            @if (i.MissionType == "GOAL")
+                                            @if (i.MissionType == "goal")
                                             {
                                                 foreach (var gm in Model.Item2.goalMissionList.Where(m => m.MissionId == i.MissionId))
                                                 {
@@ -599,7 +610,7 @@
                                                 <span>Ongoing Oppertunity</span>
                                             }
                                             else
-                                            {
+                                            {  
                                                 <span>From @i.StartDate?.ToString("dd/MM/yyyy") until @i.EndDate?.ToString("dd/MM/yyyy")</span>
                                             }
                                         </div>

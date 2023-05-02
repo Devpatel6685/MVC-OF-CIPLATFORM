@@ -2,11 +2,14 @@
 using CI_PLATFORM.Entities.ViewModels;
 using CI_PLATFORM_.repository.Interface;
 using CI_PLATFORM_.repository.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Data;
 
 namespace MVC_OF_CI_PLATFORM.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly ILogger<AdminController> _logger;

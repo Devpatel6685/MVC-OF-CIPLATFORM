@@ -13,10 +13,8 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             _Volunteer = volunteer;
         }
-        [HttpGet] 
-      
+        [HttpGet]
         [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-        
         public IActionResult VolunteeringTimesheet()
         {
             var userid = HttpContext.Session.GetString("userid");
@@ -39,19 +37,15 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         public IActionResult addTimesheet(VolunteerTimesheetviewmodel model)
         {
             var userid = HttpContext.Session.GetString("userid");
+            _Volunteer.addTimesheet(model, userid);
             if (model.timesheetid == null)
             {
-
-                
-                TempData["timesheet"] = "Timesheet Added Successfullyl";
-
+                TempData["timesheet"] = "Timesheet Added Successfully";
             }
             else
             {
                 TempData["timesheet"] = "Timesheet Edited Successfully";
-
             }
-            _Volunteer.addTimesheet(model, userid);
             return RedirectToAction("VolunteeringTimesheet");
         }
 
@@ -67,8 +61,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var data = _Volunteer.getMissions(userid);
             return Json(new { time = data.Item1, goal = data.Item2 });
         }
-        
 
+        public JsonResult getGoal(int id)
+        {
+            var data = _Volunteer.getGoal(id);
+            return Json(new { goal = data.Item1, sum = data.Item2 });
+        }
 
     }
 }
