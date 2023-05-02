@@ -19,7 +19,7 @@ function filterthemes() {
             pageindex: pageIndex
         },
         success: function (response) {
-            alert("hello");
+           /* alert("hello");*/
             $('.table').html($(response).find('.table').html());
             $('.pagination').html($(response).find('.pagination').html());
 
@@ -30,7 +30,7 @@ function filterthemes() {
 $(document).ready(function () {
 
     $('#themesearch').keyup(function () {
-        alert('hi');
+
         $('.pagination .misactive').removeClass('misactive');
         filterSearch();
 
@@ -48,7 +48,7 @@ function filterSearch() {
 
         },
         success: function (response) {
-            alert('called');
+            /*alert('called');*/
 
             $('.table').empty().html($(response).find('.table').html());
             $('.page').empty().html($(response).find('.page').html());
@@ -69,16 +69,11 @@ function showModal(id) {
     }).then((result) => {
         if (result.isConfirmed) {
             DeleteTheme(id);
-            Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
         }
     })
 }
 function DeleteTheme(themeId) {
-    alert("delete theme called");
+   /* alert("delete theme called");*/
     $.ajax({
         url: '/admin/DeleteTheme',
         type: 'GET',
@@ -86,9 +81,31 @@ function DeleteTheme(themeId) {
             themeid: themeId
         },
         success: function (result) {
-            $('#loadPartialView').html($(result).find('#loadPartialView').html());
+            alert('result called');
+            console.log(result);
+            if (result == true) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Deleted',
+                    text: 'Your theme is been deleted',
+                    footer: '<a href="">You cannot de-activate it</a>'
+                }).then(() => {
+                    window.location = "/Admin/Theme/"
+                })
+
+            }
+            else if (result == false) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'This theme is already used by Mission or User',
+                    footer: '<a href="">You cannot de-activate it</a>'
+                })
+            }
 
 
         }
     });
 }
+
+

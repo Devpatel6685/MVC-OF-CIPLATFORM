@@ -12,11 +12,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         private readonly ILogger<AdminController> _logger;
         private readonly IAdminInterface _adminInterface;
 
-        public AdminController(ILogger<AdminController> logger, IAdminInterface adminInterface)
+        public AdminController(ILogger<AdminController> logger, IAdminInterface adminRepository)
         {
             _logger = logger;
-            _adminInterface = adminInterface;
+            _adminInterface = adminRepository;
         }
+
         public IActionResult UserpageInAdmin(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
         {
             var model = _adminInterface.getuserdata(pageindex, pageSize, SearchInputdata);
@@ -48,6 +49,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             var model = _adminInterface.getstorydata(pageindex, pageSize, SearchInputdata);
             return PartialView("_storypage", model);
+        }
+        public IActionResult Cmspage(string SearchInputdata = "", int pageindex = 1, int pageSize = 4)
+        {
+            var model = _adminInterface.getcmspagedata(pageindex, pageSize, SearchInputdata);
+            return PartialView("_cmspage", model);
         }
         public IActionResult MissionApplication(string SearchInputdata = "", int pageindex = 1, int pageSize = 4)
         {
@@ -210,10 +216,10 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return RedirectToAction("Mission", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
 
         }
-        public IActionResult DeleteTheme(string themeid)
+        public bool DeleteTheme(string themeid)
         {
-            _adminInterface.deletetheme(themeid);
-            return RedirectToAction("Theme", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
+            var delete = _adminInterface.deletetheme(themeid);
+            return delete;
         }
         public bool DeleteSkill(string skillId)
         {

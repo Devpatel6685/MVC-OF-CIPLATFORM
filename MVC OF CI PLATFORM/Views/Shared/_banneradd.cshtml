@@ -9,19 +9,19 @@
     <div class="container mt-2">
         <div class="">
 
-            @if (Model == null)
-            {
-                <div class="col-12 bg-light border p-2">Add</div>
-            }
-            else
-            {
+                @if(Model == null)
+                {
+                <div class="col-12 bg-light border p-2">Add</div>                    
+                }
+                else
+                {
                 <div class="col-12 bg-light border p-2">Edit</div>
-            }
-
+                }
+            
         </div>
         <div class=" p-2 border">
             <form asp-action="AddBanner" asp-controller="admin" method="post" enctype="multipart/form-data" id="form">
-                <input type="number" asp-for="BannerId" hidden />
+                <input type="number" asp-for="BannerId" hidden/>
                 <div class=" d-flex flex-column mb-2">
                     <label asp-for="Title">Enter Title</label>
                     <input asp-for="Title" type="text" class="form-control" placeholder="Enter Title">
@@ -29,22 +29,22 @@
                 </div>
                 <div class=" d-flex flex-column mb-2">
                     <label asp-for="SortOrder">Enter Sort Order</label>
-                    <input asp-for="SortOrder" type="number" class="form-control" placeholder="Enter Sort Order">
+                    <input asp-for="SortOrder" type="number"  class="form-control" placeholder="Enter Sort Order">
                     <span asp-validation-for="SortOrder" class="text-danger"></span>
                 </div>
                 <div class="d-flex flex-column mb-2">
                     <label asp-for="Text">Banner Text</label>
-                    <textarea id="storytext" placeholder="I loved this mission because..." asp-for="Text"></textarea>
-                    <span asp-validation-for="Text" class="text-danger d-none">Text is Required</span>
-                    @*     <textarea asp-for="Text" cols="30" rows="5" class="form-control" placeholder="Enter Banner Text"></textarea>
+                     <textarea id="storytext" placeholder="I loved this mission because..." asp-for="Text"></textarea>
+                     <span  asp-validation-for="Text" class="text-danger d-none">Text is Required</span>
+               @*     <textarea asp-for="Text" cols="30" rows="5" class="form-control" placeholder="Enter Banner Text"></textarea>
                     <span asp-validation-for="Text" class="text-danger"></span>*@
                 </div>
                 <div class="d-flex flex-column mb-2">
                     <label asp-for="Image">Image</label>
-                    <input type="file" asp-for="Image" id="imageInput" />
+                    <input type="file" asp-for="Image" id="imageInput"/>
                     <span class="text-danger d-none" id="imageValidate">Select Image</span>
                 </div>
-                @if (Model != null)
+                @if(Model!= null)
                 {
                     <input id="fileValue" value="@Model.Image" hidden />
                     <div class="d-flex flex-wrap mb-2" id="showImage">
@@ -54,7 +54,7 @@
                 else
                 {
                     <div class="d-flex flex-wrap mb-2" id="showImage">
-                        <img />
+                        <img/>
                     </div>
                 }
                 <div class="row">
@@ -77,5 +77,5 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/banneraddpartial.js"></script>
 </body>
-<partial name="_ValidationScriptsPartial" />
+<partial name="_ValidationScriptsPartial"/>
 </html>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FJlfnNSJZ5OaXLWDoE5jcLkWIWnzC1D7aKJImZ2ofpo=",
+  "Hash": "nZDXihxne4nusF32M1wpGqAB22RfupX/Ge6bmtbBAz4=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -1989,6 +1989,23 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\cmspage.css",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "css/cmspage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\cmspage.css"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\header.css",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2055,6 +2072,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\missionapplication.css"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionedit.css",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "css/missionedit.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\missionedit.css"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\css\\missionpartial.css",
@@ -2618,6 +2652,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\67e2406b-c004-4a70-9803-d397c974abc0.png"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\8f28ba38-f3bd-41b5-9924-871241c5abec.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/8f28ba38-f3bd-41b5-9924-871241c5abec.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\8f28ba38-f3bd-41b5-9924-871241c5abec.png"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\91fe4adf-0231-4f10-961a-8293a9f6a300.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -2650,6 +2701,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/Banner/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Banner\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Banner\\image2.png",

@@ -19,7 +19,7 @@ $(document).ready(function () {
                 });
             },
             error: function () {
-                alert('Error');
+               /* alert('Error');*/
             }
         });
     });

@@ -1,30 +1,56 @@
 ﻿
-$(document).on('click', '.paginationcms li', function (e) {
+$('.nav-link').each(function () {
+    $(this).parent().removeClass('bg-light');
+    $(this).css('color', 'white');
+});
+$('.nav-link.cms').parent().addClass('bg-light');
+$('.nav-link.cms ').css('color', 'orange');
+
+
+
+$(document).on('click', '.cms li', function (e) {
     e.preventDefault();
-    $('.paginationcms li').each(function () {
-        $(this).removeClass('activecms');
+    $('.cms li').each(function () {
+        $(this).removeClass('cmsactive');
     })
-    $(this).addClass('activecms');
-    console.log($(this).children().attr("id"))
+    $(this).addClass('cmsactive');
     filtercms();
 });
 function filtercms() {
-    var pageIndex = $('.paginationcms .activecms a').attr('id');
+
+    var pageIndex = $('.cms .cmsactive a').attr('id');
+    var keyword = $('#cmssearch').val();
     $.ajax({
-        url: "/Admin/cmspage",
+        url: "/Admin/Cmspage",
         type: "POST",
         data: {
-            //  SearchInputdata: keyword,
+            SearchInputdata: keyword,
             pageindex: pageIndex
         },
-        success: function (result) {
+        success: function (response) {
+            $('.table').html($(response).find('.table').html());
+            $('.pagination').html($(response).find('.pagination').html());
+        }
+    })
+}
+$(document).ready(function () {
+    $('#cmssearch').keyup(function () {
+        $('.pagination .cmsactive').removeClass('cmsactive');
+        filterSearch();
+    });
+});
 
-            $('.table').html($(result).find('.table').html());
-            $('.paginationcms').html($(result).find('.paginationcms').html());
-
-            // Change the URL in the browser to reflect the updated page state
-            // history.pushState(null, null, "/Admin/UserpageInAdmin?pageindex=" + pageIndex);
-
+function filterSearch() {
+    var keyword = $('#cmssearch').val();
+    $.ajax({
+        url: "/Admin/Cmspage",
+        type: "POST",
+        data: {
+            SearchInputdata: keyword,
+        },
+        success: function (response) {
+            $('.table').empty().html($(response).find('.table').html());
+            $('.page').empty().html($(response).find('.page').html());
         }
     })
 }

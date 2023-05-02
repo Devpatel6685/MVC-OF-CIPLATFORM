@@ -20,7 +20,7 @@ namespace CI_PLATFORM_.repository.Interface
         public BannerAddViewModel getBanner(string bannerid);
         public MissionAddViewModel editmissondata(string missonid);
         public void Editmission(MissionAddViewModel model, List<int> selectedSkills);
-
+        public Adminviewmodel getcmspagedata(int pageindex, int pageSize, string SearchInputdata);
         public List<Country> getcountries();
         public List<City> getcities(string countryid);
         public List<MissionTheme> getthemes();
@@ -31,7 +31,7 @@ namespace CI_PLATFORM_.repository.Interface
         public void Addskill(SkillAddViewModel model);
         public Adminviewmodel getthemedata(int pageindex, int pageSize, string SearchInputdata);
         public void Addtheme(ThemeAddViewModel model);
-        public void deletetheme(string themeid);
+        public bool deletetheme(string themeid);
         public Adminviewmodel getskilldata(int pageindex, int pageSize, string SearchInputdata);
         public Adminviewmodel getmissionapplicationdata(int pageindex, int pageSize, string SearchInputdata);
         public void approveapplication(string applicationid);

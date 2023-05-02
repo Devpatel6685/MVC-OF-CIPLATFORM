@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="table-responsive" id="missionview">
+    <div class="table-responsive overflow-tableEntry" id="missionview">
         @if (Model.Missions.Count() == 0)
         {
             @*<div class="page"> </div>*@
@@ -55,13 +55,12 @@
                                 <td>@mission.EndDate</td>
                                 <td class="d-flex">
                                     <button class="btn border-0">
-                                        <a asp-action="editmission" asp-controller="Admin" asp-route-id="@mission.MissionId"><i class="bi bi-pencil-square icon"></i></a>
-                                    </button>
-
-                                    <a class="nav-link text-black deleteMission p-2" onclick="showModal(@mission.MissionId)" type="button"><i class="bi bi-trash3"></i></a>
-                                    @*                                    <a class="nav-link text-black deleteMission p-2" data-missionid="@mission.MissionId" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-trash3"></i></a>
-                            *@
-                                </td>
+                                        <a asp-action="editmission" asp-controller="Admin" asp-route-id="@mission.MissionId"><i class="bi bi-pencil-square icon"></i></a>   
+                                        </button>
+                                     
+                                     <a class="nav-link text-black deleteMission p-2" onclick="showModal(@mission.MissionId)" type="button" ><i class="bi bi-trash3"></i></a>
+@*                                    <a class="nav-link text-black deleteMission p-2" data-missionid="@mission.MissionId" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-trash3"></i></a>
+*@                                </td>
                             </tr>
 
                         }
@@ -102,8 +101,6 @@
                         {
                             <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.Missions.PageNumber + 1) "> >></a></div>
                         }
-
-
                     </ul>
                 }
 
@@ -112,7 +109,7 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    @* <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>*@
+   @* <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>*@
 
 
     @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

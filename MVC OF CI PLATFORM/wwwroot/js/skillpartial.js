@@ -29,7 +29,7 @@ function filterskills() {
             pageindex: pageIndex
         },
         success: function (response) {
-            alert("hello");
+
             $('.table').html($(response).find('.table').html());
             $('.pagination').html($(response).find('.pagination').html());
 
@@ -40,7 +40,7 @@ function filterskills() {
 $(document).ready(function () {
 
     $('#skillsearch').keyup(function () {
-        alert('hi');
+
         $('.pagination .skiactive').removeClass('skiactive');
         filterSearch();
 
@@ -58,7 +58,7 @@ function filterSearch() {
 
         },
         success: function (response) {
-            alert('called');
+           /* alert('called');*/
 
             $('.table').empty().html($(response).find('.table').html());
             $('.page').empty().html($(response).find('.page').html());
@@ -70,7 +70,7 @@ function filterSearch() {
 function showModal(skillid) {
     Swal.fire({
         title: 'Are you sure?',
-        text: "This Theme will be de-activated",
+        text: "This Skill will be de-activated",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -83,7 +83,7 @@ function showModal(skillid) {
     })
 }
 function DeleteSkill(skillid) {
-    alert("delete theme called");
+    /*alert("delete Skill called");*/
     $.ajax({
         url: '/admin/DeleteSkill',
         type: 'GET',
@@ -91,7 +91,7 @@ function DeleteSkill(skillid) {
             skillId: skillid
         },
         success: function (result) {
-            alert('result called');
+            /*alert('result called');*/
             console.log(result);
             if (result == true) {
                 Swal.fire({

@@ -7,3 +7,33 @@
     background-color: lightgrey !important;
     color: white !important;
 }
+.active .page-link {
+    background-color: orange !important;
+    color: white !important
+}
+
+.page-item .disabled {
+    background-color: lightgrey !important;
+    color: white !important;
+}
+
+#inactive {
+    color: red;
+}
+
+#active {
+    color: green;
+}
+
+#nouserbgcolor {
+    background-color: #F88634;
+}
+
+.text-color {
+    color: white;
+}
+
+.borderbottom {
+    border-bottom: solid 3.5px #333333;
+    padding-bottom: 13.5px;
+}

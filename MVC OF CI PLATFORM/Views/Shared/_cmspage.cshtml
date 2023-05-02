@@ -1,15 +1,126 @@
-﻿@*@model CI_PLATFORM.Entities.ViewModels.Adminviewmodel<!-- user page  --><head>    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"></head><h4 class="mt-2 ms-3 border-bottom">Cms Page</h4><div class=" ms-2 d-flex justify-content-between">    <div class="col-6" role="search">        <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">        <input class="form-control me-2 ps-5 pt-3 pb-3" id="search" type="search" placeholder="Search" aria-label="Search">    </div>    <div class="col-4  d-flex justify-content-end">        <button class=" px-3 apply">+ ADD</button>    </div></div><div class="table-responsive">    <table class="table">        <thead>            <tr>                <th scope="col">Title</th>                <th scope="col">Status</th>                <th scope="col">Action</th>            </tr>        </thead>        <tbody>            @foreach (var cms in Model.cmsPages)            {                <tr>                    <td>@cms.Title</td>                    <td>@cms.Status</td>                                       <td>                        <button class="btn border-0"><i class="bi bi-pencil-square icon"></i></button>                        <a><i class="bi bi-trash3"></i></a>                    </td>                </tr>            }        </tbody>    </table>    <div class="d-flex justify-content-center page">        @if (Model.cmsPages.PageCount > 1)
-        {            <ul class="paginationcms">                @if (Model.cmsPages.HasPreviousPage && Model.cmsPages.PageNumber > 1)
-                {                    <li class="page-item"> <a class="page-link" id="@Convert.ToInt32(@Model.cmsPages.PageNumber -1)"> &#60;&#60; </a></li>                }
-                else
-                {                    <div class="page-item"> <a class="page-link disabled" id="@Convert.ToInt32(@Model.cmsPages.PageNumber -1)"> &#60;&#60; </a></div>                }                @for (int i = 1; i <= Model.cmsPages.PageCount; i++)
-                {
-                    if (i == Model.cmsPages.PageNumber)
-                    {                        <li class="page-item activecms"><a class="page-link" id="@i">@i</a></li>                    }
-                    else
-                    {                        <li class="page-item"><a class="page-link" id="@i">@i</a></li>                    }
+﻿@model CI_PLATFORM.Entities.ViewModels.Adminviewmodel
+@{
+    Layout = "~/Views/Admin/UserpageInAdmin.cshtml";
+}
+<!-- user page  -->
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/cmspage.css">
+</head>
+<body>
+    <h4 class="mt-2 ms-3 border-bottom">CMS Pages</h4>
+    <div class=" ms-2 d-flex justify-content-between">
+        <div class="col-6" role="search">
+            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
+            <input class="form-control me-2 ps-5 pt-3 pb-3" id="cmssearch" type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col-4  d-flex justify-content-end">
+            <button class=" px-3 apply"> <a asp-action="skilladd" asp-controller="Admin">+ Apply</a></button>
+        </div>
+    </div>
 
-                }                @if (Model.cmsPages.HasNextPage && Model.cmsPages.PageNumber < Model.cmsPages.PageCount)
-                {                    <li class="page-item"><a class="page-link" id="@Convert.ToInt32(@Model.cmsPages.PageNumber + 1)"> >></a></li>                }
-                else
-                {                    <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.cmsPages.PageNumber + 1) "> >></a></div>                }            </ul>        }    </div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="~/js/cmspartial.js"></script>*@
+    <div class="table-responsive" class="overflow-tableEntry">
+
+        @if (Model.Cmspages.Count() == 0)
+        {
+            <div class="page"> </div>
+            <div class="d-flex mt-5 flex-column my-3 table">
+                <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No Cms Data found</h3></div>
+            </div>
+
+        }
+        else
+        {
+            <div class="table">
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+
+                        @foreach (var cms in Model.Cmspages)
+                        {
+                            <tr>
+                                <td>@cms.Title</td>
+                                @{
+                                    if (@cms.Status == 0)
+                                    {
+                                        <td id="inactive" class="text-danger">In-active</td>
+                                    }
+                                    else
+                                    {
+                                        <td id="active">Active</td>
+                                    }
+                                }
+                                <td class="d-flex">
+                                    <button class="btn border-0">
+                                        <a asp-action="editskilldata" asp-controller="Admin" asp-route-skillid="@cms.CmsPageId">
+                                            <i class="bi bi-pencil-square icon"></i>
+                                        </a>
+                                    </button>
+                                    <a class="nav-link text-black deleteMission p-2" onclick="showModal(@cms.CmsPageId)" type="button"><i class="bi bi-trash3"></i></a>
+
+
+                                </td>
+
+                            </tr>
+
+                        }
+
+
+                    </tbody>
+
+
+                </table>
+            </div>
+            <div class="d-flex justify-content-center page">
+                @if (Model.Cmspages.PageCount > 1)
+                {
+                    <ul class="pagination cms">
+
+                        @if (Model.Cmspages.HasPreviousPage && Model.Cmspages.PageNumber > 1)
+                        {
+                            <li class="page-item"> <a class="page-link" id="@Convert.ToInt32(@Model.Cmspages.PageNumber -1)"> &#60;&#60; </a></li>
+                        }
+                        else
+                        {
+                            <div class="page-item"> <a class="page-link disabled" id="@Convert.ToInt32(@Model.Cmspages.PageNumber -1)"> &#60;&#60; </a></div>
+                        }
+                        @for (int i = 1; i <= Model.Cmspages.PageCount; i++)
+                        {
+                            if (i == Model.Cmspages.PageNumber)
+                            {
+                                <li class="page-item cmsactive"><a class="page-link" id="@i">@i</a></li>
+                            }
+                            else
+                            {
+                                <li class="page-item"><a class="page-link" id="@i">@i</a></li>
+                            }
+
+                        }
+                        @if (Model.Cmspages.HasNextPage && Model.Cmspages.PageNumber < Model.Cmspages.PageCount)
+                        {
+                            <li class="page-item"><a class="page-link" id="@Convert.ToInt32(@Model.Cmspages.PageNumber + 1)"> >></a></li>
+                        }
+                        else
+                        {
+                            <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.Cmspages.PageNumber + 1) "> >></a></div>
+                        }s
+                    </ul>
+                }
+            </div>
+        }
+    </div>
+    @*       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/cmspartial.js"></script>
+</body>

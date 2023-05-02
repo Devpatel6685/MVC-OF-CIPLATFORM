@@ -20,7 +20,7 @@ function showModal(id) {
     })
 }
 function DeleteMission(missionId) {
-    alert("delete misson called");
+    /*alert("delete misson called");*/
     $.ajax({
         url: '/admin/DeleteMission',
         type: 'GET',
@@ -58,7 +58,7 @@ function filtermissions() {
             pageindex: pageIndex
         },
         success: function (response) {
-            alert("hello");
+/*            alert("hello");*/
             $('.table').html($(response).find('.table').html());
             $('.pagination').html($(response).find('.pagination').html());
         }
@@ -67,7 +67,7 @@ function filtermissions() {
 $(document).ready(function () {
 
     $('#searchmission').keyup(function () {
-        alert('hi');
+       /* alert('hi');*/
         $('.pagination .misactive').removeClass('misactive');
         filterSearch();
 

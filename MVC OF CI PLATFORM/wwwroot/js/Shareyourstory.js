@@ -213,6 +213,12 @@ function isValidated() {
     var textarea = tinymce.get("storytext").getContent();
     const imagePaths = [];
     validate = true;
+    const images = document.getElementById('image-preview');
+    const image_tag = images.getElementsByTagName("img");
+    for (let i = 0; i < image_tag.length; i++) {
+        const image = image_tag[i].getAttribute("src");
+        imagePaths.push(image);
+    }
     if (missionId == "") {
         validate = false;
         $('#missionValidate').removeClass('d-none');
@@ -261,11 +267,15 @@ function isValidated() {
     } else {
         $('#storytextValidate').addClass('d-none');
     }
-    if (imagePaths.length > 20) {
+    if (imagePaths.length == 0) {
         validate = false;
-        $('#ImageValidate').removeClass('d-none');
-    } else {
-        $('#ImageValidate').addClass('d-none');
+        $('#photoValidate').removeClass('d-none').text("Select Images");
+    } else if (imagePaths.length > 20) {
+        validate = false;
+        $('#photoValidate').removeClass('d-none').text("Images must be less than 20");
+    }
+    else {
+        $('#photoValidate').addClass('d-none');
     }
     return validate;
 }

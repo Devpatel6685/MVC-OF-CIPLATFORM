@@ -7,3 +7,7 @@
     background-color: lightgrey !important;
     color: white !important;
 }
+
+.overflow-tableEntry::-webkit-scrollbar {
+    display: none;
+}

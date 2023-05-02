@@ -1,4 +1,5 @@
-﻿$(document).on('click', '.use li', function (e) {
+﻿
+$(document).on('click', '.use li', function (e) {
     e.preventDefault();
     $('.use li').each(function () {
         $(this).removeClass('active');

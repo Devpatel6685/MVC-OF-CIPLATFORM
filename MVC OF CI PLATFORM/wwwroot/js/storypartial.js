@@ -56,7 +56,7 @@ function filterSearch() {
 
         },
         success: function (response) {
-            alert('called');
+            
 
             $('.table').empty().html($(response).find('.table').html());
             $('.page').empty().html($(response).find('.page').html());

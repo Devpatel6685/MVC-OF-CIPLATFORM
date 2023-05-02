@@ -81,15 +81,28 @@ function handleFiles(files) {
         const file = files[i];
         if (!file.type.startsWith("image/")) continue;
         if (uploadedFiles.has(file.name)) {
-            alert(`File "${file.name}" has already been uploaded.`);
+           /* alert(`File "${file.name}" has already been uploaded.`);*/
             continue;
         }
         const reader = new FileReader();
         reader.onload = function (event) {
-            alert('reader called');
+            /*alert('reader called');*/
             $('#profileimg').attr('src', event.target.result);
         }
         reader.readAsDataURL(file);
         uploadedFiles.add(file.name);
+    }
+}
+function password() {
+    var icon = $('.bi')
+    var pass = $('#password')
+    if (icon.hasClass('bi-eye')) {
+        icon.removeClass('bi-eye')
+        icon.addClass('bi-eye-slash')
+        pass.attr('type', 'text')
+    } else {
+        icon.addClass('bi-eye')
+        icon.removeClass('bi-eye-slash')
+        pass.attr('type', 'password')
     }
 }

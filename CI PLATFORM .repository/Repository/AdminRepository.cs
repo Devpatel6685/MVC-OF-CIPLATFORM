@@ -54,6 +54,13 @@ namespace CI_PLATFORM_.repository.Repository
             model.Skills = skills.ToPagedList(pageindex, 2);
             return model;
         }
+        public Adminviewmodel getcmspagedata(int pageindex, int pageSize, string SearchInputdata)
+        {
+            var pages = _ciplatfromdbcontext.CmsPages.Where(c => (SearchInputdata == null) || (c.Title.Contains(SearchInputdata))).OrderByDescending(c => c.Status).ToList();
+            var model = new Adminviewmodel();
+            model.Cmspages = pages.ToPagedList(pageindex, 4);
+            return model;
+        }
         public SkillAddViewModel getskill(string skillid)
         {
             var skill = _ciplatfromdbcontext.Skills.FirstOrDefault(s => s.SkillId.ToString() == skillid);
@@ -91,7 +98,7 @@ namespace CI_PLATFORM_.repository.Repository
         }
         public Adminviewmodel getbannerdata(int pageindex, string SearchInputdata)
         {
-            var banners = _ciplatfromdbcontext.Banners.Where(b => (SearchInputdata == null) || (b.Title.Contains(SearchInputdata)) || (b.Text.Contains(SearchInputdata))).OrderByDescending(m => m.Status).ToList();
+            var banners = _ciplatfromdbcontext.Banners.Where(b => (SearchInputdata == null) || EF.Functions.Like(b.Text, $"%{SearchInputdata}%") || b.Title.Contains(SearchInputdata)).OrderByDescending(m => m.Status).ToList();
             var model = new Adminviewmodel();
             model.Banners = banners.ToPagedList(pageindex, 5);
             return model;
@@ -177,25 +184,25 @@ namespace CI_PLATFORM_.repository.Repository
                 MissionId = mission.MissionId,
                 skillids = skillids_mission,
                 Skills = skills,
+                RegistrationDeadline = mission.RegistrationDeadline
             };
             foreach (var m in missionMedia)
             {
                 string fullPath = wwwRootPath + m.MediaPath;
-                /*using (var stream = new FileStream(fullPath, FileMode.Open))
+                using (var stream = new FileStream(fullPath, FileMode.Open))
                 {
                     IFormFile file = new FormFile(stream, 0, new FileInfo(fullPath).Length, null, Path.GetFileName(fullPath));
                     imageFiles.Add(file);
-                }*/
+                }
             }
             foreach (var m in missionDoc)
             {
                 string fullPath = wwwRootPath + m.DocumentPath;
-             /*   using (var stream = new FileStream(fullPath, FileMode.Open))
+                using (var stream = new FileStream(fullPath, FileMode.Open))
                 {
                     IFormFile file = new FormFile(stream, 0, new FileInfo(fullPath).Length, null, Path.GetFileName(fullPath));
                     docFiles.Add(file);
-                }*/
-
+                }
             }
             model.Images = imageFiles;
             model.Documents = docFiles;
@@ -331,6 +338,8 @@ namespace CI_PLATFORM_.repository.Repository
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
             missionapplication.ApprovalStatus = "APPROVE";
+            var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
+            mission.TotalSeats = mission.TotalSeats - 1;
             _ciplatfromdbcontext.SaveChanges();
         }
         public void approvestory(string storyid)
@@ -343,6 +352,11 @@ namespace CI_PLATFORM_.repository.Repository
         public void declineapplication(string applicationid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
+            if (missionapplication.ApprovalStatus == "APPROVE")
+            {
+                var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
+                mission.TotalSeats = mission.TotalSeats + 1;
+            }
             missionapplication.ApprovalStatus = "DECLINE";
             _ciplatfromdbcontext.SaveChanges();
         }
@@ -455,7 +469,7 @@ namespace CI_PLATFORM_.repository.Repository
             }
             Banner banner = new Banner
             {
-                Text = WebUtility.HtmlDecode(model.Text),
+                Text = model.Text,
                 Title = model.Title,
                 Image = @"\Images\Banner\" + model.Image.FileName,
                 SortOrder = model.SortOrder,
@@ -532,7 +546,11 @@ namespace CI_PLATFORM_.repository.Repository
             }
             if (model.Images != null)
             {
-                _ciplatfromdbcontext.MissionMedia.RemoveRange(missionMedia);
+                if (missionMedia.Count() != 0)
+                {
+                    _ciplatfromdbcontext.MissionMedia.RemoveRange(missionMedia);
+                }
+
                 string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
                 string MainfolderPath = Path.Combine(imagesFolderPath, "Mission");
                 if (!Directory.Exists(MainfolderPath))
@@ -545,43 +563,31 @@ namespace CI_PLATFORM_.repository.Repository
                 {
                     Directory.CreateDirectory(folderPath);
                 }
+
                 foreach (var Image in model.Images)
                 {
                     string fileName = Image.FileName;
-                    var uploads = Path.Combine(folderPath, fileName + Path.GetExtension(Image.FileName));
-                  /*  using (var fileStreams = new FileStream(uploads, FileMode.Create))
+                    var uploads = Path.Combine(folderPath, fileName);
+                    using (var fileStreams = new FileStream(uploads, FileMode.Create))
                     {
                         Image.CopyTo(fileStreams);
-                    }*/
+                    }
                     var viewModel = new MissionMedium
                     {
                         MediaName = fileName,
                         MediaType = "Imag",
-                        MediaPath = @"\Images\Mission\" + folderName + @"\" + fileName + Path.GetExtension(Image.FileName),
+                        MediaPath = @"\Images\Mission\" + folderName + @"\" + fileName,
                     };
                     mission.MissionMedia.Add(viewModel);
                 }
             }
-            /* foreach (var Image in model.Images)
-                 {
-                     string fileName = Image.FileName;
-                     var uploads = Path.Combine(folderPath, fileName + Path.GetExtension(Image.FileName));
-                     using (var fileStreams = new FileStream(uploads, FileMode.Create))
-                     {
-                         Image.CopyTo(fileStreams);
-                     }
-                     var viewModel = new MissionMedium
-                     {
-                         MediaName = fileName,
-                         MediaType = "Imag",
-                         MediaPath = @"\Images\Mission\" + folderName + @"\" + fileName + Path.GetExtension(Image.FileName),
-                     };
-                     mission.MissionMedia.Add(viewModel);
-                 }
-             }*/
             if (model.Documents != null)
             {
-                _ciplatfromdbcontext.MissionDocuments.RemoveRange(missionDoc);
+                if (missionDoc.Count() != 0)
+                {
+                    _ciplatfromdbcontext.MissionDocuments.RemoveRange(missionDoc);
+                }
+
                 string docFolderPath = Path.Combine(wwwRootPath, "Documents");
                 string docMainfolderPath = Path.Combine(docFolderPath, "Mission");
                 if (!Directory.Exists(docMainfolderPath))
@@ -598,10 +604,10 @@ namespace CI_PLATFORM_.repository.Repository
                 {
                     string fileName = doc.FileName;
                     var uploads = Path.Combine(docfolderPath, fileName + Path.GetExtension(doc.FileName));
-                    /*using (var fileStreams = new FileStream(uploads, FileMode.Create))
+                    using (var fileStreams = new FileStream(uploads, FileMode.Create))
                     {
                         doc.CopyTo(fileStreams);
-                    }*/
+                    }
                     MissionDocument docModel = new MissionDocument()
                     {
                         DocumentName = doc.FileName,
@@ -736,7 +742,7 @@ namespace CI_PLATFORM_.repository.Repository
                 {
                     MissionId = mission.MissionId,
                     DocumentName = doc.FileName,
-                    DocumentPath = @"\Documents\Mission\" + folderName + @"\",
+                    DocumentPath = @"\Documents\Mission\" + folderName + @"\" + fileName,
                 };
 
                 switch (Path.GetExtension(doc.FileName))
@@ -767,18 +773,28 @@ namespace CI_PLATFORM_.repository.Repository
             mission.Status = 0;
             _ciplatfromdbcontext.SaveChanges();
         }
-        public void deletetheme(string themeid)
+        public bool deletetheme(string themeid)
         {
             var theme = _ciplatfromdbcontext.MissionThemes.FirstOrDefault(t => t.MissionThemeId.ToString() == themeid);
-            theme.Status = 0;
-            _ciplatfromdbcontext.SaveChanges();
+            var MissionTheme = _ciplatfromdbcontext.Missions.Select(m => m.ThemeId).ToList();
+            if (MissionTheme.Contains(int.Parse(themeid)))
+            {
+                return false;
+            }
+            else
+            {
+                theme.Status = 0;
+                _ciplatfromdbcontext.SaveChanges();
+                return true;
+            }
+
         }
         public bool deleteskill(string skillid)
         {
             var skill = _ciplatfromdbcontext.Skills.FirstOrDefault(s => s.SkillId.ToString() == skillid);
             var MissionSkill = _ciplatfromdbcontext.MissionSkills.Select(mp => mp.SkillId).ToList();
             var UserSkill = _ciplatfromdbcontext.UserSkills.Select(us => us.SkillId).ToList();
-            if (MissionSkill.Contains(int.Parse(skillid)) && UserSkill.Contains(int.Parse(skillid)))
+            if (MissionSkill.Contains(int.Parse(skillid)) || UserSkill.Contains(int.Parse(skillid)))
             {
                 return false;
             }
