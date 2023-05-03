@@ -124,7 +124,7 @@ namespace CI_PLATFORM_.repository.Repository
         {
             var stories = _ciplatfromdbcontext.Stories.Include(s => s.User).Include(s => s.Mission).Where(s => s.Status != "DRAFT" && ((SearchInputdata == null) || (s.Mission.Title.Contains(SearchInputdata)) || (s.User.FirstName.Contains(SearchInputdata)))).ToList();
             var model = new Adminviewmodel();
-            model.Stories = stories.ToPagedList(pageindex, 1);
+            model.Stories = stories.ToPagedList(pageindex, 10);
             return model;
         }
         public Adminviewmodel getmissiondata(int pageindex, int pageSize, string SearchInputdata)
@@ -866,18 +866,19 @@ namespace CI_PLATFORM_.repository.Repository
             mission.DeletedAt = DateTime.Now;
             _ciplatfromdbcontext.SaveChanges();
         }
+
+        public void deleteuser(string userid)
+        {
+            var users = _ciplatfromdbcontext.Users.FirstOrDefault(m => m.UserId.ToString() == userid);
+            users.Status = 0;
+            users.DeletedAt = DateTime.Now;
+            _ciplatfromdbcontext.SaveChanges();
+        }
         public void deletecmspage(string cmspageid)
         {
             var cmspage = _ciplatfromdbcontext.CmsPages.FirstOrDefault(c => c.CmsPageId.ToString() == cmspageid);
             cmspage.Status = 0;
             cmspage.DeletedAt = DateTime.Now;
-            _ciplatfromdbcontext.SaveChanges();
-        }
-        public void deleteuser(string userid)
-        {
-            User user = _ciplatfromdbcontext.Users.SingleOrDefault(u => u.UserId.ToString() == userid);
-            user.Status = 0;
-            user.DeletedAt = DateTime.Now;
             _ciplatfromdbcontext.SaveChanges();
         }
         public void deletestory(string storyid)

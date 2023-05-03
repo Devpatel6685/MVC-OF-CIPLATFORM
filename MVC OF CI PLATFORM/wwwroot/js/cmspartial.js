@@ -75,7 +75,7 @@ function showModal(id) {
     })
 }
 function DeleteCmspage(cmspageid) {
-    alert("delete misson called");
+   /* alert("delete misson called");*/
     $.ajax({
         url: '/admin/DeleteCMSPage',
         type: 'GET',

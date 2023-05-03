@@ -128,7 +128,7 @@ function handleFiles(files) {
         const file = files[i];
         if (!file.type.startsWith("image/")) continue;
         if (uploadedFiles.has(file.name)) {
-            alert(`File "${file.name}" has already been uploaded.`);
+           /* alert(`File "${file.name}" has already been uploaded.`);*/
             continue;
         }
         uploadedFiles.add(file.name);

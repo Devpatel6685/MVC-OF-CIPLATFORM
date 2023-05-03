@@ -1,5 +1,4 @@
-﻿@*@model CI_PLATFORM.Entities.ViewModels.MissionViewmodel*@
-@using Microsoft.AspNetCore.Http;
+﻿@using Microsoft.AspNetCore.Http;
 
 @{
     var country = (List<Country>)ViewData["country"];
@@ -41,7 +40,7 @@
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page" asp-action="platformLanding" asp-controller="Mission"><img src="~/Assets/logo.png" /></a>
                     </li>
-                    <li class="nav-item @*dropdown*@">
+                    <li class="nav-item ">
                         <a class="nav-link active" aria-current="page" asp-controller="Mission" asp-action="platformLanding">Home</a>
                     </li>
                     <li class="nav-item">
@@ -61,7 +60,6 @@
     {
         <div class="dropdown mx-5" id="prof-drop">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                @*            <img src="/Assets/user-img.png" class="rounded-circle" alt="profile">*@
                 <img src="@avtar" alt="" class=" rounded-circle" id="profile-photo">
                 <span id="hide">@firstname_session</span>
             </a>

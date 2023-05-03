@@ -42,7 +42,7 @@ $(document).ready(function () {
     });
 });
 function getcountry() {
-    alert('country called');
+    /*alert('country called');*/
     var countryid = $('#usercountryselect').val();
     console.log("id", countryid);
     $.ajax({
@@ -89,7 +89,7 @@ function handleFiles(files) {
         const file = files[i];
         if (!file.type.startsWith("image/")) continue;
         if (uploadedFiles.has(file.name)) {
-            alert(`File "${file.name}" has already been uploaded.`);
+            /*alert(`File "${file.name}" has already been uploaded.`);*/
             continue;
         }
         const reader = new FileReader();

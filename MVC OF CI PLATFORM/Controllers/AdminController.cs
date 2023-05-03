@@ -47,7 +47,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var model = _adminInterface.getskilldata(pageindex, pageSize, SearchInputdata);
             return PartialView("_skillpage", model);
         }
-        public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 1)
+        public IActionResult Story(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
         {
             var model = _adminInterface.getstorydata(pageindex, pageSize, SearchInputdata);
             return PartialView("_storypage", model);
@@ -196,11 +196,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             }
 
         }
-       /* public IActionResult AddTheme(ThemeAddViewModel model)
-        {
-            _adminInterface.Addtheme(model);
-            return RedirectToAction("Theme", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
-        }*/
+      
         public IActionResult AddTheme(ThemeAddViewModel model)
         {
             if (model.themeid == 0)
@@ -285,15 +281,16 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return RedirectToAction("Mission", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
 
         }
+        public IActionResult Deleteuser(string userid)
+        {
+            _adminInterface.deleteuser(userid);
+            return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
+
+        }
         public IActionResult DeleteCMSPage(string cmspageId)
         {
             _adminInterface.deletecmspage(cmspageId);
             return RedirectToAction("Cmspage", new { SearchInputdata = "", pageindex = 1 });
-        }
-        public IActionResult DeleteUser(string userid)
-        {
-            _adminInterface.deleteuser(userid);
-            return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
         }
         public bool DeleteTheme(string themeid)
         {

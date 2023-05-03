@@ -19,18 +19,13 @@
             <script>
                 console.log("@TempData["success"]");
                 ("@TempData["success"]" == "Old password is incorrect" || "@TempData["success"]" == "Information is not provided correctly") ? toastr.error("@TempData["success"]") : toastr.success("@TempData["success"]");
-                @*toastr.success("@TempData["success"]");*@
             </script>
         }
     </div>
     <div class="container mb-2">
         <div class="row mt-4 gap-2">
             <div class="col-md-2 text-center">
-               @* <div class="mb-4 adjust img-wrapper position-relative">
-                    <img src="@Model.Avatar" class="rounded-circle mt-3" id="profileimg" alt="">
-                    <span id="boot-icon" class="bi bi-pencil icon d-none" style="font-size: 31px; color: rgb(0, 0, 0); opacity: 1; -webkit-text-stroke-width: 0.5px;"></span>
-                    <input type="file" id="file-input" style="display:none">
-                </div>*@
+
                 <div class="mb-4 adjust img-wrapper position-relative">
                     <img src="@Model.Avatar" class="rounded-circle mt-3" id="profileimg" alt="">
                     <span id="boot-icon" class="bi bi-pencil icon d-none" style="font-size: 31px; color: rgb(0, 0, 0); opacity: 1; -webkit-text-stroke-width: 0.5px;"></span>
@@ -43,17 +38,8 @@
 
                     </div>
                 </div>
-               @* <div class="adjust " style="height:200px;">
-                    <img src="~/Assets/user-img.png" class="rounded-circle mt-3" id="profile_img"  alt="">
-                    <div class="userName mt-3">
-                        <h3>@Model.name @Model.surname</h3>
-                    </div>
-                    <div class="button mt-3">
-                        <button type="button" class="btn rounded-pill apply px-1 py-2 justify-content-center" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Change Password</button>
 
-                    </div>
-                </div>*@
-                
+
                 <div class="d-flex justify-content-center">
                     <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
@@ -97,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col" >
+            <div class="col">
                 <form method="post" asp-action="UserEdit" id="userEditForm">
                     <div class="row">
                         <h4 class="col-12 border-bottom pb-2 mb-2 ">
@@ -277,8 +263,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary rounded-pill"  data-bs-dismiss="modal">Cancel</button>
-                                                    <button type="button" class="btn apply rounded-pill"  data-bs-dismiss="modal" onclick="addskill();">Save</button>
+                                                    <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" class="btn apply rounded-pill" data-bs-dismiss="modal" onclick="addskill();">Save</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -295,88 +281,15 @@
             </div>
         </div>
     </div>
-              <partial name="_footer">
+    <partial name="_footer">
 
-@*    <!--Formsectioni end-->
-    <!--footer satrt-->
-    <div class="copyright mt-5 bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="copyright-menu">
-                        <ul>
-                            <li>
-                                <a asp-controller="Home" asp-action="Privacy" class="text-light">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <div class="d-flex justify-content-center">
-                                    <button type="button" data-bs-toggle="modal" data-bs-target="#ContactUs" class="border-0 bg-transparent">
-                                        <a class="text-light">Contact Us</a>
-                                    </button>
-                                    <div class="modal fade" id="ContactUs" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Contact Us</h1>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <form method="post" asp-action="ContactUs" asp-controller="home">
-                                                    <div class="modal-body d-flex flex-column">
-                                                        <div class="my-2">
-                                                            <label for="name">Name</label>
-                                                            <input type="text" id="name" class="w-100" value="@Model.name" disabled />
-                                                            <span class="text-danger" asp-validation-for="name"></span>
-                                                        </div>
-                                                        <div class="my-2">
-                                                            <label for="Email">email Address</label>
-                                                            <input type="text" id="email" class="w-100" asp-for="Email" value="@Model.Email" disabled />
-                                                            <span class="text-danger" asp-validation-for="Email"></span>
-                                                        </div>
-                                                        <div class="my-2">
-                                                            <label for="Subject">Subject</label>
-                                                            <input type="text" id="subject" class="w-100" asp-for="Subject" />
-                                                            <span class="text-danger" asp-validation-for="Subject"></span>
-                                                        </div>
-                                                        <div class="my-3">
-                                                           
-                                                            <label for="Message">Message</label>
-                                                            <textarea asp-for="Message" id="message" class="w-100" style="height:90px" placeholder="Enter your message"></textarea>
-                                                            <span asp-validation-for="Message" class="text-danger"></span>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Cancel</button>
-                                                        <button type="submit" class="btn rounded-pill border">Save</button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="text-light">Terms of Use</a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 rights">
-                    <span class="text-light"> ©️ 2019 Optimy.com. All Right Reserved</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--footer end-->*@
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-@*    <partial name="_ValidationScriptsPartial" />
-*@    
-<div id="model-img" data-avtar="@Model.Avatar"></div>
-    <script src="~/js/Useredit.js"></script>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+        <div id="model-img" data-avtar="@Model.Avatar"></div>
+        <script src="~/js/Useredit.js"></script>
 </body>
 
 </html>

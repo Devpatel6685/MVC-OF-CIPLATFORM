@@ -25,7 +25,7 @@
     <div class="table-responsive overflow-tableEntry" id="missionview">
         @if (Model.Missions.Count() == 0)
         {
-            @*<div class="page"> </div>*@
+            
             <div class="d-flex mt-5 flex-column my-3 ">
                 <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No Mission Found</h3></div>
             </div>
@@ -63,8 +63,7 @@
                                     </button>
 
                                     <a class="nav-link text-black deleteMission p-2" onclick="showModal(@mission.MissionId)" type="button"><i class="bi bi-trash3"></i></a>
-                                    @*                                    <a class="nav-link text-black deleteMission p-2" data-missionid="@mission.MissionId" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-trash3"></i></a>
-                            *@
+                              
                                 </td>
                             </tr>
 
@@ -114,11 +113,5 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.js"></script>
-    @* <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>*@
-
-
-    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    *@
-    @*  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>*@
     <script src="~/js/missionpartial.js"></script>
 </body>

@@ -79,16 +79,6 @@
                 </div>
 
                 <div id="image-preview">
-                    @* @if (Model.imagepaths != null)
-                    {
-                    @foreach (var data in Model.imagepaths)
-                    {
-                    <div class="image-container">
-                    <img class="image-preview" src="@data">
-                    <div class="remove-image">&#10006;</div>
-                    </div>
-                    }
-                    }*@
                 </div>
                 <span class="text-danger d-none" id="ImageValidate"></span>
                 <span id="photoValidate" class="text-danger d-none">Photo Length increases is Required</span>
@@ -154,9 +144,7 @@
         <script src="/js/Shareyourstory.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-       
-@*        <a href="~/lib/jquery/dist/jquery.min.map"></a>
-*@        
+        
 </body>
 
 </html>

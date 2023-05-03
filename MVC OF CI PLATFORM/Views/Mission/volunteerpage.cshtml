@@ -33,16 +33,7 @@
                 <div class="main">
 
                     <div class="slider slider-for">
-                        @*                        @{
-                        foreach (var image in @Model.storyMediaForAssets)
-                        {
-                        <div>
-                        <img src="@image.Path" class="w-100"
-                        alt="" srcset="">
-                        </div>
 
-                        }
-                        }*@
 
                         <div>
                             <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" class="w-100"
@@ -65,16 +56,7 @@
                     </div>
                     <div class="slider slider-nav w-100 mt-1">
 
-                        @*                     @{
-                        foreach (var image in @Model.storyMediaForAssets)
-                        {
-                        <div>
-                        <img src="@image.Path" class="story_image_class"
-                        alt="" srcset="">
-                        </div>
 
-                        }
-                        }*@
                         <div>
                             <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png" alt=""
                                  srcset="">
@@ -108,22 +90,7 @@
                     var sumOfgoal = timeSheet1.Sum(t => t.Action);
                 }
                 <div class="mx-auto px-2 py-1 rounded-pill border mt-3 pill position-relative z-1">
-                    @*   @if (Model.Item1.StartDate < DateTime.Today && Model.Item1.EndDate > DateTime.Today)
-                    {
-                    <>Ongoing Oppertunity</>
-                    }
-                    else if (Model.Item1.EndDate < DateTime.Today)
-                    {
-                    <span class="text-danger">Mission Completed</span>
-                    }
-                    else if (@Model.Item1.MissionType == "GOAL")
-                    {
-                    @Model.Item1.goalObjective
-                    }
-                    else
-                    {
-                    <>from @Model.Item1.StartDate until @Model.Item1.EndDate</>
-                    }*@
+
                     @if (Model.Item1.StartDate < DateTime.Today && ((Model.Item1.MissionType == "time" && Model.Item1.EndDate > DateTime.Today) || (Model.Item1.MissionType == "goal" && goals.GoalValue > sumOfgoal)))
                     {
                         <span>Ongoing Oppertunity</span>
@@ -136,7 +103,7 @@
                     {
                         <div> plant <span>@Model.Item1.goalvalue </span> Tress </div>
 
-                        @* @Model.Item1.goalObjective*@
+
                     }
                     else
                     {
@@ -549,9 +516,7 @@
                                     <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
                                         <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                     </div>
-                                    <img src="@i.MissionMedia.FirstOrDefault(m=>m.MissionId==i.MissionId && m.MediaType=="Imag").MediaPath" class="relCardImage"
-                                 @* <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top" *@
-                                 alt="Skyscrapers" />
+                                    <img src="@i.MissionMedia.FirstOrDefault(m=>m.MissionId==i.MissionId && m.MediaType=="Imag").MediaPath" class="relCardImage" alt="Skyscrapers" />
                                     <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
                                         @{
                                             var fav = Model.Item2.favorite.FirstOrDefault(m => m.MissionId == i.MissionId && m.UserId.ToString() == @userid_session);
@@ -655,20 +620,10 @@
          data-totalitem="@Model.Item1.MissionApplications.TotalItemCount"
          data-userid="@userid_session"
          data-pagenumber="@Model.Item1.MissionApplications.PageNumber"
-        data-applied = "@Model.Item1.applied"   >
+         data-applied="@Model.Item1.applied">
     </div>
 
     </div>
-
-    @*<script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" mailto:src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <script src="~/js/Volunteerpage.js"></script>
-
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>*@
 
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>

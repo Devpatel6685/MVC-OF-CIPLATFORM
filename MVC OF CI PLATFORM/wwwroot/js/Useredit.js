@@ -19,7 +19,7 @@ $(document).ready(function () {
                 });
             },
             error: function () {
-               /* alert('Error');*/
+               
             }
         });
     });
@@ -62,23 +62,7 @@ function addskill() {
     })
 }
 
-/*function saveSkill() {
-    console.log("add skills");
-    var skillids = [];
-    $('.skill-selected div').each(function () {
-        skillids.push($(this).attr('id'));
-    });
-    $.ajax({
-        url: "/home/addskill",
-        type: "POST",
-        data: {
-            skillids: skillids,
-        },
-        success: function (result) {
-            console.log("profile updated successfully");
-        }
-    })
-}*/
+
 function saveSkill() {
     console.log("add skills");
     var skillids = [];
@@ -126,12 +110,12 @@ function handleSelectedFile(file) {
         processData: false,
         contentType: false,
         success: function (result) {
-            /*alert('success');*/
+            
             window.location = result.redirectUrl;
 
         }
     });
-    // Read the file as a data URL
+    
 }
 var img1 = $('#model-img');
 
@@ -147,15 +131,15 @@ $('.img-wrapper').mouseout(function () {
 
 
 document.getElementById("profileimg").onclick = function () {
-    /*alert("sucess");*/
+    
     document.getElementById("file-input").click();
 }
 document.getElementById("boot-icon").onclick = function () {
-   /* alert("sucess");*/
+   
     document.getElementById("file-input").click();
 }
 document.getElementById("file-input").onchange = function () {
-   /* alert('inside file');*/
+   
     handleSelectedFile(this.files[0]);
 }
 

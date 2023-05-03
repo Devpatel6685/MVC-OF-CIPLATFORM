@@ -31,6 +31,7 @@ namespace CI_PLATFORM_.repository.Repository
 
         public MissionViewmodel GetAll(string keyword, int sortId, List<long> countryids, List<long> cityids, List<long> themeids, List<long> skillids, string userid, int pageIndex)
         {
+            /*keyword.IsNullOrEmplty()*/
             int pagesize = 9;
             var skillfilter = _cIPLATFORMDbContext.MissionSkills.Where(s => skillids.Contains(s.SkillId)).Select(s => s.MissionId);
             var mission = _cIPLATFORMDbContext.Missions.Include(m => m.City).Include(m => m.Theme).Include(m=>m.MissionMedia).Where(model => (keyword == null || model.Title.Contains(keyword) || model.Theme.Title.Contains(keyword) || model.City.Name.Contains(keyword)) && ((countryids.Contains(model.CountryId)) || countryids.Count() == 0) && ((cityids.Contains(model.CityId)) || cityids.Count() == 0) && ((skillfilter.Contains(model.MissionId)) || skillids.Count() == 0) && ((themeids.Contains(model.ThemeId)) || themeids.Count() == 0) && model.Status == 1).AsQueryable();

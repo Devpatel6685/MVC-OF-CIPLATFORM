@@ -35,6 +35,9 @@ namespace CI_PLATFORM_.repository.Interface
         public bool Addskill(SkillAddViewModel model);
         public Adminviewmodel getthemedata(int pageindex, int pageSize, string SearchInputdata);
         public bool Addtheme(ThemeAddViewModel model);
+
+        public void deleteuser(string userid);
+
         public bool deletetheme(string themeid);
         public Adminviewmodel getskilldata(int pageindex, int pageSize, string SearchInputdata);
         public Adminviewmodel getmissionapplicationdata(int pageindex, int pageSize, string SearchInputdata);
@@ -51,7 +54,6 @@ namespace CI_PLATFORM_.repository.Interface
         public MissionAddViewModel getmissionmodeldata();
         public void Adduser(UserAddViewModel model);
         public void updateuser(UserAddViewModel model);
-        public void deleteuser(string userid);
         public void deletecmspage(string cmspageid);
         public UserAddViewModel edituserdata(string userid);
         public void editskilldatabase(SkillAddViewModel model);

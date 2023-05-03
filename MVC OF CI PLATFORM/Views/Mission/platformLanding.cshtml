@@ -125,32 +125,11 @@
                                                 }
                                             }
 
-                                            @*    @{
-                                if (userid_session != null)
-                                {
-                                var applied = Model.MissionApplications.SingleOrDefault(m => m.MissionId == i.MissionId && m.UserId.ToString() == userid_session);
-                                if (applied != null && applied.ApprovalStatus == "APPROVE")
-                                {
-                                <div class="d-flex position-absolute pt-2 badgeclass">
-                                <span class="badge1 bg-success text-dark ms-1 pt-2">Applied</span><div class="arrow-right-a"></div>
-                                </div>
-                                }
-                                else if ((i.MissionType == "time" && i.RegistrationDeadline < DateTime.Now) || (i.MissionType == "goal" && goals.GoalValue == sumOfgoal));
-                                {
-                                <div class="d-flex position-absolute pt-2 badgeclass">
-                                <span class="badge1 bg-warning text-dark ms-1 pt-2">Closed</span><div class="arrow-right"></div>
-                                </div>
-                                }
-                                }
-
-                                } *@
-
                                             <div class="align-self-end position-absolute top-1 text-light icon rounded-pill px-2 me-1 mt-1">
                                                 <img class="pin" src="~/Assets/pin.png" alt=""> @i.City.Name
                                             </div>
                                             <img src="@i.MissionMedia.FirstOrDefault(m=>m.MissionId==i.MissionId && m.MediaType=="Imag").MediaPath" class="w-100 h-100 cardImage" />
 
-                                            @*  <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability-1.png" class="card-img-top h-100" alt="Skyscrapers" /> *@
                                             <div class="d-flex flex-column align-self-end position-absolute rounded-circle mt-5 pt-5 me-2">
 
                                                 @{
@@ -280,7 +259,7 @@
                                                     {
                                                         foreach (var gm in goalmissions.Where(m => m.MissionId == i.MissionId))
                                                         {
-                                                          <div> plant <span>@gm.GoalValue</span> Tress </div>
+                                                            <div> plant <span>@gm.GoalValue</span> Tress </div>
                                                         }
                                                     }
 
@@ -333,7 +312,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            @* for apply button*@
+                                            
                                             <div class=" d-flex grid-element">
 
                                                 <a class="py-2 px-3 mx-auto apply nav-link" asp-action="volunteerpage" asp-controller="Mission" asp-route-Id="@i.MissionId">View Details <img src="~/Assets/right-arrow.png" alt="" class="ms-2"></a>
@@ -414,7 +393,7 @@
 
                                                 </div>
                                             </div>
-                                            @*card-body end*@
+                                           
                                         </div>
 
 

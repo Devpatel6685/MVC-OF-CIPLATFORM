@@ -12,19 +12,7 @@
      <link rel="stylesheet" href="~/css/VolunteeringTimeSheet.css">
 </head>
 <body>
- @*   @if (TempData["timesheet"] != null)
-    {
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.1.5/sweetalert2.min.js"></script>
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: "@TempData["timesheet"]",
-                showConfirmButton: false,
-                timer: 1500
-            })
-        </script>
-    }*@
+
     <div>
         @if (TempData["timesheet"] != null)
         {
@@ -148,7 +136,6 @@
                                             <label for="action">Actions <span class="text-danger">*</span></label>
                                             <input class="form-control" type="text" id="action" asp-for="action" />
                                             <span asp-validation-for="action" id="validaction" class="text-danger"></span>
-                                            @* <span class="text-danger" id="validaction"></span>*@
                                         </div>
                                         <div class="d-flex flex-column mt-2">
                                             <label for="date">Date Volunteered <span class="text-danger">*</span></label>
