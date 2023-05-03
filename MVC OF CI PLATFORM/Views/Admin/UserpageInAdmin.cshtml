@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor Accessor;
+@{
+    var firstname_session = @Accessor.HttpContext.Session.GetString("username");
+    var avtar = Accessor.HttpContext.Session.GetString("avtar");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -103,29 +110,16 @@
 
                     <div class="col-10 col-sm-12   d-flex justify-content-between">
                         <div class="pt-4 ps-3 ">@DateTime.Now.ToString("dddd, MMMM d, yyyy, h:mm tt")</div>
-                        <div class="dropdown mt-3">
-                            @*  <div class="d-flex justify-content-end">*@
-                            <button class="btn dropdown-button dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="~/Assets/user-img.png" class="rounded-circle" alt="profile" id="prof-drop">
-                                <span class="d-sm-inline d-none">Evan Donohue</span>
-                            </button>
-                            @*  </div>*@
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                            @* <div class="dropdown mx-5 mr-sm-auto dropdown12" id="smallpos">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="~/Assets/user-img.png" alt="" class=" rounded-circle w-30">
-                            <p class="name" id="hide">Evan dounhue</p>
+                        <div class="dropdown mt-3" id="prof-drop">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="@avtar" alt="" class=" rounded-circle" style="width:50px" id="profile-photo">
+                                <span id="hide">@firstname_session</span>
                             </a>
-                            <ul class="dropdown-menu" id="profile-drop">
-                            <li><a class="dropdown-item" asp-action="usereditdetail" asp-controller="home">UserProfile</a></li>
-                            <li><a class="dropdown-item" asp-action="volunteersheet" asp-controller="TimeSheet">VolunteerTimeSheet</a></li>
-                            <li><a class="dropdown-item" asp-action="Index" asp-controller="home">log out</a></li>
+                            <ul class="dropdown-menu" id="drop-pos">
+                                <li><a class="dropdown-item" >Add Profile</a></li>
+                                <li><a class="dropdown-item" >VolunteeringTimesheet</a></li>
+                                <li><a class="dropdown-item" asp-action="LogOut" asp-controller="Home">Logout</a></li>
                             </ul>
-                            </div>*@
                         </div>
 
                     </div>

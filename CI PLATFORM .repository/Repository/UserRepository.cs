@@ -35,7 +35,7 @@ namespace CI_PLATFORM.repository.Repository
 
         public string login(LoginViewModel user)
         {
-            var email = _cIPLATFORMDbContext.Users.FirstOrDefault(c => c.Email == user.Email.ToLower());
+            var email = _cIPLATFORMDbContext.Users.FirstOrDefault(c => c.Email == user.Email.ToLower() && c.Status == 1);
             if (email == null)
             {
 

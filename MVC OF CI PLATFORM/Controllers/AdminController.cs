@@ -15,16 +15,15 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         private readonly ILogger<AdminController> _logger;
         private readonly IAdminInterface _adminInterface;
 
-        public AdminController(ILogger<AdminController> logger, IAdminInterface adminRepository)
-        {
-            _logger = logger;
-            _adminInterface = adminRepository;
-        }
-
         public IActionResult UserpageInAdmin(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
         {
             var model = _adminInterface.getuserdata(pageindex, pageSize, SearchInputdata);
             return View(model);
+        }
+        public AdminController(ILogger<AdminController> logger, IAdminInterface adminRepository)
+        {
+            _logger = logger;
+            _adminInterface= adminRepository;
         }
 
         public IActionResult User(string SearchInputdata = "", int pageindex = 1, int pageSize = 10)
@@ -85,6 +84,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
 
         }
+        public IActionResult pendingStory(string storyid)
+        {
+            _adminInterface.pendingstory(storyid);
+            return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
+
+        }
         public IActionResult DeclineApplication(string Applicationid)
         {
             _adminInterface.declineapplication(Applicationid);
@@ -122,10 +127,24 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             return PartialView("_skilladd");
         }
+        public IActionResult cmsadd()
+        {
+            return PartialView("_cmsadd");
+        }
         public IActionResult editskilldata(string skillid)
         {
             var model = _adminInterface.getskill(skillid);
             return PartialView("_skilladd", model);
+        }
+        public IActionResult editthemedata(string themeid)
+        {
+            var model = _adminInterface.gettheme(themeid);
+            return PartialView("_themeadd", model);
+        }
+        public IActionResult editcmsdata(string cmsid)
+        {
+            var model = _adminInterface.getcmsdata(cmsid);
+            return PartialView("_cmsadd", model);
         }
         public IActionResult banneradd()
         {
@@ -177,17 +196,48 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             }
 
         }
-        public IActionResult AddTheme(ThemeAddViewModel model)
+       /* public IActionResult AddTheme(ThemeAddViewModel model)
         {
             _adminInterface.Addtheme(model);
             return RedirectToAction("Theme", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
+        }*/
+        public IActionResult AddTheme(ThemeAddViewModel model)
+        {
+            if (model.themeid == 0)
+            {
+                var check = _adminInterface.Addtheme(model);
+                if (check)
+                {
+                    TempData["success"] = "Theme is added";
+                }
+                else
+                {
+                    ModelState.AddModelError("Title", "Theme already exist");
+                    return PartialView("_themeadd");
+                }
+            }
+            else
+            {
+                _adminInterface.editthemedatabase(model);
+                TempData["success"] = "theme is updated";
+            }
+            return RedirectToAction("Theme", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
+
         }
         public IActionResult AddSkill(SkillAddViewModel model)
         {
             if (model.SkillId == 0)
             {
-                _adminInterface.Addskill(model);
-                TempData["success"] = "skill is added";
+                var check = _adminInterface.Addskill(model);
+                if (check)
+                {
+                    TempData["success"] = "skill is added";
+                }
+                else
+                {
+                    ModelState.AddModelError("SkillName", "Skillname already exist");
+                    return PartialView("_skilladd");
+                }
             }
             else
             {
@@ -196,6 +246,22 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             }
             return RedirectToAction("Skill", new { SearchInputdata = "", pageindex = 1, pageSize = 2 });
 
+        }
+        public IActionResult AddCms(CmsAddViewModel model)
+        {
+            if (model.CmsPageId == 0)
+            {
+                _adminInterface.Addcms(model);
+                TempData["success"] = "CMS page is added";
+
+            }
+            else
+            {
+                _adminInterface.editcmspage(model);
+                TempData["success"] = "CMS page is edited";
+
+            }
+            return RedirectToAction("Cmspage", new { SearchInputdata = "", pageindex = 1 });
         }
         public IActionResult EditBanner(string id)
         {
@@ -219,6 +285,16 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return RedirectToAction("Mission", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
 
         }
+        public IActionResult DeleteCMSPage(string cmspageId)
+        {
+            _adminInterface.deletecmspage(cmspageId);
+            return RedirectToAction("Cmspage", new { SearchInputdata = "", pageindex = 1 });
+        }
+        public IActionResult DeleteUser(string userid)
+        {
+            _adminInterface.deleteuser(userid);
+            return RedirectToAction("User", new { SearchInputdata = "", pageindex = 1, pageSize = 10 });
+        }
         public bool DeleteTheme(string themeid)
         {
             var delete = _adminInterface.deletetheme(themeid);
@@ -228,6 +304,12 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             var delete = _adminInterface.deleteskill(skillId);
             return delete;
+        }
+        public IActionResult DeleteStory(string storyid)
+        {
+            _adminInterface.deletestory(storyid);
+            return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
+
         }
     }
 }

@@ -15,14 +15,14 @@
                 <div class="col-12 text-center">
 
                     <div class="adjust img-wrapper">
-                        @if (Model == null)
+                        @if (Model.avtar == null)
                         {
-                            <img src="~/Assets/f38f7d36-e789-477f-939b-2760507ce69d.png" class="rounded-circle mt-3" id="profileimg" alt="">
+                            <img src="~/Assets/user1.png" style="width:10%" class="rounded-circle mt-3" id="profileimg" alt="">
 
                         }
                         else
                         {
-                            <img src="@Model.avtar" class="rounded-circle mt-3" id="profileimg" alt="">
+                            <img src="@Model.avtar" style="width:10%" class="rounded-circle mt-3" id="profileimg" alt="">
                         }
                         <span id="boot-icon" class="bi bi-pencil icon d-none" style="font-size: 31px; color: rgb(0, 0, 0); opacity: 1; -webkit-text-stroke-width: 0.5px;"></span>
                         <input type="file" id="file-input" style="display:none" asp-for="Avatar">
@@ -75,8 +75,8 @@
                             <div class="col-sm-6 mt-2">
                                 <div class="d-flex flex-column position-relative">
                                     <span>Password</span>
-                                    <input type="password" id="password" asp-for="Password" class="form-control">
-                                    <span onclick="password();" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye"></i></span>
+                                    <input type="text" id="password" asp-for="Password" class="form-control">
+                                    <span onclick="password();" class="position-absolute bottom-0 end-0 mb-1 me-1 "><i class="bi bi-eye-slash"></i></span>
                                 </div>
                                 <span class="text-danger" asp-validation-for="Password"></span>
 
@@ -141,7 +141,7 @@
                                             <select id="usercountryselect" asp-for="CountryId" class="form-control" asp-items="@Model.countries">
                                                 <option value="">Select country</option>
                                             </select>
-                                                                                        <span class="text-danger" asp-validation-for="CountryId"></span>
+                                            <span class="text-danger" asp-validation-for="CountryId"></span>
 
                                         </div>
                                     </div>

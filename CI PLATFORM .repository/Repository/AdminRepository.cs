@@ -72,11 +72,52 @@ namespace CI_PLATFORM_.repository.Repository
             };
             return model;
         }
+        public ThemeAddViewModel gettheme(string themeid)
+        {
+            var theme = _ciplatfromdbcontext.MissionThemes.FirstOrDefault(s => s.MissionThemeId.ToString() == themeid);
+            var model = new ThemeAddViewModel
+            {
+                Title = theme.Title,
+               themeid = theme.MissionThemeId,
+                Status = theme.Status
+            };
+            return model;
+        }
+        public CmsAddViewModel getcmsdata(string cmspageid)
+        {
+            var cmspage = _ciplatfromdbcontext.CmsPages.FirstOrDefault(c => c.CmsPageId.ToString() == cmspageid);
+            var model = new CmsAddViewModel
+            {
+                CmsPageId = cmspage.CmsPageId,
+                Title = cmspage.Title,
+                Description = cmspage.Description,
+                Slug = cmspage.Slug,
+                Status = cmspage.Status,
+            };
+            return model;
+        }
         public void editskilldatabase(SkillAddViewModel model)
         {
             var skill = _ciplatfromdbcontext.Skills.FirstOrDefault(s => s.SkillId == model.SkillId);
             skill.SkillName = model.SkillName;
             skill.Status = model.Status;
+            _ciplatfromdbcontext.SaveChanges();
+        }
+        public void editthemedatabase(ThemeAddViewModel model)
+        {
+            var theme = _ciplatfromdbcontext.MissionThemes.FirstOrDefault(s => s.MissionThemeId == model.themeid);
+           
+            theme.Title = model.Title;
+            theme.Status = model.Status;
+            _ciplatfromdbcontext.SaveChanges();
+        }
+        public void editcmspage(CmsAddViewModel model)
+        {
+            var cmspage = _ciplatfromdbcontext.CmsPages.SingleOrDefault(c => c.CmsPageId == model.CmsPageId);
+            cmspage.Title = model.Title;
+            cmspage.Slug = model.Slug;
+            cmspage.Description = model.Description;
+            cmspage.Status = model.Status;
             _ciplatfromdbcontext.SaveChanges();
         }
         public Adminviewmodel getstorydata(int pageindex, int pageSize, string SearchInputdata)
@@ -184,7 +225,7 @@ namespace CI_PLATFORM_.repository.Repository
                 MissionId = mission.MissionId,
                 skillids = skillids_mission,
                 Skills = skills,
-                RegistrationDeadline = mission.RegistrationDeadline,
+                RegistrationDeadline = mission.RegistrationDeadline
             };
             foreach (var m in missionMedia)
             {
@@ -367,6 +408,13 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext.SaveChanges();
 
         }
+        public void pendingstory(string storyid)
+        {
+            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
+            story.Status = "PENDING";
+            _ciplatfromdbcontext.SaveChanges();
+
+        }
         public List<Country> getcountries()
         {
             var countries = _ciplatfromdbcontext.Countries.ToList();
@@ -382,22 +430,53 @@ namespace CI_PLATFORM_.repository.Repository
             var themes = _ciplatfromdbcontext.MissionThemes.ToList();
             return themes;
         }
-        public void Addtheme(ThemeAddViewModel model)
+        public bool Addtheme(ThemeAddViewModel model)
         {
-            var model1 = new MissionTheme
+            List<string> themes = _ciplatfromdbcontext.MissionThemes.Select(s => s.Title).ToList();
+            if (themes.Contains(model.Title))
+            {
+                return false;
+            }
+            else
+            {
+                var model1 = new MissionTheme
+                {
+                    Title = model.Title,
+                    Status = model.Status,
+                };
+                _ciplatfromdbcontext.Add(model1);
+                _ciplatfromdbcontext.SaveChanges();
+                return true;
+            }
+        }
+        public bool Addskill(SkillAddViewModel model)
+        {
+            List<string> Skillnames = _ciplatfromdbcontext.Skills.Select(s => s.SkillName).ToList();
+            if (Skillnames.Contains(model.SkillName))
+            {
+                return false;
+            }
+            else
+            {
+                var model1 = new Skill
+                {
+                    SkillName = model.SkillName,
+                    Status = 0,
+                };
+                _ciplatfromdbcontext.Add(model1);
+                _ciplatfromdbcontext.SaveChanges();
+                return true;
+            }
+
+        }
+        public void Addcms(CmsAddViewModel model)
+        {
+            var model1 = new CmsPage
             {
                 Title = model.Title,
-                Status = model.Status,
-            };
-            _ciplatfromdbcontext.Add(model1);
-            _ciplatfromdbcontext.SaveChanges();
-        }
-        public void Addskill(SkillAddViewModel model)
-        {
-            var model1 = new Skill
-            {
-                SkillName = model.SkillName,
-                Status = 0,
+                Description = model.Description,
+                Slug = model.Slug,
+                Status = model.Status
             };
             _ciplatfromdbcontext.Add(model1);
             _ciplatfromdbcontext.SaveChanges();
@@ -425,27 +504,35 @@ namespace CI_PLATFORM_.repository.Repository
                 CityId = model.CityId,
                 CountryId = model.CountryId,
                 ProfileText = model.ProfileText,
-                Status = model.Status
+                Status = model.Status,
+                LinkedInUrl = model.LinkedInUrl
             };
             _ciplatfromdbcontext.Add(model1);
-            _ciplatfromdbcontext.SaveChanges();
-            var user = _ciplatfromdbcontext.Users.FirstOrDefault(u => u.UserId == model1.UserId);
-            string wwwRootPath = _hostEnvironment.WebRootPath;
-            string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
-            string MainfolderPath = Path.Combine(imagesFolderPath, "UserProfileImages");
-            if (!Directory.Exists(MainfolderPath))
+            if (model.Avatar != null)
             {
-                Directory.CreateDirectory(MainfolderPath);
+                var user = _ciplatfromdbcontext.Users.FirstOrDefault(u => u.UserId == model1.UserId);
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
+                string MainfolderPath = Path.Combine(imagesFolderPath, "UserProfileImages");
+                if (!Directory.Exists(MainfolderPath))
+                {
+                    Directory.CreateDirectory(MainfolderPath);
+                }
+                string fileName = model.Avatar.FileName;
+
+                var uploads = Path.Combine(MainfolderPath, fileName);
+
+                using (var fileStreams = new FileStream(uploads, FileMode.Create))
+                {
+                    model.Avatar.CopyTo(fileStreams);
+                }
+                user.Avatar = @"\Images\UserProfileImages\" + fileName;
             }
-            string fileName = model.Avatar.FileName;
-
-            var uploads = Path.Combine(MainfolderPath, fileName);
-
-            using (var fileStreams = new FileStream(uploads, FileMode.Create))
+            else
             {
-                model.Avatar.CopyTo(fileStreams);
+                model1.Avatar = @"\Images\f38f7d36-e789-477f-939b-2760507ce69d.png";
             }
-            user.Avatar = @"\Images\UserProfileImages\" + fileName;
+
             _ciplatfromdbcontext.SaveChanges();
 
         }
@@ -483,8 +570,11 @@ namespace CI_PLATFORM_.repository.Repository
             var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == model.MissionId);
             List<MissionMedium> missionMedia = _ciplatfromdbcontext.MissionMedia.Where(m => m.MissionId == model.MissionId).ToList();
             List<MissionDocument> missionDoc = _ciplatfromdbcontext.MissionDocuments.Where(m => m.MissionId == model.MissionId).ToList();
-            var missionskills = _ciplatfromdbcontext.MissionSkills.Where(m => m.MissionId == model.MissionId);
-            _ciplatfromdbcontext.MissionSkills.RemoveRange(missionskills);
+            var missionskills = _ciplatfromdbcontext.MissionSkills.Where(m => m.MissionId == model.MissionId).ToList();
+            if (missionskills.Count() > 0)
+            {
+                _ciplatfromdbcontext.MissionSkills.RemoveRange(missionskills);
+            }
             var goals = _ciplatfromdbcontext.GoalMissions.Where(g => g.MissionId == model.MissionId).ToList();
             if (model.MissionType == "goal")
             {
@@ -498,43 +588,44 @@ namespace CI_PLATFORM_.repository.Repository
             }
             string wwwRootPath = _hostEnvironment.WebRootPath;
 
-            if (model.Title != mission.Title)
+            if (model.Title != mission.Title && model.Images == null)
             {
-
                 string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
                 string MainfolderPath = Path.Combine(imagesFolderPath, "Mission");
-                string oldfolderpath = Path.Combine(MainfolderPath, mission.Title);
-                string folderName = model.Title;
-                string newfolderPath = Path.Combine(MainfolderPath, folderName);
-                if (!Directory.Exists(newfolderPath))
+                string sourceDir = Path.Combine(MainfolderPath, mission.Title);
+                string destDir = Path.Combine(MainfolderPath, model.Title);
+                if (!Directory.Exists(destDir))
                 {
-                    Directory.CreateDirectory(newfolderPath);
+                    Directory.CreateDirectory(destDir);
                 }
-                string[] imageFiles = Directory.GetFiles(oldfolderpath, "*.png|*.jpg");
+                string[] imageFiles = Directory.GetFiles(sourceDir);
+
                 foreach (string imageFile in imageFiles)
                 {
                     string fileName = Path.GetFileName(imageFile);
-                    string destFile = Path.Combine(newfolderPath, fileName);
+                    string destFile = Path.Combine(destDir, fileName);
                     File.Copy(imageFile, destFile, true);
                 }
-                string documentFolderPath = Path.Combine(wwwRootPath, "Documents");
-                string docmainfolderPath = Path.Combine(documentFolderPath, "Mission");
-                string docoldfolderpath = Path.Combine(docmainfolderPath, mission.Title);
-                string docnewfolderPath = Path.Combine(docmainfolderPath, folderName);
-                if (!Directory.Exists(docnewfolderPath))
+
+
+            }
+            if (model.Title != mission.Title && model.Documents == null)
+            {
+                string docFolderPath = Path.Combine(wwwRootPath, "Documents");
+                string missionDocPath = Path.Combine(docFolderPath, "Mission");
+                string sourceDocDir = Path.Combine(missionDocPath, mission.Title);
+                string destDocDir = Path.Combine(missionDocPath, model.Title);
+                if (!Directory.Exists(destDocDir))
                 {
-                    Directory.CreateDirectory(docnewfolderPath);
+                    Directory.CreateDirectory(destDocDir);
                 }
-                string[] docFiles = Directory.GetFiles(docoldfolderpath, "*.doc|*.pdf|*.xlsx|*xls");
-                foreach (string docFile in docFiles)
+                string[] files = Directory.GetFiles(sourceDocDir);
+                foreach (string file in files)
                 {
-                    string fileName = Path.GetFileName(docFile);
-                    string destFile = Path.Combine(docnewfolderPath, fileName);
-                    File.Copy(docFile, destFile, true);
+                    string fileName = Path.GetFileName(file);
+                    string destFile = Path.Combine(destDocDir, fileName);
+                    File.Copy(file, destFile, true);
                 }
-
-
-
             }
             foreach (var skill in selectedSkills)
             {
@@ -671,7 +762,6 @@ namespace CI_PLATFORM_.repository.Repository
                 RegistrationDeadline = model.RegistrationDeadline
             };
             _ciplatfromdbcontext.Add(model1);
-            
             foreach (var skill in selectedSkills)
             {
                 var model3 = new MissionSkill
@@ -773,6 +863,28 @@ namespace CI_PLATFORM_.repository.Repository
         {
             var mission = _ciplatfromdbcontext.Missions.FirstOrDefault(m => m.MissionId.ToString() == missionid);
             mission.Status = 0;
+            mission.DeletedAt = DateTime.Now;
+            _ciplatfromdbcontext.SaveChanges();
+        }
+        public void deletecmspage(string cmspageid)
+        {
+            var cmspage = _ciplatfromdbcontext.CmsPages.FirstOrDefault(c => c.CmsPageId.ToString() == cmspageid);
+            cmspage.Status = 0;
+            cmspage.DeletedAt = DateTime.Now;
+            _ciplatfromdbcontext.SaveChanges();
+        }
+        public void deleteuser(string userid)
+        {
+            User user = _ciplatfromdbcontext.Users.SingleOrDefault(u => u.UserId.ToString() == userid);
+            user.Status = 0;
+            user.DeletedAt = DateTime.Now;
+            _ciplatfromdbcontext.SaveChanges();
+        }
+        public void deletestory(string storyid)
+        {
+            Story story = _ciplatfromdbcontext.Stories.SingleOrDefault(s => s.StoryId.ToString() == storyid);
+            story.Status = "PENDING";
+            story.DeletedAt = DateTime.Now;
             _ciplatfromdbcontext.SaveChanges();
         }
         public bool deletetheme(string themeid)
@@ -786,6 +898,7 @@ namespace CI_PLATFORM_.repository.Repository
             else
             {
                 theme.Status = 0;
+                theme.DeletedAt = DateTime.Now;
                 _ciplatfromdbcontext.SaveChanges();
                 return true;
             }
@@ -803,6 +916,7 @@ namespace CI_PLATFORM_.repository.Repository
             else
             {
                 skill.Status = 0;
+                skill.DeletedAt = DateTime.Now;
                 _ciplatfromdbcontext.SaveChanges();
                 return true;
             }

@@ -10,13 +10,20 @@
 <body>
     <h4 class="mt-2 ms-3 border-bottom">MissionApplication</h4>
     <div class=" ms-2 d-flex justify-content-between">
-        <div class="col-6" role="search">
+        <div class="col-6 position-relative" role="search">
+            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-2 ps-1">
+            <input class="form-control me-2 ps-5" id="applicationsearch" type="search" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col-4  d-flex justify-content-end">
+            <button class="px-3 btn btn-warning rounded-pill"> <a  class="text-decoration-none text-white" >+ Add</a></button>
+        </div>
+        @*<div class="col-6" role="search">
             <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
             <input class="form-control me-2 ps-5 pt-3 pb-3" id="applicationsearch" type="text" placeholder="Search" aria-label="Search">
         </div>
         <div class="col-4  d-flex justify-content-end">
             <button class=" px-3 apply"> <a asp-action="skilladd" asp-controller="Admin">+ Apply</a></button>
-        </div>
+        </div>*@
     </div>
 
     <div class="table-responsive">
@@ -25,7 +32,7 @@
         {
               <div class="page"> </div>
             <div class="d-flex mt-5 flex-column my-3 table">
-                <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No skill found</h3></div>
+                <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No Application found</h3></div>
             </div>
 
         }

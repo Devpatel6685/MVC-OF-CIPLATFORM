@@ -25,8 +25,8 @@ $('#countryselect').on('change', function () {
     })
 });
 $('.skillselect:checkbox:checked').each(function () {
-    
-    var skillname = $(this).next('label').text();
+/*    alert('span called');
+*/    var skillname = $(this).next('label').text();
     var id = $(this).val();
     $('.skill-section').append('<span class="filter-list ps-3 pe-3 me-2 rounded-pill border btn btn-warning text-white">' + skillname + '</span>')
 })
@@ -36,7 +36,6 @@ if ($('.skill-section .filter-list').length > 0) {
 function Addskill() {
     $('.skill-section').empty();
     $('.skillselect:checkbox:checked').each(function () {
-       
         var skillname = $(this).next('label').text();
         var id = $(this).val();
         $('.skill-section').append('<span class="filter-list ps-3 pe-3 me-2 rounded-pill border btn btn-warning text-white">' + skillname + '</span>')
@@ -45,8 +44,6 @@ function Addskill() {
         $('.skill-section').prepend('<span class="filter-list ps-3 pe-3 me-2 p-2 text-dark fw-bold">Selected Skills</span>');
     }
 }
-
-
 
 function getThemes() {
 
@@ -111,7 +108,13 @@ function Mission() {
         $('#timefields').addClass('d-none');
     }
 };
-
+$('#sdate').attr("min", $('#rdead').val());
+$('#edate').attr("min", $('#sdate').val());
+$('#rdead').change(function () {
+    
+})
+$('#sdate').change(function () {
+})
 
 $('#Images').change(function () {
     const files = $('#Images').prop('files');
@@ -125,7 +128,7 @@ function handleFiles(files) {
         const file = files[i];
         if (!file.type.startsWith("image/")) continue;
         if (uploadedFiles.has(file.name)) {
-            /* alert(`File "${file.name}" has already been uploaded.`);*/
+            alert(`File "${file.name}" has already been uploaded.`);
             continue;
         }
         uploadedFiles.add(file.name);
@@ -142,8 +145,8 @@ function handleFiles(files) {
         };
     }
 }
-$('#missionForm').submit(function (event) {
-    
+/*$('#missionForm').submit(function (event) {
+    alert('mission valid');
     var textarea = tinymce.get("storytext").getContent();
     event.preventDefault();
     if ($('#showImage').children().length == 0) {
@@ -154,39 +157,16 @@ $('#missionForm').submit(function (event) {
     if ($('#showDocument').children().length == 0) {
         $('#docValidate').text("Select Images")
     }
-    else if ($('#missionForm').valid) {
+    else if ($('#missionForm').valid()) {
         $('#missionForm')[0].submit();
     }
-})
-/*$('#missionForm').submit(function (event) {
-    alert('mission valid');
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-
-    var textarea = tinymce.get("storytext").getContent();
-    event.preventDefault();
-    if ($('#showImage').children().length == 0) {
-        $('#imgValidate').text("Select Images")
-    } else if (textarea == "") {
-        $('#textValidate').text("Text is Required");
-    }
-    else if ($('#showDocument').children().length == 0) {
-        $('#docValidate').text("Select Images")
-    } else if ($('#missionForm').valid()) {
-
-        // Form is valid, submit it
-        $('#missionForm')[0].submit();
-    }
-    *//* else if ($('#missionForm').valid()) {
-        $('#missionForm')[0].submit();
-    }*//*
 })*/
 
 
 
-// Get the input element
+
 const input = document.querySelector('#document');
 
-// Add event listener for when a file is selected
 input.addEventListener('change', () => {
     // Clear the contents of the showDocument div
     document.querySelector('#showDocument').innerHTML = '';

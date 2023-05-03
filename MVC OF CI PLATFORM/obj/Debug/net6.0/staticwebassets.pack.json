@@ -629,12 +629,24 @@
       "PackagePath": "staticwebassets\\Images\\UserProfileImages\\1a54b90f-7f63-49f0-b9ec-ad26dc43724f.png"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer2.png",
+      "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer2.png"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer3.png",
       "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer3.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer3.png.png",
       "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer3.png.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer5.png",
+      "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer5.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer7.png",
+      "PackagePath": "staticwebassets\\Images\\UserProfileImages\\volunteer7.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\ad769a15-2042-4ac1-b98b-538b1c45cb9f.png",

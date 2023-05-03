@@ -5,17 +5,17 @@
 <!-- user page  -->
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="~/css/cmspage.css">
+    <link rel="stylesheet" href="~/css/cmspartial.css">
 </head>
 <body>
-    <h4 class="mt-2 ms-3 border-bottom">CMS Pages</h4>
-    <div class=" ms-2 d-flex justify-content-between">
-        <div class="col-6" role="search">
-            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-3 ps-1">
-            <input class="form-control me-2 ps-5 pt-3 pb-3" id="cmssearch" type="text" placeholder="Search" aria-label="Search">
+    <h4 class="mt-2 ms-3 border-bottom">  <span class="borderbottom">CMS Page</span> </h4>
+    <div class=" ms-2 d-flex justify-content-between mt-4 position-sticky">
+        <div class="col-6 position-relative" role="search">
+            <img src="~/Assets/search.png" alt="search-icon" class="position-absolute pt-2 ps-1">
+            <input class="form-control me-2 ps-5" id="cmssearch" type="text" placeholder="Search" aria-label="Search">
         </div>
         <div class="col-4  d-flex justify-content-end">
-            <button class=" px-3 apply"> <a asp-action="skilladd" asp-controller="Admin">+ Apply</a></button>
+            <button class="px-3 btn btn-warning rounded-pill"> <a asp-action="cmsadd" class="text-decoration-none text-white" asp-controller="Admin">+ Add</a></button>
         </div>
     </div>
 
@@ -23,7 +23,7 @@
 
         @if (Model.Cmspages.Count() == 0)
         {
-            <div class="page"> </div>
+              <div class="page"> </div>
             <div class="d-flex mt-5 flex-column my-3 table">
                 <div class="mx-auto mt-3 d-flex" id="nouserbgcolor"><h3 class="text-center mx-auto text-color">No Cms Data found</h3></div>
             </div>
@@ -33,7 +33,7 @@
         {
             <div class="table">
                 <table class="table">
-
+                  
                     <thead>
                         <tr>
                             <th scope="col">Title</th>
@@ -52,22 +52,21 @@
                                 @{
                                     if (@cms.Status == 0)
                                     {
-                                        <td id="inactive" class="text-danger">In-active</td>
+                                        <td id="inactive" class="text-danger fw-bold">In-active</td>
                                     }
                                     else
                                     {
-                                        <td id="active">Active</td>
+                                        <td id="active" class="text-success fw-bold">Active</td>
                                     }
                                 }
                                 <td class="d-flex">
                                     <button class="btn border-0">
-                                        <a asp-action="editskilldata" asp-controller="Admin" asp-route-skillid="@cms.CmsPageId">
-                                            <i class="bi bi-pencil-square icon"></i>
-                                        </a>
-                                    </button>
-                                    <a class="nav-link text-black deleteMission p-2" onclick="showModal(@cms.CmsPageId)" type="button"><i class="bi bi-trash3"></i></a>
+                                       <a asp-action="editcmsdata" asp-controller="Admin" asp-route-cmsid="@cms.CmsPageId">
+                                        <i class="bi bi-pencil-square icon"></i>
+                                        </a> </button>
+                                      <a class="nav-link text-black deleteMission p-2" onclick="showModal(@cms.CmsPageId)" type="button"><i class="bi bi-trash3"></i></a>
 
-
+                                  
                                 </td>
 
                             </tr>
@@ -112,7 +111,7 @@
                         else
                         {
                             <div class="page-item"><a class="page-link disabled" id="@Convert.ToInt32(@Model.Cmspages.PageNumber + 1) "> >></a></div>
-                        }s
+                        }
                     </ul>
                 }
             </div>

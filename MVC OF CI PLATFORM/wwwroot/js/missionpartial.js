@@ -1,4 +1,9 @@
-﻿
+﻿$('.nav-link').each(function () {
+    $(this).parent().removeClass('bg-light');
+    $(this).css('color', 'white');
+});
+$('.nav-link.mission').parent().addClass('bg-light');
+$('.nav-link.mission').css('color', 'orange');
 function showModal(id) {
     Swal.fire({
         title: 'Are you sure?',

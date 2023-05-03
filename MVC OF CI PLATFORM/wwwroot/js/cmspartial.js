@@ -54,3 +54,38 @@ function filterSearch() {
         }
     })
 }
+function showModal(id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "This CMSPage will be de-activated",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            DeleteCmspage(id);
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            )
+        }
+    })
+}
+function DeleteCmspage(cmspageid) {
+    alert("delete misson called");
+    $.ajax({
+        url: '/admin/DeleteCMSPage',
+        type: 'GET',
+        data: {
+            cmspageId: cmspageid
+        },
+        success: function (result) {
+            $('#loadPartialView').html($(result).find('#loadPartialView').html());
+            toastr.success("mission is deleted ");
+
+        }
+    });
+}

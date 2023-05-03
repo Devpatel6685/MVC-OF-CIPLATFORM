@@ -1,12 +1,10 @@
 ﻿
-$(document).on('click', '.theme li', function (e) {
-    e.preventDefault();
-    $('.theme li').each(function () {
-        $(this).removeClass('theactive');
-    })
-    $(this).addClass('theactive');
-    filterthemes();
+$('.nav-link').each(function () {
+    $(this).parent().removeClass('bg-light');
+    $(this).css('color', 'white');
 });
+$('.nav-link.theme').parent().addClass('bg-light');
+$('.nav-link.theme').css('color', 'orange');
 function filterthemes() {
 
     var pageIndex = $('.theme .theactive a').attr('id');
@@ -19,7 +17,7 @@ function filterthemes() {
             pageindex: pageIndex
         },
         success: function (response) {
-           /* alert("hello");*/
+            
             $('.table').html($(response).find('.table').html());
             $('.pagination').html($(response).find('.pagination').html());
 
@@ -48,7 +46,7 @@ function filterSearch() {
 
         },
         success: function (response) {
-            /*alert('called');*/
+
 
             $('.table').empty().html($(response).find('.table').html());
             $('.page').empty().html($(response).find('.page').html());
@@ -73,7 +71,7 @@ function showModal(id) {
     })
 }
 function DeleteTheme(themeId) {
-   /* alert("delete theme called");*/
+    /*alert("delete theme called");*/
     $.ajax({
         url: '/admin/DeleteTheme',
         type: 'GET',
@@ -81,7 +79,7 @@ function DeleteTheme(themeId) {
             themeid: themeId
         },
         success: function (result) {
-            alert('result called');
+           /* alert('result called');*/
             console.log(result);
             if (result == true) {
                 Swal.fire({

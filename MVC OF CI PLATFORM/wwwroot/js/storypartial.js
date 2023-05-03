@@ -92,3 +92,17 @@ function declinestory(storyId) {
         }
     })
 }
+
+function pendingstory(storyId) {
+    $.ajax({
+        url: "/Admin/pendingStory",
+        type: "POST",
+        data: {
+            storyid: storyId,
+        },
+        success: function (response) {
+            $('#loadPartialView').html($(response).find('#loadPartialView').html());
+            toastr.success("Story  is Pending");
+        }
+    })
+}

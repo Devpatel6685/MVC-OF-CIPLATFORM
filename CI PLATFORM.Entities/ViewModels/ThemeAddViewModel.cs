@@ -11,5 +11,7 @@ namespace CI_PLATFORM.Entities.ViewModels
         public string? Title { get; set; }
 
         public byte Status { get; set; }
+
+        public long themeid { get; set; }
     }
 }

@@ -1,12 +1,11 @@
-﻿$(document).on('click', '.banner li', function (e) {
-    e.preventDefault();
-    $('.banner li').each(function () {
-        $(this).removeClass('banactive');
-    })
-    $(this).addClass('banactive');
-    console.log($(this).children().attr("id"))
-    filterbanner();
+﻿
+$('.nav-link').each(function () {
+    $(this).parent().removeClass('bg-light');
+    $(this).css('color', 'white');
 });
+$('.nav-link.banner').parent().addClass('bg-light');
+$('.nav-link.banner').css('color', 'orange');
+
 function filterbanner() {
 
     var pageIndex = $('.banner .banactive a').attr('id');

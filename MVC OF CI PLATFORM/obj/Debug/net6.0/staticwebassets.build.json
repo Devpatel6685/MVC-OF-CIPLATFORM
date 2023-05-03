@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zagS28+oQTFoBvIfDkR9H7WPlWs059ojm0thaSKFEkE=",
+  "Hash": "Tk7yJ0UQmq5YKqSpu4C/IR9bykOp3IBF0DZxSvJ/ygs=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -3247,6 +3247,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\UserProfileImages\\1a54b90f-7f63-49f0-b9ec-ad26dc43724f.png"
     },
     {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer2.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/UserProfileImages/volunteer2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\UserProfileImages\\volunteer2.png"
+    },
+    {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer3.png",
       "SourceId": "MVC OF CI PLATFORM",
       "SourceType": "Discovered",
@@ -3279,6 +3296,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\UserProfileImages\\volunteer3.png.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer5.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/UserProfileImages/volunteer5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\UserProfileImages\\volunteer5.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\UserProfileImages\\volunteer7.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/UserProfileImages/volunteer7.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\UserProfileImages\\volunteer7.png"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\Adminpage.js",
