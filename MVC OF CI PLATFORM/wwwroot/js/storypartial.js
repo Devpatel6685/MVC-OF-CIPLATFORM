@@ -92,7 +92,26 @@ function declinestory(storyId) {
         }
     })
 }
-
+function showModal(storyid) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "This Story will be Pending",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            pendingstory(storyid);
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            )
+        }
+    })
+}
 function pendingstory(storyId) {
     $.ajax({
         url: "/Admin/pendingStory",
