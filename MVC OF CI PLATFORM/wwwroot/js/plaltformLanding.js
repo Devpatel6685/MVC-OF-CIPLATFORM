@@ -57,9 +57,19 @@ $(document).ready(function () {
         filterMission()
 
     });
-    $('#search-input').keyup(function () {
-        filterMission()
+ 
+    $('#search-input').on('input', function () {
+        var keyword = $(this).val();
+        if (keyword.length > 2 || keyword.length == 0) {
+
+            // Perform the search with the keyword
+            filterMission(keyword);
+        } else {
+            // Clear the search results
+            clearMissionResults();
+        }
     });
+
 
     dispalyCout();
 

@@ -10,7 +10,7 @@
             $('#missionTime').empty();
             $('#missionTime').append('<option value="">Select Mission</option>')
             $(result.time).each(function (i, data) {
-                if (data.missionId != mission) {
+                if (data.missionid != mission) {
                     $('#missionTime').append('<option value="' + data.missionId + '" id="' + data.missionId + '">' + data.title + '</option>')
                 }
             })
@@ -95,7 +95,7 @@ $('#missionGoal').change(function () {
 })
 
 function edit(missionType, missionid, timesheetId) {
-
+    debugger;
     $('.edit').html("Edit");
     $.ajax({
         url: "/Volunteer/getTimesheet",
@@ -104,6 +104,7 @@ function edit(missionType, missionid, timesheetId) {
         },
         type: "get",
         success: function (result) {
+            debugger;
             var date = new Date(Date.parse(result.date));
             date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
             var isoDate = date.toISOString().slice(0, 10)
