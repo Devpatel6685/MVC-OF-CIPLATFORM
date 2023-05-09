@@ -265,6 +265,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 ;
             return PartialView("_banneradd", model);
         }
+        public IActionResult DeleteBanner(int id)
+        {
+            _adminInterface.DeleteBanner(id);
+            return RedirectToAction("Banner", new { SearchInputdata = "", pageindex = 1 });
+        }
         public IActionResult edituser(string id)
         {
             var usermodel = _adminInterface.edituserdata(id);

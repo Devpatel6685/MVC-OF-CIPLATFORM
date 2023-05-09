@@ -4,6 +4,8 @@
 @{
     var firstname_session = @Accessor.HttpContext.Session.GetString("username");
     var userid_session = @Accessor.HttpContext.Session.GetString("userid");
+    var role = Accessor.HttpContext.Session.GetString("role");
+
 }
 <html lang="en">
 
@@ -112,7 +114,12 @@
             </div>
         </div>
 
-
+        @if(role == "Admin")
+        {
+            <a class="py-2 mx-auto btn rounded-pill border apply justify-content-end me-5" asp-action="Story" asp-controller="Admin">
+                Close
+            </a>
+        }
 
         <div id="model"
              data-userid="@userid_session">

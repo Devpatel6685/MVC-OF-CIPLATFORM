@@ -80,7 +80,7 @@
                                 <td class="d-flex">
                                     <button class="btn border-0">
                                         <a asp-action="edituser" asp-controller="Admin" asp-route-id="@user.UserId">
-                                            <i class="bi bi-pencil-square icon"></i>
+                                            <i class="bi bi-pencil-square icon" onclick="showModal(@user.UserId)"></i>
                                         </a>
                                     </button>
                                     <a class="nav-link text-black deleteUser p-2" onclick="showModal(@user.UserId)" type="button"><i class="bi bi-trash3"></i></a>
@@ -99,7 +99,7 @@
             <div class="d-flex justify-content-center page">
                 @if (Model.users.PageCount > 1)
                 {
-                    <ul class="pagination use">
+                    <ul class="pagination useli">
 
                         @if (Model.users.HasPreviousPage && Model.users.PageNumber > 1)
                         {
@@ -113,7 +113,7 @@
                         {
                             if (i == Model.users.PageNumber)
                             {
-                                <li class="page-item active"><a class="page-link" id="@i">@i</a></li>
+                                <li class="page-item usactive"><a class="page-link" id="@i">@i</a></li>
                             }
                             else
                             {

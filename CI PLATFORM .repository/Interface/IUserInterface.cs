@@ -14,6 +14,7 @@ namespace CI_PLATFORM_.repository.Interface
         public string login(LoginViewModel user);
 
         public string REGISTRATIONPAGE(registerviewmodel user);
+        public Tuple<List<NotificationTitle>, List<long>> gettitles(string userId);
 
 
         public string FORGOTPASSWORD(forgotviewmodel user);

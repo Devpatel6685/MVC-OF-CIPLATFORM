@@ -5,8 +5,17 @@ $('.nav-link').each(function () {
 });
 $('.nav-link.user').parent().addClass('bg-light');
 $('.nav-link.user').css('color', 'orange');
+
+$(document).on('click', '.useli li', function (e) {
+    e.preventDefault();
+    $('.useli li').each(function () {
+        $(this).removeClass('usactive');
+    })
+    $(this).addClass('usactive');
+    filteruser();
+});
 function filteruser() {
-    var pageIndex = $('.use .active a').attr('id');
+    var pageIndex = $('.useli .usactive a').attr('id');
     var keyword = $('#search').val();
     $.ajax({
         url: "/Admin/User",
@@ -56,7 +65,7 @@ function filterSearch() {
 function showModal(id) {
     Swal.fire({
         title: 'Are you sure?',
-        text: "This Mission will be de-activated",
+        text: "This User will be de-activated",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

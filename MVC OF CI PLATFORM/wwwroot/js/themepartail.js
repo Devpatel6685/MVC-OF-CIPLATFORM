@@ -5,6 +5,14 @@ $('.nav-link').each(function () {
 });
 $('.nav-link.theme').parent().addClass('bg-light');
 $('.nav-link.theme').css('color', 'orange');
+$(document).on('click', '.theme li', function (e) {
+    e.preventDefault();
+    $('.theme li').each(function () {
+        $(this).removeClass('theactive');
+    })
+    $(this).addClass('theactive');
+    filterthemes();
+});
 function filterthemes() {
 
     var pageIndex = $('.theme .theactive a').attr('id');

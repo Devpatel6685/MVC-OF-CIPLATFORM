@@ -1137,6 +1137,14 @@ namespace CI_PLATFORM_.repository.Repository
             story.DeletedAt = DateTime.Now;
             _ciplatfromdbcontext.SaveChanges();
         }
+        public void DeleteBanner(long id)
+        {
+            Banner banner = _ciplatfromdbcontext.Banners.SingleOrDefault(b => b.BannerId == id);
+            banner.Status = "In-Active";
+            banner.DeletedAt = DateTime.Now;
+            _ciplatfromdbcontext.Banners.Update(banner);
+            _ciplatfromdbcontext.SaveChanges();
+        }
         public bool deletetheme(string themeid)
         {
             var theme = _ciplatfromdbcontext.MissionThemes.FirstOrDefault(t => t.MissionThemeId.ToString() == themeid);

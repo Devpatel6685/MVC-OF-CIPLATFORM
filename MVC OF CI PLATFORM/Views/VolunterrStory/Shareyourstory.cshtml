@@ -1,4 +1,10 @@
 ﻿@model CI_PLATFORM.Entities.ViewModels.AddStoryViewmodel;
+@inject IHttpContextAccessor Accessor;
+
+@{
+   
+    var role = Accessor.HttpContext.Session.GetString("role");
+}
 <!DOCTYPE html>
 
 <html lang="en">
@@ -89,7 +95,11 @@
         <div class="row mx-2 mt-2">
             <div class="col-12 d-flex justify-content-between">
                 <div>
-                    <a type="button" class="btn btn-outline-warning" asp-action="volunteerStory" style="border-radius: 50px;">Cancel</a>
+                    @if(role == "Admin"){
+                        <a type="button" class="btn btn-outline-warning" asp-action="Story" asp-controller="Admin" style="border-radius: 50px;">Cancel</a>
+                    }else{
+                        <a type="button" class="btn btn-outline-warning" asp-action="volunteerStory" style="border-radius: 50px;">Cancel</a>
+                    }
                 </div>
                 <div>
                     @if (Model.missionId == 0)

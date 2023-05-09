@@ -20,7 +20,7 @@
             
         </div>
         <div class=" p-2 border">
-            <form asp-action="AddBanner" asp-controller="admin" method="post" enctype="multipart/form-data" id="form">
+            <form asp-action="AddBanner" asp-controller="Admin" method="post" enctype="multipart/form-data" id="form">
                 <input type="number" asp-for="BannerId" hidden/>
                 <div class=" d-flex flex-column mb-2">
                     <label asp-for="Title">Enter Title</label>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="d-flex mt-3 justify-content-end">
-                    <a class="btn btn-secondary rounded-pill me-1" asp-action="BannerManagement" asp-controller="admin">Cancel</a>
+                    <a class="btn btn-secondary rounded-pill me-1" asp-action="Banner" asp-controller="Admin">Cancel</a>
                     <button type="submit" class="btn apply rounded-pill">Save</button>
                 </div>
             </form>

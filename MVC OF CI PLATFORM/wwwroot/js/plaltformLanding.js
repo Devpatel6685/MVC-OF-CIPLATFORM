@@ -57,8 +57,8 @@ $(document).ready(function () {
         filterMission()
 
     });
- 
-    $('#search-input').on('input', function () {
+
+  /*  $('#search-input').on('input', function () {
         var keyword = $(this).val();
         if (keyword.length > 2 || keyword.length == 0) {
 
@@ -68,6 +68,14 @@ $(document).ready(function () {
             // Clear the search results
             clearMissionResults();
         }
+    });*/
+    let timeoutId;
+
+    $('#search-input').keyup(function () {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(function () {
+            filterMission()
+        }, 1000); // 3000 milliseconds = 3 seconds
     });
 
 
@@ -252,7 +260,7 @@ $(document).on('click', '.btn-list', showList);
 
 
 $(document).on('click', '.pagination li', function (e) {
-   
+
     e.preventDefault();
     $('.pagination li').each(function () {
         $(this).removeClass('active');
@@ -352,5 +360,40 @@ function getUsers(mId) {
         });
     }
 }
+function messagenable(event) {
+    event.stopPropagation();
+    $('.noti').addClass('d-none');
+    $('.check').removeClass('d-none');
 
+    $.ajax({
+        type: "GET",
+        url: "/home/GetTitles",
 
+        success: function (result) {
+
+            $.each(result.titles, function (i, data) {
+                if ($.inArray(data.NotificationId, data.ids) !== -1) {
+                    $('.check').append('<div class="form-check ms-3"><input class="form-check-input checkbox title" checked type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '</label></div>')
+
+                }
+                else {
+                    $('.check').append('<div class="form-check ms-3"><input class="form-check-input checkbox title" type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '</label></div>')
+
+                }
+            })
+
+        }
+    });
+
+}
+function selecttitles() {
+    title = [];
+    $('.title:checkbox:checked').each(function () {
+        title.push($(this).attr("id"));
+    })
+
+}
+
+$('#bell-icon').on('click', function () {
+    $('.noti').toggleClass('d-none');
+});

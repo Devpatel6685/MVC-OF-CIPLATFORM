@@ -9,7 +9,11 @@
     overflow-y: auto;
     height: 100px;
 }
-
+#bellicon {
+    height: 36px;
+    width: 32px;
+    margin-top: 9px;
+}
 .dropdown a img {
     width: 50px;
     height: 50px;
@@ -19,6 +23,12 @@
     position: absolute;
     right: 5px;
     top: 3px;
+}
+#notification-div {
+    left: 0px !important;
+    width: 290px;
+    min-height:200px;
+    overflow-y:auto
 }
 
 #search-border {

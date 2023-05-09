@@ -47,9 +47,9 @@ namespace CI_PLATFORM.repository.Repository
             {
                 return "invalid password";
             }
-            
-            return userpassword.FirstName + "," + userpassword.UserId+","+userpassword.Avatar + "," + userpassword.Role;
-            
+
+            return userpassword.FirstName + "," + userpassword.UserId + "," + userpassword.Avatar + "," + userpassword.Role;
+
         }
         public List<Banner> GetBanners()
         {
@@ -187,7 +187,7 @@ namespace CI_PLATFORM.repository.Repository
             }
             EditUserViewModel model = new EditUserViewModel()
             {
-                Avatar=data.Avatar,
+                Avatar = data.Avatar,
                 name = data.FirstName,
                 surname = data.LastName,
                 title = data.Title,
@@ -202,9 +202,9 @@ namespace CI_PLATFORM.repository.Repository
                 linkedinURL = data.LinkedInUrl,
                 userSkills = user_skill,
                 skills = skills,
-                Email= data.Email,
-                
-                
+                Email = data.Email,
+
+
             };
             return model;
         }
@@ -279,7 +279,7 @@ namespace CI_PLATFORM.repository.Repository
             }
             _cIPLATFORMDbContext.SaveChanges();
         }
-        
+
         public string changepass(EditUserViewModel model, string userid)
         {
             var user = _cIPLATFORMDbContext.Users.SingleOrDefault(u => u.UserId.ToString() == userid);
@@ -292,6 +292,13 @@ namespace CI_PLATFORM.repository.Repository
             _cIPLATFORMDbContext.SaveChanges();
             return "success";
         }
+        public Tuple<List<NotificationTitle>, List<long>> gettitles(string userId)
+        {
+            var notificationTitle = _cIPLATFORMDbContext.NotificationTitles.ToList();
+             List<long> idsselected = (List<long>)_cIPLATFORMDbContext.EnableUserStatuses.Where(up => up.UserId.ToString() == userId && up.Status == 1).Select(up => up.NotificationId);
+            return new Tuple<List<NotificationTitle>,List<long>> (notificationTitle, idsselected); 
+        }
+
 
 
     }

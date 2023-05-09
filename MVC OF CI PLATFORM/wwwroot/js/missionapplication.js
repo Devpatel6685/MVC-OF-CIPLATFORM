@@ -1,12 +1,9 @@
-﻿
-
-$('.nav-link').each(function () {
+﻿$('.nav-link').each(function () {
     $(this).parent().removeClass('bg-light');
     $(this).css('color', 'white');
 });
 $('.nav-link.missionapplication').parent().addClass('bg-light');
-$('.nav-link.missionapplication ').css('color', 'orange');
-
+$('.nav-link.missionapplication').css('color', 'orange');
 
 
 $(document).on('click', '.miapp li', function (e) {

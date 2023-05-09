@@ -29,9 +29,13 @@ public partial class CIPLATFORMDbContext : DbContext
 
     public virtual DbSet<Country> Countries { get; set; }
 
+    public virtual DbSet<EnableUserStatus> EnableUserStatuses { get; set; }
+
     public virtual DbSet<FavouriteMission> FavouriteMissions { get; set; }
 
     public virtual DbSet<GoalMission> GoalMissions { get; set; }
+
+    public virtual DbSet<MessageTable> MessageTables { get; set; }
 
     public virtual DbSet<Mission> Missions { get; set; }
 
@@ -49,6 +53,8 @@ public partial class CIPLATFORMDbContext : DbContext
 
     public virtual DbSet<MissionTheme> MissionThemes { get; set; }
 
+    public virtual DbSet<NotificationTitle> NotificationTitles { get; set; }
+
     public virtual DbSet<PasswordReset> PasswordResets { get; set; }
 
     public virtual DbSet<Skill> Skills { get; set; }
@@ -64,6 +70,8 @@ public partial class CIPLATFORMDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<UserSkill> UserSkills { get; set; }
+
+    public virtual DbSet<Userpermission> Userpermissions { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=ConnectionStrings:DeafultString");
@@ -287,6 +295,32 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasColumnName("updated_at");
         });
 
+        modelBuilder.Entity<EnableUserStatus>(entity =>
+        {
+            entity.HasKey(e => e.Enableuserid).HasName("PK__enable_u__E4421F1872E2B680");
+
+            entity.ToTable("enable_user_status");
+
+            entity.Property(e => e.Enableuserid).HasColumnName("enableuserid");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
+            entity.Property(e => e.NotificationId).HasColumnName("notification_id");
+            entity.Property(e => e.Status)
+                .HasDefaultValueSql("((0))")
+                .HasColumnName("status");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.Notification).WithMany(p => p.EnableUserStatuses)
+                .HasForeignKey(d => d.NotificationId)
+                .HasConstraintName("FK__enable_us__notif__4F12BBB9");
+
+            entity.HasOne(d => d.User).WithMany(p => p.EnableUserStatuses)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__enable_us__user___5006DFF2");
+        });
+
         modelBuilder.Entity<FavouriteMission>(entity =>
         {
             entity.HasKey(e => e.FavouriteMissionId).HasName("PK__favourit__94E4D8CAF4FE2823");
@@ -346,6 +380,24 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasForeignKey(d => d.MissionId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__goal_miss__missi__0B91BA14");
+        });
+
+        modelBuilder.Entity<MessageTable>(entity =>
+        {
+            entity.HasKey(e => e.MessageId).HasName("PK__MessageT__F5A1327A41079855");
+
+            entity.ToTable("MessageTable");
+
+            entity.Property(e => e.MessageId).HasColumnName("Message_id");
+            entity.Property(e => e.Message)
+                .HasMaxLength(30)
+                .IsUnicode(false)
+                .HasColumnName("message");
+            entity.Property(e => e.NotificationId).HasColumnName("notification_id");
+
+            entity.HasOne(d => d.Notification).WithMany(p => p.MessageTables)
+                .HasForeignKey(d => d.NotificationId)
+                .HasConstraintName("FK__MessageTa__notif__467D75B8");
         });
 
         modelBuilder.Entity<Mission>(entity =>
@@ -661,6 +713,18 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasColumnName("updated_at");
         });
 
+        modelBuilder.Entity<NotificationTitle>(entity =>
+        {
+            entity.HasKey(e => e.NotificationId).HasName("PK__notifica__E059842FB8DEDFA8");
+
+            entity.ToTable("notification_title");
+
+            entity.Property(e => e.NotificationId).HasColumnName("notification_id");
+            entity.Property(e => e.Title)
+                .HasMaxLength(50)
+                .HasColumnName("title");
+        });
+
         modelBuilder.Entity<PasswordReset>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__password__3213E83F750FF36C");
@@ -959,6 +1023,28 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK__user_skil__user___671F4F74");
+        });
+
+        modelBuilder.Entity<Userpermission>(entity =>
+        {
+            entity.HasKey(e => e.UserpermissionId).HasName("PK__userperm__4AD7F7C4BD0AB521");
+
+            entity.ToTable("userpermission");
+
+            entity.Property(e => e.UserpermissionId).HasColumnName("userpermission_id");
+            entity.Property(e => e.MessageId).HasColumnName("Message_id");
+            entity.Property(e => e.Status)
+                .HasDefaultValueSql("((1))")
+                .HasColumnName("status");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.Message).WithMany(p => p.Userpermissions)
+                .HasForeignKey(d => d.MessageId)
+                .HasConstraintName("FK__userpermi__Messa__4C364F0E");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Userpermissions)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__userpermi__user___4959E263");
         });
 
         OnModelCreatingPartial(modelBuilder);

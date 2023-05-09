@@ -53,6 +53,8 @@ public partial class User
 
     public virtual Country Country { get; set; } = null!;
 
+    public virtual ICollection<EnableUserStatus> EnableUserStatuses { get; } = new List<EnableUserStatus>();
+
     public virtual ICollection<FavouriteMission> FavouriteMissions { get; } = new List<FavouriteMission>();
 
     public virtual ICollection<MissionApplication> MissionApplications { get; } = new List<MissionApplication>();
@@ -68,4 +70,6 @@ public partial class User
     public virtual ICollection<Timesheet> Timesheets { get; } = new List<Timesheet>();
 
     public virtual ICollection<UserSkill> UserSkills { get; } = new List<UserSkill>();
+
+    public virtual ICollection<Userpermission> Userpermissions { get; } = new List<Userpermission>();
 }

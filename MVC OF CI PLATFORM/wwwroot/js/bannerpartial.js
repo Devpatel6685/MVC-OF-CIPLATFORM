@@ -48,3 +48,32 @@ function filterSearch() {
         }
     })
 }
+function deleteBanner(id) {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You want to delete this?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "/Admin/deleteBanner",
+                type: "POST",
+                data: {
+                    id: id
+                },
+                success: function (response) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your banner has been deleted.',
+                        'success'
+                    )
+                    $('#loadPartialView').html($(response).find('#loadPartialView').html());
+                }
+            });
+        }
+    })
+}

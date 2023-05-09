@@ -269,8 +269,13 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var city = _iuserRepository.GetCities(id);
             return Json(city);
         }
+        public JsonResult GetTitles()
+        {
+            var userid = HttpContext.Session.GetString("userid");
+            var titles = _iuserRepository.gettitles(userid);
+            return Json(new {titles = titles.Item1, ids = titles.Item2});
+        }
 
-       
 
     }
 }

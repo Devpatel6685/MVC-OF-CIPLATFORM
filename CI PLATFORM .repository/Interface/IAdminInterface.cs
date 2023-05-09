@@ -50,6 +50,7 @@ namespace CI_PLATFORM_.repository.Interface
 
         public Adminviewmodel getstorydata(int pageindex, int pageSize, string SearchInputdata);
         public void approvestory(string storyid);
+        public void DeleteBanner(long id);
         public void declinestory(string storyid);
         public MissionAddViewModel getmissionmodeldata();
         public void Adduser(UserAddViewModel model);
