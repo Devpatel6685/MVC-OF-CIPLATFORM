@@ -275,7 +275,20 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             var titles = _iuserRepository.gettitles(userid);
             return Json(new {titles = titles.Item1, ids = titles.Item2});
         }
-
+        [HttpPost]
+        public void SetStatus(List<string> titles)
+        {
+            var userid = HttpContext.Session.GetString("userid");
+           _iuserRepository.setstatus(userid,titles);
+            
+        }
+       
+        public JsonResult GetNotification()
+        {
+            var userid = HttpContext.Session.GetString("userid");
+            var notifications = _iuserRepository.getnotification(userid);
+            return Json(notifications);
+        }
 
     }
 }

@@ -94,7 +94,7 @@ function DeleteTheme(themeId) {
                     icon: 'success',
                     title: 'Deleted',
                     text: 'Your theme is been deleted',
-                    footer: '<a href="">You cannot de-activate it</a>'
+                    footer: 'You cannot de-activate it'
                 }).then(() => {
                     window.location = "/Admin/Theme/"
                 })
@@ -105,7 +105,7 @@ function DeleteTheme(themeId) {
                     icon: 'error',
                     title: 'Oops...',
                     text: 'This theme is already used by Mission or User',
-                    footer: '<a href="">You cannot de-activate it</a>'
+                    
                 })
             }
 

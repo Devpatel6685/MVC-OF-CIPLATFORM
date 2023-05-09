@@ -25,7 +25,7 @@ namespace CI_PLATFORM_.repository.Interface
         public List<City> getcities(string countryid);
         public List<MissionTheme> getthemes();
         public void deletemission(string missionid);
-        public void Addmission(MissionAddViewModel model, List<int> selectedSkills);
+        public void Addmission(MissionAddViewModel model, List<int> selectedSkills,string userid);
         public SkillAddViewModel getskill(string skillid);
         public CmsAddViewModel getcmsdata(string cmspageid);
         public void Addcms(CmsAddViewModel model);

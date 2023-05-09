@@ -70,8 +70,10 @@
                                 }
 
                                 <td class="d-flex">
-                                    <a class="me-1 apply btn rounded-pill" asp-action="storydetails" asp-controller="VolunterrStory" asp-route-id="@story.StoryId">View</a>
-                                    <a class="mx-1 text-success align-self-center" onclick="approvestory(@story.StoryId)"><i class="bi bi-check-circle"></i></a>
+                                    <button class="px-3 me-1 btn btn-warning rounded-pill"> <a class="text-decoration-none text-white" asp-action="storydetails" asp-controller="VolunterrStory" asp-route-id="@story.StoryId">View</a></button>
+
+@*                                    <a class="me-1 apply btn rounded-pill" asp-action="storydetails" asp-controller="VolunterrStory" asp-route-id="@story.StoryId">View</a>
+*@                                    <a class="mx-1 text-success align-self-center" onclick="approvestory(@story.StoryId)"><i class="bi bi-check-circle"></i></a>
                                     <a class="mx-1 text-danger align-self-center" onclick="declinestory(@story.StoryId)"><i class="bi bi-x-circle"></i></a>
                                     <a class="ms-1 text-black align-self-center " onclick="showModal(@story.StoryId)"><i class="bi bi-trash3"></i></a>
                                 </td>

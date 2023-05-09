@@ -98,7 +98,6 @@ function DeleteSkill(skillid) {
                     icon: 'success',
                     title: 'Deleted',
                     text: 'Your skill is been deleted',
-                    footer: '<a href="">You cannot de-activate it</a>'
                 }).then(() => {
                     window.location = "/Admin/Skill/"
                 })
@@ -109,7 +108,7 @@ function DeleteSkill(skillid) {
                     icon: 'error',
                     title: 'Oops...',
                     text: 'This Skill is already used by Mission or User',
-                    footer: '<a href="">You cannot de-activate it</a>'
+                    
                 })
             }
         }

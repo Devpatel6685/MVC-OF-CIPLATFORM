@@ -990,7 +990,7 @@ namespace CI_PLATFORM_.repository.Repository
             mission.Status = model.Status;
             _ciplatfromdbcontext.SaveChanges();
         }
-        public void Addmission(MissionAddViewModel model, List<int> selectedSkills)
+        public void Addmission(MissionAddViewModel model, List<int> selectedSkills,string userid)
         {
             var model1 = new Mission
             {
@@ -1105,6 +1105,18 @@ namespace CI_PLATFORM_.repository.Repository
                 }
                 _ciplatfromdbcontext.MissionDocuments.Add(docModel);
             }
+            var not_id = _ciplatfromdbcontext.NotificationTitles.SingleOrDefault(n => n.Title == "New Missions").NotificationId;
+            var message = new MessageTable
+            {
+                NotificationId = not_id,
+                Message = $"New Mission-{model.Title}"
+            };
+            _ciplatfromdbcontext.Add(message);
+            var Addpermission = new Userpermission
+            {
+                UserId=long.Parse(userid),
+            };
+            message.Userpermissions.Add(Addpermission);
             _ciplatfromdbcontext.SaveChanges();
 
         }

@@ -295,10 +295,44 @@ namespace CI_PLATFORM.repository.Repository
         public Tuple<List<NotificationTitle>, List<long>> gettitles(string userId)
         {
             var notificationTitle = _cIPLATFORMDbContext.NotificationTitles.ToList();
-             List<long> idsselected = (List<long>)_cIPLATFORMDbContext.EnableUserStatuses.Where(up => up.UserId.ToString() == userId && up.Status == 1).Select(up => up.NotificationId);
+            List<long> idsselected = _cIPLATFORMDbContext.EnableUserStatuses.Where(up => up.UserId.ToString() == userId && up.Status == 1).Select(up => up.NotificationId).ToList().ConvertAll(id => (long?)id).Select(id => id.Value).ToList();
             return new Tuple<List<NotificationTitle>,List<long>> (notificationTitle, idsselected); 
         }
 
+        public void setstatus(string userid,List<string> titles)
+        {
+            foreach(var id in titles)
+            {
+                var model = new EnableUserStatus
+                {
+                    UserId=long.Parse(userid),
+                    Status=1,
+                    NotificationId=long.Parse(id),
+                };
+                _cIPLATFORMDbContext.Add(model);
+            }
+            _cIPLATFORMDbContext.SaveChanges();
+        }
+        public Dictionary<long, string> getnotification(string userId)
+        {
+            var notifications = new Dictionary<long, string>();
+            var takeids = _cIPLATFORMDbContext.EnableUserStatuses.Where(e => e.UserId.ToString() == userId).Select(e => e.NotificationId).ToList();
+            foreach(var id in takeids)
+            {
+                var message = _cIPLATFORMDbContext.MessageTables.Where(m => m.NotificationId == id).AsQueryable();
+                var messageid = message.Select(m=>m.MessageId).ToList();
+                foreach(var id1 in messageid)
+                {
+                    var check_status = _cIPLATFORMDbContext.Userpermissions.SingleOrDefault(u => u.UserId.ToString() == userId && u.MessageId == id1).Status;
+                    if(check_status==1)
+                    {
+                        var messages = message.FirstOrDefault(m => m.MessageId == id1);
+                        notifications.Add((long)messages.NotificationId, messages.Message);
+                    }
+                }
+            }
+            return notifications;
+        }
 
 
     }

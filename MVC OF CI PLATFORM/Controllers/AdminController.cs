@@ -152,9 +152,10 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
         public IActionResult AddMission(MissionAddViewModel model, List<int> selectedSkills)
         {
+            var userid = HttpContext.Session.GetString("userid");
             if (model.MissionId == 0)
             {
-                _adminInterface.Addmission(model, selectedSkills);
+                _adminInterface.Addmission(model, selectedSkills,userid);
                 TempData["success"] = "Mission is added successfully";
             }
             else

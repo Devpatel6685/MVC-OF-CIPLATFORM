@@ -353,12 +353,16 @@ function getUsers(mId) {
             success: function (result) {
                 div.empty();
                 $.each(result, function (i, data) {
-                    div.append('<div class="form-check ms-3"><input class="form-check-input checkbox" type="checkbox" value="' + data.firstName + " " + data.lastName + '" id=' + data.userId + '><label class="form-check-label" for=' + data.userId + '>' + data.firstName + " " + data.lastName + '</label></div>')
+                    div.append('<div class="form-check "><input class="form-check-input checkbox" type="checkbox" value="' + data.firstName + " " + data.lastName + '" id=' + data.userId + '><label class="form-check-label" for=' + data.userId + '>' + data.firstName + " " + data.lastName + '</label></div>')
                 })
 
             }
         });
     }
+}
+function cancel() {
+    $('.noti').removeClass('d-none');
+    $('.check').addClass('d-none');
 }
 function messagenable(event) {
     event.stopPropagation();
@@ -370,14 +374,15 @@ function messagenable(event) {
         url: "/home/GetTitles",
 
         success: function (result) {
-
+  
             $.each(result.titles, function (i, data) {
+                console.log("result", data.title);
                 if ($.inArray(data.NotificationId, data.ids) !== -1) {
-                    $('.check').append('<div class="form-check ms-3"><input class="form-check-input checkbox title" checked type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '</label></div>')
+                    $('.titleswithcheck').append('<div class="form-check"><input class="form-check-input checkbox title" checked type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for='+data.notificationId+' >' + data.title + '</label></div>')
 
                 }
                 else {
-                    $('.check').append('<div class="form-check ms-3"><input class="form-check-input checkbox title" type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '</label></div>')
+                    $('.titleswithcheck').append('<div class="form-check"><input class="form-check-input checkbox title" type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '>' + data.title +'</label></div>')
 
                 }
             })
@@ -387,13 +392,51 @@ function messagenable(event) {
 
 }
 function selecttitles() {
-    title = [];
+    titles = [];
     $('.title:checkbox:checked').each(function () {
-        title.push($(this).attr("id"));
+        titles.push($(this).attr("id"));
     })
+    console.log('titles', titles);
+    $.ajax({
+        type: "POST",
+        url: "/home/SetStatus",
+        data: {
+            titles: titles
+        },
+        success: function (result) {
+            toastr.success("Now for selected titles Notification will be shown!!");
 
+        }
+    });
 }
 
-$('#bell-icon').on('click', function () {
+/*$('#bell-icon').on('click', function () {
     $('.noti').toggleClass('d-none');
-});
+});*/
+getusernotification();
+
+function getusernotification() {
+    alert('called');
+    $.ajax({
+        type: "GET",
+        url: "/home/GetNotification",
+        success: function (result) {
+            console.log("this is result", result);
+            $.each(result, function (i, data) {
+                switch (i) {
+                    case '5':
+                        console.log("success")
+                        var img = '<img src="/Assets/add.png">';
+                        icon = '<i class="bi bi-circle-fill text-warning"></i>';
+                        $('.usernoti').append('<div class="form-check  d-flex">' + img + '<span class="form-check-label" for=' + i + '>' + data + '</span>' + icon + '</div>');
+                        break;
+                    default:
+                        console.log("Value is not 1, 2, or 3.");
+                }
+            })
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log("Error: " + errorThrown);
+        }
+    });
+}

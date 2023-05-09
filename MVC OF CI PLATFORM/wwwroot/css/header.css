@@ -18,7 +18,10 @@
     width: 50px;
     height: 50px;
 }
-
+.form-check {
+    padding: 0px !important;
+    justify-content: space-between;
+}
 #prof-drop {
     position: absolute;
     right: 5px;

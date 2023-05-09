@@ -457,6 +457,10 @@
       "PackagePath": "staticwebassets\\Documents\\Mission\\ANIMAL WELFARE\\New doc Jul 20, 2022 6.08 PM.pdf"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\Ahmedabad Health\\Assets.zip",
+      "PackagePath": "staticwebassets\\Documents\\Mission\\Ahmedabad Health\\Assets.zip"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Documents\\Mission\\CHILDREN CARING\\New doc Jul 20, 2022 6.08 PM (1).doc",
       "PackagePath": "staticwebassets\\Documents\\Mission\\CHILDREN CARING\\New doc Jul 20, 2022 6.08 PM (1).doc"
     },
@@ -555,6 +559,18 @@
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\ANIMAL WELFARE 2\\Animal-welfare-_-save-birds-campaign-1.png",
       "PackagePath": "staticwebassets\\Images\\Mission\\ANIMAL WELFARE 2\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Ahmedabad Health\\404-Page-image.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\Ahmedabad Health\\404-Page-image.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Ahmedabad Health\\Animal-welfare-_-save-birds-campaign-1.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\Ahmedabad Health\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Ahmedabad Health\\Animal-welfare-_-save-birds-campaign.png",
+      "PackagePath": "staticwebassets\\Images\\Mission\\Ahmedabad Health\\Animal-welfare-_-save-birds-campaign.png"
     },
     {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Animal Welfare\\Animal-welfare-_-save-birds-campaign-1.png",
