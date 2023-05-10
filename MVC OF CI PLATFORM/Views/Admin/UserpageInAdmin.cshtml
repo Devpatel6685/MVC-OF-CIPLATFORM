@@ -91,6 +91,11 @@
                                 <i class="bi bi-border-style me-2 sidebar-img "></i> <span class="d-none d-md-inline sidebar-text-font">Banner Management</span>
                             </a>
                         </dt>
+                        <dt class="mt-4" id="timesheetlink">
+                            <a asp-action="Timesheet" asp-controller="Admin" class="nav-link sidebarcontent d-flex p-0 atMediumConvertIntoColum">
+                                <i class="bi bi-reception-4  me-2 sidebar-img "></i> <span class="d-none d-md-inline sidebar-text-font">Timesheet</span>
+                            </a>
+                        </dt>
                     </dl>
                 </div>
 
@@ -114,8 +119,7 @@
                                 <span id="hide2">@firstname_session</span>
                             </a>
                             <ul class="dropdown-menu" id="drop-pos">
-                                <li><a class="dropdown-item">Add Profile</a></li>
-                                <li><a class="dropdown-item">VolunteeringTimesheet</a></li>
+                                <li><a class="dropdown-item">Edit Profile</a></li>
                                 <li><a class="dropdown-item" asp-action="LogOut" asp-controller="Home">Logout</a></li>
                             </ul>
                         </div>

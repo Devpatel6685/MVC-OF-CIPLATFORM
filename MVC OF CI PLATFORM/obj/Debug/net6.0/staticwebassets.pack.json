@@ -813,6 +813,10 @@
       "PackagePath": "staticwebassets\\js\\Volunteerpage.js"
     },
     {
+      "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\_timesheetAdmin.js",
+      "PackagePath": "staticwebassets\\js\\_timesheetAdmin.js"
+    },
+    {
       "Id": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\js\\banneraddpartial.js",
       "PackagePath": "staticwebassets\\js\\banneraddpartial.js"
     },

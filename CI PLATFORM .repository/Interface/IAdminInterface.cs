@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace CI_PLATFORM_.repository.Interface
 {
@@ -59,6 +60,9 @@ namespace CI_PLATFORM_.repository.Interface
         public UserAddViewModel edituserdata(string userid);
         public void editskilldatabase(SkillAddViewModel model);
         public bool deleteskill(string skillid);
+        public IPagedList<AdminTimesheetViewModel> GetTimesheets(int pageIndex, string keyword);
+        public void EditTimesheet(int id, int status);
+        public void DeleteTimesheet(long id);
 
 
     }

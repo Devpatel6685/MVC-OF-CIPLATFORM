@@ -389,10 +389,10 @@ public partial class CIPLATFORMDbContext : DbContext
             entity.ToTable("MessageTable");
 
             entity.Property(e => e.MessageId).HasColumnName("Message_id");
-            entity.Property(e => e.Message)
-                .HasMaxLength(30)
-                .IsUnicode(false)
-                .HasColumnName("message");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
+            entity.Property(e => e.Message).HasColumnName("message");
             entity.Property(e => e.NotificationId).HasColumnName("notification_id");
 
             entity.HasOne(d => d.Notification).WithMany(p => p.MessageTables)

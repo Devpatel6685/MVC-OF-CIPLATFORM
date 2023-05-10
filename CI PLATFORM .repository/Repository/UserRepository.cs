@@ -301,7 +301,9 @@ namespace CI_PLATFORM.repository.Repository
 
         public void setstatus(string userid,List<string> titles)
         {
-            foreach(var id in titles)
+            var title = _cIPLATFORMDbContext.EnableUserStatuses.Where(u => u.UserId.ToString() == userid);
+            _cIPLATFORMDbContext.EnableUserStatuses.RemoveRange(title);
+            foreach (var id in titles)
             {
                 var model = new EnableUserStatus
                 {
@@ -315,6 +317,7 @@ namespace CI_PLATFORM.repository.Repository
         }
         public Dictionary<long, string> getnotification(string userId)
         {
+            
             var notifications = new Dictionary<long, string>();
             var takeids = _cIPLATFORMDbContext.EnableUserStatuses.Where(e => e.UserId.ToString() == userId).Select(e => e.NotificationId).ToList();
             foreach(var id in takeids)

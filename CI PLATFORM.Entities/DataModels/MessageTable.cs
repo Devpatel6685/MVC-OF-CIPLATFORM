@@ -11,6 +11,8 @@ public partial class MessageTable
 
     public string? Message { get; set; }
 
+    public DateTime? CreatedAt { get; set; }
+
     public virtual NotificationTitle? Notification { get; set; }
 
     public virtual ICollection<Userpermission> Userpermissions { get; } = new List<Userpermission>();

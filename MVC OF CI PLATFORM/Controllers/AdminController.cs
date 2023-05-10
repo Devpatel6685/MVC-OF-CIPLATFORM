@@ -314,6 +314,34 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
 
         }
+        public IActionResult Timesheet(int pageIndex = 1, string keyword = "")
+        {
+            var data = _adminInterface.GetTimesheets(pageIndex, keyword);
+            return PartialView("_TimesheetPage", data);
+        }
+
+        [HttpPost]
+        public string EditTimesheet(int id, int status)
+        {
+            _adminInterface.EditTimesheet(id, status);
+            if (status == 0)
+            {
+                TempData["admin"] = "Request Rejected";
+            }
+            else
+            {
+                TempData["admin"] = "Request Accepted";
+            }
+            return "success";
+        }
+
+        [HttpPost]
+        public IActionResult DeleteTimesheet(long id)
+        {
+            _adminInterface.DeleteTimesheet(id);
+            return RedirectToAction("Timesheet");
+        }
+
     }
 }
 

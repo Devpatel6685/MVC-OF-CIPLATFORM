@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Http;
 using System.Net;
 using static Microsoft.Extensions.Logging.EventSource.LoggingEventSource;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace CI_PLATFORM_.repository.Repository
 {
@@ -28,15 +29,15 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext = ciplatfromdbcontext;
             _hostEnvironment = hostEnvironment;
         }
-   /*     public Adminviewmodel getuserdata(int pageindex, int pageSize, string SearchInputdata)
-        {
+        /*     public Adminviewmodel getuserdata(int pageindex, int pageSize, string SearchInputdata)
+             {
 
-            var users = _ciplatfromdbcontext.Users.Where(u => (SearchInputdata == null) || (u.FirstName.Contains(SearchInputdata)) || (u.LastName.Contains(SearchInputdata))).ToList();
-            var model = new Adminviewmodel();
+                 var users = _ciplatfromdbcontext.Users.Where(u => (SearchInputdata == null) || (u.FirstName.Contains(SearchInputdata)) || (u.LastName.Contains(SearchInputdata))).ToList();
+                 var model = new Adminviewmodel();
 
-            model.users = users.ToPagedList(pageindex, 10);
-            return model;
-        }*/
+                 model.users = users.ToPagedList(pageindex, 10);
+                 return model;
+             }*/
         public Adminviewmodel getuserdata(int pageindex, int pageSize, string SearchInputdata)
         {
             List<User> users;
@@ -56,15 +57,15 @@ namespace CI_PLATFORM_.repository.Repository
             return model;
         }
 
-       /* public Adminviewmodel getthemedata(int pageindex, int pageSize, string SearchInputdata)
+        /* public Adminviewmodel getthemedata(int pageindex, int pageSize, string SearchInputdata)
 
-        { 
-            var themes = _ciplatfromdbcontext.MissionThemes.Where(t => (SearchInputdata == null) || (t.Title.Contains(SearchInputdata))).OrderByDescending(m => m.Status).ToList();
-            var model = new Adminviewmodel();
-            model.MissionThemes = themes.ToPagedList(pageindex, 2);
-            return model;
+         { 
+             var themes = _ciplatfromdbcontext.MissionThemes.Where(t => (SearchInputdata == null) || (t.Title.Contains(SearchInputdata))).OrderByDescending(m => m.Status).ToList();
+             var model = new Adminviewmodel();
+             model.MissionThemes = themes.ToPagedList(pageindex, 2);
+             return model;
 
-        }*/
+         }*/
         public Adminviewmodel getthemedata(int pageindex, int pageSize, string SearchInputdata)
         {
             List<MissionTheme> themes;
@@ -168,7 +169,7 @@ namespace CI_PLATFORM_.repository.Repository
             var model = new ThemeAddViewModel
             {
                 Title = theme.Title,
-               themeid = theme.MissionThemeId,
+                themeid = theme.MissionThemeId,
                 Status = theme.Status
             };
             return model;
@@ -196,7 +197,7 @@ namespace CI_PLATFORM_.repository.Repository
         public void editthemedatabase(ThemeAddViewModel model)
         {
             var theme = _ciplatfromdbcontext.MissionThemes.FirstOrDefault(s => s.MissionThemeId == model.themeid);
-           
+
             theme.Title = model.Title;
             theme.Status = model.Status;
             _ciplatfromdbcontext.SaveChanges();
@@ -313,13 +314,13 @@ namespace CI_PLATFORM_.repository.Repository
                 return model;
             }
         }
-       /* public Adminviewmodel getmissionapplicationdata(int pageindex, int pageSize, string SearchInputdata)
-        {
-            var missionapplication = _ciplatfromdbcontext.MissionApplications.Include(m => m.Mission).Include(m => m.User).Where(m => (SearchInputdata == null) || (m.Mission.Title.Contains(SearchInputdata)) || (m.User.FirstName.Contains(SearchInputdata))).ToList();
-            var model = new Adminviewmodel();
-            model.MissionApplications = missionapplication.ToPagedList(pageindex, 4);
-            return model;
-        }*/
+        /* public Adminviewmodel getmissionapplicationdata(int pageindex, int pageSize, string SearchInputdata)
+         {
+             var missionapplication = _ciplatfromdbcontext.MissionApplications.Include(m => m.Mission).Include(m => m.User).Where(m => (SearchInputdata == null) || (m.Mission.Title.Contains(SearchInputdata)) || (m.User.FirstName.Contains(SearchInputdata))).ToList();
+             var model = new Adminviewmodel();
+             model.MissionApplications = missionapplication.ToPagedList(pageindex, 4);
+             return model;
+         }*/
         public Adminviewmodel getmissionapplicationdata(int pageIndex, int pageSize, string SearchInputData)
         {
             var missionApplicationsQuery = _ciplatfromdbcontext.MissionApplications
@@ -539,18 +540,18 @@ namespace CI_PLATFORM_.repository.Repository
             user.Title = model.Title;
             _ciplatfromdbcontext.SaveChanges();
         }
-     /*   public void approveapplication(string applicationid)
-        {
-            var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
-            missionapplication.ApprovalStatus = "APPROVE";
-            var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
-            mission.TotalSeats = mission.TotalSeats - 1;
-            _ciplatfromdbcontext.SaveChanges();
-        }*/
+        /*   public void approveapplication(string applicationid)
+           {
+               var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
+               missionapplication.ApprovalStatus = "APPROVE";
+               var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
+               mission.TotalSeats = mission.TotalSeats - 1;
+               _ciplatfromdbcontext.SaveChanges();
+           }*/
         public void approveapplication(string applicationid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
-          
+
             if (string.Equals(missionapplication.ApprovalStatus, "APPROVE", StringComparison.OrdinalIgnoreCase))
             {
                 return; // Already approved, no need to update
@@ -565,6 +566,13 @@ namespace CI_PLATFORM_.repository.Repository
                 }
                 _ciplatfromdbcontext.SaveChanges();
             }
+            /*var approvemessage = new MessageTable()
+            {
+                NotificationId = 8,
+                Message = $"New Mission-{}"
+
+
+            };*/
         }
 
         public void approvestory(string storyid)
@@ -622,18 +630,18 @@ namespace CI_PLATFORM_.repository.Repository
         {
             var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
 
-            
-                // Check for "declined" in both lower and upper case
-                if (string.Equals(story.Status, "declined", StringComparison.OrdinalIgnoreCase))
-                {
-                    return; // Already declined, no need to update
-                }
-                else
-                {
-                    story.Status = "DECLINED";
-                    _ciplatfromdbcontext.SaveChanges();
-                }
-            
+
+            // Check for "declined" in both lower and upper case
+            if (string.Equals(story.Status, "declined", StringComparison.OrdinalIgnoreCase))
+            {
+                return; // Already declined, no need to update
+            }
+            else
+            {
+                story.Status = "DECLINED";
+                _ciplatfromdbcontext.SaveChanges();
+            }
+
         }
 
         /* public void pendingstory(string storyid)
@@ -648,7 +656,7 @@ namespace CI_PLATFORM_.repository.Repository
             var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
             if (story.Status.ToLower() == "pending")
             {
-                return; 
+                return;
             }
             story.Status = "PENDING";
             _ciplatfromdbcontext.SaveChanges();
@@ -990,7 +998,7 @@ namespace CI_PLATFORM_.repository.Repository
             mission.Status = model.Status;
             _ciplatfromdbcontext.SaveChanges();
         }
-        public void Addmission(MissionAddViewModel model, List<int> selectedSkills,string userid)
+        public void Addmission(MissionAddViewModel model, List<int> selectedSkills, string userid)
         {
             var model1 = new Mission
             {
@@ -1112,11 +1120,17 @@ namespace CI_PLATFORM_.repository.Repository
                 Message = $"New Mission-{model.Title}"
             };
             _ciplatfromdbcontext.Add(message);
-            var Addpermission = new Userpermission
+            var enebleduserids = _ciplatfromdbcontext.EnableUserStatuses.Where(u => u.NotificationId == 5).Select(u => u.UserId).ToList();
+            foreach(var ids in enebleduserids)
             {
-                UserId=long.Parse(userid),
-            };
-            message.Userpermissions.Add(Addpermission);
+                var Addpermission = new Userpermission
+                {
+                    UserId = ids,
+                };
+                message.Userpermissions.Add(Addpermission);
+                
+            }
+           
             _ciplatfromdbcontext.SaveChanges();
 
         }
@@ -1191,6 +1205,50 @@ namespace CI_PLATFORM_.repository.Repository
                 return true;
             }
 
+        }
+        public IPagedList<AdminTimesheetViewModel> GetTimesheets(int pageIndex, string keyword)
+        {
+            int pageSize = 10;
+            var data =_ciplatfromdbcontext.Timesheets.Include(u => u.User).Include(m => m.Mission).Where(m => ((keyword == null) || m.Status.Contains(keyword) || m.Mission.Title.Contains(keyword) || (m.User.FirstName + " " + m.User.LastName).Contains(keyword)) && m.DeletedAt == null).OrderBy(u => u.User.FirstName);
+            List<AdminTimesheetViewModel> timesheets = new List<AdminTimesheetViewModel>();
+            foreach (var timesheet in data)
+            {
+                AdminTimesheetViewModel timesheetViewModel = new AdminTimesheetViewModel()
+                {
+                    timesheetId = timesheet.TimesheetId,
+                    userId = timesheet.UserId,
+                    userName = timesheet.User.FirstName,
+                    missionName = timesheet.Mission.Title,
+                    type = timesheet.Mission.MissionType,
+                    time = timesheet.Time,
+                    dateVolunteered = timesheet.DateVolunteered,
+                    action = timesheet.Action,
+                    status = timesheet.Status,
+                };
+                timesheets.Add(timesheetViewModel);
+            }
+            return timesheets.ToPagedList(pageIndex, pageSize);
+        }
+
+        public void EditTimesheet(int id, int status)
+        {
+            var timesheet = _ciplatfromdbcontext.Timesheets.SingleOrDefault(m => m.TimesheetId == id);
+            if (status == 0)
+            {
+                timesheet.Status = "DECLINED";
+            }
+            else
+            {
+                timesheet.Status = "APPROVED";
+            }
+            _ciplatfromdbcontext.SaveChanges();
+        }
+        public void DeleteTimesheet(long id)
+        {
+            Timesheet timesheet = _ciplatfromdbcontext.Timesheets.SingleOrDefault(t => t.TimesheetId == id);
+            timesheet.DeletedAt = DateTime.Now;
+            _ciplatfromdbcontext.Timesheets.Update(timesheet);
+            _ciplatfromdbcontext.SaveChanges();
         }
     }
 }

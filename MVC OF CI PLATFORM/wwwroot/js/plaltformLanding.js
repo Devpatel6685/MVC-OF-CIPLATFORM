@@ -377,7 +377,7 @@ function messagenable(event) {
   
             $.each(result.titles, function (i, data) {
                 console.log("result", data.title);
-                if ($.inArray(data.NotificationId, data.ids) !== -1) {
+                if ($.inArray(data.notificationId, result.ids) !== -1) {
                     $('.titleswithcheck').append('<div class="form-check"><input class="form-check-input checkbox title" checked type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for='+data.notificationId+' >' + data.title + '</label></div>')
 
                 }
