@@ -13,6 +13,12 @@ public partial class MessageTable
 
     public DateTime? CreatedAt { get; set; }
 
+    public int Seen { get; set; }
+
+    public string? Url { get; set; }
+
+    public string? AvatarUser { get; set; }
+
     public virtual NotificationTitle? Notification { get; set; }
 
     public virtual ICollection<Userpermission> Userpermissions { get; } = new List<Userpermission>();

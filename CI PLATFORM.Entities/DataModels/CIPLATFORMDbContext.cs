@@ -389,11 +389,17 @@ public partial class CIPLATFORMDbContext : DbContext
             entity.ToTable("MessageTable");
 
             entity.Property(e => e.MessageId).HasColumnName("Message_id");
+            entity.Property(e => e.AvatarUser).HasColumnName("avatar_user");
             entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
             entity.Property(e => e.Message).HasColumnName("message");
             entity.Property(e => e.NotificationId).HasColumnName("notification_id");
+            entity.Property(e => e.Seen)
+                .HasDefaultValueSql("((1))")
+                .HasColumnName("seen");
+            entity.Property(e => e.Url).HasColumnName("url");
 
             entity.HasOne(d => d.Notification).WithMany(p => p.MessageTables)
                 .HasForeignKey(d => d.NotificationId)

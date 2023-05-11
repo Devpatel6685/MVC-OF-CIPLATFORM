@@ -15,7 +15,7 @@ namespace CI_PLATFORM_.repository.Interface
 
         public string REGISTRATIONPAGE(registerviewmodel user);
         public Tuple<List<NotificationTitle>, List<long>> gettitles(string userId);
-        public Dictionary<long, string> getnotification(string userId);
+        public List<Tuple<string, long, string, string, int, int>> getnotification(string userId);
 
         public void setstatus(string userid, List<string> titles);
 

@@ -52,7 +52,6 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             if (ModelState.IsValid)
             {
-                
                 var entity = _iuserRepository.login(user);
                 LoginViewModel model = new LoginViewModel()
                 {

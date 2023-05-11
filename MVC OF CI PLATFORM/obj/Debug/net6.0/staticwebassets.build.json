@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bE/62aJxNVna0E+h7ty0jj4D7vEukgDf7nn3LzX52HI=",
+  "Hash": "mzTb0doxTYlLOoTSnFziZSywPYB/g6eZtCM2WKUQtgM=",
   "Source": "MVC OF CI PLATFORM",
   "BasePath": "_content/MVC OF CI PLATFORM",
   "Mode": "Default",
@@ -2990,6 +2990,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Mission\\Ahmedabad Health\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
+      "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\Ahmedabad Health\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "SourceId": "MVC OF CI PLATFORM",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\",
+      "BasePath": "_content/MVC OF CI PLATFORM",
+      "RelativePath": "Images/Mission/Ahmedabad Health/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Mission\\Ahmedabad Health\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
     },
     {
       "Identity": "E:\\DEV MVC OF CIPLATFORM\\MVC OF CI PLATFORM\\wwwroot\\Images\\Mission\\ANIMAL WELFARE 2\\Animal-welfare-_-save-birds-campaign-1.png",

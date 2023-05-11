@@ -296,10 +296,10 @@ namespace CI_PLATFORM.repository.Repository
         {
             var notificationTitle = _cIPLATFORMDbContext.NotificationTitles.ToList();
             List<long> idsselected = _cIPLATFORMDbContext.EnableUserStatuses.Where(up => up.UserId.ToString() == userId && up.Status == 1).Select(up => up.NotificationId).ToList().ConvertAll(id => (long?)id).Select(id => id.Value).ToList();
-            return new Tuple<List<NotificationTitle>,List<long>> (notificationTitle, idsselected); 
+            return new Tuple<List<NotificationTitle>, List<long>>(notificationTitle, idsselected);
         }
 
-        public void setstatus(string userid,List<string> titles)
+        public void setstatus(string userid, List<string> titles)
         {
             var title = _cIPLATFORMDbContext.EnableUserStatuses.Where(u => u.UserId.ToString() == userid);
             _cIPLATFORMDbContext.EnableUserStatuses.RemoveRange(title);
@@ -307,30 +307,32 @@ namespace CI_PLATFORM.repository.Repository
             {
                 var model = new EnableUserStatus
                 {
-                    UserId=long.Parse(userid),
-                    Status=1,
-                    NotificationId=long.Parse(id),
+                    UserId = long.Parse(userid),
+                    Status = 1,
+                    NotificationId = long.Parse(id),
                 };
                 _cIPLATFORMDbContext.Add(model);
             }
             _cIPLATFORMDbContext.SaveChanges();
         }
-        public Dictionary<long, string> getnotification(string userId)
+        public List<Tuple<string, long, string, string, int, int>> getnotification(string userId)
         {
-            
-            var notifications = new Dictionary<long, string>();
+            var notifications = new List<Tuple<string, long, string, string, int, int>>();
             var takeids = _cIPLATFORMDbContext.EnableUserStatuses.Where(e => e.UserId.ToString() == userId).Select(e => e.NotificationId).ToList();
-            foreach(var id in takeids)
+            /*            var takeids = _ciplatformcontext.EnableUserStatuses.Where(e => e.UserId.ToString() == userId).Select(e => e.NotificationId).ToList();
+            */
+            foreach (var id in takeids)
             {
                 var message = _cIPLATFORMDbContext.MessageTables.Where(m => m.NotificationId == id).AsQueryable();
-                var messageid = message.Select(m=>m.MessageId).ToList();
-                foreach(var id1 in messageid)
+                var messageid = message.Select(m => m.MessageId).ToList();
+                foreach (var id1 in messageid)
                 {
-                    var check_status = _cIPLATFORMDbContext.Userpermissions.SingleOrDefault(u => u.UserId.ToString() == userId && u.MessageId == id1).Status;
-                    if(check_status==1)
+                    var check_status = _cIPLATFORMDbContext.Userpermissions.SingleOrDefault(u => u.UserId.ToString() == userId && u.MessageId == id1)?.Status;
+                    if (check_status == 1)
                     {
                         var messages = message.FirstOrDefault(m => m.MessageId == id1);
-                        notifications.Add((long)messages.NotificationId, messages.Message);
+                    DateTime createdAt = (DateTime)messages.CreatedAt;
+                    notifications.Add(Tuple.Create(messages.Message, (long)messages.NotificationId, createdAt.ToString("d MMM, H:mm"), messages.Url, messages.MessageId, messages.Seen));
                     }
                 }
             }
