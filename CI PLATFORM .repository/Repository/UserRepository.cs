@@ -6,10 +6,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.Extensions.Hosting;
 using MimeKit;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Mail;
@@ -168,7 +170,7 @@ namespace CI_PLATFORM.repository.Repository
         }
 
         public EditUserViewModel getUserDetails(long userid)
-        {
+        {  
             var data = _cIPLATFORMDbContext.Users.Include(c => c.Country).Include(c => c.City).SingleOrDefault(x => x.UserId == userid);
             var user_skill = _cIPLATFORMDbContext.UserSkills.Where(s => s.UserId == userid).ToList();
             var skills = _cIPLATFORMDbContext.Skills.OrderBy(s => s.SkillName).ToList();
@@ -208,21 +210,7 @@ namespace CI_PLATFORM.repository.Repository
             };
             return model;
         }
-        /* public void getcontact(EditUserViewModel model,long userid)
-         {
-             Contactu ctn = new Contactu()
-             {
-                 Userid= userid,
-                 Subject=model.Subject,
-                 Message=model.Message,
-             };
-             _cIPLATFORMDbContext.Contactus.Add(ctn);
-             _cIPLATFORMDbContext.SaveChanges();
-
-
-
-
-         }*/
+      
         public void editcontact(string subject, string message, long userid)
         {
             var contact = _cIPLATFORMDbContext.Users.FirstOrDefault(c => c.UserId == userid);
@@ -236,7 +224,6 @@ namespace CI_PLATFORM.repository.Repository
             _cIPLATFORMDbContext.Add(model1);
             _cIPLATFORMDbContext.SaveChanges();
         }
-
         public Contactusmodel addcontact(string userid)
         {
             var user = _cIPLATFORMDbContext.Users.FirstOrDefault(u => u.UserId.ToString() == userid);
@@ -263,6 +250,7 @@ namespace CI_PLATFORM.repository.Repository
 
             _cIPLATFORMDbContext.SaveChanges();
         }
+
 
         public void addskill(List<int> skillids, string userid)
         {
@@ -301,8 +289,8 @@ namespace CI_PLATFORM.repository.Repository
 
         public void setstatus(string userid, List<string> titles)
         {
-            var title = _cIPLATFORMDbContext.EnableUserStatuses.Where(u => u.UserId.ToString() == userid);
-            _cIPLATFORMDbContext.EnableUserStatuses.RemoveRange(title);
+            var enables = _cIPLATFORMDbContext.EnableUserStatuses.Where(e => e.UserId.ToString() == userid).ToList();
+            _cIPLATFORMDbContext.EnableUserStatuses.RemoveRange(enables);
             foreach (var id in titles)
             {
                 var model = new EnableUserStatus
@@ -315,31 +303,46 @@ namespace CI_PLATFORM.repository.Repository
             }
             _cIPLATFORMDbContext.SaveChanges();
         }
-        public List<Tuple<string, long, string, string, int, int>> getnotification(string userId)
+        public void changestatus(int messageid, string userid)
         {
-            var notifications = new List<Tuple<string, long, string, string, int, int>>();
+            var userrecord = _cIPLATFORMDbContext.Userpermissions.SingleOrDefault(up => up.MessageId == messageid && up.UserId.ToString() == userid);
+            userrecord.Seen = 0;
+            _cIPLATFORMDbContext.SaveChanges();
+        }
+        public void clearall(string userid)
+        {
+            var userpermiids = _cIPLATFORMDbContext.Userpermissions.Where(u => u.UserId.ToString() == userid).ToList();
+            foreach (var record in userpermiids)
+            {
+                record.Status = 0;
+                _cIPLATFORMDbContext.SaveChanges();
+            }
+
+        }
+        public List<Tuple<string, long, string, string, int, int, string>> getnotification(string userId)
+        {
+            var notifications = new List<Tuple<string, long, string, string, int, int, string>>();
             var takeids = _cIPLATFORMDbContext.EnableUserStatuses.Where(e => e.UserId.ToString() == userId).Select(e => e.NotificationId).ToList();
-            /*            var takeids = _ciplatformcontext.EnableUserStatuses.Where(e => e.UserId.ToString() == userId).Select(e => e.NotificationId).ToList();
-            */
+
             foreach (var id in takeids)
             {
                 var message = _cIPLATFORMDbContext.MessageTables.Where(m => m.NotificationId == id).AsQueryable();
                 var messageid = message.Select(m => m.MessageId).ToList();
                 foreach (var id1 in messageid)
                 {
-                    var check_status = _cIPLATFORMDbContext.Userpermissions.SingleOrDefault(u => u.UserId.ToString() == userId && u.MessageId == id1)?.Status;
-                    if (check_status == 1)
+                    var check_status = _cIPLATFORMDbContext.Userpermissions.SingleOrDefault(u => u.UserId.ToString() == userId && u.MessageId == id1);
+
+                    if (check_status != null && check_status.Status == 1)
                     {
                         var messages = message.FirstOrDefault(m => m.MessageId == id1);
-                    DateTime createdAt = (DateTime)messages.CreatedAt;
-                    notifications.Add(Tuple.Create(messages.Message, (long)messages.NotificationId, createdAt.ToString("d MMM, H:mm"), messages.Url, messages.MessageId, messages.Seen));
+                        DateTime createdAt = (DateTime)messages.CreatedAt;
+                        notifications.Add(Tuple.Create(messages.Message, (long)messages.NotificationId, createdAt.ToString("d MMM, H:mm"), messages.Url, messages.MessageId, check_status.Seen, messages.AvatarUser));
                     }
                 }
             }
             return notifications;
         }
 
-
-    }
+    } 
 
 }

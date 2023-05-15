@@ -396,9 +396,6 @@ public partial class CIPLATFORMDbContext : DbContext
                 .HasColumnName("created_at");
             entity.Property(e => e.Message).HasColumnName("message");
             entity.Property(e => e.NotificationId).HasColumnName("notification_id");
-            entity.Property(e => e.Seen)
-                .HasDefaultValueSql("((1))")
-                .HasColumnName("seen");
             entity.Property(e => e.Url).HasColumnName("url");
 
             entity.HasOne(d => d.Notification).WithMany(p => p.MessageTables)
@@ -1039,6 +1036,9 @@ public partial class CIPLATFORMDbContext : DbContext
 
             entity.Property(e => e.UserpermissionId).HasColumnName("userpermission_id");
             entity.Property(e => e.MessageId).HasColumnName("Message_id");
+            entity.Property(e => e.Seen)
+                .HasDefaultValueSql("((1))")
+                .HasColumnName("seen");
             entity.Property(e => e.Status)
                 .HasDefaultValueSql("((1))")
                 .HasColumnName("status");

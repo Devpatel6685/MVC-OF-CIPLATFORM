@@ -13,8 +13,6 @@ public partial class MessageTable
 
     public DateTime? CreatedAt { get; set; }
 
-    public int Seen { get; set; }
-
     public string? Url { get; set; }
 
     public string? AvatarUser { get; set; }

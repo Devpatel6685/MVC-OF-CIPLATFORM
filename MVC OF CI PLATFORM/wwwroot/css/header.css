@@ -45,7 +45,10 @@
 #filter {
     width: 240px;
 }
-
+.form-check .form-check-input {
+    float: left;
+    margin-left: -0.5em !important;
+}
 .filter-list {
     / padding:6px 10px;
     / background-color: white;

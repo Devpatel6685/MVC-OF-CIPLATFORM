@@ -69,20 +69,29 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
         public IActionResult ApproveApplication(string Applicationid)
         {
-            _adminInterface.approveapplication(Applicationid);
+            var userid = HttpContext.Session.GetString("userid");
+            _adminInterface.approveapplication(Applicationid, userid);
             return RedirectToAction("MissionApplication", new { SearchInputdata = "", pageindex = 1, pageSize = 4 });
         }
         public IActionResult ApproveStory(string storyid)
         {
-            _adminInterface.approvestory(storyid);
+            var userid = HttpContext.Session.GetString("userid");
+           _adminInterface.approvestory(storyid, userid);
             return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
 
         }
         public IActionResult DeclineStory(string storyid)
         {
-            _adminInterface.declinestory(storyid);
+            var userid = HttpContext.Session.GetString("userid");
+            _adminInterface.declinestory(storyid, userid);
             return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
 
+        }
+        public IActionResult DeclineApplication(string Applicationid)
+        {
+            var userid = HttpContext.Session.GetString("userid");
+           _adminInterface.declineapplication(Applicationid, userid);
+            return RedirectToAction("MissionApplication", new { SearchInputdata = "", pageindex = 1, pageSize = 4 });
         }
         public IActionResult pendingStory(string storyid)
         {
@@ -90,11 +99,11 @@ namespace MVC_OF_CI_PLATFORM.Controllers
             return RedirectToAction("Story", new { SearchInputdata = "", pageindex = 1, pageSize = 1 });
 
         }
-        public IActionResult DeclineApplication(string Applicationid)
+     /*   public IActionResult DeclineApplication(string Applicationid, string userid)
         {
-            _adminInterface.declineapplication(Applicationid);
+            _adminInterface.declineapplication(Applicationid, userid);
             return RedirectToAction("MissionApplication", new { SearchInputdata = "", pageindex = 1, pageSize = 4 });
-        }
+        }*/
         public JsonResult Country()
         {
             var countries = _adminInterface.getcountries();

@@ -58,17 +58,17 @@ $(document).ready(function () {
 
     });
 
-  /*  $('#search-input').on('input', function () {
-        var keyword = $(this).val();
-        if (keyword.length > 2 || keyword.length == 0) {
-
-            // Perform the search with the keyword
-            filterMission(keyword);
-        } else {
-            // Clear the search results
-            clearMissionResults();
-        }
-    });*/
+    /*  $('#search-input').on('input', function () {
+          var keyword = $(this).val();
+          if (keyword.length > 2 || keyword.length == 0) {
+  
+              // Perform the search with the keyword
+              filterMission(keyword);
+          } else {
+              // Clear the search results
+              clearMissionResults();
+          }
+      });*/
     let timeoutId;
 
     $('#search-input').keyup(function () {
@@ -360,37 +360,33 @@ function getUsers(mId) {
         });
     }
 }
-function cancel() {
-    $('.noti').removeClass('d-none');
-    $('.check').addClass('d-none');
-}
 function messagenable(event) {
     event.stopPropagation();
     $('.noti').addClass('d-none');
     $('.check').removeClass('d-none');
-
+    $('.titleswithcheck').empty();
     $.ajax({
         type: "GET",
         url: "/home/GetTitles",
-
         success: function (result) {
-  
             $.each(result.titles, function (i, data) {
                 console.log("result", data.title);
                 if ($.inArray(data.notificationId, result.ids) !== -1) {
-                    $('.titleswithcheck').append('<div class="form-check"><input class="form-check-input checkbox title" checked type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for='+data.notificationId+' >' + data.title + '</label></div>')
-
+                    $('.titleswithcheck').append('<div class="form-check ms-3"><input class="form-check-input checkbox title" checked type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + ' >' + data.title + '</label></div>')
                 }
                 else {
-                    $('.titleswithcheck').append('<div class="form-check"><input class="form-check-input checkbox title" type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '>' + data.title +'</label></div>')
-
+                    $('.titleswithcheck').append('<div class="form-check ms-3"><input class="form-check-input checkbox title" type="checkbox" value="' + data.notificationId + '" id=' + data.notificationId + '><label class="form-check-label" for=' + data.notificationId + '>' + data.title + '</label></div>')
                 }
             })
-
         }
     });
-
 }
+function cancel(event) {
+    event.stopPropagation();
+    $('.noti').removeClass('d-none');
+    $('.check').addClass('d-none');
+}
+
 function selecttitles() {
     titles = [];
     $('.title:checkbox:checked').each(function () {
@@ -404,31 +400,75 @@ function selecttitles() {
             titles: titles
         },
         success: function (result) {
+            getusernotification();
             toastr.success("Now for selected titles Notification will be shown!!");
 
         }
     });
 }
 
-/*$('#bell-icon').on('click', function () {
-    $('.noti').toggleClass('d-none');
-});*/
 getusernotification();
 
 function getusernotification() {
     alert('called');
+    $('.usernoti').empty();
     $.ajax({
         type: "GET",
         url: "/home/GetNotification",
         success: function (result) {
-            console.log("this is result", result);
+            var dictionary = result;
+            var count = Object.keys(dictionary).length;
+            $('.circletext').text(count);
             $.each(result, function (i, data) {
-                switch (i) {
-                    case '5':
-                        console.log("success")
-                        var img = '<img src="/Assets/add.png">';
-                        icon = '<i class="bi bi-circle-fill text-warning"></i>';
-                        $('.usernoti').append('<div class="form-check  d-flex">' + img + '<span class="form-check-label" for=' + i + '>' + data + '</span>' + icon + '</div>');
+
+                switch (data.item2) {
+                    case 5:
+                        console.log("success");
+                        var img = '<img src="/Assets/add.png" class="imgsize mt-1 mx-2">';
+                        if (data.item6 == 1) {
+                            icon = '<i class="bi bi-circle-fill text-warning col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        else {
+                            icon = '<i class="bi bi-check-circle-fill col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        datestring = '<span>' + data.item3 + '</span>'
+                        $('.usernoti').append('<div class="form-check p-0 d-flex align-items-start border-bottom bg-light" onclick="notify(\'' + data.item4 + '\', ' + data.item5 + ')" >' + img + '<div class="d-flex flex-column">' + datestring + '<span class="form-check-label mx-1" for=' + data.item2 + '>' + data.item1 + '</span></div> ' + icon + '</div>');
+                        break;
+                    case 1:
+                        console.log("success recomended");
+                        var img = '<img src="' + data.item7 + '" class="imgsize mt-1 mx-2">';
+                        if (data.item6 == 1) {
+                            icon = '<i class="bi bi-circle-fill text-warning col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        else {
+                            icon = '<i class="bi bi-check-circle-fill col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        datestring = '<span>' + data.item3 + '</span>'
+                        $('.usernoti').append('<div class="form-check p-0 d-flex align-items-start border-bottom bg-light" onclick="notify(\'' + data.item4 + '\', ' + data.item5 + ')" >' + img + '<div class="d-flex flex-column">' + datestring + '<span class="form-check-label mx-1" for=' + data.item2 + '>' + data.item1 + '</span></div> ' + icon + '</div>');
+                        break;
+                    case 4:
+                        console.log("success");
+                        var img = '<img src="/Assets/right.png" class="imgsize mx-2 mt-1 col-2">';
+                        if (data.item6 == 1) {
+                            icon = '<i class="bi bi-circle-fill text-warning col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        else {
+                            icon = '<i class="bi bi-circle-fill col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        datestring = '<span>' + data.item3 + '</span>'
+                        $('.usernoti').append('<div class="form-check p-0 d-flex align-items-start border-bottom bg-light"onclick="notify(\'' + data.item4 + '\', ' + data.item5 + ')">' + img + '<div class="d-flex flex-column">' + datestring + '<span class="form-check-label mx-1" for=' + data.item2 + '>' + data.item1 + '</span></div>' + icon + '</div>');
+                        break;
+                    case 8:
+                        console.log("success");
+                        var img = '<img src="/Assets/right.png" class="imgsize mx-2 mt-1 col-2">';
+                        if (data.item6 == 1) {
+                            icon = '<i class="bi bi-circle-fill text-warning col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        else {
+                            icon = '<i class="bi bi-circle-fill col-2 text-end me-2" id="message-' + data.item5 + '"></i>';
+                        }
+                        datestring = '<span>' + data.item3 + '</span>'
+                        $('.usernoti').append('<div class="form-check p-0 d-flex align-items-start border-bottom bg-light" onclick="notify(\'' + data.item4 + '\', ' + data.item5 + ')">' + img + '<div class="d-flex flex-column">' + datestring + '<span class="form-check-label mx-1" for=' + data.item2 + '>' + data.item1 + '</span></div>' + icon + '</div>');
                         break;
                     default:
                         console.log("Value is not 1, 2, or 3.");
@@ -438,5 +478,37 @@ function getusernotification() {
         error: function (jqXHR, textStatus, errorThrown) {
             console.log("Error: " + errorThrown);
         }
+    });
+} function notify(url, id) {
+    console.log("url", url);
+    alert('notify called');
+    var icon = $('#message-' + id);
+    icon.removeClass('bi-circle-fill');
+    icon.addClass('bi-check-circle-fill');
+
+    $.ajax({
+        type: "POST",
+        url: "/home/ChangeStatus",
+        data: {
+            messageid: id
+        },
+        success: function (result) {
+            alert('success hit');
+            if (url != null) {
+                window.location.href = url;
+            }
+        }
+
+    });
+}
+function clearseen() {
+    $.ajax({
+        type: "POST",
+        url: "/home/ClearAll",
+        success: function (result) {
+            getusernotification();
+            toastr.success("All notifications seen!!");
+        }
+
     });
 }

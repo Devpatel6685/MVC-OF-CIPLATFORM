@@ -13,6 +13,8 @@ public partial class Userpermission
 
     public int? MessageId { get; set; }
 
+    public int Seen { get; set; }
+
     public virtual MessageTable? Message { get; set; }
 
     public virtual User? User { get; set; }

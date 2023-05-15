@@ -26,17 +26,18 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
 
         public IActionResult Index()
-        {   
+        {
             return View();
         }
-       
-		[ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
-		public IActionResult LOGIN()
+
+        [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult LOGIN()
 
         {
-            if(HttpContext.Session.GetString("username")!=null){ 
-            
-            return RedirectToAction ("platformLanding","Mission");
+            if (HttpContext.Session.GetString("username") != null)
+            {
+
+                return RedirectToAction("platformLanding", "Mission");
             }
             LoginViewModel loginViewModel = new LoginViewModel()
             {
@@ -46,7 +47,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
             return View(loginViewModel);
         }
-        
+
         [HttpPost]
         public IActionResult LOGIN(LoginViewModel user)
         {
@@ -57,22 +58,18 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                 {
                     Banners = _iuserRepository.GetBanners()
                 };
-                if (entity == "User Does not Exists" )
+                if (entity == "User Does not Exists")
                 {
                     ModelState.AddModelError("Email", entity);
-                    return View("LOGIN",model);
+                    return View("LOGIN", model);
                 }
                 if (entity == "invalid password")
                 {
                     ModelState.AddModelError("Password", entity);
-                    return View("LOGIN",model);
+                    return View("LOGIN", model);
                 }
-               /* var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, user.Email) },
-                    CookieAuthenticationDefaults.AuthenticationScheme);
-                var principal = new ClaimsPrincipal(identity);
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);*/
                 var Users = entity.Split(',');
-             
+
                 HttpContext.Session.SetString("username", Users[0]);
                 HttpContext.Session.SetString("userid", Users[1]);
                 HttpContext.Session.SetString("avtar", Users[2]);
@@ -91,7 +88,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         public IActionResult LogOut()
         {
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            
+
             HttpContext.Session.Clear();
             return RedirectToAction("PlatformLanding", "Mission");
         }
@@ -103,7 +100,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                 Banners = _iuserRepository.GetBanners(),
             };
             return View(forgotPassViewModel);
-            
+
         }
         [HttpPost]
         public IActionResult FORGOTPASSWORD(forgotviewmodel user)
@@ -126,7 +123,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult RESETPAGE()
         {
-           if(HttpContext.Session.GetString("Token")== null)
+            if (HttpContext.Session.GetString("Token") == null)
             {
                 return NotFound("Link Expired");
             }
@@ -135,7 +132,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
                 Banners = _iuserRepository.GetBanners(),
             };
             return View(forgotPassViewModel);
-            
+
         }
 
         [HttpPost]
@@ -143,7 +140,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             if (ModelState.IsValid)
             {
-               
+
                 var token = HttpContext.Session.GetString("Token");
                 var entity = _iuserRepository.RESETPAGE(entry, token);
                 if (entity == null)
@@ -165,7 +162,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
         public IActionResult REGISTRATIONPAGE()
         {
-            
+
             registerviewmodel registerViewModel = new registerviewmodel()
             {
                 Banners = _iuserRepository.GetBanners(),
@@ -174,15 +171,15 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         }
 
         [HttpPost]
-        public IActionResult REGISTRATIONPAGE(registerviewmodel user )
+        public IActionResult REGISTRATIONPAGE(registerviewmodel user)
         {
-            
+
             if (ModelState.IsValid)
             {
                 var entity = _iuserRepository.REGISTRATIONPAGE(user);
                 if (entity == "user already exist")
                 {
-                    ModelState.AddModelError("Email",entity);
+                    ModelState.AddModelError("Email", entity);
                     return View();
                 }
                 TempData["REGISTRATIONPAGE"] = "Successfully Registered";
@@ -258,7 +255,7 @@ namespace MVC_OF_CI_PLATFORM.Controllers
 
             var user_id = long.Parse(HttpContext.Session.GetString("userid"));
             var avtar = _iuserRepository.editimage(Image, user_id);
-            HttpContext.Session.SetString("avtar",avtar);
+            HttpContext.Session.SetString("avtar", avtar);
             return Json(new { redirectUrl = Url.Action("UserEdit", "Home") });
 
         }
@@ -272,21 +269,29 @@ namespace MVC_OF_CI_PLATFORM.Controllers
         {
             var userid = HttpContext.Session.GetString("userid");
             var titles = _iuserRepository.gettitles(userid);
-            return Json(new {titles = titles.Item1, ids = titles.Item2});
+            return Json(new { titles = titles.Item1, ids = titles.Item2 });
         }
-        [HttpPost]
         public void SetStatus(List<string> titles)
         {
             var userid = HttpContext.Session.GetString("userid");
-           _iuserRepository.setstatus(userid,titles);
-            
+            _iuserRepository.setstatus(userid, titles);
+
         }
-       
+        public void ChangeStatus(int messageid)
+        {
+            var userid = HttpContext.Session.GetString("userid");
+            _iuserRepository.changestatus(messageid, userid);
+        }
         public JsonResult GetNotification()
         {
             var userid = HttpContext.Session.GetString("userid");
             var notifications = _iuserRepository.getnotification(userid);
             return Json(notifications);
+        }
+        public void ClearAll()
+        {
+            var userid = HttpContext.Session.GetString("userid");
+            _iuserRepository.clearall(userid);
         }
 
     }

@@ -42,17 +42,19 @@ namespace CI_PLATFORM_.repository.Interface
         public bool deletetheme(string themeid);
         public Adminviewmodel getskilldata(int pageindex, int pageSize, string SearchInputdata);
         public Adminviewmodel getmissionapplicationdata(int pageindex, int pageSize, string SearchInputdata);
-        public void approveapplication(string applicationid);
-        public void declineapplication(string applicationid);
+      
         public void editthemedatabase(ThemeAddViewModel model);
         public void pendingstory(string storyid);
 
         public ThemeAddViewModel gettheme(string themeid);
 
         public Adminviewmodel getstorydata(int pageindex, int pageSize, string SearchInputdata);
-        public void approvestory(string storyid);
+      
+        public void approveapplication(string applicationid, string userid);
+        public void declineapplication(string applicationid, string userid);
         public void DeleteBanner(long id);
-        public void declinestory(string storyid);
+        public void approvestory(string storyid, string userid);
+        public void declinestory(string storyid, string userid);
         public MissionAddViewModel getmissionmodeldata();
         public void Adduser(UserAddViewModel model);
         public void updateuser(UserAddViewModel model);

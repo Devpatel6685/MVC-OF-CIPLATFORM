@@ -15,8 +15,10 @@ namespace CI_PLATFORM_.repository.Interface
 
         public string REGISTRATIONPAGE(registerviewmodel user);
         public Tuple<List<NotificationTitle>, List<long>> gettitles(string userId);
-        public List<Tuple<string, long, string, string, int, int>> getnotification(string userId);
+        public List<Tuple<string, long, string, string, int, int, string>> getnotification(string userId);
 
+        public void changestatus(int messageid, string userid);
+        public void clearall(string userid);
         public void setstatus(string userid, List<string> titles);
 
         public string FORGOTPASSWORD(forgotviewmodel user);

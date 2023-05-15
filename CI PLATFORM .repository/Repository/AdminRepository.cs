@@ -548,7 +548,7 @@ namespace CI_PLATFORM_.repository.Repository
                mission.TotalSeats = mission.TotalSeats - 1;
                _ciplatfromdbcontext.SaveChanges();
            }*/
-        public void approveapplication(string applicationid)
+  /*      public void approveapplication(string applicationid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
 
@@ -566,26 +566,72 @@ namespace CI_PLATFORM_.repository.Repository
                 }
                 _ciplatfromdbcontext.SaveChanges();
             }
-            /*var approvemessage = new MessageTable()
+            *//*var approvemessage = new MessageTable()
             {
                 NotificationId = 8,
                 Message = $"New Mission-{}"
 
 
-            };*/
-        }
-
-        public void approvestory(string storyid)
+            };*//*
+        }*/
+        public void approveapplication(string applicationid, string userid)
         {
-            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
-            if (story.Status.ToLower() == "published")
+            var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
+            missionapplication.ApprovalStatus = "APPROVE";
+            var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
+            mission.TotalSeats = mission.TotalSeats - 1;
+
+            var enable_check = _ciplatfromdbcontext.EnableUserStatuses.SingleOrDefault(e => e.NotificationId == 8 && e.UserId.ToString() == userid)?.Status;
+            if (enable_check == 1)
             {
-                return;
+                var message = new MessageTable
+                {
+                    NotificationId = 8,
+                    Message = $"Volunterring Request has been approved for Mission-{mission.Title}"
+                };
+                _ciplatfromdbcontext.Add(message);
+                var userpermission = new Userpermission
+                {
+                    UserId = long.Parse(userid)
+                };
+                message.Userpermissions.Add(userpermission);
             }
-            story.Status = "PUBLISHED";
+
             _ciplatfromdbcontext.SaveChanges();
         }
 
+        /*     public void approvestory(string storyid)
+             {
+                 var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
+                 if (story.Status.ToLower() == "published")
+                 {
+                     return;
+                 }
+                 story.Status = "PUBLISHED";
+                 _ciplatfromdbcontext.SaveChanges();
+             }*/
+        public void approvestory(string storyid, string userid)
+        {
+            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
+            story.Status = "PUBLISHED";
+
+            var enable_check = _ciplatfromdbcontext.EnableUserStatuses.SingleOrDefault(e => e.NotificationId == 4 && e.UserId.ToString() == userid)?.Status;
+            if (enable_check == 1)
+            {
+                var message = new MessageTable
+                {
+                    NotificationId = 4,
+                    Message = $"Volunterring Request has been approved for Story-{story.Title}"
+                };
+                _ciplatfromdbcontext.Add(message);
+                var userpermission = new Userpermission
+                {
+                    UserId = long.Parse(userid)
+                };
+                message.Userpermissions.Add(userpermission);
+            }
+            _ciplatfromdbcontext.SaveChanges();
+        }
         /*public void declineapplication(string applicationid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
@@ -598,49 +644,110 @@ namespace CI_PLATFORM_.repository.Repository
             _ciplatfromdbcontext.SaveChanges();
         }*/
 
-        public void declineapplication(string applicationid)
+        /* public void declineapplication(string applicationid)
+         {
+             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
+
+             if (missionapplication != null)
+             {
+                 if (string.Equals(missionapplication.ApprovalStatus, "APPROVE", StringComparison.OrdinalIgnoreCase))
+                 {
+                     var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
+                     if (mission != null)
+                     {
+                         mission.TotalSeats = mission.TotalSeats + 1;
+                     }
+                 }
+
+                 missionapplication.ApprovalStatus = "DECLINE";
+                 _ciplatfromdbcontext.SaveChanges();
+             }
+         }
+
+         *//*public void declinestory(string storyid)
+         {
+             var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
+
+             story.Status = "DECLINED";
+             _ciplatfromdbcontext.SaveChanges();
+
+         }*//*
+         public void declinestory(string storyid)
+         {
+             var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
+
+
+             // Check for "declined" in both lower and upper case
+             if (string.Equals(story.Status, "declined", StringComparison.OrdinalIgnoreCase))
+             {
+                 return; // Already declined, no need to update
+             }
+             else
+             {
+                 story.Status = "DECLINED";
+                 _ciplatfromdbcontext.SaveChanges();
+             }
+
+         }*/
+        public void declineapplication(string applicationid, string userid)
         {
             var missionapplication = _ciplatfromdbcontext.MissionApplications.FirstOrDefault(m => m.MissionApplicationId.ToString() == applicationid);
-
-            if (missionapplication != null)
+            var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
+            if (missionapplication.ApprovalStatus == "APPROVE")
             {
-                if (string.Equals(missionapplication.ApprovalStatus, "APPROVE", StringComparison.OrdinalIgnoreCase))
+                mission.TotalSeats = mission.TotalSeats + 1;
+            }
+            missionapplication.ApprovalStatus = "DECLINE";
+
+
+            var enable_check = _ciplatfromdbcontext.EnableUserStatuses.SingleOrDefault(e => e.NotificationId == 8 && e.UserId.ToString() == userid)?.Status;
+            if (enable_check == 1)
+            {
+                var message = new MessageTable
                 {
-                    var mission = _ciplatfromdbcontext.Missions.SingleOrDefault(m => m.MissionId == missionapplication.MissionId);
-                    if (mission != null)
-                    {
-                        mission.TotalSeats = mission.TotalSeats + 1;
-                    }
-                }
-
-                missionapplication.ApprovalStatus = "DECLINE";
-                _ciplatfromdbcontext.SaveChanges();
+                    NotificationId = 8,
+                    Message = $"Volunterring Request has been declined for Mission-{mission.Title}"
+                };
+                _ciplatfromdbcontext.Add(message);
+                var userpermission = new Userpermission
+                {
+                    UserId = long.Parse(userid)
+                };
+                message.Userpermissions.Add(userpermission);
             }
-        }
-
-        /*public void declinestory(string storyid)
-        {
-            var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
-
-            story.Status = "DECLINED";
             _ciplatfromdbcontext.SaveChanges();
-
-        }*/
-        public void declinestory(string storyid)
+        }
+        public void declinestory(string storyid, string userid)
         {
             var story = _ciplatfromdbcontext.Stories.FirstOrDefault(s => s.StoryId.ToString() == storyid);
+            story.Status = "DECLINED";
 
-
-            // Check for "declined" in both lower and upper case
-            if (string.Equals(story.Status, "declined", StringComparison.OrdinalIgnoreCase))
+            var enable_check = _ciplatfromdbcontext.EnableUserStatuses.SingleOrDefault(e => e.NotificationId == 4 && e.UserId.ToString() == userid)?.Status;
+            if (enable_check == 1)
             {
-                return; // Already declined, no need to update
+                var url = "";
+                if (story.Status == "DECLINED")
+                {
+                    url = $"https://localhost:7292/StoryListing/addstory?missionid={story.MissionId}";
+                }
+                else
+                {
+                    url = $"https://localhost:7292/StoryListing/storydetail?story_id={story.StoryId}";
+                }
+                var message = new MessageTable
+                {
+                    NotificationId = 4,
+                    Url = url,
+                    Message = $"Volunterring Request has been declined for Story-{story.Title}"
+                };
+                _ciplatfromdbcontext.Add(message);
+                var userpermission = new Userpermission
+                {
+                    UserId = long.Parse(userid)
+                };
+                message.Userpermissions.Add(userpermission);
             }
-            else
-            {
-                story.Status = "DECLINED";
-                _ciplatfromdbcontext.SaveChanges();
-            }
+            _ciplatfromdbcontext.SaveChanges();
 
         }
 
@@ -998,6 +1105,142 @@ namespace CI_PLATFORM_.repository.Repository
             mission.Status = model.Status;
             _ciplatfromdbcontext.SaveChanges();
         }
+        /* public void Addmission(MissionAddViewModel model, List<int> selectedSkills, string userid)
+         {
+             var model1 = new Mission
+             {
+                 Title = model.Title,
+                 CityId = model.CityId,
+                 CountryId = model.CountryId,
+                 OrganizationDetail = model.OrganizationDetail,
+                 OrganizationName = model.OrganizationName,
+                 Description = model.Description,
+                 ShortDescription = model.ShortDescription,
+                 StartDate = model.StartDate,
+                 EndDate = model.EndDate,
+                 TotalSeats = model.TotalSeats,
+                 Availibility = model.Availibility,
+                 ThemeId = model.ThemeId,
+                 Status = model.Status,
+                 MissionType = model.MissionType,
+                 RegistrationDeadline = model.RegistrationDeadline
+             };
+             _ciplatfromdbcontext.Add(model1);
+             foreach (var skill in selectedSkills)
+             {
+                 var model3 = new MissionSkill
+                 {
+                     SkillId = skill,
+                 };
+                 model1.MissionSkills.Add(model3);
+             }
+             if (string.Equals(model.MissionType, "goal", StringComparison.OrdinalIgnoreCase))
+             {
+                 var model2 = new GoalMission
+                 {
+                     GoalObjectiveText = model.GoalObjectiveText,
+                     GoalValue = model.GoalValue,
+
+                 };
+                 model1.GoalMissions.Add(model2);
+             }
+             _ciplatfromdbcontext.SaveChanges();
+             string wwwRootPath = _hostEnvironment.WebRootPath;
+             string imagesFolderPath = Path.Combine(wwwRootPath, "Images");
+             string MainfolderPath = Path.Combine(imagesFolderPath, "Mission");
+             if (!Directory.Exists(MainfolderPath))
+             {
+                 Directory.CreateDirectory(MainfolderPath);
+             }
+             string folderName = model.Title;
+             string folderPath = Path.Combine(MainfolderPath, folderName);
+             var mission = _ciplatfromdbcontext.Missions.FirstOrDefault(m => m.MissionId == model1.MissionId);
+             if (!Directory.Exists(folderPath))
+             {
+                 Directory.CreateDirectory(folderPath);
+             }
+
+             foreach (var Image in model.Images)
+             {
+                 string fileName = Image.FileName;
+                 var uploads = Path.Combine(folderPath, fileName);
+                 using (var fileStreams = new FileStream(uploads, FileMode.Create))
+                 {
+                     Image.CopyTo(fileStreams);
+                 }
+                 var viewModel = new MissionMedium
+                 {
+                     MissionId = mission.MissionId,
+                     MediaName = fileName,
+                     MediaType = "Imag",
+                     MediaPath = @"\Images\Mission\" + folderName + @"\" + fileName,
+                 };
+                 _ciplatfromdbcontext.Add(viewModel);
+                 _ciplatfromdbcontext.SaveChanges();
+             }
+
+             string documentFolderPath = Path.Combine(wwwRootPath, "Documents");
+             string missiondocPath = Path.Combine(documentFolderPath, "Mission");
+             string missiondocfolderPath = Path.Combine(missiondocPath, folderName);
+             if (!Directory.Exists(missiondocfolderPath))
+             {
+                 Directory.CreateDirectory(missiondocfolderPath);
+             }
+             foreach (var doc in model.Documents)
+             {
+                 string fileName = doc.FileName;
+                 var uploads = Path.Combine(missiondocfolderPath, fileName);
+                 using (var fileStreams = new FileStream(uploads, FileMode.Create))
+                 {
+                     doc.CopyTo(fileStreams);
+                 }
+                 MissionDocument docModel = new MissionDocument()
+                 {
+                     MissionId = mission.MissionId,
+                     DocumentName = doc.FileName,
+                     DocumentPath = @"\Documents\Mission\" + folderName + @"\" + fileName,
+                 };
+
+                 switch (Path.GetExtension(doc.FileName))
+                 {
+                     case ".doc":
+                     case ".docx":
+                         docModel.DocumentType = "DOCX";
+                         break;
+                     case ".xls":
+                     case ".xlsx":
+                         docModel.DocumentType = "XLSX";
+                         break;
+                     case ".pdf":
+                         docModel.DocumentType = "PDF";
+                         break;
+                     default:
+                         // Handle other types of documents here
+                         break;
+                 }
+                 _ciplatfromdbcontext.MissionDocuments.Add(docModel);
+             }
+             var not_id = _ciplatfromdbcontext.NotificationTitles.SingleOrDefault(n => n.Title == "New Missions").NotificationId;
+             var message = new MessageTable
+             {
+                 NotificationId = not_id,
+                 Message = $"New Mission-{model.Title}"
+             };
+             _ciplatfromdbcontext.Add(message);
+             var enebleduserids = _ciplatfromdbcontext.EnableUserStatuses.Where(u => u.NotificationId == 5).Select(u => u.UserId).ToList();
+             foreach(var ids in enebleduserids)
+             {
+                 var Addpermission = new Userpermission
+                 {
+                     UserId = ids,
+                 };
+                 message.Userpermissions.Add(Addpermission);
+
+             }
+
+             _ciplatfromdbcontext.SaveChanges();
+
+         }*/
         public void Addmission(MissionAddViewModel model, List<int> selectedSkills, string userid)
         {
             var model1 = new Mission
@@ -1027,7 +1270,7 @@ namespace CI_PLATFORM_.repository.Repository
                 };
                 model1.MissionSkills.Add(model3);
             }
-            if (string.Equals(model.MissionType, "goal", StringComparison.OrdinalIgnoreCase))
+            if (model.MissionType == "goal")
             {
                 var model2 = new GoalMission
                 {
@@ -1108,29 +1351,27 @@ namespace CI_PLATFORM_.repository.Repository
                         docModel.DocumentType = "PDF";
                         break;
                     default:
-                        // Handle other types of documents here
                         break;
                 }
                 _ciplatfromdbcontext.MissionDocuments.Add(docModel);
             }
-            var not_id = _ciplatfromdbcontext.NotificationTitles.SingleOrDefault(n => n.Title == "New Missions").NotificationId;
             var message = new MessageTable
             {
-                NotificationId = not_id,
-                Message = $"New Mission-{model.Title}"
+                NotificationId = 5,
+                Message = $"New Mission-{model.Title} is added",
+                Url = $"https://localhost:7292/Mission/volunteermission/{model1.MissionId}"
             };
             _ciplatfromdbcontext.Add(message);
-            var enebleduserids = _ciplatfromdbcontext.EnableUserStatuses.Where(u => u.NotificationId == 5).Select(u => u.UserId).ToList();
-            foreach(var ids in enebleduserids)
+            var users = _ciplatfromdbcontext.EnableUserStatuses.Where(e => e.NotificationId == 5).Select(e => e.UserId).ToList();
+            foreach (var userId in users)
             {
-                var Addpermission = new Userpermission
+                var userpermission = new Userpermission
                 {
-                    UserId = ids,
+                    UserId = userId,
+
                 };
-                message.Userpermissions.Add(Addpermission);
-                
+                message.Userpermissions.Add(userpermission);
             }
-           
             _ciplatfromdbcontext.SaveChanges();
 
         }

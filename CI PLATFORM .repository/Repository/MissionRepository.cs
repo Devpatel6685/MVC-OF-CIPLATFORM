@@ -69,6 +69,7 @@ namespace CI_PLATFORM_.repository.Repository
             };
             //SORT BY
             var sortmission = mission.ToList();
+
             if (sortId == 1)
             {
                 sortmission = sortmission.OrderByDescending(p => p.CreatedAt).ToList();
@@ -313,6 +314,37 @@ namespace CI_PLATFORM_.repository.Repository
             using var smtp = new SmtpClient();
             smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
             smtp.Authenticate("devppatel6685@gmail.com", "hpygmvoqamjvzkrl");
+            Mission mission = _cIPLATFORMDbContext.Missions.SingleOrDefault(m => m.MissionId == misssionid);
+            MessageTable message = new MessageTable()
+            {
+                NotificationId = 1,
+                Url = "https://localhost:7296/Mission/volunteerMission/" + misssionid,
+                Message = name.FirstName + " " + name.LastName + " Reccomends this mission - " + mission.Title,
+                AvatarUser = name.Avatar,
+            };
+            _cIPLATFORMDbContext.MessageTables.Add(message);
+            List<long> enableUsers = _cIPLATFORMDbContext.EnableUserStatuses.Where(n => n.NotificationId == 1).Select(u => (long)u.UserId).ToList();
+            foreach (var user in users)
+            {
+                MissionInvite model = new MissionInvite();
+                model.MissionId = misssionid;
+                model.FromUserId = Convert.ToInt64(fromuserId);
+                model.ToUserId = user.UserId;
+                email.To.Add(MailboxAddress.Parse(user.Email));
+                email.Subject = name.FirstName + " " + name.LastName + " has recommended mission to you";
+                email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = mailBody };
+                smtp.Send(email);
+                _cIPLATFORMDbContext.MissionInvites.Add(model);
+                if (enableUsers.Contains(user.UserId))
+                {
+                    Userpermission userpermission = new Userpermission()
+                    {
+                        UserId = user.UserId,
+                    };
+                    message.Userpermissions.Add(userpermission);
+                }
+
+            }
 
             foreach (var user in users)
             {
@@ -329,6 +361,7 @@ namespace CI_PLATFORM_.repository.Repository
             }
             _cIPLATFORMDbContext.SaveChanges();
             smtp.Disconnect(true);
+             
             return "success";
         }
 
